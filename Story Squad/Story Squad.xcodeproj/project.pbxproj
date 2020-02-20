@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FD90F2923FF361900BC4702 /* Bangers.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F2723FF361900BC4702 /* Bangers.ttf */; };
+		4FD90F2A23FF361900BC4702 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F2823FF361900BC4702 /* OFL.txt */; };
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
 		FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E84423FEF35C008637E0 /* AppDelegate.swift */; };
 		FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E84623FEF35C008637E0 /* SceneDelegate.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FD90F2723FF361900BC4702 /* Bangers.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bangers.ttf; sourceTree = "<group>"; };
+		4FD90F2823FF361900BC4702 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		FA85E84123FEF35C008637E0 /* Story Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Story Squad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA85E84423FEF35C008637E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FD90F2623FF361900BC4702 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4FD90F2723FF361900BC4702 /* Bangers.ttf */,
+				4FD90F2823FF361900BC4702 /* OFL.txt */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		FA85E83823FEF35C008637E0 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				DDD7D24C23FF179900C9DF2B /* README.md */,
+				4FD90F2623FF361900BC4702 /* Font */,
 				FA85E85823FEF38D008637E0 /* Storyboards */,
 				FA85E85923FEF3B1008637E0 /* View Controllers */,
 				FA85E85B23FEF3C6008637E0 /* Views */,
@@ -160,10 +174,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD90F2A23FF361900BC4702 /* OFL.txt in Resources */,
 				FA85E85123FEF35E008637E0 /* LaunchScreen.storyboard in Resources */,
 				FA85E84E23FEF35E008637E0 /* Assets.xcassets in Resources */,
 				DDD7D24D23FF179900C9DF2B /* README.md in Resources */,
 				FA85E84C23FEF35C008637E0 /* Main.storyboard in Resources */,
+				4FD90F2923FF361900BC4702 /* Bangers.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
