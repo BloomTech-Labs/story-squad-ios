@@ -11,6 +11,7 @@ import UIKit
 class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
+        updateViews()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -18,7 +19,18 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var storySquadLabel: UILabel!
     
+    func updateViews() {
+        storySquadLabel.textColor.setStroke()
+        setStrokePumpkin()
+    }
 
+    func setStrokePumpkin() {
+        pumpkinColor.setStroke()
+    }
+    
+    //Red: 0, green: 0.447, blue: 0.733, alpha: 1)
+    let pumpkinColor = UIColor(displayP3Red: 1, green: 0.427, blue: 0.227, alpha: 1)
+    
     /*
     // MARK: - Navigation
 
