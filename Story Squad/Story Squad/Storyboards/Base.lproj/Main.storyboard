@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RbK-Dr-0xU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RbK-Dr-0xU">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +10,12 @@
     <customFonts key="customFonts">
         <array key="Bangers.ttf">
             <string>Bangers-Regular</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -22,80 +28,92 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STORY SQUAD " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMw-f1-Mi7">
-                                <rect key="frame" x="94" y="64" width="226" height="51.333333333333343"/>
+                                <rect key="frame" x="94" y="45" width="226" height="51.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="48"/>
                                 <color key="textColor" red="0.0" green="0.44705882352941173" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fza-Mo-NWs">
+                                <rect key="frame" x="274" y="131.33333333333334" width="120" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <state key="normal" title="Add a Child">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Wc-QC-lnw">
-                                <rect key="frame" x="0.0" y="135.33333333333331" width="414" height="600.66666666666674"/>
+                                <rect key="frame" x="0.0" y="184.33333333333331" width="414" height="551.66666666666674"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="32" minimumInteritemSpacing="10" id="RZn-ZL-wfK">
                                     <size key="itemSize" width="343" height="244"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="16" minY="20" maxX="16" maxY="20"/>
+                                    <inset key="sectionInset" minX="16" minY="10" maxX="16" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChildProfileCell" id="jeI-f3-rTt">
-                                        <rect key="frame" x="50" y="20" width="314" height="244"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChildProfileCell" id="jeI-f3-rTt" customClass="ChildProfileCollectionViewCell" customModule="Story_Squad" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="10" width="314" height="244"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="X3j-Sy-V1L">
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="244"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="UPh-72-os8">
-                                                    <rect key="frame" x="92.333333333333329" y="28" width="129.33333333333337" height="216"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Squad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDe-bq-c3c">
-                                                            <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="36"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Squad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSW-qw-28U">
-                                                            <rect key="frame" x="0.0" y="36" width="129.33333333333334" height="36"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Squad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjW-17-RVL">
-                                                            <rect key="frame" x="0.0" y="72" width="129.33333333333334" height="36"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Squad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdF-kP-BTc">
-                                                            <rect key="frame" x="0.0" y="108" width="129.33333333333334" height="36"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Squad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uV-Le-tck">
-                                                            <rect key="frame" x="0.0" y="144" width="129.33333333333334" height="36"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Squad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZt-Mx-1IZ">
-                                                            <rect key="frame" x="0.0" y="180" width="129.33333333333334" height="36"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDe-bq-c3c">
+                                                    <rect key="frame" x="92" y="20" width="214" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGp-nR-6Ek">
+                                                    <rect key="frame" x="92" y="45" width="214" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="g2k-xP-WVp">
+                                                    <rect key="frame" x="8" y="7" width="75" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ACCEPT THE MISSION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJY-zy-2cl">
+                                                    <rect key="frame" x="8" y="91" width="298" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="28"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dasboard Icon Set" translatesAutoresizingMaskIntoConstraints="NO" id="zns-nU-PRk">
+                                                    <rect key="frame" x="8" y="160" width="298" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstItem="UPh-72-os8" firstAttribute="centerX" secondItem="X3j-Sy-V1L" secondAttribute="centerX" id="4GR-Md-90V"/>
-                                                <constraint firstItem="UPh-72-os8" firstAttribute="leading" secondItem="X3j-Sy-V1L" secondAttribute="leading" constant="92.329999999999998" id="G7Y-4I-m5U"/>
-                                                <constraint firstAttribute="trailing" secondItem="UPh-72-os8" secondAttribute="trailing" constant="92.329999999999998" id="Ice-No-3C0"/>
-                                                <constraint firstAttribute="bottom" secondItem="UPh-72-os8" secondAttribute="bottom" id="bOS-rA-ayj"/>
-                                                <constraint firstItem="UPh-72-os8" firstAttribute="top" secondItem="X3j-Sy-V1L" secondAttribute="top" constant="28" id="e4d-Nz-PH2"/>
-                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="314" height="244"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="g2k-xP-WVp" id="aBV-zd-zkP"/>
+                                            <outlet property="dashboardIconSetImageView" destination="zns-nU-PRk" id="Pkj-OF-Spb"/>
+                                            <outlet property="missionLabel" destination="yJY-zy-2cl" id="7Fo-xB-uUk"/>
+                                            <outlet property="nameLabel" destination="BDe-bq-c3c" id="irJ-3u-nlT"/>
+                                            <outlet property="teamLabel" destination="sGp-nR-6Ek" id="0yb-xK-5NT"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -104,16 +122,27 @@
                         <constraints>
                             <constraint firstItem="6Wc-QC-lnw" firstAttribute="leading" secondItem="WMF-gh-Stg" secondAttribute="leading" id="0Ph-XQ-U98"/>
                             <constraint firstItem="WMF-gh-Stg" firstAttribute="trailing" secondItem="6Wc-QC-lnw" secondAttribute="trailing" id="GMP-55-Nkz"/>
-                            <constraint firstItem="6Wc-QC-lnw" firstAttribute="top" secondItem="LMw-f1-Mi7" secondAttribute="bottom" constant="20" id="MSv-pZ-nh4"/>
+                            <constraint firstItem="fza-Mo-NWs" firstAttribute="leading" secondItem="WMF-gh-Stg" secondAttribute="leading" constant="274" id="Nm1-Ew-Ish"/>
                             <constraint firstItem="WMF-gh-Stg" firstAttribute="bottom" secondItem="6Wc-QC-lnw" secondAttribute="bottom" id="XXo-tQ-bJW"/>
-                            <constraint firstItem="LMw-f1-Mi7" firstAttribute="top" secondItem="WMF-gh-Stg" secondAttribute="top" constant="20" id="m4i-DQ-2Gs"/>
+                            <constraint firstItem="WMF-gh-Stg" firstAttribute="trailing" secondItem="LMw-f1-Mi7" secondAttribute="trailing" constant="94" id="YlM-Hs-qci"/>
+                            <constraint firstItem="fza-Mo-NWs" firstAttribute="trailing" secondItem="fo6-ya-487" secondAttribute="trailingMargin" id="hhc-BY-EGt"/>
+                            <constraint firstItem="LMw-f1-Mi7" firstAttribute="top" secondItem="WMF-gh-Stg" secondAttribute="top" constant="1" id="n5z-ee-xsL"/>
+                            <constraint firstItem="6Wc-QC-lnw" firstAttribute="top" secondItem="fza-Mo-NWs" secondAttribute="bottom" constant="16" id="njo-iL-hjz"/>
+                            <constraint firstItem="fza-Mo-NWs" firstAttribute="top" secondItem="LMw-f1-Mi7" secondAttribute="bottom" constant="35" id="og5-EV-RdN"/>
                             <constraint firstItem="LMw-f1-Mi7" firstAttribute="centerX" secondItem="fo6-ya-487" secondAttribute="centerX" id="pEJ-kp-rs5"/>
+                            <constraint firstItem="LMw-f1-Mi7" firstAttribute="leading" secondItem="WMF-gh-Stg" secondAttribute="leading" constant="94" id="tz2-zH-dHE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WMF-gh-Stg"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Cdt-vl-c2z"/>
+                    <navigationItem key="navigationItem" id="csv-6J-f5i">
+                        <barButtonItem key="rightBarButtonItem" image="line.horizontal.3" catalog="system" id="coZ-mt-yQZ">
+                            <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addChildButton" destination="fza-Mo-NWs" id="8Xb-NS-FSA"/>
                         <outlet property="childrenProfilesCollectionView" destination="6Wc-QC-lnw" id="snY-yb-bTS"/>
+                        <outlet property="hamburgerMenuButton" destination="coZ-mt-yQZ" id="iTz-AC-u0G"/>
                         <outlet property="storySquadLabel" destination="LMw-f1-Mi7" id="GXU-EI-5Yn"/>
                     </connections>
                 </viewController>
@@ -140,4 +169,9 @@
             <point key="canvasLocation" x="115.94202898550725" y="193.52678571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Dasboard Icon Set" width="500" height="117"/>
+        <image name="line.horizontal.3" catalog="system" width="64" height="32"/>
+        <image name="person" catalog="system" width="64" height="58"/>
+    </resources>
 </document>

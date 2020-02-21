@@ -9,9 +9,13 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
-    
+   
+// MARK: - Properties
     @IBOutlet weak var storySquadLabel: UILabel!
     @IBOutlet weak var childrenProfilesCollectionView: UICollectionView!
+    @IBOutlet weak var hamburgerMenuButton: UIBarButtonItem!
+    
+    @IBOutlet weak var addChildButton: UIButton!
     
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
 //        .foregroundColor: UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1),
