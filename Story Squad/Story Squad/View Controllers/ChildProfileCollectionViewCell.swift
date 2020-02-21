@@ -17,4 +17,9 @@ class ChildProfileCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var missionLabel: UILabel!
     @IBOutlet weak var dashboardIconSetImageView: UIImageView!
     
+//    override func didAddSubview(_ subview: UIView) {
+//        
+//        missionLabel.layer.cornerRadius = CGFloat(5)
+//    }
+    
 }
