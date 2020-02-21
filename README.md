@@ -10,7 +10,6 @@
 
 ## 4️⃣ Contributors
 
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add or delete these place-holders as needed
 
 [Wilmari Rodriguez](https://github.com/kima-92) | [Jonalynn Masters](https://www.github.com/jonalynnA) | [Percival Ngan](https://github.com/PercivalN)                                     
 | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | 
@@ -34,11 +33,11 @@
 
 1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
 
-1️⃣ [Trello Board](🚫add link to trello board here)
+1️⃣ [Trello Board](https://trello.com/b/YDkQ9Mqw/labs-story-squad)
 
-1️⃣ [Product Canvas](🚫add link to product canvas here)
+1️⃣ [Product Canvas](https://www.notion.so/v1-0-Labs21-iOS-Release-Canvas-Dashboard-Integration-11d96a13125140d6b3038dc78ca02c46)
 
-1️⃣ [UX Design files](🚫add link to design files here) - 🚫 delete if not applicable
+1️⃣ [UX Design files](https://www.figma.com/file/WaHXdLK2NASoFWYVMZLVNt/Story_Squad?node-id=0%3A1) 
 
 🚫 One to two paragraph statement about your product and what it does.
 
