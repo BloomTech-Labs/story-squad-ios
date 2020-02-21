@@ -9,9 +9,9 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
-
     
     @IBOutlet weak var storySquadLabel: UILabel!
+    @IBOutlet weak var childrenProfilesCollectionView: UICollectionView!
     
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
 //        .foregroundColor: UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1),
@@ -22,8 +22,8 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateViews()
         
+        updateViews()
     }
     
     func updateViews() {
@@ -32,8 +32,10 @@ class DashboardViewController: UIViewController {
         
         storySquadLabel.attributedText = pumkinStrokeAttribute
         storySquadLabel.textColor = UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1)
+        
+        childrenProfilesCollectionView.delegate = self
+        childrenProfilesCollectionView.dataSource = self
     }
-
     
     /*
     // MARK: - Navigation
@@ -44,5 +46,16 @@ class DashboardViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        10 // Change
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = childrenProfilesCollectionView.dequeueReusableCell(withReuseIdentifier: "ChildProfileCell", for: indexPath)
+        
+        return cell
+    }
 }
