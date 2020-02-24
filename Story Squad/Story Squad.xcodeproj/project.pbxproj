@@ -27,6 +27,12 @@
 		DDDE701524044271003F8783 /* ChildSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701424044271003F8783 /* ChildSettings.storyboard */; };
 		DDDE7017240442D6003F8783 /* PaymentMethod.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE7016240442D6003F8783 /* PaymentMethod.storyboard */; };
 		DDDE70192404430E003F8783 /* ChildProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE70182404430E003F8783 /* ChildProfile.storyboard */; };
+		DDDE701B240463DD003F8783 /* AddChildParentPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */; };
+		DDDE701D240463FA003F8783 /* SettingsParentPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */; };
+		DDDE701F24046412003F8783 /* ChildProfileChildPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701E24046412003F8783 /* ChildProfileChildPin.storyboard */; };
+		DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */; };
+		DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */; };
+		DDDE702624046498003F8783 /* ChildProfileChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE702524046498003F8783 /* ChildProfileChildViewController.swift */; };
 		FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E84423FEF35C008637E0 /* AppDelegate.swift */; };
 		FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E84623FEF35C008637E0 /* SceneDelegate.swift */; };
 		FA85E84C23FEF35C008637E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA85E84A23FEF35C008637E0 /* Main.storyboard */; };
@@ -56,6 +62,12 @@
 		DDDE701424044271003F8783 /* ChildSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildSettings.storyboard; sourceTree = "<group>"; };
 		DDDE7016240442D6003F8783 /* PaymentMethod.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentMethod.storyboard; sourceTree = "<group>"; };
 		DDDE70182404430E003F8783 /* ChildProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildProfile.storyboard; sourceTree = "<group>"; };
+		DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddChildParentPin.storyboard; sourceTree = "<group>"; };
+		DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsParentPin.storyboard; sourceTree = "<group>"; };
+		DDDE701E24046412003F8783 /* ChildProfileChildPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildProfileChildPin.storyboard; sourceTree = "<group>"; };
+		DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildParentPinViewController.swift; sourceTree = "<group>"; };
+		DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsParentPinViewController.swift; sourceTree = "<group>"; };
+		DDDE702524046498003F8783 /* ChildProfileChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileChildViewController.swift; sourceTree = "<group>"; };
 		FA85E84123FEF35C008637E0 /* Story Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Story Squad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA85E84423FEF35C008637E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA85E84623FEF35C008637E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +117,26 @@
 			path = "open-sans";
 			sourceTree = "<group>";
 		};
+		DDDE70202404641B003F8783 /* Pins Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */,
+				DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */,
+				DDDE701E24046412003F8783 /* ChildProfileChildPin.storyboard */,
+			);
+			path = "Pins Storyboards";
+			sourceTree = "<group>";
+		};
+		DDDE7027240464A2003F8783 /* Pin VC */ = {
+			isa = PBXGroup;
+			children = (
+				DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */,
+				DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */,
+				DDDE702524046498003F8783 /* ChildProfileChildViewController.swift */,
+			);
+			path = "Pin VC";
+			sourceTree = "<group>";
+		};
 		FA85E83823FEF35C008637E0 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +178,7 @@
 				DDDE701424044271003F8783 /* ChildSettings.storyboard */,
 				DDDE7016240442D6003F8783 /* PaymentMethod.storyboard */,
 				DDDE70182404430E003F8783 /* ChildProfile.storyboard */,
+				DDDE70202404641B003F8783 /* Pins Storyboards */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -155,6 +188,7 @@
 			children = (
 				FA85E88123FF3558008637E0 /* DashboardViewController.swift */,
 				4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */,
+				DDDE7027240464A2003F8783 /* Pin VC */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -220,6 +254,7 @@
 				4FD90F3923FF6AEF00BC4702 /* OpenSans-Italic.ttf in Resources */,
 				4FD90F3B23FF6AEF00BC4702 /* OpenSans-ExtraBold.ttf in Resources */,
 				DDDE7017240442D6003F8783 /* PaymentMethod.storyboard in Resources */,
+				DDDE701F24046412003F8783 /* ChildProfileChildPin.storyboard in Resources */,
 				4FD90F3C23FF6AEF00BC4702 /* OpenSans-LightItalic.ttf in Resources */,
 				4FD90F2A23FF361900BC4702 /* OFL.txt in Resources */,
 				DDDE701524044271003F8783 /* ChildSettings.storyboard in Resources */,
@@ -230,6 +265,7 @@
 				4FD90F4123FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf in Resources */,
 				DDDE70192404430E003F8783 /* ChildProfile.storyboard in Resources */,
 				FA85E84E23FEF35E008637E0 /* Assets.xcassets in Resources */,
+				DDDE701D240463FA003F8783 /* SettingsParentPin.storyboard in Resources */,
 				4FD90F3F23FF6AEF00BC4702 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				DDD7D24D23FF179900C9DF2B /* README.md in Resources */,
 				FA85E84C23FEF35C008637E0 /* Main.storyboard in Resources */,
@@ -237,6 +273,7 @@
 				4FD90F3E23FF6AEF00BC4702 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				4FD90F3D23FF6AEF00BC4702 /* OpenSans-Bold.ttf in Resources */,
 				DDDE701124043DE6003F8783 /* AddChild.storyboard in Resources */,
+				DDDE701B240463DD003F8783 /* AddChildParentPin.storyboard in Resources */,
 				4FD90F3723FF6AEF00BC4702 /* OpenSans-Semibold.ttf in Resources */,
 				4FD90F2923FF361900BC4702 /* Bangers.ttf in Resources */,
 			);
@@ -250,6 +287,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */,
+				DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */,
+				DDDE702624046498003F8783 /* ChildProfileChildViewController.swift in Sources */,
+				DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */,
 				FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */,
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,
 				4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */,
