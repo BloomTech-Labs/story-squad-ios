@@ -269,7 +269,7 @@
         <!--Name's Settings-->
         <scene sceneID="dmW-24-FaI">
             <objects>
-                <viewController id="TS9-QY-Nb5" sceneMemberID="viewController">
+                <viewController id="TS9-QY-Nb5" customClass="ChildSettingsViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C0a-X2-p36">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
