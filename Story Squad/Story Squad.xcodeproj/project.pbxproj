@@ -27,6 +27,7 @@
 		4FF0F5EE2404A7A100587C7B /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5ED2404A7A100587C7B /* Help.storyboard */; };
 		4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */; };
 		4FF0F5F22404AEF300587C7B /* ChildSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */; };
+		4FF0F5F42405C4F900587C7B /* AddChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F32405C4F900587C7B /* AddChildViewController.swift */; };
 		DD13175B2405B4F100013753 /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13175A2405B4F100013753 /* StringKeys.swift */; };
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
 		DDDE701324044226003F8783 /* ParentAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701224044226003F8783 /* ParentAccount.storyboard */; };
@@ -71,6 +72,7 @@
 		4FF0F5ED2404A7A100587C7B /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildSettingsViewController.swift; sourceTree = "<group>"; };
+		4FF0F5F32405C4F900587C7B /* AddChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildViewController.swift; sourceTree = "<group>"; };
 		DD13175A2405B4F100013753 /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
 		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		DDDE701224044226003F8783 /* ParentAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentAccount.storyboard; sourceTree = "<group>"; };
@@ -120,17 +122,17 @@
 		4FD90F2B23FF6AEF00BC4702 /* open-sans */ = {
 			isa = PBXGroup;
 			children = (
-				4FD90F2C23FF6AEF00BC4702 /* OpenSans-Semibold.ttf */,
-				4FD90F2D23FF6AEF00BC4702 /* OpenSans-Light.ttf */,
-				4FD90F2E23FF6AEF00BC4702 /* OpenSans-Italic.ttf */,
 				4FD90F2F23FF6AEF00BC4702 /* Apache License.txt */,
-				4FD90F3023FF6AEF00BC4702 /* OpenSans-ExtraBold.ttf */,
-				4FD90F3123FF6AEF00BC4702 /* OpenSans-LightItalic.ttf */,
 				4FD90F3223FF6AEF00BC4702 /* OpenSans-Bold.ttf */,
-				4FD90F3323FF6AEF00BC4702 /* OpenSans-SemiboldItalic.ttf */,
-				4FD90F3423FF6AEF00BC4702 /* OpenSans-ExtraBoldItalic.ttf */,
-				4FD90F3523FF6AEF00BC4702 /* OpenSans-Regular.ttf */,
 				4FD90F3623FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf */,
+				4FD90F3023FF6AEF00BC4702 /* OpenSans-ExtraBold.ttf */,
+				4FD90F3423FF6AEF00BC4702 /* OpenSans-ExtraBoldItalic.ttf */,
+				4FD90F2E23FF6AEF00BC4702 /* OpenSans-Italic.ttf */,
+				4FD90F2D23FF6AEF00BC4702 /* OpenSans-Light.ttf */,
+				4FD90F3123FF6AEF00BC4702 /* OpenSans-LightItalic.ttf */,
+				4FD90F3523FF6AEF00BC4702 /* OpenSans-Regular.ttf */,
+				4FD90F2C23FF6AEF00BC4702 /* OpenSans-Semibold.ttf */,
+				4FD90F3323FF6AEF00BC4702 /* OpenSans-SemiboldItalic.ttf */,
 			);
 			path = "open-sans";
 			sourceTree = "<group>";
@@ -147,20 +149,10 @@
 			isa = PBXGroup;
 			children = (
 				DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */,
-				DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */,
 				DDDE701E24046412003F8783 /* ChildProfileChildPin.storyboard */,
+				DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */,
 			);
 			path = "Pins Storyboards";
-			sourceTree = "<group>";
-		};
-		DDDE7027240464A2003F8783 /* Pin VC */ = {
-			isa = PBXGroup;
-			children = (
-				DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */,
-				DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */,
-				DDDE702524046498003F8783 /* ChildProfileChildViewController.swift */,
-			);
-			path = "Pin VC";
 			sourceTree = "<group>";
 		};
 		FA85E83823FEF35C008637E0 = {
@@ -186,8 +178,8 @@
 				DDD7D24C23FF179900C9DF2B /* README.md */,
 				4FD90F2623FF361900BC4702 /* Font */,
 				FA85E85923FEF3B1008637E0 /* View Controllers */,
-				FAB94F97240469B200905211 /* Helper */,
 				4FF0F5EA2404983300587C7B /* Views */,
+				FAB94F97240469B200905211 /* Helper */,
 				FA85E84423FEF35C008637E0 /* AppDelegate.swift */,
 				FA85E84623FEF35C008637E0 /* SceneDelegate.swift */,
 				FA85E84D23FEF35E008637E0 /* Assets.xcassets */,
@@ -199,13 +191,13 @@
 		FA85E85823FEF38D008637E0 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				FA85E84A23FEF35C008637E0 /* Main.storyboard */,
+				DDDE70182404430E003F8783 /* ChildProfile.storyboard */,
+				DDDE701424044271003F8783 /* ChildSettings.storyboard */,
 				4FF0F5ED2404A7A100587C7B /* Help.storyboard */,
 				FA85E84F23FEF35E008637E0 /* LaunchScreen.storyboard */,
+				FA85E84A23FEF35C008637E0 /* Main.storyboard */,
 				DDDE701224044226003F8783 /* ParentAccount.storyboard */,
-				DDDE701424044271003F8783 /* ChildSettings.storyboard */,
 				DDDE7016240442D6003F8783 /* PaymentMethod.storyboard */,
-				DDDE70182404430E003F8783 /* ChildProfile.storyboard */,
 				DDDE70202404641B003F8783 /* Pins Storyboards */,
 			);
 			path = Storyboards;
@@ -214,14 +206,17 @@
 		FA85E85923FEF3B1008637E0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */,
-				FA85E88123FF3558008637E0 /* DashboardViewController.swift */,
+				DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */,
+				4FF0F5F32405C4F900587C7B /* AddChildViewController.swift */,
+				DDDE702524046498003F8783 /* ChildProfileChildViewController.swift */,
 				4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */,
-				FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */,
-				4FF0F5E62404970700587C7B /* ParentAccountViewController.swift */,
+				4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */,
 				4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */,
-				DDDE7027240464A2003F8783 /* Pin VC */,
+				FA85E88123FF3558008637E0 /* DashboardViewController.swift */,
+				FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */,
 				4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */,
+				4FF0F5E62404970700587C7B /* ParentAccountViewController.swift */,
+				DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -229,8 +224,8 @@
 		FAB94F97240469B200905211 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				FAB94F9824046A3C00905211 /* SlideInTransition.swift */,
 				FAB94F9A2404AC1D00905211 /* HamburgerMenuOptions.swift */,
+				FAB94F9824046A3C00905211 /* SlideInTransition.swift */,
 				DD13175A2405B4F100013753 /* StringKeys.swift */,
 			);
 			path = Helper;
@@ -336,6 +331,7 @@
 				4FF0F5EC2404986700587C7B /* ChildProfileSettingsTableViewCell.swift in Sources */,
 				DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */,
 				FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */,
+				4FF0F5F42405C4F900587C7B /* AddChildViewController.swift in Sources */,
 				FAB94F9624045C4500905211 /* HamburgerMenuTableViewController.swift in Sources */,
 				FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */,
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,

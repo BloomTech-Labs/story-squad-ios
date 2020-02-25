@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pla-Ht-af6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3NQ-1I-Bgy">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -102,12 +102,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKA-5B-9Ex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="90"/>
+            <point key="canvasLocation" x="2404" y="89.505247376311857"/>
         </scene>
         <!--Add Child-->
         <scene sceneID="ErP-aK-cS1">
             <objects>
-                <viewController id="UWi-fO-3FJ" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="UWi-fO-3FJ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Pp-M2-VC3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,7 +145,6 @@
                                             <constraint firstAttribute="height" constant="55" id="ER8-ZU-6TV"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="y7f-V7-tTR"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -157,7 +156,6 @@
                                             <constraint firstAttribute="width" constant="229" id="VZf-69-Zd9"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="bn2-2D-ieg"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -173,7 +171,6 @@
                                             <constraint firstAttribute="width" constant="229" id="92C-DE-3dX"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="Kud-e0-4rr"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -191,9 +188,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSl-hD-a5w" userLabel="selectGradeDropButton">
-                                <rect key="frame" x="333" y="176" width="19" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSl-hD-a5w" userLabel="selectGradeDropButton">
+                                <rect key="frame" x="330" y="176" width="18.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="chevron.down" catalog="system"/>
@@ -201,48 +197,47 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Q0C-Hr-xMM" firstAttribute="top" secondItem="SSl-hD-a5w" secondAttribute="bottom" constant="150" id="CtZ-Gx-LrF"/>
                             <constraint firstItem="wmB-ZL-ZJ1" firstAttribute="trailing" secondItem="zJb-jm-WcC" secondAttribute="trailing" constant="16" id="G9J-rq-l3x"/>
+                            <constraint firstItem="SSl-hD-a5w" firstAttribute="top" secondItem="wmB-ZL-ZJ1" secondAttribute="top" constant="132" id="HDd-au-B4q"/>
                             <constraint firstItem="zJb-jm-WcC" firstAttribute="top" secondItem="wmB-ZL-ZJ1" secondAttribute="top" constant="32" id="JMT-2z-0uv"/>
                             <constraint firstItem="kvd-Xl-flx" firstAttribute="centerY" secondItem="zJb-jm-WcC" secondAttribute="centerY" id="NTm-JB-QVr"/>
                             <constraint firstItem="Q0C-Hr-xMM" firstAttribute="top" secondItem="zJb-jm-WcC" secondAttribute="bottom" constant="50" id="awW-nc-Z6e"/>
                             <constraint firstItem="Q0C-Hr-xMM" firstAttribute="leading" secondItem="kvd-Xl-flx" secondAttribute="leading" id="ffV-ld-TXU"/>
+                            <constraint firstItem="SSl-hD-a5w" firstAttribute="leading" secondItem="kvd-Xl-flx" secondAttribute="trailing" constant="232" id="kOn-yP-PyW"/>
                             <constraint firstItem="kvd-Xl-flx" firstAttribute="leading" secondItem="wmB-ZL-ZJ1" secondAttribute="leading" constant="16" id="naZ-om-n6X"/>
+                            <constraint firstItem="wmB-ZL-ZJ1" firstAttribute="trailing" secondItem="SSl-hD-a5w" secondAttribute="trailing" constant="26.5" id="xbW-Ra-QGk"/>
                             <constraint firstItem="zJb-jm-WcC" firstAttribute="leading" secondItem="kvd-Xl-flx" secondAttribute="trailing" constant="32" id="zDb-s9-CHN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wmB-ZL-ZJ1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Child" id="zGd-Pl-Tba">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.left.fill" catalog="system" id="jqQ-Zo-haB">
-                            <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Add Child" id="zGd-Pl-Tba"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoW-J7-UtY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="bDT-zm-e8T"/>
             </objects>
-            <point key="canvasLocation" x="1293" y="90"/>
+            <point key="canvasLocation" x="3409" y="90"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="oXM-sr-vz2">
+        <scene sceneID="WUe-6O-ccH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pla-Ht-af6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3NQ-1I-Bgy" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Zt-vr-uaG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hyo-Pd-ASb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MZo-9k-AXw" kind="relationship" relationship="rootViewController" id="JEM-JC-hET"/>
+                        <segue destination="MZo-9k-AXw" kind="relationship" relationship="rootViewController" id="4Kq-Xk-TfR"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FNx-iv-oce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKb-VI-kiU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="90"/>
+            <point key="canvasLocation" x="1464.8" y="89.505247376311857"/>
         </scene>
     </scenes>
     <resources>
-        <image name="arrowshape.turn.up.left.fill" catalog="system" width="64" height="52"/>
         <image name="chevron.down" catalog="system" width="64" height="36"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
