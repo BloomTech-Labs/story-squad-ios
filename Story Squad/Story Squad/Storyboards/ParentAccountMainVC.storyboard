@@ -15,7 +15,7 @@
         <!--Parent Account-->
         <scene sceneID="hPw-6h-433">
             <objects>
-                <viewController id="jNZ-eC-1wx" customClass="ParentAccountViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jNZ-eC-1wx" customClass="ParentAccountMainVC" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8wA-0n-NAH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="825"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,7 +183,7 @@
         <!--ChildSettingsFromParentAccount-->
         <scene sceneID="2Go-4D-zUu">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ChildSettingsFromParentAccount" storyboardName="SettingsParentPin" referencedIdentifier="ChildSettingsFromParentAccount" id="Qhg-VJ-6e4" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="ChildSettingsFromParentAccount" storyboardName="ChildSettingsFromParentAccount" referencedIdentifier="ChildSettingsFromParentAccount" id="Qhg-VJ-6e4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zvl-3G-zHB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2285.5999999999999" y="-200.14992503748127"/>
@@ -191,7 +191,7 @@
         <!--AddEditCardFromParentAccount-->
         <scene sceneID="tpM-FL-rb3">
             <objects>
-                <viewControllerPlaceholder storyboardName="SettingsParentPin" referencedIdentifier="AddEditCardFromParentAccount" id="uH9-OU-rFw" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="AddEditCardFromParentAccount" referencedIdentifier="AddEditCardFromParentAccount" id="uH9-OU-rFw" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bU-AH-d5L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2288" y="491"/>

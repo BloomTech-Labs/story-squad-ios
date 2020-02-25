@@ -1,14 +1,14 @@
 //
-//  ParentAccountViewController.swift
+//  ParentAccountMainVC.swift
 //  Story Squad
 //
-//  Created by Jonalynn Masters on 2/24/20.
+//  Created by Jonalynn Masters on 2/25/20.
 //  Copyright © 2020 Lambda School. All rights reserved.
 //
 
 import UIKit
 
-class ParentAccountViewController: UIViewController {
+class ParentAccountMainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

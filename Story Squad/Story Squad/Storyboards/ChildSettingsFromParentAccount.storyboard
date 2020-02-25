@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TS9-QY-Nb5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -18,7 +18,7 @@
         <!--Name's Settings-->
         <scene sceneID="dmW-24-FaI">
             <objects>
-                <viewController storyboardIdentifier="ChildSettingsFromParentAccount" id="TS9-QY-Nb5" customClass="ChildSettingsViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChildSettingsFromParentAccount" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TS9-QY-Nb5" customClass="ChildSettingsViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C0a-X2-p36">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

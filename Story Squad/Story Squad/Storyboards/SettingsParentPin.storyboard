@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m3v-hF-GfC">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -125,28 +125,12 @@
         <!--ParentAccountMainVC-->
         <scene sceneID="LPd-Wn-vsS">
             <objects>
-                <viewControllerPlaceholder storyboardName="ParentAccountMainVC" id="vnt-PB-GxO" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ParentAccountMainVC" referencedIdentifier="ParentAccountMainVC" id="vnt-PB-GxO" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="bRl-qf-oq9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3s-hp-nvj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1506.4000000000001" y="100.29985007496252"/>
-        </scene>
-        <!--UIViewController-TS9-QY-Nb5-->
-        <scene sceneID="asW-Cz-85U">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UIViewController-TS9-QY-Nb5" storyboardName="ChildSettingsFromParentAccount" referencedIdentifier="UIViewController-TS9-QY-Nb5" id="jS0-VP-GLh" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uMY-uq-BbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2285.5999999999999" y="-200.14992503748127"/>
-        </scene>
-        <!--UIViewController-ykS-Jn-eux-->
-        <scene sceneID="Ycj-07-mcM">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UIViewController-ykS-Jn-eux" storyboardName="AddEditCardFromParentAccount" referencedIdentifier="UIViewController-ykS-Jn-eux" id="mOz-tt-32D" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qfs-fF-upc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2288" y="491"/>
         </scene>
     </scenes>
     <resources>
