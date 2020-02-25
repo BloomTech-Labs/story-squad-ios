@@ -27,8 +27,8 @@
 		4FF0F5EE2404A7A100587C7B /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5ED2404A7A100587C7B /* Help.storyboard */; };
 		4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */; };
 		4FF0F5F22404AEF300587C7B /* ChildSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */; };
+		DD13175B2405B4F100013753 /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13175A2405B4F100013753 /* StringKeys.swift */; };
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
-		DDDE701124043DE6003F8783 /* AddChild.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701024043DE6003F8783 /* AddChild.storyboard */; };
 		DDDE701324044226003F8783 /* ParentAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701224044226003F8783 /* ParentAccount.storyboard */; };
 		DDDE701524044271003F8783 /* ChildSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701424044271003F8783 /* ChildSettings.storyboard */; };
 		DDDE7017240442D6003F8783 /* PaymentMethod.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE7016240442D6003F8783 /* PaymentMethod.storyboard */; };
@@ -71,8 +71,8 @@
 		4FF0F5ED2404A7A100587C7B /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildSettingsViewController.swift; sourceTree = "<group>"; };
+		DD13175A2405B4F100013753 /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
 		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		DDDE701024043DE6003F8783 /* AddChild.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddChild.storyboard; sourceTree = "<group>"; };
 		DDDE701224044226003F8783 /* ParentAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentAccount.storyboard; sourceTree = "<group>"; };
 		DDDE701424044271003F8783 /* ChildSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildSettings.storyboard; sourceTree = "<group>"; };
 		DDDE7016240442D6003F8783 /* PaymentMethod.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentMethod.storyboard; sourceTree = "<group>"; };
@@ -202,7 +202,6 @@
 				FA85E84A23FEF35C008637E0 /* Main.storyboard */,
 				4FF0F5ED2404A7A100587C7B /* Help.storyboard */,
 				FA85E84F23FEF35E008637E0 /* LaunchScreen.storyboard */,
-				DDDE701024043DE6003F8783 /* AddChild.storyboard */,
 				DDDE701224044226003F8783 /* ParentAccount.storyboard */,
 				DDDE701424044271003F8783 /* ChildSettings.storyboard */,
 				DDDE7016240442D6003F8783 /* PaymentMethod.storyboard */,
@@ -232,6 +231,7 @@
 			children = (
 				FAB94F9824046A3C00905211 /* SlideInTransition.swift */,
 				FAB94F9A2404AC1D00905211 /* HamburgerMenuOptions.swift */,
+				DD13175A2405B4F100013753 /* StringKeys.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -315,7 +315,6 @@
 				4FD90F3A23FF6AEF00BC4702 /* Apache License.txt in Resources */,
 				4FD90F3E23FF6AEF00BC4702 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				4FD90F3D23FF6AEF00BC4702 /* OpenSans-Bold.ttf in Resources */,
-				DDDE701124043DE6003F8783 /* AddChild.storyboard in Resources */,
 				DDDE701B240463DD003F8783 /* AddChildParentPin.storyboard in Resources */,
 				4FD90F3723FF6AEF00BC4702 /* OpenSans-Semibold.ttf in Resources */,
 				4FD90F2923FF361900BC4702 /* Bangers.ttf in Resources */,
@@ -344,6 +343,7 @@
 				4FF0F5E72404970700587C7B /* ParentAccountViewController.swift in Sources */,
 				4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */,
 				FAB94F9B2404AC1D00905211 /* HamburgerMenuOptions.swift in Sources */,
+				DD13175B2405B4F100013753 /* StringKeys.swift in Sources */,
 				4FF0F5E92404975A00587C7B /* ChildrenProfileTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
