@@ -10,6 +10,9 @@
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans</string>
         </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Settings Parent Pin View Controller-->
@@ -144,6 +147,9 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TS9-QY-Nb5" kind="show" id="avh-Bu-XN6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -260,6 +266,134 @@
             </objects>
             <point key="canvasLocation" x="1506.4000000000001" y="100.29985007496252"/>
         </scene>
+        <!--Name's Settings-->
+        <scene sceneID="dmW-24-FaI">
+            <objects>
+                <viewController id="TS9-QY-Nb5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C0a-X2-p36">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="tZV-9e-zwE">
+                                <rect key="frame" x="16" y="96" width="73.5" height="221"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Change User Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osd-g9-YLz">
+                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="44"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Change PIN" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufE-Sp-K9R">
+                                        <rect key="frame" x="0.0" y="94" width="73.5" height="38.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Confirm PIN" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbj-C4-JBD">
+                                        <rect key="frame" x="0.0" y="182.5" width="73.5" height="38.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="6aZ-dh-f5x">
+                                <rect key="frame" x="130" y="92" width="229" height="229"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="zRW-6h-Yly">
+                                        <rect key="frame" x="0.0" y="0.0" width="229" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="229" id="2uj-sy-6M7"/>
+                                            <constraint firstAttribute="height" constant="55" id="adH-IE-Zif"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="uhS-6l-dsx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New PIN" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="C7L-Hn-mXM">
+                                        <rect key="frame" x="0.0" y="87" width="229" height="55"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="MeX-4F-qLp"/>
+                                            <constraint firstAttribute="width" constant="229" id="qxW-ZW-miS"/>
+                                            <constraint firstAttribute="height" constant="55" id="zqC-Mt-x2c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="password"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm PIN" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="2bf-Jf-5jR">
+                                        <rect key="frame" x="0.0" y="174" width="229" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="229" id="Rgb-PX-Rdx"/>
+                                            <constraint firstAttribute="height" constant="55" id="vIs-z1-J5G"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="yja-Yg-RBQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="X1s-oL-Day">
+                                <rect key="frame" x="16" y="353" width="343" height="134"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="0RG-4f-4v8">
+                                        <rect key="frame" x="150.5" y="0.0" width="192.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dyslexia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Of-Ea-Hph">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="31"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="j7m-x0-TWV">
+                                                <rect key="frame" x="143.5" y="0.0" width="51" height="31"/>
+                                                <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="onTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="thumbTintColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ph-Nb-nE9">
+                                        <rect key="frame" x="0.0" y="79" width="343" height="55"/>
+                                        <color key="backgroundColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="aGJ-lL-rGm"/>
+                                            <constraint firstAttribute="width" constant="343" id="ljh-Yv-ICM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="24"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tZV-9e-zwE" firstAttribute="top" secondItem="SeG-Le-PL0" secondAttribute="top" constant="52" id="2LB-Z6-wTp"/>
+                            <constraint firstItem="X1s-oL-Day" firstAttribute="leading" secondItem="C0a-X2-p36" secondAttribute="leadingMargin" id="2be-ws-zBL"/>
+                            <constraint firstItem="tZV-9e-zwE" firstAttribute="centerY" secondItem="6aZ-dh-f5x" secondAttribute="centerY" id="9uv-Tu-thD"/>
+                            <constraint firstItem="X1s-oL-Day" firstAttribute="leading" secondItem="tZV-9e-zwE" secondAttribute="leading" id="LOF-yT-Xqs"/>
+                            <constraint firstItem="SeG-Le-PL0" firstAttribute="bottom" secondItem="X1s-oL-Day" secondAttribute="bottom" constant="180" id="QIc-S0-vOy"/>
+                            <constraint firstItem="X1s-oL-Day" firstAttribute="top" secondItem="6aZ-dh-f5x" secondAttribute="bottom" constant="32" id="SXH-8G-lqb"/>
+                            <constraint firstItem="X1s-oL-Day" firstAttribute="trailing" secondItem="6aZ-dh-f5x" secondAttribute="trailing" id="j2B-sr-u5O"/>
+                            <constraint firstItem="X1s-oL-Day" firstAttribute="top" secondItem="C0a-X2-p36" secondAttribute="top" constant="353" id="jQm-hs-cDQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SeG-Le-PL0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Name's Settings" id="Tfe-ja-uoF">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.left.fill" catalog="system" id="ger-wF-pof">
+                            <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="house.fill" catalog="system" id="jXo-iI-zzk">
+                            <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8n-Wr-TaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2324" y="28.335832083958024"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="sH0-gb-3S2">
             <objects>
@@ -281,6 +415,7 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="64" height="52"/>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="person.crop.square" catalog="system" width="64" height="56"/>
         <image name="trash" catalog="system" width="60" height="64"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
