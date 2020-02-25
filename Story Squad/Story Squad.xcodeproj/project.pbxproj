@@ -24,6 +24,8 @@
 		4FF0F5E72404970700587C7B /* ParentAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5E62404970700587C7B /* ParentAccountViewController.swift */; };
 		4FF0F5E92404975A00587C7B /* ChildrenProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */; };
 		4FF0F5EC2404986700587C7B /* ChildProfileSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5EB2404986700587C7B /* ChildProfileSettingsTableViewCell.swift */; };
+		4FF0F5EE2404A7A100587C7B /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5ED2404A7A100587C7B /* Help.storyboard */; };
+		4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */; };
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
 		DDDE701124043DE6003F8783 /* AddChild.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701024043DE6003F8783 /* AddChild.storyboard */; };
 		DDDE701324044226003F8783 /* ParentAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701224044226003F8783 /* ParentAccount.storyboard */; };
@@ -62,6 +64,8 @@
 		4FF0F5E62404970700587C7B /* ParentAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentAccountViewController.swift; sourceTree = "<group>"; };
 		4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChildrenProfileTableView.swift; path = "Story Squad/Storyboards/Pins Storyboards/ChildrenProfileTableView.swift"; sourceTree = SOURCE_ROOT; };
 		4FF0F5EB2404986700587C7B /* ChildProfileSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		4FF0F5ED2404A7A100587C7B /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
+		4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		DDDE701024043DE6003F8783 /* AddChild.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddChild.storyboard; sourceTree = "<group>"; };
 		DDDE701224044226003F8783 /* ParentAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentAccount.storyboard; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				FA85E84A23FEF35C008637E0 /* Main.storyboard */,
+				4FF0F5ED2404A7A100587C7B /* Help.storyboard */,
 				FA85E84F23FEF35E008637E0 /* LaunchScreen.storyboard */,
 				DDDE701024043DE6003F8783 /* AddChild.storyboard */,
 				DDDE701224044226003F8783 /* ParentAccount.storyboard */,
@@ -206,6 +211,7 @@
 				4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */,
 				4FF0F5E62404970700587C7B /* ParentAccountViewController.swift */,
 				DDDE7027240464A2003F8783 /* Pin VC */,
+				4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 				DDDE701B240463DD003F8783 /* AddChildParentPin.storyboard in Resources */,
 				4FD90F3723FF6AEF00BC4702 /* OpenSans-Semibold.ttf in Resources */,
 				4FD90F2923FF361900BC4702 /* Bangers.ttf in Resources */,
+				4FF0F5EE2404A7A100587C7B /* Help.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */,
 				FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */,
 				DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */,
 				DDDE702624046498003F8783 /* ChildProfileChildViewController.swift in Sources */,
