@@ -80,7 +80,7 @@
                                             <color key="titleColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="jNZ-eC-1wx" kind="show" id="Lrt-72-K6q"/>
+                                            <segue destination="jNZ-eC-1wx" kind="show" identifier="AfterPinParentAccountSegue" id="Lrt-72-K6q"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -148,7 +148,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="TS9-QY-Nb5" kind="show" id="avh-Bu-XN6"/>
+                                            <segue destination="TS9-QY-Nb5" kind="show" identifier="ChildsSettingsSegue" id="avh-Bu-XN6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -216,7 +216,7 @@
                                             <color key="titleColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ykS-Jn-eux" kind="show" id="gMQ-FI-s30"/>
+                                            <segue destination="ykS-Jn-eux" kind="show" identifier="AddCardSegue" id="gMQ-FI-s30"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PU4-FT-3YU">
