@@ -14,7 +14,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var storySquadLabel: UILabel!
     @IBOutlet weak var childrenProfilesCollectionView: UICollectionView!
     @IBOutlet weak var hamburgerMenuButton: UIBarButtonItem!
-    
+
     @IBOutlet weak var addChildButton: UIButton!
     
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
@@ -24,10 +24,20 @@ class DashboardViewController: UIViewController {
         .strokeWidth: -3.5
     ]
     
+    let transition = SlideInTransition()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateViews()
+    }
+    
+    @IBAction func hamburgerMenuTapped(_ sender: UIBarButtonItem) {
+        guard let hamburgerMenuVC = storyboard?.instantiateViewController(identifier: "HamburgerMenuViewController") else { return }
+        
+        hamburgerMenuVC.modalPresentationStyle = .overCurrentContext
+        hamburgerMenuVC.transitioningDelegate = self
+        present(hamburgerMenuVC, animated: true)
     }
     
     func updateViews() {
@@ -61,5 +71,18 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
         let cell = childrenProfilesCollectionView.dequeueReusableCell(withReuseIdentifier: "ChildProfileCell", for: indexPath)
         
         return cell
+    }
+}
+
+extension DashboardViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = true
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = false
+        return transition
     }
 }

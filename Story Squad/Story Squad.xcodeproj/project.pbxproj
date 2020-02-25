@@ -33,6 +33,8 @@
 		FA85E84E23FEF35E008637E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA85E84D23FEF35E008637E0 /* Assets.xcassets */; };
 		FA85E85123FEF35E008637E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA85E84F23FEF35E008637E0 /* LaunchScreen.storyboard */; };
 		FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E88123FF3558008637E0 /* DashboardViewController.swift */; };
+		FAB94F9624045C4500905211 /* HamburgerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */; };
+		FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94F9824046A3C00905211 /* SlideInTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		FA85E85023FEF35E008637E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA85E85223FEF35E008637E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA85E88123FF3558008637E0 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuTableViewController.swift; sourceTree = "<group>"; };
+		FAB94F9824046A3C00905211 /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 				DDD7D24C23FF179900C9DF2B /* README.md */,
 				4FD90F2623FF361900BC4702 /* Font */,
 				FA85E85923FEF3B1008637E0 /* View Controllers */,
+				FAB94F97240469B200905211 /* Helper */,
 				FA85E84423FEF35C008637E0 /* AppDelegate.swift */,
 				FA85E84623FEF35C008637E0 /* SceneDelegate.swift */,
 				FA85E84D23FEF35E008637E0 /* Assets.xcassets */,
@@ -155,8 +160,17 @@
 			children = (
 				FA85E88123FF3558008637E0 /* DashboardViewController.swift */,
 				4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */,
+				FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FAB94F97240469B200905211 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FAB94F9824046A3C00905211 /* SlideInTransition.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +265,8 @@
 			files = (
 				FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */,
 				FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */,
+				FAB94F9624045C4500905211 /* HamburgerMenuTableViewController.swift in Sources */,
+				FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */,
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,
 				4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */,
 			);
