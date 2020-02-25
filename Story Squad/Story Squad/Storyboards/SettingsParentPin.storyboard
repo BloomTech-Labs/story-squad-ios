@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Settings Parent Pin View Controller-->
+        <scene sceneID="g15-Om-BlZ">
+            <objects>
+                <viewController id="ON0-2Q-ipe" customClass="SettingsParentPinViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2oD-l2-aUK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="bob-CI-4Ig">
+                                <rect key="frame" x="81.5" y="244" width="212" height="188"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter PIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTz-cM-mAY">
+                                        <rect key="frame" x="53.5" y="0.0" width="105.5" height="33"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4AO-Rl-I9C">
+                                        <rect key="frame" x="0.0" y="68" width="212" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oku-0M-N3f">
+                                                <rect key="frame" x="0.0" y="0.0" width="41" height="40"/>
+                                                <color key="tintColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="lUw-BB-dTN"/>
+                                                    <constraint firstAttribute="width" constant="41" id="nnx-uV-lN2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYm-0i-wlX">
+                                                <rect key="frame" x="57" y="0.0" width="41" height="40"/>
+                                                <color key="tintColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="NaD-ec-Ed4"/>
+                                                    <constraint firstAttribute="width" constant="41" id="T88-pk-2kQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jY8-aX-zD1">
+                                                <rect key="frame" x="114" y="0.0" width="41" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Qmd-dh-hgc"/>
+                                                    <constraint firstAttribute="width" constant="41" id="aYH-ih-Sxw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6e-kU-qEe">
+                                                <rect key="frame" x="171" y="0.0" width="41" height="40"/>
+                                                <color key="tintColor" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="ZuG-2l-aSO"/>
+                                                    <constraint firstAttribute="width" constant="41" id="tyn-s9-Skh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5A-q7-EJn">
+                                        <rect key="frame" x="89" y="143" width="34" height="45"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="vnt-PB-GxO" kind="show" identifier="AfterPinParentAccountSegue" id="Lrt-72-K6q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" red="0.58039215690000001" green="0.61176470589999998" blue="0.63529411759999999" alpha="0.75347933739999995" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bob-CI-4Ig" firstAttribute="centerX" secondItem="2oD-l2-aUK" secondAttribute="centerX" id="EOb-Dn-sG5"/>
+                            <constraint firstItem="bob-CI-4Ig" firstAttribute="top" secondItem="Shv-eU-Tpz" secondAttribute="top" constant="200" id="oUd-EM-Y8I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Shv-eU-Tpz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vy8-uY-iaO">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="xmark" catalog="system" id="fIb-Og-ana">
+                            <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xza-FE-FGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="104"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sH0-gb-3S2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m3v-hF-GfC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gDT-Ru-ZjG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ON0-2Q-ipe" kind="relationship" relationship="rootViewController" id="R0Z-yK-Tlj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DiV-uM-9Gs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42.028985507246382" y="103.79464285714285"/>
+        </scene>
+        <!--ParentAccountMainVC-->
+        <scene sceneID="LPd-Wn-vsS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ParentAccountMainVC" id="vnt-PB-GxO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bRl-qf-oq9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s3s-hp-nvj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1506.4000000000001" y="100.29985007496252"/>
+        </scene>
+        <!--UIViewController-TS9-QY-Nb5-->
+        <scene sceneID="asW-Cz-85U">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="UIViewController-TS9-QY-Nb5" storyboardName="ChildSettingsFromParentAccount" referencedIdentifier="UIViewController-TS9-QY-Nb5" id="jS0-VP-GLh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMY-uq-BbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2285.5999999999999" y="-200.14992503748127"/>
+        </scene>
+        <!--UIViewController-ykS-Jn-eux-->
+        <scene sceneID="Ycj-07-mcM">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="UIViewController-ykS-Jn-eux" storyboardName="AddEditCardFromParentAccount" referencedIdentifier="UIViewController-ykS-Jn-eux" id="mOz-tt-32D" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qfs-fF-upc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2288" y="491"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
