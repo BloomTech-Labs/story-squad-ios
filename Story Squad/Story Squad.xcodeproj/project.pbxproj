@@ -21,6 +21,9 @@
 		4FD90F4023FF6AEF00BC4702 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F3523FF6AEF00BC4702 /* OpenSans-Regular.ttf */; };
 		4FD90F4123FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F3623FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf */; };
 		4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */; };
+		4FF0F5E72404970700587C7B /* ParentAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5E62404970700587C7B /* ParentAccountViewController.swift */; };
+		4FF0F5E92404975A00587C7B /* ChildrenProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */; };
+		4FF0F5EC2404986700587C7B /* ChildProfileSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5EB2404986700587C7B /* ChildProfileSettingsTableViewCell.swift */; };
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
 		DDDE701124043DE6003F8783 /* AddChild.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701024043DE6003F8783 /* AddChild.storyboard */; };
 		DDDE701324044226003F8783 /* ParentAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701224044226003F8783 /* ParentAccount.storyboard */; };
@@ -56,6 +59,9 @@
 		4FD90F3523FF6AEF00BC4702 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		4FD90F3623FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		4FF0F5E62404970700587C7B /* ParentAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentAccountViewController.swift; sourceTree = "<group>"; };
+		4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChildrenProfileTableView.swift; path = "Story Squad/Storyboards/Pins Storyboards/ChildrenProfileTableView.swift"; sourceTree = SOURCE_ROOT; };
+		4FF0F5EB2404986700587C7B /* ChildProfileSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		DDDE701024043DE6003F8783 /* AddChild.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddChild.storyboard; sourceTree = "<group>"; };
 		DDDE701224044226003F8783 /* ParentAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentAccount.storyboard; sourceTree = "<group>"; };
@@ -117,6 +123,14 @@
 			path = "open-sans";
 			sourceTree = "<group>";
 		};
+		4FF0F5EA2404983300587C7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FF0F5EB2404986700587C7B /* ChildProfileSettingsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DDDE70202404641B003F8783 /* Pins Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +174,7 @@
 				DDD7D24C23FF179900C9DF2B /* README.md */,
 				4FD90F2623FF361900BC4702 /* Font */,
 				FA85E85923FEF3B1008637E0 /* View Controllers */,
+				4FF0F5EA2404983300587C7B /* Views */,
 				FA85E84423FEF35C008637E0 /* AppDelegate.swift */,
 				FA85E84623FEF35C008637E0 /* SceneDelegate.swift */,
 				FA85E84D23FEF35E008637E0 /* Assets.xcassets */,
@@ -186,8 +201,10 @@
 		FA85E85923FEF3B1008637E0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */,
 				FA85E88123FF3558008637E0 /* DashboardViewController.swift */,
 				4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */,
+				4FF0F5E62404970700587C7B /* ParentAccountViewController.swift */,
 				DDDE7027240464A2003F8783 /* Pin VC */,
 			);
 			path = "View Controllers";
@@ -289,10 +306,13 @@
 				FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */,
 				DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */,
 				DDDE702624046498003F8783 /* ChildProfileChildViewController.swift in Sources */,
+				4FF0F5EC2404986700587C7B /* ChildProfileSettingsTableViewCell.swift in Sources */,
 				DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */,
 				FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */,
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,
+				4FF0F5E72404970700587C7B /* ParentAccountViewController.swift in Sources */,
 				4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */,
+				4FF0F5E92404975A00587C7B /* ChildrenProfileTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -112,7 +112,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="kvd-Xl-flx">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="kvd-Xl-flx">
                                 <rect key="frame" x="16" y="89" width="82" height="203"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IO-bz-mFU">
@@ -151,6 +151,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Grade" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="QJv-xM-yb7">
                                         <rect key="frame" x="0.0" y="87" width="229" height="55"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="RLR-zI-lNj"/>
                                             <constraint firstAttribute="width" constant="229" id="VZf-69-Zd9"/>
@@ -159,6 +160,11 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="bDT-zm-e8T" appends="YES" id="4lc-0p-MLJ"/>
+                                            <outletCollection property="gestureRecognizers" destination="bDT-zm-e8T" appends="YES" id="EHw-05-Ijb"/>
+                                            <outletCollection property="gestureRecognizers" destination="bDT-zm-e8T" appends="YES" id="Ac9-CZ-atA"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1111" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="wZO-Ud-6Am">
                                         <rect key="frame" x="0.0" y="174" width="229" height="55"/>
@@ -173,7 +179,7 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0C-Hr-xMM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0C-Hr-xMM">
                                 <rect key="frame" x="16" y="355" width="343" height="55"/>
                                 <color key="backgroundColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -185,12 +191,21 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSl-hD-a5w" userLabel="selectGradeDropButton">
+                                <rect key="frame" x="333" y="176" width="19" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="chevron.down" catalog="system"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="wmB-ZL-ZJ1" firstAttribute="trailing" secondItem="zJb-jm-WcC" secondAttribute="trailing" constant="16" id="G9J-rq-l3x"/>
                             <constraint firstItem="zJb-jm-WcC" firstAttribute="top" secondItem="wmB-ZL-ZJ1" secondAttribute="top" constant="32" id="JMT-2z-0uv"/>
+                            <constraint firstItem="kvd-Xl-flx" firstAttribute="centerY" secondItem="zJb-jm-WcC" secondAttribute="centerY" id="NTm-JB-QVr"/>
                             <constraint firstItem="Q0C-Hr-xMM" firstAttribute="top" secondItem="zJb-jm-WcC" secondAttribute="bottom" constant="50" id="awW-nc-Z6e"/>
+                            <constraint firstItem="Q0C-Hr-xMM" firstAttribute="leading" secondItem="kvd-Xl-flx" secondAttribute="leading" id="ffV-ld-TXU"/>
                             <constraint firstItem="kvd-Xl-flx" firstAttribute="leading" secondItem="wmB-ZL-ZJ1" secondAttribute="leading" constant="16" id="naZ-om-n6X"/>
                             <constraint firstItem="zJb-jm-WcC" firstAttribute="leading" secondItem="kvd-Xl-flx" secondAttribute="trailing" constant="32" id="zDb-s9-CHN"/>
                         </constraints>
@@ -203,6 +218,7 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoW-J7-UtY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bDT-zm-e8T"/>
             </objects>
             <point key="canvasLocation" x="1293" y="90"/>
         </scene>
@@ -227,6 +243,7 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="64" height="52"/>
+        <image name="chevron.down" catalog="system" width="64" height="36"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
 </document>
