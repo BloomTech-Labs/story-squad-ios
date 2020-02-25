@@ -14,9 +14,10 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var storySquadLabel: UILabel!
     @IBOutlet weak var childrenProfilesCollectionView: UICollectionView!
     @IBOutlet weak var hamburgerMenuButton: UIBarButtonItem!
-    
+
     @IBOutlet weak var addChildButton: UIButton!
     
+    let transition = SlideInTransition()
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
 //        .foregroundColor: UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1),
 //        .font: UIFont(name: "Avenir", size: 100)!,
@@ -28,6 +29,35 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         updateViews()
+    }
+    
+    @IBAction func hamburgerMenuTapped(_ sender: UIBarButtonItem) {
+        
+        guard let hamburgerMenuVC = storyboard?.instantiateViewController(identifier: "HamburgerMenuViewController") as? HamburgerMenuTableViewController else { return }
+        
+        hamburgerMenuVC.menuOptionTapped = { menueOption in
+            self.transitionTo(menueOption)
+        }
+        hamburgerMenuVC.modalPresentationStyle = .overCurrentContext
+        hamburgerMenuVC.transitioningDelegate = self
+        present(hamburgerMenuVC, animated: true)
+    }
+    
+    func transitionTo(_ menueOption: HamburgerMenuOptions) {
+        let title = String(describing: menueOption).capitalized
+        self.title = title
+        
+        switch menueOption {
+        case .parentAccount:
+            // TODO: Segue to Parent Account Storyboard
+            print("segue to parent account")
+        case .help:
+            // TODO: Segue to Help Storyboard
+            print("segue to help")
+        case .logout:
+            // TODO: Alert to confirm logout
+            print("alert to logout")
+        }
     }
     
     func updateViews() {
@@ -61,5 +91,18 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
         let cell = childrenProfilesCollectionView.dequeueReusableCell(withReuseIdentifier: "ChildProfileCell", for: indexPath)
         
         return cell
+    }
+}
+
+extension DashboardViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = true
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = false
+        return transition
     }
 }
