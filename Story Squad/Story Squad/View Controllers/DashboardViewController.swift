@@ -17,14 +17,13 @@ class DashboardViewController: UIViewController {
 
     @IBOutlet weak var addChildButton: UIButton!
     
+    let transition = SlideInTransition()
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
 //        .foregroundColor: UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1),
 //        .font: UIFont(name: "Avenir", size: 100)!,
         .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
         .strokeWidth: -3.5
     ]
-    
-    let transition = SlideInTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +32,32 @@ class DashboardViewController: UIViewController {
     }
     
     @IBAction func hamburgerMenuTapped(_ sender: UIBarButtonItem) {
-        guard let hamburgerMenuVC = storyboard?.instantiateViewController(identifier: "HamburgerMenuViewController") else { return }
         
+        guard let hamburgerMenuVC = storyboard?.instantiateViewController(identifier: "HamburgerMenuViewController") as? HamburgerMenuTableViewController else { return }
+        
+        hamburgerMenuVC.menuOptionTapped = { menueOption in
+            self.transitionTo(menueOption)
+        }
         hamburgerMenuVC.modalPresentationStyle = .overCurrentContext
         hamburgerMenuVC.transitioningDelegate = self
         present(hamburgerMenuVC, animated: true)
+    }
+    
+    func transitionTo(_ menueOption: HamburgerMenuOptions) {
+        let title = String(describing: menueOption).capitalized
+        self.title = title
+        
+        switch menueOption {
+        case .parentAccount:
+            // TODO: Segue to Parent Account Storyboard
+            print("segue to parent account")
+        case .help:
+            // TODO: Segue to Help Storyboard
+            print("segue to help")
+        case .logout:
+            // TODO: Alert to confirm logout
+            print("alert to logout")
+        }
     }
     
     func updateViews() {
