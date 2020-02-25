@@ -26,6 +26,7 @@
 		4FF0F5EC2404986700587C7B /* ChildProfileSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5EB2404986700587C7B /* ChildProfileSettingsTableViewCell.swift */; };
 		4FF0F5EE2404A7A100587C7B /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5ED2404A7A100587C7B /* Help.storyboard */; };
 		4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */; };
+		4FF0F5F22404AEF300587C7B /* ChildSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */; };
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
 		DDDE701124043DE6003F8783 /* AddChild.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701024043DE6003F8783 /* AddChild.storyboard */; };
 		DDDE701324044226003F8783 /* ParentAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701224044226003F8783 /* ParentAccount.storyboard */; };
@@ -69,6 +70,7 @@
 		4FF0F5EB2404986700587C7B /* ChildProfileSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		4FF0F5ED2404A7A100587C7B /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildSettingsViewController.swift; sourceTree = "<group>"; };
 		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		DDDE701024043DE6003F8783 /* AddChild.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddChild.storyboard; sourceTree = "<group>"; };
 		DDDE701224044226003F8783 /* ParentAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentAccount.storyboard; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */,
 				FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */,
 				4FF0F5E62404970700587C7B /* ParentAccountViewController.swift */,
+				4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */,
 				DDDE7027240464A2003F8783 /* Pin VC */,
 				4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */,
 			);
@@ -337,6 +340,7 @@
 				FAB94F9624045C4500905211 /* HamburgerMenuTableViewController.swift in Sources */,
 				FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */,
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,
+				4FF0F5F22404AEF300587C7B /* ChildSettingsViewController.swift in Sources */,
 				4FF0F5E72404970700587C7B /* ParentAccountViewController.swift in Sources */,
 				4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */,
 				FAB94F9B2404AC1D00905211 /* HamburgerMenuOptions.swift in Sources */,
