@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m3v-hF-GfC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -109,10 +109,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="825"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nxt-29-yZp" customClass="ChildrenProfileTableView" customModule="Story_Squad" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nxt-29-yZp" customClass="ChildrenProfileTableView" customModule="Story_Squad" customModuleProvider="target">
                                 <rect key="frame" x="16" y="44" width="343" height="294"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="294" id="z0B-NF-epW"/>
+                                </constraints>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="82" id="qGj-WD-iIi" customClass="ChildProfileSettingsTableViewCell" customModule="Story_Squad" customModuleProvider="target">
@@ -145,7 +147,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bzd-gB-h7k">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzd-gB-h7k">
                                 <rect key="frame" x="16" y="346" width="343" height="234"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b1v-8N-ecf">
@@ -190,7 +192,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FuI-OS-w5S">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FuI-OS-w5S">
                                 <rect key="frame" x="16" y="609" width="343" height="119"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join Story Squad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHG-vn-AxA">
@@ -219,9 +221,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McZ-7n-2rd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McZ-7n-2rd">
                                 <rect key="frame" x="16" y="762" width="99" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
                                 <state key="normal" title="Terms/Conditions">
                                     <color key="titleColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -230,7 +231,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="FuI-OS-w5S" firstAttribute="top" secondItem="bzd-gB-h7k" secondAttribute="bottom" constant="32" id="EeQ-ul-wx6"/>
+                            <constraint firstItem="Nxt-29-yZp" firstAttribute="top" secondItem="Tfm-YV-Bdw" secondAttribute="top" id="B4B-nL-AmW"/>
+                            <constraint firstItem="FuI-OS-w5S" firstAttribute="leading" secondItem="McZ-7n-2rd" secondAttribute="leading" id="Cgj-FI-hOO"/>
+                            <constraint firstItem="bzd-gB-h7k" firstAttribute="leading" secondItem="Tfm-YV-Bdw" secondAttribute="leading" constant="16" id="EqI-dr-xdE"/>
+                            <constraint firstItem="Tfm-YV-Bdw" firstAttribute="trailing" secondItem="bzd-gB-h7k" secondAttribute="trailing" constant="16" id="FgL-1G-H1J"/>
+                            <constraint firstItem="FuI-OS-w5S" firstAttribute="top" secondItem="bzd-gB-h7k" secondAttribute="bottom" constant="29" id="LAw-bx-OhA"/>
+                            <constraint firstItem="Nxt-29-yZp" firstAttribute="leading" secondItem="Tfm-YV-Bdw" secondAttribute="leading" constant="16" id="Rld-SV-ilt"/>
+                            <constraint firstItem="Tfm-YV-Bdw" firstAttribute="trailing" secondItem="Nxt-29-yZp" secondAttribute="trailing" constant="16" id="cwj-6d-PPW"/>
+                            <constraint firstAttribute="bottom" secondItem="FuI-OS-w5S" secondAttribute="bottom" constant="97" id="cye-oJ-UWb"/>
+                            <constraint firstItem="FuI-OS-w5S" firstAttribute="trailing" secondItem="bzd-gB-h7k" secondAttribute="trailing" id="h9G-49-peT"/>
+                            <constraint firstItem="FuI-OS-w5S" firstAttribute="top" secondItem="8wA-0n-NAH" secondAttribute="top" constant="609" id="kJz-38-2XP"/>
+                            <constraint firstItem="bzd-gB-h7k" firstAttribute="top" secondItem="Nxt-29-yZp" secondAttribute="bottom" constant="8" id="oiB-gi-U1Y"/>
+                            <constraint firstItem="bzd-gB-h7k" firstAttribute="top" secondItem="Nxt-29-yZp" secondAttribute="bottom" constant="8" id="t8U-01-FWi"/>
+                            <constraint firstItem="FuI-OS-w5S" firstAttribute="top" secondItem="bzd-gB-h7k" secondAttribute="bottom" constant="29" id="x6D-Ct-Ndk"/>
+                            <constraint firstItem="McZ-7n-2rd" firstAttribute="top" secondItem="FuI-OS-w5S" secondAttribute="bottom" constant="34" id="yh7-Qx-gMe"/>
+                            <constraint firstItem="FuI-OS-w5S" firstAttribute="leading" secondItem="bzd-gB-h7k" secondAttribute="leading" id="zzc-6f-A8z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tfm-YV-Bdw"/>
                     </view>
