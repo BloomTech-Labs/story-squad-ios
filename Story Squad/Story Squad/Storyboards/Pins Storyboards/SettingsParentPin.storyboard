@@ -215,6 +215,9 @@
                                         <state key="normal" title="Add/Edit Credit Card">
                                             <color key="titleColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="ykS-Jn-eux" kind="show" id="gMQ-FI-s30"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PU4-FT-3YU">
                                         <rect key="frame" x="235" y="90" width="86" height="29"/>
@@ -265,6 +268,199 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6M-k4-ZY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1506.4000000000001" y="100.29985007496252"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Sfx-50-eA8">
+            <objects>
+                <viewController id="ykS-Jn-eux" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="llb-n5-3gX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6c-Fo-peJ">
+                                <rect key="frame" x="16" y="86" width="343" height="494"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XVR-Fy-6C7">
+                                        <rect key="frame" x="122" y="8" width="125" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbM-pY-gLT">
+                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="25"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditcard" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="C3c-Dz-mfL">
+                                                <rect key="frame" x="102.5" y="2" width="22.5" height="21"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Payment Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYP-dt-ccn">
+                                        <rect key="frame" x="8" y="47" width="147" height="25"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kju-lp-Bzc">
+                                        <rect key="frame" x="8" y="107" width="311" height="127"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dWk-pv-UUX">
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="59.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name on Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diY-Xu-23S">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfW-ZY-hm9">
+                                                        <rect key="frame" x="0.0" y="24.5" width="311" height="35"/>
+                                                        <color key="backgroundColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="311" id="0UX-HU-nXE"/>
+                                                            <constraint firstAttribute="height" constant="35" id="T00-qO-rKY"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LdY-UA-eW9">
+                                                <rect key="frame" x="0.0" y="67.5" width="311" height="59.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Card Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONM-Nv-Lzc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="113" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="4444-4444-4444-4444" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZQH-zv-wZM">
+                                                        <rect key="frame" x="0.0" y="24.5" width="311" height="35"/>
+                                                        <color key="backgroundColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="XtU-bT-iSe"/>
+                                                            <constraint firstAttribute="width" constant="311" id="k6l-Pg-bht"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" smartDashesType="yes" textContentType="cc-number"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="dWk-pv-UUX" secondAttribute="trailing" id="60X-JE-ElO"/>
+                                            <constraint firstItem="LdY-UA-eW9" firstAttribute="top" secondItem="dWk-pv-UUX" secondAttribute="bottom" constant="8" id="A2O-z4-BCK"/>
+                                            <constraint firstItem="dWk-pv-UUX" firstAttribute="leading" secondItem="kju-lp-Bzc" secondAttribute="leading" id="HSh-qf-fp8"/>
+                                            <constraint firstItem="dWk-pv-UUX" firstAttribute="top" secondItem="kju-lp-Bzc" secondAttribute="top" id="YYy-IJ-ZNf"/>
+                                        </constraints>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/YY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gF9-vB-wbo">
+                                        <rect key="frame" x="8" y="267" width="129" height="35"/>
+                                        <color key="backgroundColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="3my-GW-4fA"/>
+                                            <constraint firstAttribute="width" constant="311" id="jnB-wg-Xbl"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" textContentType="postal-code"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LNH-Cg-OpJ">
+                                        <rect key="frame" x="190" y="267" width="129" height="35"/>
+                                        <color key="backgroundColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="B9P-yJ-FPs"/>
+                                            <constraint firstAttribute="width" constant="311" id="BYE-Hn-1eb"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" textContentType="postal-code"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g5N-IS-04F">
+                                        <rect key="frame" x="8" y="310" width="311" height="59.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zip Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svG-lI-pvY">
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vLE-RF-DaD">
+                                                <rect key="frame" x="0.0" y="24.5" width="311" height="35"/>
+                                                <color key="backgroundColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="aie-gW-Li0"/>
+                                                    <constraint firstAttribute="width" constant="311" id="eES-n6-Szb"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" textContentType="postal-code"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EXP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2u-RZ-jXh">
+                                        <rect key="frame" x="8" y="242" width="21" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ffo-Fu-emk">
+                                        <rect key="frame" x="190" y="242" width="50.5" height="22"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9j7-CS-lT1">
+                                                <rect key="frame" x="0.0" y="0.0" width="22.5" height="22"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI7-da-mB5">
+                                                <rect key="frame" x="30.5" y="0.0" width="20" height="22"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="questionmark.circle" catalog="system"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmM-5W-2Nn">
+                                        <rect key="frame" x="12" y="416" width="302" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="30"/>
+                                        <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Add Card">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XVR-Fy-6C7" secondAttribute="trailing" constant="96" id="6jN-jL-Wmi"/>
+                                    <constraint firstItem="vYP-dt-ccn" firstAttribute="top" secondItem="XVR-Fy-6C7" secondAttribute="bottom" constant="14" id="OzF-iz-zcF"/>
+                                    <constraint firstItem="XVR-Fy-6C7" firstAttribute="top" secondItem="q6c-Fo-peJ" secondAttribute="top" constant="8" id="kP4-c1-ppC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hgq-v9-Tbc" firstAttribute="trailing" secondItem="q6c-Fo-peJ" secondAttribute="trailing" constant="16" id="Ihv-DG-peR"/>
+                            <constraint firstItem="Hgq-v9-Tbc" firstAttribute="bottom" secondItem="q6c-Fo-peJ" secondAttribute="bottom" constant="87" id="Waq-9D-BC2"/>
+                            <constraint firstItem="q6c-Fo-peJ" firstAttribute="top" secondItem="Hgq-v9-Tbc" secondAttribute="top" constant="42" id="fzt-CT-iEo"/>
+                            <constraint firstItem="q6c-Fo-peJ" firstAttribute="leading" secondItem="Hgq-v9-Tbc" secondAttribute="leading" constant="16" id="kfF-Se-j2b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hgq-v9-Tbc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8GU-Hp-vMO">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.left.fill" catalog="system" id="P7d-7C-far">
+                            <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QnA-YK-Ctx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2288" y="491"/>
         </scene>
         <!--Name's Settings-->
         <scene sceneID="dmW-24-FaI">
@@ -392,7 +588,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8n-Wr-TaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2324" y="28.335832083958024"/>
+            <point key="canvasLocation" x="2287" y="-200"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sH0-gb-3S2">
@@ -415,8 +611,10 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="64" height="52"/>
+        <image name="creditcard" catalog="system" width="64" height="44"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="person.crop.square" catalog="system" width="64" height="56"/>
+        <image name="questionmark.circle" catalog="system" width="64" height="60"/>
         <image name="trash" catalog="system" width="60" height="64"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
