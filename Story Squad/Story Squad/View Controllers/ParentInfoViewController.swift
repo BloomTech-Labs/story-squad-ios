@@ -20,11 +20,10 @@ class ParentInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        pinTextField.delegate = self
     }
     
-
 	// MARK: - Actions
 	@IBAction func doneButton(_ sender: Any) {
 
@@ -45,7 +44,6 @@ class ParentInfoViewController: UIViewController {
 		print(emailTextField)
 		print(passwordTextField)
 		print(pinTextField)
-
 	}
 
 
@@ -58,5 +56,18 @@ class ParentInfoViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension ParentInfoViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        // Mobile validation
+        if textField == pinTextField {
+            let allowedCharacters = CharacterSet(charactersIn: "0123456789")//Here change this characters based on your requirement
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        return true
+    }
 }
