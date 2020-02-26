@@ -7,6 +7,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="parent" optional="YES" attributeType="String"/>
         <attribute name="perferencesDyslexia" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="pin" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Parent" representedClassName="Parent" syncable="YES" codeGenerationType="class">
@@ -18,7 +19,7 @@
         <attribute name="pin" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
+        <element name="Child" positionX="-54" positionY="36" width="128" height="163"/>
         <element name="Parent" positionX="-63" positionY="-18" width="128" height="133"/>
-        <element name="Child" positionX="-54" positionY="36" width="128" height="148"/>
     </elements>
 </model>
