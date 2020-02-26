@@ -42,8 +42,6 @@ class DashboardViewController: UIViewController {
     }
     
     func transitionTo(_ menueOption: HamburgerMenuOptions) {
-        let title = String(describing: menueOption).capitalized
-        self.title = title
         
         switch menueOption {
             

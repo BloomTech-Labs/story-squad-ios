@@ -118,6 +118,9 @@
                                                                 <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="onTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="thumbTintColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="dyslexiaSliderToggled:" destination="TS9-QY-Nb5" eventType="valueChanged" id="tmT-qp-UiT"/>
+                                                                </connections>
                                                             </switch>
                                                         </subviews>
                                                     </stackView>
@@ -137,6 +140,9 @@
                                                                 <integer key="value" value="3"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="saveButtonTapped:" destination="TS9-QY-Nb5" eventType="touchUpInside" id="6Ro-Ur-dqS"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -167,6 +173,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="dyslexiaSlider" destination="j7m-x0-TWV" id="oPF-S1-s9o"/>
+                        <outlet property="nameTextField" destination="zRW-6h-Yly" id="dBi-Fk-luz"/>
+                        <outlet property="pinConfirmationTextField" destination="Wbj-C4-JBD" id="4P9-ck-OsL"/>
+                        <outlet property="pinTextField" destination="ufE-Sp-K9R" id="2eo-Of-9d7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8n-Wr-TaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

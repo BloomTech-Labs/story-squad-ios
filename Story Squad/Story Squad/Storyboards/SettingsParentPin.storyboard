@@ -80,6 +80,7 @@
                                             <color key="titleColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="okButtonTapped:" destination="ON0-2Q-ipe" eventType="touchUpInside" id="iTo-Cz-ZeM"/>
                                             <segue destination="vnt-PB-GxO" kind="show" identifier="AfterPinParentAccountSegue" id="Lrt-72-K6q"/>
                                         </connections>
                                     </button>
@@ -99,6 +100,12 @@
                             <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pinBox1TextField" destination="Oku-0M-N3f" id="D4I-if-FYd"/>
+                        <outlet property="pinBox2TextField" destination="gYm-0i-wlX" id="Ftj-n3-jkB"/>
+                        <outlet property="pinBox3TextField" destination="jY8-aX-zD1" id="8WC-PJ-zx8"/>
+                        <outlet property="pinBox4TextField" destination="b6e-kU-qEe" id="PhH-Wa-55b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xza-FE-FGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

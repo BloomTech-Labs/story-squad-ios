@@ -10,13 +10,24 @@ import UIKit
 
 class ParentAccountMainVC: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var currentPasswordTextField: UITextField!
+    @IBOutlet weak var newPasswordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func addEditCardButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func cancelAccountButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func termsConditionButtonTapped(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

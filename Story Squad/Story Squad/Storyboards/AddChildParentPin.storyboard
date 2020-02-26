@@ -12,10 +12,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Child Parent Pin View Controller-->
+        <!--Add Child Parent Pin View Controller-->
         <scene sceneID="knu-Rh-uaD">
             <objects>
-                <viewController id="MZo-9k-AXw" customClass="ChildParentPinViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MZo-9k-AXw" customClass="AddChildParentPinViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aDT-zM-4NC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,7 @@
                                             <color key="titleColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="okButtonTapped:" destination="MZo-9k-AXw" eventType="touchUpInside" id="0lY-hk-Iyb"/>
                                             <segue destination="g24-bt-ITK" kind="show" id="7Ok-1h-Iw3"/>
                                         </connections>
                                     </button>
@@ -97,6 +98,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="digitBox1TextField" destination="qpw-8H-B80" id="SJs-IZ-zQg"/>
+                        <outlet property="digitBox2TextField" destination="Gq8-Rk-YSh" id="oCf-hG-p8w"/>
+                        <outlet property="digitBox3TextField" destination="Pcs-KU-wXq" id="vuS-CN-TA7"/>
+                        <outlet property="digitBox4TextField" destination="ccN-A2-GLf" id="kOO-60-1g3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKA-5B-9Ex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
