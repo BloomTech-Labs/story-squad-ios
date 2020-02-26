@@ -1,14 +1,14 @@
 //
-//  ChildProfileChildViewController.swift
+//  ChildProfileMainVC.swift
 //  Story Squad
 //
-//  Created by Percy Ngan on 2/24/20.
+//  Created by Jonalynn Masters on 2/25/20.
 //  Copyright © 2020 Lambda School. All rights reserved.
 //
 
 import UIKit
 
-class ChildProfileChildViewController: UIViewController {
+class ChildProfileMainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

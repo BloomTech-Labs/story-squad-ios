@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RbK-Dr-0xU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RbK-Dr-0xU">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +22,7 @@
         <!--Dashboard View Controller-->
         <scene sceneID="ibb-Uw-gtf">
             <objects>
-                <viewController id="vEQ-Vh-5gf" customClass="DashboardViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dashboard" id="vEQ-Vh-5gf" customClass="DashboardViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fo6-ya-487">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -168,6 +168,7 @@
                                             <outlet property="missionLabel" destination="yJY-zy-2cl" id="7Fo-xB-uUk"/>
                                             <outlet property="nameLabel" destination="BDe-bq-c3c" id="irJ-3u-nlT"/>
                                             <outlet property="teamLabel" destination="sGp-nR-6Ek" id="0yb-xK-5NT"/>
+                                            <segue destination="Rcp-lq-5NS" kind="show" identifier="ShowChildPinVCSegue" id="icJ-2u-gmH"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -208,15 +209,25 @@
             </objects>
             <point key="canvasLocation" x="681" y="183"/>
         </scene>
-        <!--AddChild-->
+        <!--ChildsProfilePin-->
+        <scene sceneID="5sg-Sv-rMt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChildsProfilePin" id="Rcp-lq-5NS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="C4t-DM-NYN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="32U-PP-b8V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611" y="210"/>
+        </scene>
+        <!--AddChildParentPin-->
         <scene sceneID="lsT-I2-Xm6">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddChild" id="tTn-v5-DrZ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="AddChildParentPin" id="tTn-v5-DrZ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="f31-5a-KaB"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQW-Kh-tya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1429" y="183"/>
+            <point key="canvasLocation" x="1624" y="114"/>
         </scene>
         <!--Hamburger Menu Table View Controller-->
         <scene sceneID="eyt-3b-Vt8">
@@ -361,7 +372,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5vI-aS-YfS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1916" y="194"/>
+            <point key="canvasLocation" x="680" y="-524"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZyS-7U-tL1">

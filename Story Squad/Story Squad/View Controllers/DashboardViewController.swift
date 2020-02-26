@@ -19,8 +19,6 @@ class DashboardViewController: UIViewController {
     
     let transition = SlideInTransition()
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
-//        .foregroundColor: UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1),
-//        .font: UIFont(name: "Avenir", size: 100)!,
         .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
         .strokeWidth: -3.5
     ]
@@ -48,12 +46,17 @@ class DashboardViewController: UIViewController {
         self.title = title
         
         switch menueOption {
+            
         case .parentAccount:
-            // TODO: Segue to Parent Account Storyboard
-            print("segue to parent account")
+            let parentAccountMainStoryboard = UIStoryboard(name: "SettingsParentPin", bundle: nil)
+            let parentSettingsPinVC = parentAccountMainStoryboard.instantiateViewController(withIdentifier: "SettingsParentPinSB")
+            self.navigationController!.pushViewController(parentSettingsPinVC, animated: true)
+    
         case .help:
-            // TODO: Segue to Help Storyboard
-            print("segue to help")
+            let helpStoryboard = UIStoryboard(name: "Help", bundle: nil)
+            let helpVC = helpStoryboard.instantiateViewController(withIdentifier: "HelpVC")
+            self.navigationController!.pushViewController(helpVC, animated: true)
+            
         case .logout:
             // TODO: Alert to confirm logout
             print("alert to logout")
