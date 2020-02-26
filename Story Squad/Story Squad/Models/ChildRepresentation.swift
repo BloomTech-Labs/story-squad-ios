@@ -17,17 +17,18 @@ struct ChildRepresentation: Codable {
 		case id
 		case cohort
 		case grade
-		case preferencesDyslexia
+		case dyslexiaPreference
 		case pin
+        case avatar
 	}
 
 	var name: String
 	var username: String
 	var parent: ParentRepresentation
 	var id: Int16
-	var cohort: String
+	var cohort: String?
 	var grade: Int16
-	var preferencesDyslexia: Bool
+	var dyslexiaPreference: Bool = false
 	var pin: Int16
-
+    var avatar: Data
 }

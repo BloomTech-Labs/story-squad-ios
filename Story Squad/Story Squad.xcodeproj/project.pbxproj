@@ -166,11 +166,11 @@
 		DD71FD052406D2ED0032EBB5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DD71FD022406D2E50032EBB5 /* StorySquad.xcdatamodeld */,
 				DD71FD082406D97F0032EBB5 /* Child+Convenience.swift */,
-				DD71FD0A2406D9930032EBB5 /* Parent+Convenience.swift */,
 				DD71FD0C2406D9AD0032EBB5 /* ChildRepresentation.swift */,
+				DD71FD0A2406D9930032EBB5 /* Parent+Convenience.swift */,
 				DD71FD0E2406D9C10032EBB5 /* ParentRepresentation.swift */,
+				DD71FD022406D2E50032EBB5 /* StorySquad.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
