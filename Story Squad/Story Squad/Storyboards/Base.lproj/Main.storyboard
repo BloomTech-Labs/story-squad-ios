@@ -168,6 +168,7 @@
                                             <outlet property="missionLabel" destination="yJY-zy-2cl" id="7Fo-xB-uUk"/>
                                             <outlet property="nameLabel" destination="BDe-bq-c3c" id="irJ-3u-nlT"/>
                                             <outlet property="teamLabel" destination="sGp-nR-6Ek" id="0yb-xK-5NT"/>
+                                            <segue destination="Rcp-lq-5NS" kind="show" identifier="ShowChildPinVCSegue" id="icJ-2u-gmH"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -208,6 +209,16 @@
             </objects>
             <point key="canvasLocation" x="681" y="183"/>
         </scene>
+        <!--ChildsProfilePin-->
+        <scene sceneID="5sg-Sv-rMt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChildsProfilePin" id="Rcp-lq-5NS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="C4t-DM-NYN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="32U-PP-b8V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611" y="210"/>
+        </scene>
         <!--AddChildParentPin-->
         <scene sceneID="lsT-I2-Xm6">
             <objects>
@@ -216,7 +227,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQW-Kh-tya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1575" y="183"/>
+            <point key="canvasLocation" x="1624" y="114"/>
         </scene>
         <!--Hamburger Menu Table View Controller-->
         <scene sceneID="eyt-3b-Vt8">

@@ -38,7 +38,6 @@
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
 		DDDE701B240463DD003F8783 /* AddChildParentPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */; };
 		DDDE701D240463FA003F8783 /* SettingsParentPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */; };
-		DDDE701F24046412003F8783 /* ChildProfileChildPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701E24046412003F8783 /* ChildProfileChildPin.storyboard */; };
 		DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */; };
 		DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */; };
 		FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E84423FEF35C008637E0 /* AppDelegate.swift */; };
@@ -47,6 +46,7 @@
 		FA85E84E23FEF35E008637E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA85E84D23FEF35E008637E0 /* Assets.xcassets */; };
 		FA85E85123FEF35E008637E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA85E84F23FEF35E008637E0 /* LaunchScreen.storyboard */; };
 		FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E88123FF3558008637E0 /* DashboardViewController.swift */; };
+		FA9A34D32405EC0800A2F8FE /* ChildsProfilePin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9A34D22405EC0800A2F8FE /* ChildsProfilePin.storyboard */; };
 		FAB94F9624045C4500905211 /* HamburgerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */; };
 		FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94F9824046A3C00905211 /* SlideInTransition.swift */; };
 		FAB94F9B2404AC1D00905211 /* HamburgerMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94F9A2404AC1D00905211 /* HamburgerMenuOptions.swift */; };
@@ -84,7 +84,6 @@
 		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddChildParentPin.storyboard; sourceTree = "<group>"; };
 		DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsParentPin.storyboard; sourceTree = "<group>"; };
-		DDDE701E24046412003F8783 /* ChildProfileChildPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildProfileChildPin.storyboard; sourceTree = "<group>"; };
 		DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildParentPinViewController.swift; sourceTree = "<group>"; };
 		DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsParentPinViewController.swift; sourceTree = "<group>"; };
 		FA85E84123FEF35C008637E0 /* Story Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Story Squad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +94,7 @@
 		FA85E85023FEF35E008637E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA85E85223FEF35E008637E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA85E88123FF3558008637E0 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		FA9A34D22405EC0800A2F8FE /* ChildsProfilePin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildsProfilePin.storyboard; sourceTree = "<group>"; };
 		FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuTableViewController.swift; sourceTree = "<group>"; };
 		FAB94F9824046A3C00905211 /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		FAB94F9A2404AC1D00905211 /* HamburgerMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuOptions.swift; sourceTree = "<group>"; };
@@ -186,9 +186,9 @@
 				4FF0F5FD2405CB2F00587C7B /* AddChildFromDashboard.storyboard */,
 				DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */,
 				4FF0F5F92405C6CB00587C7B /* AddEditCardFromParentAccount.storyboard */,
-				DDDE701E24046412003F8783 /* ChildProfileChildPin.storyboard */,
 				4FF0F5FB2405C9DD00587C7B /* ChildProfileMainVC.storyboard */,
 				4FF0F5F72405C6A900587C7B /* ChildSettingsFromParentAccount.storyboard */,
+				FA9A34D22405EC0800A2F8FE /* ChildsProfilePin.storyboard */,
 				4FF0F5ED2404A7A100587C7B /* Help.storyboard */,
 				FA85E84F23FEF35E008637E0 /* LaunchScreen.storyboard */,
 				FA85E84A23FEF35C008637E0 /* Main.storyboard */,
@@ -286,8 +286,8 @@
 			files = (
 				4FD90F3923FF6AEF00BC4702 /* OpenSans-Italic.ttf in Resources */,
 				4FD90F3B23FF6AEF00BC4702 /* OpenSans-ExtraBold.ttf in Resources */,
+				FA9A34D32405EC0800A2F8FE /* ChildsProfilePin.storyboard in Resources */,
 				4FF0F5FA2405C6CB00587C7B /* AddEditCardFromParentAccount.storyboard in Resources */,
-				DDDE701F24046412003F8783 /* ChildProfileChildPin.storyboard in Resources */,
 				4FF0F5FE2405CB2F00587C7B /* AddChildFromDashboard.storyboard in Resources */,
 				4FD90F3C23FF6AEF00BC4702 /* OpenSans-LightItalic.ttf in Resources */,
 				4FD90F2A23FF361900BC4702 /* OFL.txt in Resources */,
