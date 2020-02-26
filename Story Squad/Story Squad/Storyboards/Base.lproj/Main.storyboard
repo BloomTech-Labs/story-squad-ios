@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xCY-LR-Z8x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xCY-LR-Z8x">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="dVL-lq-ju9">
-                                <rect key="frame" x="30" y="80" width="354" height="456"/>
+                                <rect key="frame" x="30" y="80" width="354" height="566"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Parent Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTQ-7f-RJg">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
@@ -59,10 +59,15 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="4-Digit Pin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZ7-bX-J4R">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="4-Digit Pin" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZ7-bX-J4R">
                                                 <rect key="frame" x="0.0" y="196" width="354" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -74,7 +79,14 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="sYB-aV-L9Q" kind="show" id="hGs-dP-hcz"/>
+                                            <action selector="doneButton:" destination="xCY-LR-Z8x" eventType="touchUpInside" id="WgY-Bs-leP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTn-u7-nzZ">
+                                        <rect key="frame" x="0.0" y="536" width="354" height="30"/>
+                                        <state key="normal" title="Bypass"/>
+                                        <connections>
+                                            <segue destination="sYB-aV-L9Q" kind="show" id="5Kx-I0-geh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -89,10 +101,18 @@
                         <viewLayoutGuide key="safeArea" id="eIf-86-4De"/>
                     </view>
                     <navigationItem key="navigationItem" id="xur-T3-Nrj"/>
+                    <connections>
+                        <outlet property="confirmPWTextField" destination="91I-py-3KV" id="tOB-sw-niY"/>
+                        <outlet property="emailTextField" destination="rBK-XK-Wug" id="fWi-W0-Pkd"/>
+                        <outlet property="nameTextField" destination="yOf-Eh-Adp" id="Krg-Cg-Sdb"/>
+                        <outlet property="passwordTextField" destination="g3Y-kg-0Uw" id="9zC-GS-xsb"/>
+                        <outlet property="pinTextField" destination="LZ7-bX-J4R" id="rQa-3C-NQZ"/>
+                        <segue destination="sYB-aV-L9Q" kind="show" identifier="ShowDashboardSegue" id="Zm9-0j-kTl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caO-dC-y9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1681" y="183"/>
+            <point key="canvasLocation" x="-1068.1159420289855" y="182.60869565217394"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="ibb-Uw-gtf">
@@ -292,7 +312,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32U-PP-b8V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3219.5652173913045" y="201.35869565217394"/>
+            <point key="canvasLocation" x="1609" y="306"/>
         </scene>
         <!--AddChildParentPin-->
         <scene sceneID="lsT-I2-Xm6">
@@ -302,7 +322,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQW-Kh-tya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3232.608695652174" y="157.33695652173915"/>
+            <point key="canvasLocation" x="1596" y="55"/>
         </scene>
         <!--Hamburger Menu Table View Controller-->
         <scene sceneID="eyt-3b-Vt8">
@@ -466,7 +486,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaJ-K0-Rnx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-358" y="183"/>
+            <point key="canvasLocation" x="-171" y="183"/>
         </scene>
     </scenes>
     <resources>
@@ -477,4 +497,7 @@
         <image name="questionmark" catalog="system" width="48" height="64"/>
         <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zm9-0j-kTl"/>
+    </inferredMetricsTieBreakers>
 </document>
