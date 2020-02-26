@@ -35,6 +35,8 @@
 		4FF0F6002405CE5A00587C7B /* ChildProfileMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5FF2405CE5A00587C7B /* ChildProfileMainVC.swift */; };
 		4FF0F6022405CE7900587C7B /* ParentAccountMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F6012405CE7900587C7B /* ParentAccountMainVC.swift */; };
 		DD13175B2405B4F100013753 /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13175A2405B4F100013753 /* StringKeys.swift */; };
+		DD71FD042406D2E50032EBB5 /* StorySquad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD71FD022406D2E50032EBB5 /* StorySquad.xcdatamodeld */; };
+		DD71FD072406D5D80032EBB5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71FD062406D5D80032EBB5 /* CoreDataStack.swift */; };
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
 		DDDE701B240463DD003F8783 /* AddChildParentPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */; };
 		DDDE701D240463FA003F8783 /* SettingsParentPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */; };
@@ -83,6 +85,8 @@
 		4FF0F5FF2405CE5A00587C7B /* ChildProfileMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileMainVC.swift; sourceTree = "<group>"; };
 		4FF0F6012405CE7900587C7B /* ParentAccountMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentAccountMainVC.swift; sourceTree = "<group>"; };
 		DD13175A2405B4F100013753 /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
+		DD71FD032406D2E50032EBB5 /* StorySquad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StorySquad.xcdatamodel; sourceTree = "<group>"; };
+		DD71FD062406D5D80032EBB5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = "Story Squad/Models/CoreDataStack.swift"; sourceTree = SOURCE_ROOT; };
 		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddChildParentPin.storyboard; sourceTree = "<group>"; };
 		DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsParentPin.storyboard; sourceTree = "<group>"; };
@@ -151,6 +155,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DD71FD052406D2ED0032EBB5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD71FD022406D2E50032EBB5 /* StorySquad.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FA85E83823FEF35C008637E0 = {
 			isa = PBXGroup;
 			children = (
@@ -171,11 +183,12 @@
 			isa = PBXGroup;
 			children = (
 				FA85E85823FEF38D008637E0 /* Storyboards */,
-				DDD7D24C23FF179900C9DF2B /* README.md */,
+				DD71FD052406D2ED0032EBB5 /* Models */,
 				4FD90F2623FF361900BC4702 /* Font */,
 				FA85E85923FEF3B1008637E0 /* View Controllers */,
 				4FF0F5EA2404983300587C7B /* Views */,
 				FAB94F97240469B200905211 /* Helper */,
+				DDD7D24C23FF179900C9DF2B /* README.md */,
 				FA85E84423FEF35C008637E0 /* AppDelegate.swift */,
 				FA85E84623FEF35C008637E0 /* SceneDelegate.swift */,
 				FA85E84D23FEF35E008637E0 /* Assets.xcassets */,
@@ -225,6 +238,7 @@
 		FAB94F97240469B200905211 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				DD71FD062406D5D80032EBB5 /* CoreDataStack.swift */,
 				FAB94F9A2404AC1D00905211 /* HamburgerMenuOptions.swift */,
 				FAB94F9824046A3C00905211 /* SlideInTransition.swift */,
 				DD13175A2405B4F100013753 /* StringKeys.swift */,
@@ -326,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD71FD072406D5D80032EBB5 /* CoreDataStack.swift in Sources */,
 				4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */,
 				4FF0F6022405CE7900587C7B /* ParentAccountMainVC.swift in Sources */,
 				FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */,
@@ -336,6 +351,7 @@
 				4FF0F5F42405C4F900587C7B /* AddChildViewController.swift in Sources */,
 				FAB94F9624045C4500905211 /* HamburgerMenuTableViewController.swift in Sources */,
 				FA9A34D7240606C800A2F8FE /* ChildProfilePinViewController.swift in Sources */,
+				DD71FD042406D2E50032EBB5 /* StorySquad.xcdatamodeld in Sources */,
 				FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */,
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,
 				FA9A34D52405FFB700A2F8FE /* CreditCardViewController.swift in Sources */,
@@ -542,6 +558,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DD71FD022406D2E50032EBB5 /* StorySquad.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DD71FD032406D2E50032EBB5 /* StorySquad.xcdatamodel */,
+			);
+			currentVersion = DD71FD032406D2E50032EBB5 /* StorySquad.xcdatamodel */;
+			path = StorySquad.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA85E83923FEF35C008637E0 /* Project object */;
 }
