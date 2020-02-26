@@ -15,12 +15,12 @@ class ParentInfoViewController: UIViewController {
 	@IBOutlet weak var nameTextField: UITextField!
 	@IBOutlet weak var emailTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
-	@IBOutlet weak var confirmPWTextField: UITextField!
+	
+    @IBOutlet weak var confirmPWTextField: UITextField!
 	@IBOutlet weak var pinTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         pinTextField.delegate = self
     }
     
@@ -39,13 +39,13 @@ class ParentInfoViewController: UIViewController {
 			!pinTextField.isEmpty
 			else { return }
 
-		// Just for testing
+    // MARK: - Print Statements
 		print(name)
 		print(emailTextField)
 		print(passwordTextField)
-		print(pinTextField)
+		
+        print(pinTextField)
 	}
-
 
     /*
     // MARK: - Navigation
@@ -58,16 +58,23 @@ class ParentInfoViewController: UIViewController {
     */
 }
 
+// MARK: - Pin TextField Properties Function
 extension ParentInfoViewController: UITextFieldDelegate {
-    
+
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        // Mobile validation
-        if textField == pinTextField {
-            let allowedCharacters = CharacterSet(charactersIn: "0123456789")//Here change this characters based on your requirement
-            let characterSet = CharacterSet(charactersIn: string)
-            return allowedCharacters.isSuperset(of: characterSet)
-        }
-        return true
+        
+        let maxLength = 4
+        let currentString: NSString = pinTextField.text! as NSString
+        let newString: NSString =
+          currentString.replacingCharacters(in: range, with: string) as NSString
+
+// Mobile validation
+//        if textField == pinTextField {
+//            let allowedCharacters = CharacterSet(charactersIn: "0123456789")//Here change this characters based on your requirement
+//            let characterSet = CharacterSet(charactersIn: string)
+//            return allowedCharacters.isSuperset(of: characterSet)
+//        }
+        return newString.length <= maxLength
     }
 }
