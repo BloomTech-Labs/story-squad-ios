@@ -12,10 +12,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Child Profile Child View Controller-->
+        <!--Child Profile Pin View Controller-->
         <scene sceneID="l8M-5p-Enx">
             <objects>
-                <viewController id="jyA-Tz-pWe" customClass="ChildProfileChildViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jyA-Tz-pWe" customClass="ChildProfilePinViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FsE-wR-kOh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,7 @@
                                             <color key="titleColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="okButtonPressed:" destination="jyA-Tz-pWe" eventType="touchUpInside" id="4JV-d5-ib0"/>
                                             <segue destination="AQD-ik-YXN" kind="show" id="ejd-Ih-aHb"/>
                                         </connections>
                                     </button>
@@ -96,6 +97,12 @@
                             <color key="tintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pinBox1TextField" destination="hY7-lO-bg7" id="cSw-9B-5No"/>
+                        <outlet property="pinBox2TextField" destination="jDT-LP-spU" id="vxG-5v-zpw"/>
+                        <outlet property="pinBox3TextField" destination="8Gr-ac-Wnw" id="2lW-jh-z5P"/>
+                        <outlet property="pinBox4TextField" destination="KlT-lR-5Nc" id="7TK-2x-WA5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akk-Wa-28W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

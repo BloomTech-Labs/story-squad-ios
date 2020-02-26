@@ -9,14 +9,21 @@
 import UIKit
 
 class SettingsParentPinViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var pinBox1TextField: UITextField!
+    @IBOutlet weak var pinBox2TextField: UITextField!
+    @IBOutlet weak var pinBox3TextField: UITextField!
+    @IBOutlet weak var pinBox4TextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func okButtonTapped(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

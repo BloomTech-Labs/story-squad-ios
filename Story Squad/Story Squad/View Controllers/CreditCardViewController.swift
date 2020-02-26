@@ -1,26 +1,28 @@
 //
-//  AddChildViewController.swift
+//  CreditCardViewController.swift
 //  Story Squad
 //
-//  Created by Jonalynn Masters on 2/25/20.
+//  Created by macbook on 2/25/20.
 //  Copyright © 2020 Lambda School. All rights reserved.
 //
 
 import UIKit
 
-class AddChildViewController: UIViewController {
+class CreditCardViewController: UIViewController {
     
     
+    @IBOutlet weak var cardNumberTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var gradeTextField: UITextField!
-    @IBOutlet weak var pinTextField: UITextField!
+    @IBOutlet weak var expirationTextField: UITextField!
+    @IBOutlet weak var cvcTextField: UITextField!
+    @IBOutlet weak var zipcodeTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
     
-    @IBAction func saveButtonPressed(_ sender: UIButton) {
+    @IBAction func addCardButtonPressed(_ sender: UIButton) {
     }
     
     /*

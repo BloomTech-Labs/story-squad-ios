@@ -9,14 +9,21 @@
 import UIKit
 
 class AddChildParentPinViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var digitBox1TextField: UITextField!
+    @IBOutlet weak var digitBox2TextField: UITextField!
+    @IBOutlet weak var digitBox3TextField: UITextField!
+    @IBOutlet weak var digitBox4TextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func okButtonTapped(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

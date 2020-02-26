@@ -9,14 +9,26 @@
 import UIKit
 
 class ChildSettingsViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var pinTextField: UILabel!
+    @IBOutlet weak var pinConfirmationTextField: UILabel!
+    
+    @IBOutlet weak var dyslexiaSlider: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func dyslexiaSliderToggled(_ sender: UISwitch) {
+    }
+    
+    
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

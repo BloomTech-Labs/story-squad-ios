@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Credit Card View Controller-->
         <scene sceneID="Sfx-50-eA8">
             <objects>
-                <viewController storyboardIdentifier="AddEditCardFromParentAccount" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ykS-Jn-eux" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddEditCardFromParentAccount" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ykS-Jn-eux" customClass="CreditCardViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="llb-n5-3gX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,6 +187,9 @@
                                                         <integer key="value" value="3"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addCardButtonPressed:" destination="ykS-Jn-eux" eventType="touchUpInside" id="kzy-tU-IkG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -212,6 +215,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="8GU-Hp-vMO"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cardNumberTextField" destination="ZQH-zv-wZM" id="3Ok-eQ-ir9"/>
+                        <outlet property="cvcTextField" destination="LNH-Cg-OpJ" id="ess-CQ-Hzi"/>
+                        <outlet property="expirationTextField" destination="gF9-vB-wbo" id="RO7-TT-QkU"/>
+                        <outlet property="nameTextField" destination="gfW-ZY-hm9" id="zv3-nf-MMQ"/>
+                        <outlet property="zipcodeTextField" destination="vLE-RF-DaD" id="Bp2-QZ-EBQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QnA-YK-Ctx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

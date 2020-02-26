@@ -47,6 +47,8 @@
 		FA85E85123FEF35E008637E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA85E84F23FEF35E008637E0 /* LaunchScreen.storyboard */; };
 		FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E88123FF3558008637E0 /* DashboardViewController.swift */; };
 		FA9A34D32405EC0800A2F8FE /* ChildsProfilePin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9A34D22405EC0800A2F8FE /* ChildsProfilePin.storyboard */; };
+		FA9A34D52405FFB700A2F8FE /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A34D42405FFB700A2F8FE /* CreditCardViewController.swift */; };
+		FA9A34D7240606C800A2F8FE /* ChildProfilePinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A34D6240606C700A2F8FE /* ChildProfilePinViewController.swift */; };
 		FAB94F9624045C4500905211 /* HamburgerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */; };
 		FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94F9824046A3C00905211 /* SlideInTransition.swift */; };
 		FAB94F9B2404AC1D00905211 /* HamburgerMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94F9A2404AC1D00905211 /* HamburgerMenuOptions.swift */; };
@@ -95,6 +97,8 @@
 		FA85E85223FEF35E008637E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA85E88123FF3558008637E0 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		FA9A34D22405EC0800A2F8FE /* ChildsProfilePin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildsProfilePin.storyboard; sourceTree = "<group>"; };
+		FA9A34D42405FFB700A2F8FE /* CreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
+		FA9A34D6240606C700A2F8FE /* ChildProfilePinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfilePinViewController.swift; sourceTree = "<group>"; };
 		FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuTableViewController.swift; sourceTree = "<group>"; };
 		FAB94F9824046A3C00905211 /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		FAB94F9A2404AC1D00905211 /* HamburgerMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuOptions.swift; sourceTree = "<group>"; };
@@ -205,8 +209,10 @@
 				4FF0F5F32405C4F900587C7B /* AddChildViewController.swift */,
 				4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */,
 				4FF0F5FF2405CE5A00587C7B /* ChildProfileMainVC.swift */,
+				FA9A34D6240606C700A2F8FE /* ChildProfilePinViewController.swift */,
 				4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */,
 				4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */,
+				FA9A34D42405FFB700A2F8FE /* CreditCardViewController.swift */,
 				FA85E88123FF3558008637E0 /* DashboardViewController.swift */,
 				FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */,
 				4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */,
@@ -329,8 +335,10 @@
 				FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */,
 				4FF0F5F42405C4F900587C7B /* AddChildViewController.swift in Sources */,
 				FAB94F9624045C4500905211 /* HamburgerMenuTableViewController.swift in Sources */,
+				FA9A34D7240606C800A2F8FE /* ChildProfilePinViewController.swift in Sources */,
 				FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */,
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,
+				FA9A34D52405FFB700A2F8FE /* CreditCardViewController.swift in Sources */,
 				4FF0F6002405CE5A00587C7B /* ChildProfileMainVC.swift in Sources */,
 				4FF0F5F22404AEF300587C7B /* ChildSettingsViewController.swift in Sources */,
 				4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */,
