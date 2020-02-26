@@ -10,6 +10,8 @@ import UIKit
 
 class ParentInfoViewController: UIViewController {
 
+    // MARK: - Properties
+    let networkingController = NetworkingController()
 
 	// MARK: - Outlets
 	@IBOutlet weak var nameTextField: UITextField!
@@ -29,33 +31,42 @@ class ParentInfoViewController: UIViewController {
 
 		guard let name = nameTextField.text,
 			!name.isEmpty,
-			let emailTextField = emailTextField.text,
-			!emailTextField.isEmpty,
-			let passwordTextField = passwordTextField.text,
-			!passwordTextField.isEmpty,
-			let confirmPWTextField = confirmPWTextField.text,
-			!confirmPWTextField.isEmpty,
-			let pinTextField = pinTextField.text,
-			!pinTextField.isEmpty
+			let email = emailTextField.text,
+			!email.isEmpty,
+			let password = passwordTextField.text,
+			!password.isEmpty,
+			let confirmPW = confirmPWTextField.text,
+			!confirmPW.isEmpty,
+			let pin = pinTextField.text,
+			!pin.isEmpty
 			else { return }
 
     // MARK: - Print Statements
 		print(name)
-		print(emailTextField)
-		print(passwordTextField)
+		print(email)
+		print(password)
 		
-        print(pinTextField)
+        print(pin)
+        
+        let pinInt = Int16(pin)
+        
+        networkingController.createParent(name: name, email: email, password: password, pin: pinInt!, context: CoreDataStack.shared.mainContext)
+        performSegue(withIdentifier: "ShowDashboardSegue", sender: self)
 	}
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDashboardSegue" {
+            if let dashboardVC = segue.destination as? DashboardViewController {
+                
+            }
+        
+        }
+        
     }
-    */
+    
 }
 
 // MARK: - Pin TextField Properties Function

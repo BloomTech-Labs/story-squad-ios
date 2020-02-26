@@ -34,6 +34,8 @@
 		4FF0F5FE2405CB2F00587C7B /* AddChildFromDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5FD2405CB2F00587C7B /* AddChildFromDashboard.storyboard */; };
 		4FF0F6002405CE5A00587C7B /* ChildProfileMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5FF2405CE5A00587C7B /* ChildProfileMainVC.swift */; };
 		4FF0F6022405CE7900587C7B /* ParentAccountMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F6012405CE7900587C7B /* ParentAccountMainVC.swift */; };
+		4FF0F62524071B4800587C7B /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F62424071B4800587C7B /* NetworkingController.swift */; };
+		4FF0F62724071DED00587C7B /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F62624071DED00587C7B /* NetworkingError.swift */; };
 		DD13175B2405B4F100013753 /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13175A2405B4F100013753 /* StringKeys.swift */; };
 		DD71FD042406D2E50032EBB5 /* StorySquad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD71FD022406D2E50032EBB5 /* StorySquad.xcdatamodeld */; };
 		DD71FD072406D5D80032EBB5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71FD062406D5D80032EBB5 /* CoreDataStack.swift */; };
@@ -89,6 +91,8 @@
 		4FF0F5FD2405CB2F00587C7B /* AddChildFromDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddChildFromDashboard.storyboard; sourceTree = "<group>"; };
 		4FF0F5FF2405CE5A00587C7B /* ChildProfileMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileMainVC.swift; sourceTree = "<group>"; };
 		4FF0F6012405CE7900587C7B /* ParentAccountMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentAccountMainVC.swift; sourceTree = "<group>"; };
+		4FF0F62424071B4800587C7B /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
+		4FF0F62624071DED00587C7B /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		DD13175A2405B4F100013753 /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
 		DD71FD032406D2E50032EBB5 /* StorySquad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StorySquad.xcdatamodel; sourceTree = "<group>"; };
 		DD71FD062406D5D80032EBB5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = "Story Squad/Models/CoreDataStack.swift"; sourceTree = SOURCE_ROOT; };
@@ -165,6 +169,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4FF0F62324071B1500587C7B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4FF0F62424071B4800587C7B /* NetworkingController.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		DD71FD052406D2ED0032EBB5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,17 +208,18 @@
 		FA85E84323FEF35C008637E0 /* Story Squad */ = {
 			isa = PBXGroup;
 			children = (
-				FA85E85823FEF38D008637E0 /* Storyboards */,
-				DD71FD052406D2ED0032EBB5 /* Models */,
+				FA85E84423FEF35C008637E0 /* AppDelegate.swift */,
+				FA85E84D23FEF35E008637E0 /* Assets.xcassets */,
 				4FD90F2623FF361900BC4702 /* Font */,
+				FAB94F97240469B200905211 /* Helper */,
+				FA85E85223FEF35E008637E0 /* Info.plist */,
+				DD71FD052406D2ED0032EBB5 /* Models */,
+				4FF0F62324071B1500587C7B /* Networking */,
+				DDD7D24C23FF179900C9DF2B /* README.md */,
+				FA85E84623FEF35C008637E0 /* SceneDelegate.swift */,
+				FA85E85823FEF38D008637E0 /* Storyboards */,
 				FA85E85923FEF3B1008637E0 /* View Controllers */,
 				4FF0F5EA2404983300587C7B /* Views */,
-				FAB94F97240469B200905211 /* Helper */,
-				DDD7D24C23FF179900C9DF2B /* README.md */,
-				FA85E84423FEF35C008637E0 /* AppDelegate.swift */,
-				FA85E84623FEF35C008637E0 /* SceneDelegate.swift */,
-				FA85E84D23FEF35E008637E0 /* Assets.xcassets */,
-				FA85E85223FEF35E008637E0 /* Info.plist */,
 			);
 			path = "Story Squad";
 			sourceTree = "<group>";
@@ -257,6 +270,7 @@
 				FAB94F9A2404AC1D00905211 /* HamburgerMenuOptions.swift */,
 				FAB94F9824046A3C00905211 /* SlideInTransition.swift */,
 				DD13175A2405B4F100013753 /* StringKeys.swift */,
+				4FF0F62624071DED00587C7B /* NetworkingError.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -355,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FF0F62524071B4800587C7B /* NetworkingController.swift in Sources */,
 				DD71FD0B2406D9930032EBB5 /* Parent+Convenience.swift in Sources */,
 				DD71FD072406D5D80032EBB5 /* CoreDataStack.swift in Sources */,
 				4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */,
@@ -364,6 +379,7 @@
 				DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */,
 				4FF0F5EC2404986700587C7B /* ChildProfileSettingsTableViewCell.swift in Sources */,
 				DD71FD092406D97F0032EBB5 /* Child+Convenience.swift in Sources */,
+				4FF0F62724071DED00587C7B /* NetworkingError.swift in Sources */,
 				DD71FD0F2406D9C10032EBB5 /* ParentRepresentation.swift in Sources */,
 				DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */,
 				FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */,

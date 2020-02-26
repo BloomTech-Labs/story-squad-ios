@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="dVL-lq-ju9">
-                                <rect key="frame" x="30" y="80" width="354" height="456"/>
+                                <rect key="frame" x="30" y="80" width="354" height="566"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Parent Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTQ-7f-RJg">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
@@ -80,7 +80,13 @@
                                         </state>
                                         <connections>
                                             <action selector="doneButton:" destination="xCY-LR-Z8x" eventType="touchUpInside" id="WgY-Bs-leP"/>
-                                            <segue destination="sYB-aV-L9Q" kind="show" id="hGs-dP-hcz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTn-u7-nzZ">
+                                        <rect key="frame" x="0.0" y="536" width="354" height="30"/>
+                                        <state key="normal" title="Bypass"/>
+                                        <connections>
+                                            <segue destination="sYB-aV-L9Q" kind="show" id="5Kx-I0-geh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -101,11 +107,12 @@
                         <outlet property="nameTextField" destination="yOf-Eh-Adp" id="Krg-Cg-Sdb"/>
                         <outlet property="passwordTextField" destination="g3Y-kg-0Uw" id="9zC-GS-xsb"/>
                         <outlet property="pinTextField" destination="LZ7-bX-J4R" id="rQa-3C-NQZ"/>
+                        <segue destination="sYB-aV-L9Q" kind="show" identifier="ShowDashboardSegue" id="Zm9-0j-kTl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caO-dC-y9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1067" y="183"/>
+            <point key="canvasLocation" x="-1068.1159420289855" y="182.60869565217394"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="ibb-Uw-gtf">
@@ -490,4 +497,7 @@
         <image name="questionmark" catalog="system" width="48" height="64"/>
         <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zm9-0j-kTl"/>
+    </inferredMetricsTieBreakers>
 </document>
