@@ -217,7 +217,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32U-PP-b8V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1611" y="210"/>
+            <point key="canvasLocation" x="1407" y="202"/>
         </scene>
         <!--AddChildParentPin-->
         <scene sceneID="lsT-I2-Xm6">
@@ -227,7 +227,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQW-Kh-tya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1624" y="114"/>
+            <point key="canvasLocation" x="1420" y="158"/>
         </scene>
         <!--Hamburger Menu Table View Controller-->
         <scene sceneID="eyt-3b-Vt8">
