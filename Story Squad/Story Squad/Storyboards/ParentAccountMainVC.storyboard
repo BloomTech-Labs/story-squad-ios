@@ -21,10 +21,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nxt-29-yZp" customClass="ChildrenProfileTableView" customModule="Story_Squad" customModuleProvider="target">
-                                <rect key="frame" x="16" y="44" width="343" height="294"/>
+                                <rect key="frame" x="16" y="54" width="343" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="294" id="z0B-NF-epW"/>
+                                    <constraint firstAttribute="height" constant="150" id="z0B-NF-epW"/>
                                 </constraints>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -61,8 +61,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzd-gB-h7k">
-                                <rect key="frame" x="16" y="346" width="343" height="255"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bzd-gB-h7k">
+                                <rect key="frame" x="16" y="202" width="343" height="258"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b1v-8N-ecf">
                                         <rect key="frame" x="11" y="29" width="321" height="175"/>
@@ -109,8 +109,15 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FuI-OS-w5S">
-                                <rect key="frame" x="16" y="609" width="343" height="119"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McZ-7n-2rd">
+                                <rect key="frame" x="57" y="616" width="99" height="29"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                <state key="normal" title="Terms/Conditions">
+                                    <color key="titleColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FuI-OS-w5S">
+                                <rect key="frame" x="16" y="479" width="343" height="119"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join Story Squad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHG-vn-AxA">
                                         <rect key="frame" x="102" y="8" width="138" height="25"/>
@@ -141,26 +148,15 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McZ-7n-2rd">
-                                <rect key="frame" x="16" y="762" width="99" height="29"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
-                                <state key="normal" title="Terms/Conditions">
-                                    <color key="titleColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Nxt-29-yZp" firstAttribute="top" secondItem="Tfm-YV-Bdw" secondAttribute="top" id="B4B-nL-AmW"/>
-                            <constraint firstItem="FuI-OS-w5S" firstAttribute="leading" secondItem="McZ-7n-2rd" secondAttribute="leading" id="Cgj-FI-hOO"/>
+                            <constraint firstItem="Nxt-29-yZp" firstAttribute="top" secondItem="Tfm-YV-Bdw" secondAttribute="top" constant="10" id="B4B-nL-AmW"/>
                             <constraint firstItem="bzd-gB-h7k" firstAttribute="leading" secondItem="Tfm-YV-Bdw" secondAttribute="leading" constant="16" id="EqI-dr-xdE"/>
                             <constraint firstItem="Tfm-YV-Bdw" firstAttribute="trailing" secondItem="bzd-gB-h7k" secondAttribute="trailing" constant="16" id="FgL-1G-H1J"/>
-                            <constraint firstItem="FuI-OS-w5S" firstAttribute="top" secondItem="bzd-gB-h7k" secondAttribute="bottom" constant="8" id="LAw-bx-OhA"/>
                             <constraint firstItem="Nxt-29-yZp" firstAttribute="leading" secondItem="Tfm-YV-Bdw" secondAttribute="leading" constant="16" id="Rld-SV-ilt"/>
                             <constraint firstItem="Tfm-YV-Bdw" firstAttribute="trailing" secondItem="Nxt-29-yZp" secondAttribute="trailing" constant="16" id="cwj-6d-PPW"/>
-                            <constraint firstAttribute="bottom" secondItem="FuI-OS-w5S" secondAttribute="bottom" constant="97" id="cye-oJ-UWb"/>
                             <constraint firstItem="FuI-OS-w5S" firstAttribute="trailing" secondItem="bzd-gB-h7k" secondAttribute="trailing" id="h9G-49-peT"/>
-                            <constraint firstItem="FuI-OS-w5S" firstAttribute="top" secondItem="8wA-0n-NAH" secondAttribute="top" constant="609" id="kJz-38-2XP"/>
                             <constraint firstItem="bzd-gB-h7k" firstAttribute="top" secondItem="Nxt-29-yZp" secondAttribute="bottom" constant="8" id="oiB-gi-U1Y"/>
                             <constraint firstItem="bzd-gB-h7k" firstAttribute="top" secondItem="Nxt-29-yZp" secondAttribute="bottom" constant="8" id="t8U-01-FWi"/>
                             <constraint firstItem="FuI-OS-w5S" firstAttribute="top" secondItem="bzd-gB-h7k" secondAttribute="bottom" constant="8" id="x6D-Ct-Ndk"/>
@@ -178,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6M-k4-ZY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506.4000000000001" y="100.29985007496252"/>
+            <point key="canvasLocation" x="1505.072463768116" y="100.11160714285714"/>
         </scene>
         <!--ChildSettingsFromParentAccount-->
         <scene sceneID="2Go-4D-zUu">
