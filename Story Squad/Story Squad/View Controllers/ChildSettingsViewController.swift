@@ -27,6 +27,15 @@ class ChildSettingsViewController: UIViewController {
     
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
+        
+        guard let name = nameTextField.text,
+            !name.isEmpty,
+            let pin = pinTextField.text,
+            !pin.isEmpty,
+            let pinConfirmation = pinConfirmationTextField.text,
+    !pinConfirmation.isEmpty
+        else { return }
+    // TODO: save switch state if changed to .isOn
     }
     
     /*

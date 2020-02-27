@@ -10,6 +10,7 @@ import UIKit
 
 class AddChildViewController: UIViewController {
     
+    // MARK: - Outlets
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var gradeTextField: UITextField!
@@ -20,7 +21,17 @@ class AddChildViewController: UIViewController {
         
     }
     
+    
+    
     @IBAction func saveButtonPressed(_ sender: UIButton) {
+        
+        guard let name = nameTextField.text,
+        !name.isEmpty,
+        let grade = gradeTextField.text,
+        !grade.isEmpty,
+        let pin = pinTextField.text,
+        !pin.isEmpty
+        else { return }
     }
     
     /*
