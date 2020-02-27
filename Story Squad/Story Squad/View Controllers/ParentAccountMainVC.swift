@@ -10,6 +10,13 @@ import UIKit
 
 class ParentAccountMainVC: UIViewController {
 
+    // MARK: - Properties
+    
+    var networkingController: NetworkingController?
+    var parentUser: Parent?
+    
+    // MARK: - Outlets
+    
     @IBOutlet weak var newEmailTextField: UITextField!
     @IBOutlet weak var currentPasswordTextField: UITextField!
     @IBOutlet weak var newPasswordTextField: UITextField!

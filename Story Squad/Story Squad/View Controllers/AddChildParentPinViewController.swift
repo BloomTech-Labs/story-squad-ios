@@ -15,6 +15,8 @@ class AddChildParentPinViewController: UIViewController {
     var networkingController: NetworkingController?
     var parentUser: Parent?
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var digitBox1TextField: UITextField!
     @IBOutlet weak var digitBox2TextField: UITextField!
     @IBOutlet weak var digitBox3TextField: UITextField!
