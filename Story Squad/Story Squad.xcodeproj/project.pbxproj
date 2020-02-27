@@ -100,7 +100,7 @@
 		DD71FD0A2406D9930032EBB5 /* Parent+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Parent+Convenience.swift"; sourceTree = "<group>"; };
 		DD71FD0C2406D9AD0032EBB5 /* ChildRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildRepresentation.swift; sourceTree = "<group>"; };
 		DD71FD0E2406D9C10032EBB5 /* ParentRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentRepresentation.swift; sourceTree = "<group>"; };
-		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddChildParentPin.storyboard; sourceTree = "<group>"; };
 		DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsParentPin.storyboard; sourceTree = "<group>"; };
 		DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildParentPinViewController.swift; sourceTree = "<group>"; };
@@ -208,18 +208,18 @@
 		FA85E84323FEF35C008637E0 /* Story Squad */ = {
 			isa = PBXGroup;
 			children = (
-				FA85E84423FEF35C008637E0 /* AppDelegate.swift */,
-				FA85E84D23FEF35E008637E0 /* Assets.xcassets */,
-				4FD90F2623FF361900BC4702 /* Font */,
-				FAB94F97240469B200905211 /* Helper */,
-				FA85E85223FEF35E008637E0 /* Info.plist */,
-				DD71FD052406D2ED0032EBB5 /* Models */,
-				4FF0F62324071B1500587C7B /* Networking */,
-				DDD7D24C23FF179900C9DF2B /* README.md */,
-				FA85E84623FEF35C008637E0 /* SceneDelegate.swift */,
 				FA85E85823FEF38D008637E0 /* Storyboards */,
 				FA85E85923FEF3B1008637E0 /* View Controllers */,
 				4FF0F5EA2404983300587C7B /* Views */,
+				4FF0F62324071B1500587C7B /* Networking */,
+				DD71FD052406D2ED0032EBB5 /* Models */,
+				FAB94F97240469B200905211 /* Helper */,
+				4FD90F2623FF361900BC4702 /* Font */,
+				FA85E84D23FEF35E008637E0 /* Assets.xcassets */,
+				FA85E84423FEF35C008637E0 /* AppDelegate.swift */,
+				FA85E84623FEF35C008637E0 /* SceneDelegate.swift */,
+				FA85E85223FEF35E008637E0 /* Info.plist */,
+				DDD7D24C23FF179900C9DF2B /* README.md */,
 			);
 			path = "Story Squad";
 			sourceTree = "<group>";
