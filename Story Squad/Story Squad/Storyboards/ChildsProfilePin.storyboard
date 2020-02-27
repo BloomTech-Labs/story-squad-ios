@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jyA-Tz-pWe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jyA-Tz-pWe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -98,10 +98,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="pinBox1TextField" destination="hY7-lO-bg7" id="cSw-9B-5No"/>
-                        <outlet property="pinBox2TextField" destination="jDT-LP-spU" id="vxG-5v-zpw"/>
-                        <outlet property="pinBox3TextField" destination="8Gr-ac-Wnw" id="2lW-jh-z5P"/>
-                        <outlet property="pinBox4TextField" destination="KlT-lR-5Nc" id="7TK-2x-WA5"/>
+                        <outlet property="digitBox1TextField" destination="hY7-lO-bg7" id="cSw-9B-5No"/>
+                        <outlet property="digitBox2TextField" destination="jDT-LP-spU" id="vxG-5v-zpw"/>
+                        <outlet property="digitBox3TextField" destination="8Gr-ac-Wnw" id="2lW-jh-z5P"/>
+                        <outlet property="digitBox4TextField" destination="KlT-lR-5Nc" id="7TK-2x-WA5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akk-Wa-28W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

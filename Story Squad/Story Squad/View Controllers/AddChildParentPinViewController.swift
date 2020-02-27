@@ -44,6 +44,12 @@ class AddChildParentPinViewController: UIViewController {
             let addChildFromDashboardSB = UIStoryboard(name: "AddChildFromDashboard", bundle: nil)
             let AddChildFromDashboardVC = addChildFromDashboardSB.instantiateViewController(withIdentifier: "AddChildFromDashboardVC")
             self.navigationController!.pushViewController(AddChildFromDashboardVC, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Incorrect PIN", message: "The PIN you entered does not match the Parent PIN that you created.", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+
+            self.present(alert, animated: true)
         }
     }
 
