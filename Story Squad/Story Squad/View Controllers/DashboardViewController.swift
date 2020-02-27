@@ -11,10 +11,14 @@ import UIKit
 class DashboardViewController: UIViewController {
    
 // MARK: - Properties
+    
+    var parentUser: Parent?
+    var childrenArray: [Child]?
+    
     @IBOutlet weak var storySquadLabel: UILabel!
     @IBOutlet weak var childrenProfilesCollectionView: UICollectionView!
+    
     @IBOutlet weak var hamburgerMenuButton: UIBarButtonItem!
-
     @IBOutlet weak var addChildButton: UIButton!
     
     let transition = SlideInTransition()
