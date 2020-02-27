@@ -10,7 +10,7 @@ import UIKit
 
 class ParentAccountMainVC: UIViewController {
 
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var newEmailTextField: UITextField!
     @IBOutlet weak var currentPasswordTextField: UITextField!
     @IBOutlet weak var newPasswordTextField: UITextField!
     
@@ -19,6 +19,16 @@ class ParentAccountMainVC: UIViewController {
 
     }
     
+    @IBAction func updateButtonTapped(_ sender: Any) {
+        
+        guard let newEmail = newEmailTextField.text,
+            !newEmail.isEmpty,
+            let currentPassword = currentPasswordTextField.text,
+            !currentPassword.isEmpty,
+            let newPassword = newPasswordTextField.text,
+            !newPassword.isEmpty
+            else { return }
+    }
     @IBAction func addEditCardButtonTapped(_ sender: UIButton) {
     }
     
