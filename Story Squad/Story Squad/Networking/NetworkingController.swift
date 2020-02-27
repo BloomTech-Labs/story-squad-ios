@@ -12,6 +12,7 @@ import CoreData
 class NetworkingController {
     
     // MARK: - Properties
+    
     // private let baseURL = URL(string: "")!
     var parent: Parent?
     var children: [Child]?
@@ -43,13 +44,12 @@ class NetworkingController {
         let moc = CoreDataStack.shared.mainContext
         let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
         
-        // Array of parents to fetch
+        // Array with parent that needs to be fetched
         let parentsByID = [id]
         fetchRequest.predicate = NSPredicate(format: "id IN %@", parentsByID)
         
-        // Trying to fetch Parents
+        // Trying to fetch array of parents
         let fetchedParents = try? moc.fetch(fetchRequest)
-        
         guard let parents = fetchedParents else { return }
         
         for parent in parents {
@@ -76,8 +76,11 @@ class NetworkingController {
     }
     
     // Delete Parent
-    func deleteParent() {
-        
+    func deleteParentFromCoreData(parent: Parent, context: NSManagedObjectContext) {
+        context.performAndWait {
+            context.delete(parent)
+            CoreDataStack.shared.save(context: context)
+        }
     }
     
     // MARK: - Child CRUD Methods
@@ -111,15 +114,14 @@ class NetworkingController {
         let moc = CoreDataStack.shared.mainContext
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
         
-        // Array of children to fetch
+        // Array with child that needs to be fetched
         let childrenByID = [id]
         fetchRequest.predicate = NSPredicate(format: "id IN %@", childrenByID)
         
-        // Trying to fetch Children
+        // Trying to fetch array of children
         let fetchedChildren = try? moc.fetch(fetchRequest)
         
         guard let children = fetchedChildren else { return }
-        
         for child in children {
             
             // Updating Child
@@ -147,8 +149,12 @@ class NetworkingController {
     }
     
     // Delete Child
-    func deleteChild() {
+    func deleteChildFromCoreData(child: Child, context: NSManagedObjectContext) {
         
+        context.performAndWait {
+            context.delete(child)
+            CoreDataStack.shared.save(context: context)
+        }
     }
     
     // MARK: - Fetch From CoreData
