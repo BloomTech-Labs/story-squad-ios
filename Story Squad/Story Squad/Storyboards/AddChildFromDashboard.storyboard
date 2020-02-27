@@ -18,7 +18,7 @@
         <!--Add Child-->
         <scene sceneID="ErP-aK-cS1">
             <objects>
-                <viewController storyboardIdentifier="AddChildFromDashboard" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UWi-fO-3FJ" customClass="AddChildViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddChildFromDashboardVC" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UWi-fO-3FJ" customClass="AddChildViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Pp-M2-VC3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

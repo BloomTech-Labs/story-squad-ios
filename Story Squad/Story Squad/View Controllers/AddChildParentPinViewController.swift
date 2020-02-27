@@ -41,7 +41,9 @@ class AddChildParentPinViewController: UIViewController {
         guard let parent = parentUser else { return }
         
         if pinInt == parent.pin {
-            performSegue(withIdentifier: "AddChildVCSegue", sender: self)
+            let addChildFromDashboardSB = UIStoryboard(name: "AddChildFromDashboard", bundle: nil)
+            let AddChildFromDashboardVC = addChildFromDashboardSB.instantiateViewController(withIdentifier: "AddChildFromDashboardVC")
+            self.navigationController!.pushViewController(AddChildFromDashboardVC, animated: true)
         }
     }
 

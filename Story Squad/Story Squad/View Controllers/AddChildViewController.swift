@@ -24,17 +24,21 @@ class AddChildViewController: UIViewController {
         
     }
     
-    
-    
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         
         guard let name = nameTextField.text,
-        !name.isEmpty,
-        let grade = gradeTextField.text,
-        !grade.isEmpty,
-        let pin = pinTextField.text,
-        !pin.isEmpty
-        else { return }
+            !name.isEmpty,
+            let grade = gradeTextField.text,
+            !grade.isEmpty,
+            let pin = pinTextField.text,
+            !pin.isEmpty,
+            let parent = parentUser,
+            let pinInt = Int16(pin),
+            let gradeInt = Int16(grade) else { return }
+        
+        networkingController?.createChildAndAddToParent(parent: parent, name: name, username: nil, pin: pinInt, grade: gradeInt, cohort: nil, avatar: nil, context: CoreDataStack.shared.mainContext)
+        
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     /*

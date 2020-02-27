@@ -87,7 +87,7 @@ class NetworkingController {
     // MARK: - Child CRUD Methods
     
     // create Child
-    func createChildAndAddToParent(parent: Parent, name: String, id: Int16?, username: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: Data?, context: NSManagedObjectContext) {
+    func createChildAndAddToParent(parent: Parent, name: String, username: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool = false, avatar: Data?, context: NSManagedObjectContext) {
         
         let randomID = Int16.random(in: 1..<1000)
         let child = Child(name: name, id: randomID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: avatar, context: context)
