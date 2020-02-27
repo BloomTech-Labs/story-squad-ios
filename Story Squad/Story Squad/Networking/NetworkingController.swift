@@ -49,18 +49,94 @@ class NetworkingController {
         
         // Saving to CoreData
         CoreDataStack.shared.save(context: context)
-        
     }
     
-    // MARK: - Update Child
-    func updateChild() {
+    // Update Child
+    func updateChild(name: String, id: Int16?, username: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: Data?, context: NSManagedObjectContext) {
         
+        guard let id = id,
+            let childFetched = fetchChildFromCD(with: id),
+            let parent = childFetched.parent else { return }
+        
+//        let moc = CoreDataStack.shared.mainContext
+//        let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
+//        let childrenByID = [id]
+//        fetchRequest.predicate = NSPredicate(format: "id IN %@", childrenByID)
+//
+//        let possibleChildren = try? moc.fetch(fetchRequest)
+//
+//        guard let children = possibleChildren else { return nil }
+//        for child in children {
+//
+//            if childFetched.id == id {
+//                self.child = child
+//            } else {
+//                print("Couldn't fetch child from CoreData")
+//            }
+//        }
+
+
+        
+        
+        
+        
+        let newChild = Child(name: name, id: id, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: avatar, context: context)
+        
+        // Saving to CoreData
+        CoreDataStack.shared.save(context: context)
     }
     
-    // MARK: - Delete Child
+    // Delete Child
     func deleteChild() {
         
     }
+    
+    // MARK: - Fetch From CoreData
+    
+    // Parent
+    func fetchParentFromCD(with id: Int16) -> Parent? {
+        
+        let moc = CoreDataStack.shared.mainContext
+        let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
+        let parentsByID = [id]
+        fetchRequest.predicate = NSPredicate(format: "id IN %@", parentsByID)
+        
+        let possibleParents = try? moc.fetch(fetchRequest)
+        
+        guard let parents = possibleParents else { return nil }
+        for parent in parents {
+            
+            if parent.id == id {
+                self.parent = parent
+            } else {
+                print("Couldn't fetch parent from CoreData")
+            }
+        }
+        return parent
+    }
+    
+    // Child
+    func fetchChildFromCD(with id: Int16) -> Child? {
+        
+        let moc = CoreDataStack.shared.mainContext
+        let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
+        let childrenByID = [id]
+        fetchRequest.predicate = NSPredicate(format: "id IN %@", childrenByID)
+        
+        let possibleChildren = try? moc.fetch(fetchRequest)
+        
+        guard let children = possibleChildren else { return nil }
+        for child in children {
+            
+            if child.id == id {
+                self.child = child
+            } else {
+                print("Couldn't fetch child from CoreData")
+            }
+        }
+        return child
+    }
+    
     
 
 }
