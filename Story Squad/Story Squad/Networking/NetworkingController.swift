@@ -12,32 +12,75 @@ import CoreData
 class NetworkingController {
     
     // MARK: - Properties
-   // private let baseURL = URL(string: "")!
+    // private let baseURL = URL(string: "")!
     var parent: Parent?
     var children: [Child]?
     var child: Child?
-
+    
     // MARK: - Parent CRUD Methods
     
-    // MARK: - Create Parent
+    // Create Parent
     func createParent(name: String, email: String, password: String, pin: Int16, context: NSManagedObjectContext) {
         
         let id = Int16.random(in: 1..<1000)
-        let parent = Parent(name: name, id: id, email: email, password: password, pin: pin, context: CoreDataStack.shared.mainContext)
+        _ = Parent(name: name, id: id, email: email, password: password, pin: pin, context: CoreDataStack.shared.mainContext)
         
         // Saving to CoreData
         CoreDataStack.shared.save(context: context)
     }
     
     // Update Parent
-    func updateParent () {
+    func updateParent(name: String?, id: Int16, email: String?, pin: Int16?, password: String?, context: NSManagedObjectContext) {
         
+        guard let parent = fetchParentFromCD(with: id) else { return }
+        
+        // Use new property or old property
+        let newName = name ?? parent.name
+        let newEmail = email ?? parent.email
+        let newPin = pin ?? parent.pin
+        let newPassword = password ?? parent.password
+        
+        let moc = CoreDataStack.shared.mainContext
+        let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
+        
+        // Array of parents to fetch
+        let parentsByID = [id]
+        fetchRequest.predicate = NSPredicate(format: "id IN %@", parentsByID)
+        
+        // Trying to fetch Parents
+        let fetchedParents = try? moc.fetch(fetchRequest)
+        
+        guard let parents = fetchedParents else { return }
+        
+        for parent in parents {
+            
+            // Updating Parent
+            if parent.id == id {
+                parent.name = newName
+                parent.email = newEmail
+                parent.password = newPassword
+                parent.pin = newPin
+                
+                print("Succefully fetched and updated parent in CoreData")
+            } else {
+                NSLog("Couldn't fetched and update parent in CoreData")
+            }
+        }
+        
+        // Saving to CoreData
+        CoreDataStack.shared.save(context: context)
+        
+        // TODO: WR Check if you need this from Tasks Project
+        //        let context = CoreDataStack.shared.container.newBackgroundContext()
+        //        context.performAndWait {
     }
     
     // Delete Parent
-    func deleteParent () {
+    func deleteParent() {
         
     }
+    
+    // MARK: - Child CRUD Methods
     
     // Create Child
     func createChild(name: String, id: Int16?, username: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: Data?, context: NSManagedObjectContext) {
@@ -45,45 +88,62 @@ class NetworkingController {
         guard let parent = self.parent else { return }
         let randomID = Int16.random(in: 1..<1000)
         
-        let child = Child(name: name, id: randomID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: avatar, context: context)
+        _ = Child(name: name, id: randomID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: avatar, context: context)
         
         // Saving to CoreData
         CoreDataStack.shared.save(context: context)
     }
     
     // Update Child
-    func updateChild(name: String, id: Int16?, username: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: Data?, context: NSManagedObjectContext) {
+    func updateChild(name: String?, id: Int16, username: String?, pin: Int16?, grade: Int16?, cohort: String?, dyslexiaPreference: Bool?, avatar: Data?, context: NSManagedObjectContext) {
         
-        guard let id = id,
-            let childFetched = fetchChildFromCD(with: id),
-            let parent = childFetched.parent else { return }
+        guard let child = fetchChildFromCD(with: id) else { return }
         
-//        let moc = CoreDataStack.shared.mainContext
-//        let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
-//        let childrenByID = [id]
-//        fetchRequest.predicate = NSPredicate(format: "id IN %@", childrenByID)
-//
-//        let possibleChildren = try? moc.fetch(fetchRequest)
-//
-//        guard let children = possibleChildren else { return nil }
-//        for child in children {
-//
-//            if childFetched.id == id {
-//                self.child = child
-//            } else {
-//                print("Couldn't fetch child from CoreData")
-//            }
-//        }
-
-
+        // Use new property or old property
+        let newName = name ?? child.name
+        let newUsername = username ?? child.username
+        let newPin = pin ?? child.pin
+        let newGrade = grade ?? child.grade
+        let newCohort = cohort ?? child.cohort
+        let newDyslexiaPreference = dyslexiaPreference ?? child.dyslexiaPreference
+        let newAvatar = avatar ?? child.avatar
         
+        let moc = CoreDataStack.shared.mainContext
+        let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
         
+        // Array of children to fetch
+        let childrenByID = [id]
+        fetchRequest.predicate = NSPredicate(format: "id IN %@", childrenByID)
         
+        // Trying to fetch Children
+        let fetchedChildren = try? moc.fetch(fetchRequest)
         
-        let newChild = Child(name: name, id: id, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: avatar, context: context)
+        guard let children = fetchedChildren else { return }
+        
+        for child in children {
+            
+            // Updating Child
+            if child.id == id {
+                child.name = newName
+                child.username = newUsername
+                child.pin = newPin
+                child.grade = newGrade
+                child.cohort = newCohort
+                child.dyslexiaPreference = newDyslexiaPreference
+                child.avatar = newAvatar
+                
+                print("Succefully fetched and updated child \(name) in CoreData")
+            } else {
+                NSLog("Couldn't fetched and update child \(name) in CoreData")
+            }
+        }
         
         // Saving to CoreData
         CoreDataStack.shared.save(context: context)
+        
+        // TODO: WR Check if you need this from Tasks Project
+        //        let context = CoreDataStack.shared.container.newBackgroundContext()
+        //        context.performAndWait {
     }
     
     // Delete Child
@@ -136,7 +196,4 @@ class NetworkingController {
         }
         return child
     }
-    
-    
-
 }
