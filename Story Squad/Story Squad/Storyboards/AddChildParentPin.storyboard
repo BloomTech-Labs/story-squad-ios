@@ -78,7 +78,7 @@
                                         </state>
                                         <connections>
                                             <action selector="okButtonTapped:" destination="MZo-9k-AXw" eventType="touchUpInside" id="0lY-hk-Iyb"/>
-                                            <segue destination="g24-bt-ITK" kind="show" id="7Ok-1h-Iw3"/>
+                                            <segue destination="g24-bt-ITK" kind="show" identifier="AddChildVCSegue" id="7Ok-1h-Iw3"/>
                                         </connections>
                                     </button>
                                 </subviews>

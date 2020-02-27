@@ -21,13 +21,14 @@ class NetworkingController {
     // MARK: - Parent CRUD Methods
     
     // Create Parent
-    func createParent(name: String, email: String, password: String, pin: Int16, context: NSManagedObjectContext) {
+    func createParent(name: String, email: String, password: String, pin: Int16, context: NSManagedObjectContext) -> Parent? {
         
         let id = Int16.random(in: 1..<1000)
-        _ = Parent(name: name, id: id, email: email, password: password, pin: pin, context: CoreDataStack.shared.mainContext)
+        let parent = Parent(name: name, id: id, email: email, password: password, pin: pin, context: CoreDataStack.shared.mainContext)
         
         // Saving to CoreData
         CoreDataStack.shared.save(context: context)
+        return parent
     }
     
     // Update Parent
