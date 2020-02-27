@@ -129,7 +129,6 @@
                                                         <color key="backgroundColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="aGJ-lL-rGm"/>
-                                                            <constraint firstAttribute="width" constant="343" id="ljh-Yv-ICM"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="24"/>
                                                         <state key="normal" title="Save">

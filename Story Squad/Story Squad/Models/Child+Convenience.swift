@@ -23,7 +23,7 @@ extension Child {
     }
     
     // MARK: CoreData Initializer
-    @discardableResult convenience init(name: String, id: Int16, username: String, parent: Parent, pin: Int16, grade: Int16, cohort: String, dyslexiaPreference: Bool, context: NSManagedObjectContext) {
+    @discardableResult convenience init(name: String, id: Int16, username: String?, parent: Parent, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: Data?, context: NSManagedObjectContext) {
         self.init(context:context)
         
         self.name = name
