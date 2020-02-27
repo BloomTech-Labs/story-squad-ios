@@ -23,12 +23,12 @@ struct ChildRepresentation: Codable {
 	}
 
 	var name: String
-	var username: String
+	var username: String?
 	var parent: ParentRepresentation
 	var id: Int16
 	var cohort: String?
 	var grade: Int16
 	var dyslexiaPreference: Bool = false
 	var pin: Int16
-    var avatar: Data
+    var avatar: Data?
 }
