@@ -15,7 +15,7 @@
         <!--Parent Account-->
         <scene sceneID="hPw-6h-433">
             <objects>
-                <viewController storyboardIdentifier="ParentAccountMainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jNZ-eC-1wx" customClass="ParentAccountMainVC" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ParentAccountVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jNZ-eC-1wx" customClass="ParentAccountMainVC" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8wA-0n-NAH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

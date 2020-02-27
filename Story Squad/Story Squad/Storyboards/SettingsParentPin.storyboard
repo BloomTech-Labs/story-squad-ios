@@ -113,7 +113,7 @@
         <!--ParentAccountMainVC-->
         <scene sceneID="LPd-Wn-vsS">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ParentAccountMain" storyboardName="ParentAccountMainVC" referencedIdentifier="ParentAccountMainVC" id="vnt-PB-GxO" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ParentAccountMainVC" referencedIdentifier="ParentAccountMainVC" id="vnt-PB-GxO" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="bRl-qf-oq9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3s-hp-nvj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
