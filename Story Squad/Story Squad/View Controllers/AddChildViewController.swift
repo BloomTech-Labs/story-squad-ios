@@ -11,6 +11,9 @@ import UIKit
 class AddChildViewController: UIViewController {
     
     // MARK: - Outlets
+    var networkingController: NetworkingController?
+    var parentUser: Parent?
+    var childAdded: Child?
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var gradeTextField: UITextField!

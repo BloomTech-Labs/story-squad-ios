@@ -12,6 +12,7 @@ class DashboardViewController: UIViewController {
    
 // MARK: - Properties
     
+    var networkingController: NetworkingController?
     var parentUser: Parent?
     var childrenArray: [Child]?
     
@@ -76,15 +77,17 @@ class DashboardViewController: UIViewController {
         childrenProfilesCollectionView.dataSource = self
     }
     
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "AddChildSegueToPin" {
+            guard let addChildSegueToPinVC = segue.destination as? AddChildParentPinViewController  else { return }
+            addChildSegueToPinVC.parentUser = self.parentUser
+            addChildSegueToPinVC.networkingController = self.networkingController
+        }
     }
-    */
 }
 
 extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
