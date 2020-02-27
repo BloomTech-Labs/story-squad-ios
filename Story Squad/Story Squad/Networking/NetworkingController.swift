@@ -85,15 +85,14 @@ class NetworkingController {
     
     // MARK: - Child CRUD Methods
     
-    // Create Child
-    func createChild(name: String, id: Int16?, username: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: Data?, context: NSManagedObjectContext) {
+    // create Child
+    func createChildAndAddToParent(parent: Parent, name: String, id: Int16?, username: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: Data?, context: NSManagedObjectContext) {
         
-        guard let parent = self.parent else { return }
         let randomID = Int16.random(in: 1..<1000)
+        let child = Child(name: name, id: randomID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: avatar, context: context)
         
-        _ = Child(name: name, id: randomID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: avatar, context: context)
-        
-        // Saving to CoreData
+        // Adding child to it's parent in Core Data
+        parent.addToChildren(child)
         CoreDataStack.shared.save(context: context)
     }
     
