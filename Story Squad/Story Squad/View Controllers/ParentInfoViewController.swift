@@ -63,7 +63,9 @@ class ParentInfoViewController: UIViewController {
         if segue.identifier == "ShowDashboardSegue" {
             
             let navVC = segue.destination as? UINavigationController
-            let dashboardVC = navVC?.viewControllers.first as! DashboardViewController
+
+			//swiftlint:disable force_cast
+			let dashboardVC = navVC?.viewControllers.first as! DashboardViewController
             dashboardVC.parentUser = self.parentUser
         }
     }

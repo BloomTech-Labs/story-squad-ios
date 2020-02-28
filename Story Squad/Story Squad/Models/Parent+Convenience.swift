@@ -24,7 +24,7 @@ extension Parent {
     
     // MARK: CoreData Inititalizer
     @discardableResult convenience init(name: String, id: Int16, email: String, password: String, pin: Int16, children: NSOrderedSet = [], context: NSManagedObjectContext) {
-        self.init(context:context)
+        self.init(context: context)
         
         self.name = name
         self.id = id

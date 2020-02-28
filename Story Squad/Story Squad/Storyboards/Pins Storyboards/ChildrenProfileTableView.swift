@@ -38,4 +38,3 @@ class ChildrenProfileTableView: UITableView {
            return cellSpacingHeight
        }*/
  }
-

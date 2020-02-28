@@ -44,7 +44,9 @@ class SettingsParentPinViewController: UIViewController {
         
         if pinInt == parent.pin {
             let parentAccountMainSB = UIStoryboard(name: "ParentAccountMainVC", bundle: nil)
-            let parentAccountMainVC = parentAccountMainSB.instantiateViewController(withIdentifier: "ParentAccountVC") as! ParentAccountMainVC
+
+			//swiftlint:disable force_cast
+			let parentAccountMainVC = parentAccountMainSB.instantiateViewController(withIdentifier: "ParentAccountVC") as! ParentAccountMainVC
             
             parentAccountMainVC.parentUser = self.parentUser
             parentAccountMainVC.networkingController = self.networkingController
