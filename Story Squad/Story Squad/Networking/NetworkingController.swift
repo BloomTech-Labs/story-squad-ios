@@ -134,9 +134,9 @@ class NetworkingController {
                 child.dyslexiaPreference = newDyslexiaPreference
                 child.avatar = newAvatar
                 
-                print("Succefully fetched and updated child \(name) in CoreData")
+                print("Succefully fetched and updated child \(String(describing: name)) in CoreData")
             } else {
-                NSLog("Couldn't fetched and update child \(name) in CoreData")
+                NSLog("Couldn't fetched and update child \(String(describing: name)) in CoreData")
             }
         }
         
