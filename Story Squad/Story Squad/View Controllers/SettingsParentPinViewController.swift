@@ -24,7 +24,6 @@ class SettingsParentPinViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func okButtonTapped(_ sender: UIButton) {
@@ -45,12 +44,11 @@ class SettingsParentPinViewController: UIViewController {
         
         if pinInt == parent.pin {
             let parentAccountMainSB = UIStoryboard(name: "ParentAccountMainVC", bundle: nil)
-            let ParentAccountMainVC = parentAccountMainSB.instantiateViewController(withIdentifier: "ParentAccountVC")
-            self.navigationController!.pushViewController(ParentAccountMainVC, animated: true)
+            let parentAccountMainVC = parentAccountMainSB.instantiateViewController(withIdentifier: "ParentAccountVC") as! ParentAccountMainVC
             
-//            let addChildFromDashboardSB = UIStoryboard(name: "AddChildFromDashboard", bundle: nil)
-//            let AddChildFromDashboardVC = addChildFromDashboardSB.instantiateViewController(withIdentifier: "AddChildFromDashboardVC")
-//            self.navigationController!.pushViewController(AddChildFromDashboardVC, animated: true)
+            parentAccountMainVC.parentUser = self.parentUser
+            parentAccountMainVC.networkingController = self.networkingController
+            self.navigationController!.pushViewController(parentAccountMainVC, animated: true)
         } else {
             showWrongPinAlert()
         }
@@ -60,11 +58,11 @@ class SettingsParentPinViewController: UIViewController {
         let alert = UIAlertController(title: "Incorrect PIN", message: "Pin entered does not match our records", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
-
         self.present(alert, animated: true)
     }
     
-    
+    /*
+     
     // MARK: - Navigation
 
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -75,5 +73,5 @@ class SettingsParentPinViewController: UIViewController {
             ParentAccountMainVC.networkingController = self.networkingController
         }
     }
-
+     */
 }

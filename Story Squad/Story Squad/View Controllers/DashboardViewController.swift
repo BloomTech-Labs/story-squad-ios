@@ -46,18 +46,23 @@ class DashboardViewController: UIViewController {
         present(hamburgerMenuVC, animated: true)
     }
     
+    // Transitioning from Hamburger Menu
     func transitionTo(_ menueOption: HamburgerMenuOptions) {
         
         switch menueOption {
             
         case .parentAccount:
             let parentAccountMainStoryboard = UIStoryboard(name: "SettingsParentPin", bundle: nil)
-            let parentSettingsPinVC = parentAccountMainStoryboard.instantiateViewController(withIdentifier: "SettingsParentPinSB")
+            let parentSettingsPinVC = parentAccountMainStoryboard.instantiateViewController(withIdentifier: "SettingsParentPinSB") as! SettingsParentPinViewController
+            
+            parentSettingsPinVC.parentUser = self.parentUser
+            parentSettingsPinVC.networkingController = self.networkingController
             self.navigationController!.pushViewController(parentSettingsPinVC, animated: true)
     
         case .help:
             let helpStoryboard = UIStoryboard(name: "Help", bundle: nil)
-            let helpVC = helpStoryboard.instantiateViewController(withIdentifier: "HelpVC")
+            let helpVC = helpStoryboard.instantiateViewController(withIdentifier: "HelpVC") as! HelpViewController
+            
             self.navigationController!.pushViewController(helpVC, animated: true)
             
         case .logout:
