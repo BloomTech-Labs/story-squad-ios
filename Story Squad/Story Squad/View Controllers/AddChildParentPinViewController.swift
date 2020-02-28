@@ -15,6 +15,8 @@ class AddChildParentPinViewController: UIViewController {
     var networkingController: NetworkingController?
     var parentUser: Parent?
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var digitBox1TextField: UITextField!
     @IBOutlet weak var digitBox2TextField: UITextField!
     @IBOutlet weak var digitBox3TextField: UITextField!
@@ -41,12 +43,23 @@ class AddChildParentPinViewController: UIViewController {
         guard let parent = parentUser else { return }
         
         if pinInt == parent.pin {
+            
+            // the name for UIStoryboard is the file name of the storyboard without the .storyboard extension
             let addChildFromDashboardSB = UIStoryboard(name: "AddChildFromDashboard", bundle: nil)
-            let AddChildFromDashboardVC = addChildFromDashboardSB.instantiateViewController(withIdentifier: "AddChildFromDashboardVC")
-            self.navigationController!.pushViewController(AddChildFromDashboardVC, animated: true)
+            let AddChildFromDashboardVC = addChildFromDashboardSB.instantiateViewController(withIdentifier: "AddChildFromDashboardVC") as! AddChildViewController
+            AddChildFromDashboardVC.parentUser = self.parentUser
+            
+            self.navigationController!.pushViewController(AddChildFromDashboardVC, animated: true)            
+        } else {
+            let alert = UIAlertController(title: "Incorrect PIN", message: "PIN entered does not match our what we have on file", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+
+            self.present(alert, animated: true)
         }
     }
-
+    
+/*
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,4 +70,5 @@ class AddChildParentPinViewController: UIViewController {
             AddChildVC.networkingController = self.networkingController
         }
     }
+     */
 }

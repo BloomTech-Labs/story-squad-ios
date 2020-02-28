@@ -18,7 +18,7 @@
         <!--Child Profile MainVC-->
         <scene sceneID="LDC-st-c7b">
             <objects>
-                <viewController id="0zb-v7-rKJ" customClass="ChildProfileMainVC" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChildProfileMainVC" id="0zb-v7-rKJ" customClass="ChildProfileMainVC" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w0u-qz-pAa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

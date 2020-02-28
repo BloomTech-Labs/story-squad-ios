@@ -15,6 +15,7 @@ class DashboardViewController: UIViewController {
     var networkingController: NetworkingController?
     var parentUser: Parent?
     var childrenArray: [Child]?
+    var childUser: Child?
     
     @IBOutlet weak var storySquadLabel: UILabel!
     @IBOutlet weak var childrenProfilesCollectionView: UICollectionView!
@@ -46,18 +47,23 @@ class DashboardViewController: UIViewController {
         present(hamburgerMenuVC, animated: true)
     }
     
+    // Transitioning from Hamburger Menu
     func transitionTo(_ menueOption: HamburgerMenuOptions) {
         
         switch menueOption {
             
         case .parentAccount:
             let parentAccountMainStoryboard = UIStoryboard(name: "SettingsParentPin", bundle: nil)
-            let parentSettingsPinVC = parentAccountMainStoryboard.instantiateViewController(withIdentifier: "SettingsParentPinSB")
+            let parentSettingsPinVC = parentAccountMainStoryboard.instantiateViewController(withIdentifier: "SettingsParentPinSB") as! SettingsParentPinViewController
+            
+            parentSettingsPinVC.parentUser = self.parentUser
+            parentSettingsPinVC.networkingController = self.networkingController
             self.navigationController!.pushViewController(parentSettingsPinVC, animated: true)
     
         case .help:
             let helpStoryboard = UIStoryboard(name: "Help", bundle: nil)
-            let helpVC = helpStoryboard.instantiateViewController(withIdentifier: "HelpVC")
+            let helpVC = helpStoryboard.instantiateViewController(withIdentifier: "HelpVC") as! HelpViewController
+            
             self.navigationController!.pushViewController(helpVC, animated: true)
             
         case .logout:
@@ -73,10 +79,10 @@ class DashboardViewController: UIViewController {
         storySquadLabel.attributedText = pumkinStrokeAttribute
         storySquadLabel.textColor = UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1)
         
+        // Setup the Children Profiles Collection View
         childrenProfilesCollectionView.delegate = self
         childrenProfilesCollectionView.dataSource = self
     }
-    
     
     // MARK: - Navigation
 
@@ -86,6 +92,12 @@ class DashboardViewController: UIViewController {
             guard let addChildSegueToPinVC = segue.destination as? AddChildParentPinViewController  else { return }
             addChildSegueToPinVC.parentUser = self.parentUser
             addChildSegueToPinVC.networkingController = self.networkingController
+            
+        } else if segue.identifier == "ShowChildProfileSegue" {
+            guard let childProfilePinVC = segue.description as? ChildProfilePinViewController else { return }
+            childProfilePinVC.parentUser = self.parentUser
+            childProfilePinVC.childUser = self.childUser
+            childProfilePinVC.networkingController = self.networkingController
         }
     }
 }
@@ -99,6 +111,11 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
         let cell = childrenProfilesCollectionView.dequeueReusableCell(withReuseIdentifier: "ChildProfileCell", for: indexPath)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "ShowChildProfileSegue", sender: self)
     }
 }
 

@@ -78,7 +78,7 @@
                                         </state>
                                         <connections>
                                             <action selector="okButtonPressed:" destination="jyA-Tz-pWe" eventType="touchUpInside" id="4JV-d5-ib0"/>
-                                            <segue destination="AQD-ik-YXN" kind="show" id="ejd-Ih-aHb"/>
+                                            <segue destination="AQD-ik-YXN" kind="show" identifier="ShowChildProfileSegue" id="ejd-Ih-aHb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -98,10 +98,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="pinBox1TextField" destination="hY7-lO-bg7" id="cSw-9B-5No"/>
-                        <outlet property="pinBox2TextField" destination="jDT-LP-spU" id="vxG-5v-zpw"/>
-                        <outlet property="pinBox3TextField" destination="8Gr-ac-Wnw" id="2lW-jh-z5P"/>
-                        <outlet property="pinBox4TextField" destination="KlT-lR-5Nc" id="7TK-2x-WA5"/>
+                        <outlet property="digitBox1TextField" destination="hY7-lO-bg7" id="cSw-9B-5No"/>
+                        <outlet property="digitBox2TextField" destination="jDT-LP-spU" id="vxG-5v-zpw"/>
+                        <outlet property="digitBox3TextField" destination="8Gr-ac-Wnw" id="2lW-jh-z5P"/>
+                        <outlet property="digitBox4TextField" destination="KlT-lR-5Nc" id="7TK-2x-WA5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akk-Wa-28W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

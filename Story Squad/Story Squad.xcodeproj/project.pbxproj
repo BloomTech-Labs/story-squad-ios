@@ -164,6 +164,7 @@
 		4FF0F5EA2404983300587C7B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */,
 				4FF0F5EB2404986700587C7B /* ChildProfileSettingsTableViewCell.swift */,
 			);
 			path = Views;
@@ -247,7 +248,6 @@
 			children = (
 				DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */,
 				4FF0F5F32405C4F900587C7B /* AddChildViewController.swift */,
-				4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */,
 				4FF0F5FF2405CE5A00587C7B /* ChildProfileMainVC.swift */,
 				FA9A34D6240606C700A2F8FE /* ChildProfilePinViewController.swift */,
 				4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */,

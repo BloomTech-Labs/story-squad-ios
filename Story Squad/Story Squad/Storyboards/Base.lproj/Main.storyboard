@@ -144,7 +144,7 @@
                                     <segue destination="tTn-v5-DrZ" kind="show" identifier="AddChildSegueToPin" id="CL6-z5-T98"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Wc-QC-lnw">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Wc-QC-lnw" customClass="DashboardProfilesCollectionView" customModule="Story_Squad" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="196.33333333333331" width="414" height="519.66666666666674"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="32" minimumInteritemSpacing="10" id="RZn-ZL-wfK">
