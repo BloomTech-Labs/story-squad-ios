@@ -16,6 +16,9 @@ class AddChildViewController: UIViewController {
     var parentUser: Parent?
     var childAdded: Child?
     
+    let gradePicker = UIPickerView()
+    var arrayOfGrades = ["Select Grade", "3rd Grade", "4th Grade", "5th Grade", "6th Grade"]
+    
     // MARK: - Outlets
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -25,6 +28,8 @@ class AddChildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        createPicker()
+        createToolbar()
     }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
@@ -55,3 +60,42 @@ class AddChildViewController: UIViewController {
     */
 
 }
+
+extension AddChildViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+        
+        func createPicker()
+    {
+        let gradePicker = UIPickerView()
+        gradePicker.delegate = self
+        gradePicker.delegate?.pickerView?(gradePicker, didSelectRow: 0, inComponent: 0)
+        gradeTextField.inputView = gradePicker
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return arrayOfGrades.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return arrayOfGrades[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        return gradeTextField.text =  arrayOfGrades[row]
+    }
+    
+    func createToolbar()
+    {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddChildViewController.closePickerView))
+        toolbar.setItems([doneButton], animated: false)
+        toolbar.isUserInteractionEnabled = true
+        gradeTextField.inputAccessoryView = toolbar
+    }
+    
+    @objc func closePickerView()
+    {
+        view.endEditing(true)
+    }
+}
+
