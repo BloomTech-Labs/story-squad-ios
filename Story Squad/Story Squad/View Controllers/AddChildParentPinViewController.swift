@@ -46,6 +46,8 @@ class AddChildParentPinViewController: UIViewController {
             
             // the name for UIStoryboard is the file name of the storyboard without the .storyboard extension
             let addChildFromDashboardSB = UIStoryboard(name: "AddChildFromDashboard", bundle: nil)
+
+			//swiftlint:disable:next force_cast identifier_name
             let AddChildFromDashboardVC = addChildFromDashboardSB.instantiateViewController(withIdentifier: "AddChildFromDashboardVC") as! AddChildViewController
             AddChildFromDashboardVC.parentUser = self.parentUser
             

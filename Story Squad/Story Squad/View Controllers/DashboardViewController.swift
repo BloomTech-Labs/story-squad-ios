@@ -54,7 +54,9 @@ class DashboardViewController: UIViewController {
             
         case .parentAccount:
             let parentAccountMainStoryboard = UIStoryboard(name: "SettingsParentPin", bundle: nil)
-            let parentSettingsPinVC = parentAccountMainStoryboard.instantiateViewController(withIdentifier: "SettingsParentPinSB") as! SettingsParentPinViewController
+
+			//swiftlint:disable force_cast
+			let parentSettingsPinVC = parentAccountMainStoryboard.instantiateViewController(withIdentifier: "SettingsParentPinSB") as! SettingsParentPinViewController
             
             parentSettingsPinVC.parentUser = self.parentUser
             parentSettingsPinVC.networkingController = self.networkingController
@@ -62,6 +64,8 @@ class DashboardViewController: UIViewController {
     
         case .help:
             let helpStoryboard = UIStoryboard(name: "Help", bundle: nil)
+
+			//swiftlint:disable force_cast
             let helpVC = helpStoryboard.instantiateViewController(withIdentifier: "HelpVC") as! HelpViewController
             
             self.navigationController!.pushViewController(helpVC, animated: true)
