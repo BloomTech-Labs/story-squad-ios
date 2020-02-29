@@ -50,6 +50,7 @@
 		DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */; };
 		DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */; };
 		FA71E3502406F826001385E7 /* ParentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E34F2406F826001385E7 /* ParentInfoViewController.swift */; };
+		FA71E375240B036B001385E7 /* SchoolGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E374240B036B001385E7 /* SchoolGrade.swift */; };
 		FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E84423FEF35C008637E0 /* AppDelegate.swift */; };
 		FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E84623FEF35C008637E0 /* SceneDelegate.swift */; };
 		FA85E84C23FEF35C008637E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA85E84A23FEF35C008637E0 /* Main.storyboard */; };
@@ -110,6 +111,7 @@
 		DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsParentPinViewController.swift; sourceTree = "<group>"; };
 		EC8FD35A646613250F69ED2C /* Pods-Story Squad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Story Squad.debug.xcconfig"; path = "Target Support Files/Pods-Story Squad/Pods-Story Squad.debug.xcconfig"; sourceTree = "<group>"; };
 		FA71E34F2406F826001385E7 /* ParentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentInfoViewController.swift; sourceTree = "<group>"; };
+		FA71E374240B036B001385E7 /* SchoolGrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolGrade.swift; sourceTree = "<group>"; };
 		FA85E84123FEF35C008637E0 /* Story Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Story Squad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA85E84423FEF35C008637E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA85E84623FEF35C008637E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				FAB94F9824046A3C00905211 /* SlideInTransition.swift */,
 				DD13175A2405B4F100013753 /* StringKeys.swift */,
 				4FF0F62624071DED00587C7B /* NetworkingError.swift */,
+				FA71E374240B036B001385E7 /* SchoolGrade.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */,
 				FAB94F9B2404AC1D00905211 /* HamburgerMenuOptions.swift in Sources */,
 				DD13175B2405B4F100013753 /* StringKeys.swift in Sources */,
+				FA71E375240B036B001385E7 /* SchoolGrade.swift in Sources */,
 				4FF0F5E92404975A00587C7B /* ChildrenProfileTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
