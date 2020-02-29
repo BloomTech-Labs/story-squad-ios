@@ -109,7 +109,6 @@ class DashboardViewController: UIViewController {
 
 extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {
     
-    
         var fetchResultsController: NSFetchedResultsController<Child> {
             
             let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
@@ -138,7 +137,6 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
         
         return name
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return fetchResultsController.fetchedObjects?.count ?? 0

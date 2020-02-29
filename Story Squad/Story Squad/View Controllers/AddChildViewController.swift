@@ -18,6 +18,7 @@ class AddChildViewController: UIViewController {
     
     let gradePicker = UIPickerView()
     var arrayOfGrades = ["Select Grade", "3rd Grade", "4th Grade", "5th Grade", "6th Grade"]
+    var grade: Int16?
     
     // MARK: - Outlets
     
@@ -34,19 +35,43 @@ class AddChildViewController: UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         
-        guard let name = nameTextField.text,
-            !name.isEmpty,
-            let grade = gradeTextField.text,
-            !grade.isEmpty,
+        // Check that name and pin textFields are not empty
+        guard let parent = parentUser,
+            let name = nameTextField.text,
             let pin = pinTextField.text,
+            !name.isEmpty,
             !pin.isEmpty,
-            let parent = parentUser,
-            let pinInt = Int16(pin),
-            let gradeInt = Int16(grade) else { return }
+            let pinInt = Int16(pin) else { return }
         
-        networkingController?.createChildAndAddToParent(parent: parent, name: name, username: nil, pin: pinInt, grade: gradeInt, cohort: nil, avatar: nil, context: CoreDataStack.shared.mainContext)
+        // Check child's Grade
+        switch gradeTextField.text {
+        case SchoolGrade.thirdGrade.rawValue:
+            grade = 3
+        case SchoolGrade.forthGrade.rawValue:
+            grade = 4
+        case SchoolGrade.fifthGrade.rawValue:
+            grade = 5
+        case SchoolGrade.sixthGrade.rawValue:
+            grade = 6
+        default:
+            grade = nil
+        }
         
-        self.navigationController?.popToRootViewController(animated: true)
+        // Continue if grade is not nil
+        if let grade = grade {
+            
+            networkingController?.createChildAndAddToParent(parent: parent, name: name, username: nil, pin: pinInt, grade: grade, cohort: nil, avatar: nil, context: CoreDataStack.shared.mainContext)
+            self.navigationController?.popToRootViewController(animated: true)
+        } else {
+            showIncompleteAlert()
+        }
+    }
+    
+    func showIncompleteAlert() {
+        let alert = UIAlertController(title: "Incomplete Child Information", message: "Please fill in all Text Fields", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
     /*
@@ -61,6 +86,7 @@ class AddChildViewController: UIViewController {
 
 }
 
+// MARK: - Grade Picker
 extension AddChildViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
         func createPicker() {
