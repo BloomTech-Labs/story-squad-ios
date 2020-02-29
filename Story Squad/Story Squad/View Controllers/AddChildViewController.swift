@@ -63,8 +63,7 @@ class AddChildViewController: UIViewController {
 
 extension AddChildViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
-        func createPicker()
-    {
+        func createPicker() {
         let gradePicker = UIPickerView()
         gradePicker.delegate = self
         gradePicker.delegate?.pickerView?(gradePicker, didSelectRow: 0, inComponent: 0)
@@ -83,8 +82,7 @@ extension AddChildViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         return gradeTextField.text =  arrayOfGrades[row]
     }
     
-    func createToolbar()
-    {
+    func createToolbar() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddChildViewController.closePickerView))
@@ -93,9 +91,7 @@ extension AddChildViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         gradeTextField.inputAccessoryView = toolbar
     }
     
-    @objc func closePickerView()
-    {
+    @objc func closePickerView() {
         view.endEditing(true)
     }
 }
-

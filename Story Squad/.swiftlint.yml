@@ -1,5 +1,7 @@
 disabled_rules:
 - trailing_whitespace
+- todo
+- unused_declaration
 
 opt_in_rules:
 - empty_count

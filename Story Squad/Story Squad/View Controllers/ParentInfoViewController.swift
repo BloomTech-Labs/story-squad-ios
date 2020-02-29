@@ -55,7 +55,6 @@ class ParentInfoViewController: UIViewController {
         performSegue(withIdentifier: "ShowDashboardSegue", sender: self)
     }
     
-    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -75,7 +74,6 @@ class ParentInfoViewController: UIViewController {
 extension ParentInfoViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
         
         let maxLength = 4
         let currentString: NSString = pinTextField.text! as NSString

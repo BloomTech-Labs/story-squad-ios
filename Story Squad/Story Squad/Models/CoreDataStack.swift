@@ -11,7 +11,6 @@ import CoreData
 
 class CoreDataStack {
 
-
 	static let shared = CoreDataStack()
 
 	// Setup a persistent container

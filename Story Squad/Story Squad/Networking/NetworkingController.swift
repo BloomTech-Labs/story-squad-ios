@@ -90,6 +90,7 @@ class NetworkingController {
     func createChildAndAddToParent(parent: Parent, name: String, username: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool = false, avatar: Data?, context: NSManagedObjectContext) {
         
         let randomID = Int16.random(in: 1..<1000)
+		// swiftlint:disable:next line_length
         let child = Child(name: name, id: randomID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: avatar, context: context)
         
         // Adding child to it's parent in Core Data
@@ -98,6 +99,7 @@ class NetworkingController {
     }
     
     // Update Child
+	// swiftlint:disable:next function_parameter_count
     func updateChild(name: String?, id: Int16, username: String?, pin: Int16?, grade: Int16?, cohort: String?, dyslexiaPreference: Bool?, avatar: Data?, context: NSManagedObjectContext) {
         
         guard let child = fetchChildFromCD(with: id) else { return }
@@ -143,7 +145,7 @@ class NetworkingController {
         // Saving to CoreData
         CoreDataStack.shared.save(context: context)
         
-        // TODO: WR Check if you need this from Tasks Project
+		// TODO: WR Check if you need this from Tasks Project
         //        let context = CoreDataStack.shared.container.newBackgroundContext()
         //        context.performAndWait {
     }
