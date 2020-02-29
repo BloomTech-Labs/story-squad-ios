@@ -10,16 +10,35 @@ import UIKit
 
 class ChildProfileCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    // MARK: - Properties
     
+    var childUser: Child? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var missionLabel: UILabel!
+    
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var dashboardIconSetImageView: UIImageView!
     
-//    override func didAddSubview(_ subview: UIView) {
-//        
-//        missionLabel.layer.cornerRadius = CGFloat(5)
-//    }
+    // MARK: - Methods
     
+    private func updateViews() {
+        missionLabel.layer.cornerRadius = CGFloat(5)
+        
+        guard let child = childUser else { return }
+        
+        nameLabel.text = child.name
+//        teamLabel.text = child.cohort
+        
+        if let avatarImage = UIImage(data: child.avatar!) {
+            avatarImageView.image = avatarImage
+        }
+    }
 }

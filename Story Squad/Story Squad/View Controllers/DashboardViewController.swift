@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DashboardViewController: UIViewController {
    
@@ -106,15 +107,56 @@ class DashboardViewController: UIViewController {
     }
 }
 
-extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {
+    
+    
+        var fetchResultsController: NSFetchedResultsController<Child> {
+            
+            let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
+            
+            let predicate = NSPredicate(format: "%K == %@", "parent.name", getParentName())
+            
+            fetchRequest.predicate = predicate
+            
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+            
+            let moc = CoreDataStack.shared.mainContext
+            let fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+            fetchResultsController.delegate = self
+            
+            do {
+                try fetchResultsController.performFetch()
+            } catch {
+                fatalError("Failed to fetch child entities: \(error)")
+            }
+            return fetchResultsController
+        }
+    
+    private func getParentName() -> String {
+        guard let parent = parentUser,
+            let name = parent.name else { return ""}
+        
+        return name
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10 // Change
+        return fetchResultsController.fetchedObjects?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = childrenProfilesCollectionView.dequeueReusableCell(withReuseIdentifier: "ChildProfileCell", for: indexPath)
+        
+        let cell = childrenProfilesCollectionView.dequeueReusableCell(withReuseIdentifier: "ChildProfileCell", for: indexPath) as! ChildProfileCollectionViewCell
+        let child = fetchResultsController.object(at: indexPath)
+        cell.childUser = child
         
         return cell
+        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "ToyCell", for: indexPath)
+//        let item = fetchResultsController.object(at: indexPath)
+//
+//        cell.textLabel?.text = item.name
+//        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
