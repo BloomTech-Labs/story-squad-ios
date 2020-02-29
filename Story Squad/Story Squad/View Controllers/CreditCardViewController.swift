@@ -10,7 +10,6 @@ import UIKit
 
 class CreditCardViewController: UIViewController {
     
-    
     @IBOutlet weak var cardNumberTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var expirationTextField: UITextField!

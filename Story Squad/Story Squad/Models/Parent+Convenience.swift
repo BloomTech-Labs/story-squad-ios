@@ -13,6 +13,7 @@ extension Parent {
     
         var parentRepresentation: ParentRepresentation? {
 
+		// swiftlint:disable unused_declaration
         guard let name = name,
                 let email = email,
                 let password = password,
