@@ -66,6 +66,7 @@ class ParentInfoViewController: UIViewController {
 			//swiftlint:disable force_cast
 			let dashboardVC = navVC?.viewControllers.first as! DashboardViewController
             dashboardVC.parentUser = self.parentUser
+            dashboardVC.networkingController = self.networkingController
         }
     }
 }

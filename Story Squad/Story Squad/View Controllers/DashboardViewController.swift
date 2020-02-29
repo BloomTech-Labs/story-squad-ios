@@ -30,10 +30,40 @@ class DashboardViewController: UIViewController {
         .strokeWidth: -3.5
     ]
     
+    
+    var fetchResultsController: NSFetchedResultsController<Child> {
+        
+        let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
+        
+        let predicate = NSPredicate(format: "%K == %@", "parent.name", getParentName())
+        
+        fetchRequest.predicate = predicate
+        
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        
+        let moc = CoreDataStack.shared.mainContext
+        let fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        fetchResultsController.delegate = self
+        
+        do {
+            try fetchResultsController.performFetch()
+        } catch {
+            fatalError("Failed to fetch child entities: \(error)")
+        }
+        return fetchResultsController
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateViews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        childrenProfilesCollectionView.reloadData()
     }
     
     @IBAction func hamburgerMenuTapped(_ sender: UIBarButtonItem) {
@@ -99,7 +129,7 @@ class DashboardViewController: UIViewController {
             addChildSegueToPinVC.networkingController = self.networkingController
             
         } else if segue.identifier == "ShowChildProfileSegue" {
-            guard let childProfilePinVC = segue.description as? ChildProfilePinViewController else { return }
+            guard let childProfilePinVC = segue.destination as? ChildProfilePinViewController else { return }
             childProfilePinVC.parentUser = self.parentUser
             childProfilePinVC.childUser = self.childUser
             childProfilePinVC.networkingController = self.networkingController
@@ -107,29 +137,8 @@ class DashboardViewController: UIViewController {
     }
 }
 
+// MARK: - Fetching Children from CD
 extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {
-    
-        var fetchResultsController: NSFetchedResultsController<Child> {
-            
-            let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
-            
-            let predicate = NSPredicate(format: "%K == %@", "parent.name", getParentName())
-            
-            fetchRequest.predicate = predicate
-            
-            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-            
-            let moc = CoreDataStack.shared.mainContext
-            let fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
-            fetchResultsController.delegate = self
-            
-            do {
-                try fetchResultsController.performFetch()
-            } catch {
-                fatalError("Failed to fetch child entities: \(error)")
-            }
-            return fetchResultsController
-        }
     
     private func getParentName() -> String {
         guard let parent = parentUser,
@@ -158,11 +167,11 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         performSegue(withIdentifier: "ShowChildProfileSegue", sender: self)
     }
 }
 
+// MARK: - Preparing for Transition
 extension DashboardViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {

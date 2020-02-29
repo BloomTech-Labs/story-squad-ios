@@ -44,21 +44,25 @@ class AddChildParentPinViewController: UIViewController {
         
         if pinInt == parent.pin {
             
-            // the name for UIStoryboard is the file name of the storyboard without the .storyboard extension
+            // The name for UIStoryboard is the file name of the storyboard without the .storyboard extension
             let addChildFromDashboardSB = UIStoryboard(name: "AddChildFromDashboard", bundle: nil)
 
 			//swiftlint:disable:next force_cast identifier_name
             let AddChildFromDashboardVC = addChildFromDashboardSB.instantiateViewController(withIdentifier: "AddChildFromDashboardVC") as! AddChildViewController
             AddChildFromDashboardVC.parentUser = self.parentUser
+            AddChildFromDashboardVC.networkingController = self.networkingController
             
             self.navigationController!.pushViewController(AddChildFromDashboardVC, animated: true)            
         } else {
-            let alert = UIAlertController(title: "Incorrect PIN", message: "PIN entered does not match our what we have on file", preferredStyle: .alert)
-
-            alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
-
-            self.present(alert, animated: true)
+            showWrongPinAlert()
         }
+    }
+    
+    private func showWrongPinAlert() {
+        let alert = UIAlertController(title: "Incorrect PIN", message: "PIN entered does not match our what we have on file", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
 /*
