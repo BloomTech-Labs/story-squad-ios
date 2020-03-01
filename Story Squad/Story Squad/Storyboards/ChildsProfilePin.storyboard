@@ -78,7 +78,6 @@
                                         </state>
                                         <connections>
                                             <action selector="okButtonPressed:" destination="jyA-Tz-pWe" eventType="touchUpInside" id="4JV-d5-ib0"/>
-                                            <segue destination="AQD-ik-YXN" kind="show" identifier="ShowChildProfileSegue" id="ejd-Ih-aHb"/>
                                         </connections>
                                     </button>
                                 </subviews>

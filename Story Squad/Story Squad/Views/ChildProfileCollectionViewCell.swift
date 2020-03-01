@@ -37,7 +37,9 @@ class ChildProfileCollectionViewCell: UICollectionViewCell {
         nameLabel.text = child.name
 //        teamLabel.text = child.cohort
         
-        if let avatarImage = UIImage(data: child.avatar!) {
+        // Setting Child avatar if not nil
+        if let avatar = child.avatar {
+            let avatarImage = UIImage(data: avatar)
             avatarImageView.image = avatarImage
         }
     }

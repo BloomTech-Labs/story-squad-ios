@@ -24,16 +24,15 @@ class CreditCardViewController: UIViewController {
     @IBAction func addCardButtonPressed(_ sender: UIButton) {
         
         guard let cardNumber = cardNumberTextField.text,
-            !cardNumber.isEmpty,
             let name = nameTextField.text,
-            !name.isEmpty,
             let exp = expirationTextField.text,
-            !exp.isEmpty,
             let cvc = cvcTextField.text,
-            !cvc.isEmpty,
             let zipCode = zipcodeTextField.text,
-            !zipCode.isEmpty
-            else { return }
+            !cardNumber.isEmpty,
+            !name.isEmpty,
+            !exp.isEmpty,
+            !cvc.isEmpty,
+            !zipCode.isEmpty else { return }
         }
     
     /*
@@ -45,5 +44,4 @@ class CreditCardViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

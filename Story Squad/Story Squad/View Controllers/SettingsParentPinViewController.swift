@@ -26,6 +26,7 @@ class SettingsParentPinViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    // MARK: - OK Button
     @IBAction func okButtonTapped(_ sender: UIButton) {
         
         guard let digit1 = digitBox1TextField.text,
@@ -42,21 +43,26 @@ class SettingsParentPinViewController: UIViewController {
         
         guard let parent = parentUser else { return }
         
+        // Validate Parent's PIN
         if pinInt == parent.pin {
             let parentAccountMainSB = UIStoryboard(name: "ParentAccountMainVC", bundle: nil)
 
 			//swiftlint:disable force_cast
 			let parentAccountMainVC = parentAccountMainSB.instantiateViewController(withIdentifier: "ParentAccountVC") as! ParentAccountMainVC
             
+            // Pass Parent ans NetworkingController
             parentAccountMainVC.parentUser = self.parentUser
             parentAccountMainVC.networkingController = self.networkingController
+            
+            // Got to Parent's Settings Account
             self.navigationController!.pushViewController(parentAccountMainVC, animated: true)
         } else {
-            showWrongPinAlert()
+            showIncorrectPinAlert()
         }
     }
     
-    func showWrongPinAlert() {
+    // MARK: - Incorrect PIN Alert
+    func showIncorrectPinAlert() {
         let alert = UIAlertController(title: "Incorrect PIN", message: "Pin entered does not match our records", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
