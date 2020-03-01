@@ -31,16 +31,15 @@ class ParentInfoViewController: UIViewController {
     @IBAction func doneButton(_ sender: Any) {
         
         guard let name = nameTextField.text,
-            !name.isEmpty,
             let email = emailTextField.text,
-            !email.isEmpty,
             let password = passwordTextField.text,
-            !password.isEmpty,
             let confirmPW = confirmPWTextField.text,
-            !confirmPW.isEmpty,
             let pin = pinTextField.text,
-            !pin.isEmpty
-            else { return }
+            !name.isEmpty,
+            !email.isEmpty,
+            !password.isEmpty,
+            !confirmPW.isEmpty,
+            !pin.isEmpty else { return }
         
         // MARK: - Print Statements
         print(name)
@@ -62,9 +61,9 @@ class ParentInfoViewController: UIViewController {
         if segue.identifier == "ShowDashboardSegue" {
             
             let navVC = segue.destination as? UINavigationController
-
 			//swiftlint:disable force_cast
 			let dashboardVC = navVC?.viewControllers.first as! DashboardViewController
+            
             dashboardVC.parentUser = self.parentUser
             dashboardVC.networkingController = self.networkingController
         }

@@ -35,7 +35,7 @@ class AddChildViewController: UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         
-        // Check that name and pin textFields are not empty
+        // Check all Text Fields are filled
         guard let parent = parentUser,
             let name = nameTextField.text,
             let pin = pinTextField.text,
@@ -43,7 +43,7 @@ class AddChildViewController: UIViewController {
             !pin.isEmpty,
             let pinInt = Int16(pin) else { return }
         
-        // Check child's Grade
+        // Check Child's Grade
         switch gradeTextField.text {
         case SchoolGrade.thirdGrade.rawValue:
             grade = 3
@@ -61,12 +61,15 @@ class AddChildViewController: UIViewController {
         if let grade = grade {
             
             networkingController?.createChildAndAddToParent(parent: parent, name: name, username: nil, pin: pinInt, grade: grade, cohort: nil, avatar: nil, context: CoreDataStack.shared.mainContext)
+            
+            // Go back to Dashboard
             self.navigationController?.popToRootViewController(animated: true)
         } else {
             showIncompleteAlert()
         }
     }
     
+    // MARK: - Incomplete Child Data Alert
     func showIncompleteAlert() {
         let alert = UIAlertController(title: "Incomplete Child Information", message: "Please fill in all Text Fields", preferredStyle: .alert)
 
@@ -83,7 +86,6 @@ class AddChildViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
 
 // MARK: - Grade Picker

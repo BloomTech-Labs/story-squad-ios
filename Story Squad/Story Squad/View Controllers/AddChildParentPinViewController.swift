@@ -26,8 +26,10 @@ class AddChildParentPinViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    // MARK: - OK Button
     @IBAction func okButtonTapped(_ sender: UIButton) {
         
+        //Check all Text Fields are filled
         guard let digit1 = digitBox1TextField.text,
             let digit2 = digitBox2TextField.text,
             let digit3 = digitBox3TextField.text,
@@ -42,6 +44,7 @@ class AddChildParentPinViewController: UIViewController {
         
         guard let parent = parentUser else { return }
         
+        // Validate Parent's PIN
         if pinInt == parent.pin {
             
             // The name for UIStoryboard is the file name of the storyboard without the .storyboard extension
@@ -49,16 +52,20 @@ class AddChildParentPinViewController: UIViewController {
 
 			//swiftlint:disable:next force_cast identifier_name
             let AddChildFromDashboardVC = addChildFromDashboardSB.instantiateViewController(withIdentifier: "AddChildFromDashboardVC") as! AddChildViewController
+            
+            // Passing Parent and NetworkingController
             AddChildFromDashboardVC.parentUser = self.parentUser
             AddChildFromDashboardVC.networkingController = self.networkingController
             
+            // Go to AddChildVC
             self.navigationController!.pushViewController(AddChildFromDashboardVC, animated: true)            
         } else {
-            showWrongPinAlert()
+            showIncorrectPinAlert()
         }
     }
     
-    private func showWrongPinAlert() {
+    // MARK: - Incorrect PIN Alert
+    private func showIncorrectPinAlert() {
         let alert = UIAlertController(title: "Incorrect PIN", message: "PIN entered does not match our what we have on file", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))

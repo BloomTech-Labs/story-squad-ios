@@ -9,13 +9,22 @@
 import UIKit
 
 class ChildProfileMainVC: UIViewController {
+    
+    // MARK: - Properties
+    
+    var networkingController: NetworkingController?
+    var parentUser: Parent?
+    var childUser: Child?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        updateViews()
     }
-
+    
+    private func updateViews() {
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -25,5 +34,4 @@ class ChildProfileMainVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
