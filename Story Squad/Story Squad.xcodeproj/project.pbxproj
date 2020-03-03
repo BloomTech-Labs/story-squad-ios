@@ -36,6 +36,16 @@
 		4FF0F6022405CE7900587C7B /* ParentAccountMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F6012405CE7900587C7B /* ParentAccountMainVC.swift */; };
 		4FF0F62524071B4800587C7B /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F62424071B4800587C7B /* NetworkingController.swift */; };
 		4FF0F62724071DED00587C7B /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F62624071DED00587C7B /* NetworkingError.swift */; };
+		4FF0F652240DD01600587C7B /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F649240DD01600587C7B /* Nunito-Medium.ttf */; };
+		4FF0F653240DD01600587C7B /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F64A240DD01600587C7B /* SIL Open Font License.txt */; };
+		4FF0F654240DD01600587C7B /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F64B240DD01600587C7B /* Nunito-ExtraBold.ttf */; };
+		4FF0F655240DD01600587C7B /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F64C240DD01600587C7B /* Nunito-Light.ttf */; };
+		4FF0F656240DD01600587C7B /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F64D240DD01600587C7B /* Nunito-Regular.ttf */; };
+		4FF0F657240DD01600587C7B /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F64E240DD01600587C7B /* Nunito-SemiBold.ttf */; };
+		4FF0F658240DD01600587C7B /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F64F240DD01600587C7B /* Nunito-Bold.ttf */; };
+		4FF0F659240DD01600587C7B /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F650240DD01600587C7B /* Nunito-Black.ttf */; };
+		4FF0F65A240DD01600587C7B /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F651240DD01600587C7B /* Nunito-ExtraLight.ttf */; };
+		4FF0F65C240DDBB900587C7B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F65B240DDBB900587C7B /* MainTabBarController.swift */; };
 		59A0C33A80A9EAD6E47C8B8A /* Pods_Story_Squad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B582B6E9B43C2AAFAC54FE00 /* Pods_Story_Squad.framework */; };
 		DD13175B2405B4F100013753 /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13175A2405B4F100013753 /* StringKeys.swift */; };
 		DD71FD042406D2E50032EBB5 /* StorySquad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD71FD022406D2E50032EBB5 /* StorySquad.xcdatamodeld */; };
@@ -44,6 +54,8 @@
 		DD71FD0B2406D9930032EBB5 /* Parent+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71FD0A2406D9930032EBB5 /* Parent+Convenience.swift */; };
 		DD71FD0D2406D9AD0032EBB5 /* ChildRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71FD0C2406D9AD0032EBB5 /* ChildRepresentation.swift */; };
 		DD71FD0F2406D9C10032EBB5 /* ParentRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71FD0E2406D9C10032EBB5 /* ParentRepresentation.swift */; };
+		DD7A36F3240DC0E000F5B246 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7A36F2240DC0E000F5B246 /* Dashboard.storyboard */; };
+		DD7A36F5240DC39E00F5B246 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A36F4240DC39E00F5B246 /* LogOutViewController.swift */; };
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
 		DDDE701B240463DD003F8783 /* AddChildParentPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */; };
 		DDDE701D240463FA003F8783 /* SettingsParentPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */; };
@@ -95,6 +107,16 @@
 		4FF0F6012405CE7900587C7B /* ParentAccountMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentAccountMainVC.swift; sourceTree = "<group>"; };
 		4FF0F62424071B4800587C7B /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
 		4FF0F62624071DED00587C7B /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		4FF0F649240DD01600587C7B /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		4FF0F64A240DD01600587C7B /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		4FF0F64B240DD01600587C7B /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4FF0F64C240DD01600587C7B /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		4FF0F64D240DD01600587C7B /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		4FF0F64E240DD01600587C7B /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		4FF0F64F240DD01600587C7B /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		4FF0F650240DD01600587C7B /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		4FF0F651240DD01600587C7B /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4FF0F65B240DDBB900587C7B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		63C7C998A68B516E47233BF0 /* Pods-Story Squad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Story Squad.release.xcconfig"; path = "Target Support Files/Pods-Story Squad/Pods-Story Squad.release.xcconfig"; sourceTree = "<group>"; };
 		B582B6E9B43C2AAFAC54FE00 /* Pods_Story_Squad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Story_Squad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD13175A2405B4F100013753 /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
@@ -104,6 +126,8 @@
 		DD71FD0A2406D9930032EBB5 /* Parent+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Parent+Convenience.swift"; sourceTree = "<group>"; };
 		DD71FD0C2406D9AD0032EBB5 /* ChildRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildRepresentation.swift; sourceTree = "<group>"; };
 		DD71FD0E2406D9C10032EBB5 /* ParentRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentRepresentation.swift; sourceTree = "<group>"; };
+		DD7A36F2240DC0E000F5B246 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		DD7A36F4240DC39E00F5B246 /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
 		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddChildParentPin.storyboard; sourceTree = "<group>"; };
 		DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsParentPin.storyboard; sourceTree = "<group>"; };
@@ -143,6 +167,7 @@
 		4FD90F2623FF361900BC4702 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				4FF0F648240DD01600587C7B /* nunito */,
 				4FD90F2723FF361900BC4702 /* Bangers.ttf */,
 				4FD90F2823FF361900BC4702 /* OFL.txt */,
 				4FD90F2B23FF6AEF00BC4702 /* open-sans */,
@@ -183,6 +208,22 @@
 				4FF0F62424071B4800587C7B /* NetworkingController.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		4FF0F648240DD01600587C7B /* nunito */ = {
+			isa = PBXGroup;
+			children = (
+				4FF0F649240DD01600587C7B /* Nunito-Medium.ttf */,
+				4FF0F64A240DD01600587C7B /* SIL Open Font License.txt */,
+				4FF0F64B240DD01600587C7B /* Nunito-ExtraBold.ttf */,
+				4FF0F64C240DD01600587C7B /* Nunito-Light.ttf */,
+				4FF0F64D240DD01600587C7B /* Nunito-Regular.ttf */,
+				4FF0F64E240DD01600587C7B /* Nunito-SemiBold.ttf */,
+				4FF0F64F240DD01600587C7B /* Nunito-Bold.ttf */,
+				4FF0F650240DD01600587C7B /* Nunito-Black.ttf */,
+				4FF0F651240DD01600587C7B /* Nunito-ExtraLight.ttf */,
+			);
+			path = nunito;
 			sourceTree = "<group>";
 		};
 		9FE549C3129D37912764CAEB /* Pods */ = {
@@ -265,6 +306,7 @@
 				FA85E84A23FEF35C008637E0 /* Main.storyboard */,
 				4FF0F5F52405C67E00587C7B /* ParentAccountMainVC.storyboard */,
 				DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */,
+				DD7A36F2240DC0E000F5B246 /* Dashboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -285,6 +327,8 @@
 				4FF0F6012405CE7900587C7B /* ParentAccountMainVC.swift */,
 				FA71E34F2406F826001385E7 /* ParentInfoViewController.swift */,
 				DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */,
+				DD7A36F4240DC39E00F5B246 /* LogOutViewController.swift */,
+				4FF0F65B240DDBB900587C7B /* MainTabBarController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -363,29 +407,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD90F3923FF6AEF00BC4702 /* OpenSans-Italic.ttf in Resources */,
+				4FF0F659240DD01600587C7B /* Nunito-Black.ttf in Resources */,
 				4FD90F3B23FF6AEF00BC4702 /* OpenSans-ExtraBold.ttf in Resources */,
+				4FF0F65A240DD01600587C7B /* Nunito-ExtraLight.ttf in Resources */,
 				FA9A34D32405EC0800A2F8FE /* ChildsProfilePin.storyboard in Resources */,
 				4FF0F5FA2405C6CB00587C7B /* AddEditCardFromParentAccount.storyboard in Resources */,
+				4FF0F652240DD01600587C7B /* Nunito-Medium.ttf in Resources */,
 				4FF0F5FE2405CB2F00587C7B /* AddChildFromDashboard.storyboard in Resources */,
 				4FD90F3C23FF6AEF00BC4702 /* OpenSans-LightItalic.ttf in Resources */,
 				4FD90F2A23FF361900BC4702 /* OFL.txt in Resources */,
+				4FF0F655240DD01600587C7B /* Nunito-Light.ttf in Resources */,
 				FA85E85123FEF35E008637E0 /* LaunchScreen.storyboard in Resources */,
+				4FF0F656240DD01600587C7B /* Nunito-Regular.ttf in Resources */,
 				4FD90F3823FF6AEF00BC4702 /* OpenSans-Light.ttf in Resources */,
+				4FF0F658240DD01600587C7B /* Nunito-Bold.ttf in Resources */,
 				4FD90F4023FF6AEF00BC4702 /* OpenSans-Regular.ttf in Resources */,
 				4FF0F5F82405C6A900587C7B /* ChildSettingsFromParentAccount.storyboard in Resources */,
 				4FD90F4123FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf in Resources */,
 				FA85E84E23FEF35E008637E0 /* Assets.xcassets in Resources */,
 				DDDE701D240463FA003F8783 /* SettingsParentPin.storyboard in Resources */,
 				4FD90F3F23FF6AEF00BC4702 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				4FF0F653240DD01600587C7B /* SIL Open Font License.txt in Resources */,
 				4FF0F5FC2405C9DD00587C7B /* ChildProfileMainVC.storyboard in Resources */,
+				DD7A36F3240DC0E000F5B246 /* Dashboard.storyboard in Resources */,
 				DDD7D24D23FF179900C9DF2B /* README.md in Resources */,
 				FA85E84C23FEF35C008637E0 /* Main.storyboard in Resources */,
 				4FD90F3A23FF6AEF00BC4702 /* Apache License.txt in Resources */,
 				4FD90F3E23FF6AEF00BC4702 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				4FD90F3D23FF6AEF00BC4702 /* OpenSans-Bold.ttf in Resources */,
 				DDDE701B240463DD003F8783 /* AddChildParentPin.storyboard in Resources */,
+				4FF0F657240DD01600587C7B /* Nunito-SemiBold.ttf in Resources */,
 				4FD90F3723FF6AEF00BC4702 /* OpenSans-Semibold.ttf in Resources */,
 				4FD90F2923FF361900BC4702 /* Bangers.ttf in Resources */,
+				4FF0F654240DD01600587C7B /* Nunito-ExtraBold.ttf in Resources */,
 				4FF0F5F62405C67E00587C7B /* ParentAccountMainVC.storyboard in Resources */,
 				4FF0F5EE2404A7A100587C7B /* Help.storyboard in Resources */,
 			);
@@ -458,6 +512,7 @@
 				FAB94F9624045C4500905211 /* HamburgerMenuTableViewController.swift in Sources */,
 				FA9A34D7240606C800A2F8FE /* ChildProfilePinViewController.swift in Sources */,
 				DD71FD042406D2E50032EBB5 /* StorySquad.xcdatamodeld in Sources */,
+				DD7A36F5240DC39E00F5B246 /* LogOutViewController.swift in Sources */,
 				FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */,
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,
 				FA9A34D52405FFB700A2F8FE /* CreditCardViewController.swift in Sources */,
@@ -467,6 +522,7 @@
 				4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */,
 				FAB94F9B2404AC1D00905211 /* HamburgerMenuOptions.swift in Sources */,
 				DD13175B2405B4F100013753 /* StringKeys.swift in Sources */,
+				4FF0F65C240DDBB900587C7B /* MainTabBarController.swift in Sources */,
 				FA71E375240B036B001385E7 /* SchoolGrade.swift in Sources */,
 				4FF0F5E92404975A00587C7B /* ChildrenProfileTableView.swift in Sources */,
 			);

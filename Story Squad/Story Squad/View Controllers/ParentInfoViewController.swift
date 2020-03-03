@@ -51,21 +51,33 @@ class ParentInfoViewController: UIViewController {
         
         let parent = networkingController.createParent(name: name, email: email, password: password, pin: pinInt!, context: CoreDataStack.shared.mainContext)
         self.parentUser = parent
-        performSegue(withIdentifier: "ShowDashboardSegue", sender: self)
+        performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
     }
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "ShowDashboardSegue" {
+        if segue.identifier == "ShowTabBarSegue" {
             
-            let navVC = segue.destination as? UINavigationController
+            let tabBarController = segue.destination as? UITabBarController
+            
 			//swiftlint:disable force_cast
-			let dashboardVC = navVC?.viewControllers.first as! DashboardViewController
+            let navVC = tabBarController?.viewControllers![1] as! UINavigationController
             
-            dashboardVC.parentUser = self.parentUser
-            dashboardVC.networkingController = self.networkingController
+//            let mainTabBarVC = navVC.topViewController as! MainTabBarController
+//            mainTabBarVC.parentUser = self.parentUser
+//            mainTabBarVC.networkingController = self.networkingController
+            
+           let dashboardVC = navVC.topViewController as? DashboardViewController
+
+            dashboardVC?.parentUser = self.parentUser
+            dashboardVC?.networkingController = self.networkingController
+            
+//            let settingsVC = navVC.topViewController as? SettingsParentPinViewController
+//
+//            settingsVC?.parentUser = self.parentUser
+//            settingsVC?.networkingController = self.networkingController
         }
     }
 }
