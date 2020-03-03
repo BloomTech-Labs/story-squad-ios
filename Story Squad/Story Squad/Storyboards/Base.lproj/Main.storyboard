@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xCY-LR-Z8x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xCY-LR-Z8x">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -92,7 +92,7 @@
                         <outlet property="nameTextField" destination="yOf-Eh-Adp" id="Krg-Cg-Sdb"/>
                         <outlet property="passwordTextField" destination="g3Y-kg-0Uw" id="9zC-GS-xsb"/>
                         <outlet property="pinTextField" destination="LZ7-bX-J4R" id="rQa-3C-NQZ"/>
-                        <segue destination="zsa-An-dBu" kind="show" id="5fd-yD-UrO"/>
+                        <segue destination="zsa-An-dBu" kind="show" identifier="ShowTabBarSegue" id="5fd-yD-UrO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caO-dC-y9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,7 +107,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9m-TA-KLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-617" y="786"/>
+            <point key="canvasLocation" x="-125" y="744"/>
         </scene>
         <!--SettingsParentPin-->
         <scene sceneID="ac7-Ep-E6g">
@@ -117,9 +117,9 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHe-wO-8Ti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-129" y="786"/>
+            <point key="canvasLocation" x="-549" y="743"/>
         </scene>
-        <!--Log Out-->
+        <!--Log Out View Controller-->
         <scene sceneID="0PG-Lx-cF5">
             <objects>
                 <viewController id="I5w-ry-Fm1" customClass="LogOutViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
@@ -129,7 +129,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="sQQ-1Q-htC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Log Out" id="3M0-9m-OVV"/>
+                    <tabBarItem key="tabBarItem" title="" image="square.and.arrow.up" catalog="system" id="3M0-9m-OVV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2o-26-l51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,7 +138,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="zNK-hS-obg">
             <objects>
-                <tabBarController id="zsa-An-dBu" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="zsa-An-dBu" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="aoy-MG-tbn"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s2C-SU-Xo1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -146,9 +146,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Wdt-yQ-klU" kind="relationship" relationship="viewControllers" id="e0E-Ag-19f"/>
-                        <segue destination="Z26-dB-iWW" kind="relationship" relationship="viewControllers" id="maI-kd-Ip4"/>
-                        <segue destination="I5w-ry-Fm1" kind="relationship" relationship="viewControllers" id="pbo-uf-e1L"/>
+                        <segue destination="Z26-dB-iWW" kind="relationship" relationship="viewControllers" id="EAX-zG-QGP"/>
+                        <segue destination="Wdt-yQ-klU" kind="relationship" relationship="viewControllers" id="4K2-zF-O8l"/>
+                        <segue destination="I5w-ry-Fm1" kind="relationship" relationship="viewControllers" id="fVH-cn-wOn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4d-Om-I2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -156,4 +156,7 @@
             <point key="canvasLocation" x="-123" y="183"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+    </resources>
 </document>
