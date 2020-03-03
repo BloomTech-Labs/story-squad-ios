@@ -54,9 +54,8 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var storySquadLabel: UILabel!
     @IBOutlet weak var childrenProfilesCollectionView: UICollectionView!
-    
-    @IBOutlet weak var hamburgerMenuButton: UIBarButtonItem!
     @IBOutlet weak var addChildButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
