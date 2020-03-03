@@ -80,6 +80,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick your grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qj6-I7-dcO">
+                                                <rect key="frame" x="143" y="3" width="161" height="41"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" image="YES" staticText="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="cHQ-Ok-Bl6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <constraints>
@@ -87,6 +99,9 @@
                                             <constraint firstAttribute="height" constant="47" id="6Jr-Cu-zia"/>
                                             <constraint firstItem="6X6-WS-oTr" firstAttribute="leading" secondItem="tG3-R8-8D8" secondAttribute="leading" constant="16" id="CW7-46-BVA"/>
                                             <constraint firstAttribute="width" constant="320" id="SPB-r6-9Ug"/>
+                                            <constraint firstItem="qj6-I7-dcO" firstAttribute="centerY" secondItem="tG3-R8-8D8" secondAttribute="centerY" id="To6-Dc-FOV"/>
+                                            <constraint firstItem="qj6-I7-dcO" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6X6-WS-oTr" secondAttribute="trailing" constant="16" id="TtX-ax-YdE"/>
+                                            <constraint firstAttribute="trailing" secondItem="qj6-I7-dcO" secondAttribute="trailing" constant="16" id="gR2-kW-Pyp"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3A-D0-YDL">
@@ -157,7 +172,7 @@
                                         <color key="onTintColor" red="0.114" green="0.45100000000000001" blue="0.94499999999999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </switch>
                                 </subviews>
-                                <color key="backgroundColor" red="0.81599999999999995" green="0.94999999999999996" blue="0.92600000000000005" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.81599999999999995" green="0.94999999999999996" blue="0.92600000000000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="tG3-R8-8D8" firstAttribute="top" secondItem="xuL-sH-v2X" secondAttribute="bottom" constant="16" id="0Pp-xD-mXu"/>
                                     <constraint firstItem="tG3-R8-8D8" firstAttribute="centerX" secondItem="k1e-kF-A7W" secondAttribute="centerX" id="0vH-DM-MXh"/>
