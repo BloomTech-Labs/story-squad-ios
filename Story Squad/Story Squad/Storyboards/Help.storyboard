@@ -6,29 +6,113 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Help View Controller-->
+        <!--Help-->
         <scene sceneID="hvG-Rw-vXc">
             <objects>
-                <viewController storyboardIdentifier="HelpVC" id="Dke-QY-K8y" customClass="HelpViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpVC" title="Help" id="Dke-QY-K8y" customClass="HelpViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qsB-QU-0aI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7p-4q-Jmd">
-                                <rect key="frame" x="177" y="430" width="60.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpy-Nt-KbM">
+                                <rect key="frame" x="16" y="128" width="382" height="260.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="6u9-83-nk7">
+                                        <rect key="frame" x="16" y="16" width="350" height="228.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact US" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bW-g3-eBH">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-Lg-0uc">
+                                                <rect key="frame" x="0.0" y="66.5" width="350" height="23"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email us:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLq-6a-nvH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="23"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="bSy-ce-eNb"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email@storysquad.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9E-MH-RtB">
+                                                        <rect key="frame" x="120" y="0.0" width="230" height="23"/>
+                                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                        <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RTO-7V-ty7">
+                                                <rect key="frame" x="0.0" y="125.5" width="350" height="23"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call us:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EV-3q-Ag5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="23"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="v0C-2R-S45"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="800 555 5555" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v32-jL-5JE">
+                                                        <rect key="frame" x="120" y="0.0" width="230" height="23"/>
+                                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                        <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYm-M9-mYs">
+                                                <rect key="frame" x="0.0" y="184.5" width="350" height="44"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="25"/>
+                                                <state key="normal" title="FAQ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="faqButtonPressed:" destination="Dke-QY-K8y" eventType="touchUpInside" id="PLy-z0-smd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8117328882" green="0.94999581580000003" blue="0.92587035890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="6u9-83-nk7" firstAttribute="top" secondItem="Kpy-Nt-KbM" secondAttribute="top" constant="16" id="2d3-dC-wIk"/>
+                                    <constraint firstAttribute="trailing" secondItem="6u9-83-nk7" secondAttribute="trailing" constant="16" id="6LJ-z4-wDV"/>
+                                    <constraint firstItem="6u9-83-nk7" firstAttribute="leading" secondItem="Kpy-Nt-KbM" secondAttribute="leading" constant="16" id="ReT-ZR-OF5"/>
+                                    <constraint firstAttribute="bottom" secondItem="6u9-83-nk7" secondAttribute="bottom" constant="16" id="tYB-7O-ZCM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="b7p-4q-Jmd" firstAttribute="centerY" secondItem="qsB-QU-0aI" secondAttribute="centerY" id="UeF-74-keR"/>
-                            <constraint firstItem="b7p-4q-Jmd" firstAttribute="centerX" secondItem="qsB-QU-0aI" secondAttribute="centerX" id="dNs-hh-0R0"/>
+                            <constraint firstItem="Kpy-Nt-KbM" firstAttribute="top" secondItem="8Vd-zo-g2m" secondAttribute="top" constant="40" id="0qS-0X-YZh"/>
+                            <constraint firstItem="Kpy-Nt-KbM" firstAttribute="leading" secondItem="8Vd-zo-g2m" secondAttribute="leading" constant="16" id="4sO-21-fMj"/>
+                            <constraint firstItem="8Vd-zo-g2m" firstAttribute="trailing" secondItem="Kpy-Nt-KbM" secondAttribute="trailing" constant="16" id="k8z-AM-J0E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Vd-zo-g2m"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="backgoundBlueView" destination="Kpy-Nt-KbM" id="66n-lh-cEF"/>
+                        <outlet property="emailLabel" destination="z9E-MH-RtB" id="iGF-GU-Yce"/>
+                        <outlet property="faqButton" destination="lYm-M9-mYs" id="IBH-Lo-pE6"/>
+                        <outlet property="phoneNumLabel" destination="v32-jL-5JE" id="Vaz-fl-Irt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hob-2N-hnn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

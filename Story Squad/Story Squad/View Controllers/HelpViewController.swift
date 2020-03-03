@@ -9,11 +9,26 @@
 import UIKit
 
 class HelpViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneNumLabel: UILabel!
+    @IBOutlet weak var backgoundBlueView: UIView!
+    @IBOutlet weak var faqButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        updateViews()
+    }
+    
+    @IBAction func faqButtonPressed(_ sender: UIButton) {
+    }
+    
+    private func updateViews() {
+        faqButton.layer.cornerRadius = 10
+        backgoundBlueView.layer.cornerRadius = 10
     }
     
     /*
