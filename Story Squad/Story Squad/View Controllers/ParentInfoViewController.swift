@@ -13,6 +13,10 @@ class ParentInfoViewController: UIViewController {
     // MARK: - Properties
     let networkingController = NetworkingController()
     var parentUser: Parent?
+    let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
+         .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
+         .strokeWidth: -3.5
+     ]
     
     // MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
@@ -22,13 +26,16 @@ class ParentInfoViewController: UIViewController {
     @IBOutlet weak var confirmPWTextField: UITextField!
     @IBOutlet weak var pinTextField: UITextField!
     
+    @IBOutlet weak var storySquadLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         pinTextField.delegate = self
+        updateViews()
     }
     
     // MARK: - Actions
-    @IBAction func doneButton(_ sender: Any) {
+    @IBAction func signUpButton(_ sender: Any) {
         
         guard let name = nameTextField.text,
             let email = emailTextField.text,
@@ -54,6 +61,14 @@ class ParentInfoViewController: UIViewController {
         performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
     }
     
+    // MARK: - Update Views
+    func updateViews() {
+        
+        let pumkinStrokeAttribute = NSAttributedString(string: storySquadLabel.text!, attributes: sqLabelStrokeAttributes)
+        
+        storySquadLabel.attributedText = pumkinStrokeAttribute
+        storySquadLabel.textColor = UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1)
+    }
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
