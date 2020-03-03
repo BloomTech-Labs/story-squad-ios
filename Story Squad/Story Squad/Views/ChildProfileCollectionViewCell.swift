@@ -21,16 +21,12 @@ class ChildProfileCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var teamLabel: UILabel!
-    @IBOutlet weak var missionLabel: UILabel!
     
     @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var dashboardIconSetImageView: UIImageView!
     
     // MARK: - Methods
     
     private func updateViews() {
-        missionLabel.layer.cornerRadius = CGFloat(5)
         
         guard let child = childUser else { return }
         
