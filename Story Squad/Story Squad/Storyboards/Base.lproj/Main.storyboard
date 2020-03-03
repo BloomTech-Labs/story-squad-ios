@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="497" y="1093"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--tabBarController-->
         <scene sceneID="zNK-hS-obg">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="zsa-An-dBu" sceneMemberID="viewController">
+                <tabBarController title="tabBarController" modalPresentationStyle="fullScreen" id="zsa-An-dBu" customClass="MainTabBarController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="aoy-MG-tbn"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s2C-SU-Xo1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
