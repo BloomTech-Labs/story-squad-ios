@@ -14,6 +14,9 @@ class SettingsParentPinViewController: UIViewController {
     
     var networkingController: NetworkingController?
     var parentUser: Parent?
+    let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
+        .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
+        .strokeWidth: -3.5
     
     // MARK: - Outlets
     
