@@ -10,6 +10,9 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
 
+    var networkingController: NetworkingController? 
+    var parentUser: Parent?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = 1

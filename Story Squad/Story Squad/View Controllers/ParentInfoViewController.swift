@@ -65,10 +65,19 @@ class ParentInfoViewController: UIViewController {
 			//swiftlint:disable force_cast
             let navVC = tabBarController?.viewControllers![1] as! UINavigationController
             
-           let dashboardVC = navVC.topViewController as! DashboardViewController
+//            let mainTabBarVC = navVC.topViewController as! MainTabBarController
+//            mainTabBarVC.parentUser = self.parentUser
+//            mainTabBarVC.networkingController = self.networkingController
+            
+           let dashboardVC = navVC.topViewController as? DashboardViewController
 
-            dashboardVC.parentUser = self.parentUser
-            dashboardVC.networkingController = self.networkingController
+            dashboardVC?.parentUser = self.parentUser
+            dashboardVC?.networkingController = self.networkingController
+            
+//            let settingsVC = navVC.topViewController as? SettingsParentPinViewController
+//
+//            settingsVC?.parentUser = self.parentUser
+//            settingsVC?.networkingController = self.networkingController
         }
     }
 }
