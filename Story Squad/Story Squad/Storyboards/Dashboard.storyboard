@@ -206,10 +206,10 @@
             </objects>
             <point key="canvasLocation" x="1446" y="202"/>
         </scene>
-        <!--ChildsProfilePin-->
+        <!--ChildProfileMainVC-->
         <scene sceneID="KvW-pX-rEq">
             <objects>
-                <viewControllerPlaceholder storyboardName="ChildsProfilePin" id="4UD-Wr-4QH" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ChildProfileMainVC" id="4UD-Wr-4QH" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="jUv-bF-Rry"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4i-Kt-3Kw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

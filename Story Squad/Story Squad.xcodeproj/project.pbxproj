@@ -57,8 +57,6 @@
 		DD7A36F3240DC0E000F5B246 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7A36F2240DC0E000F5B246 /* Dashboard.storyboard */; };
 		DD7A36F5240DC39E00F5B246 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A36F4240DC39E00F5B246 /* LogOutViewController.swift */; };
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
-		DDDE701B240463DD003F8783 /* AddChildParentPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */; };
-		DDDE701D240463FA003F8783 /* SettingsParentPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */; };
 		DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */; };
 		DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */; };
 		E398E647240F196900CEB26B /* ChildSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E398E646240F196900CEB26B /* ChildSettings.storyboard */; };
@@ -71,7 +69,6 @@
 		FA85E84E23FEF35E008637E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA85E84D23FEF35E008637E0 /* Assets.xcassets */; };
 		FA85E85123FEF35E008637E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA85E84F23FEF35E008637E0 /* LaunchScreen.storyboard */; };
 		FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E88123FF3558008637E0 /* DashboardViewController.swift */; };
-		FA9A34D32405EC0800A2F8FE /* ChildsProfilePin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9A34D22405EC0800A2F8FE /* ChildsProfilePin.storyboard */; };
 		FA9A34D52405FFB700A2F8FE /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A34D42405FFB700A2F8FE /* CreditCardViewController.swift */; };
 		FA9A34D7240606C800A2F8FE /* ChildProfilePinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A34D6240606C700A2F8FE /* ChildProfilePinViewController.swift */; };
 		FAB94F9624045C4500905211 /* HamburgerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */; };
@@ -131,8 +128,6 @@
 		DD7A36F2240DC0E000F5B246 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		DD7A36F4240DC39E00F5B246 /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
 		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddChildParentPin.storyboard; sourceTree = "<group>"; };
-		DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsParentPin.storyboard; sourceTree = "<group>"; };
 		DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildParentPinViewController.swift; sourceTree = "<group>"; };
 		DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsParentPinViewController.swift; sourceTree = "<group>"; };
 		E398E646240F196900CEB26B /* ChildSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildSettings.storyboard; sourceTree = "<group>"; };
@@ -148,7 +143,6 @@
 		FA85E85023FEF35E008637E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA85E85223FEF35E008637E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA85E88123FF3558008637E0 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		FA9A34D22405EC0800A2F8FE /* ChildsProfilePin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildsProfilePin.storyboard; sourceTree = "<group>"; };
 		FA9A34D42405FFB700A2F8FE /* CreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
 		FA9A34D6240606C700A2F8FE /* ChildProfilePinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfilePinViewController.swift; sourceTree = "<group>"; };
 		FAB94F9524045C4500905211 /* HamburgerMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -251,16 +245,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		E398E648240F30F900CEB26B /* PIN Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */,
-				FA9A34D22405EC0800A2F8FE /* ChildsProfilePin.storyboard */,
-				DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */,
-			);
-			path = "PIN Storyboards";
-			sourceTree = "<group>";
-		};
 		F837914D5F6CBD0BC1DBDF93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,7 +303,6 @@
 				DD7A36F2240DC0E000F5B246 /* Dashboard.storyboard */,
 				E3C82628240ED82200055A77 /* FamilySettings.storyboard */,
 				E398E646240F196900CEB26B /* ChildSettings.storyboard */,
-				E398E648240F30F900CEB26B /* PIN Storyboards */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -425,7 +408,6 @@
 				4FF0F659240DD01600587C7B /* Nunito-Black.ttf in Resources */,
 				4FD90F3B23FF6AEF00BC4702 /* OpenSans-ExtraBold.ttf in Resources */,
 				4FF0F65A240DD01600587C7B /* Nunito-ExtraLight.ttf in Resources */,
-				FA9A34D32405EC0800A2F8FE /* ChildsProfilePin.storyboard in Resources */,
 				4FF0F5FA2405C6CB00587C7B /* AddEditCardFromParentAccount.storyboard in Resources */,
 				4FF0F652240DD01600587C7B /* Nunito-Medium.ttf in Resources */,
 				4FF0F5FE2405CB2F00587C7B /* AddChildFromDashboard.storyboard in Resources */,
@@ -440,7 +422,6 @@
 				E398E647240F196900CEB26B /* ChildSettings.storyboard in Resources */,
 				4FD90F4123FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf in Resources */,
 				FA85E84E23FEF35E008637E0 /* Assets.xcassets in Resources */,
-				DDDE701D240463FA003F8783 /* SettingsParentPin.storyboard in Resources */,
 				4FD90F3F23FF6AEF00BC4702 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				4FF0F653240DD01600587C7B /* SIL Open Font License.txt in Resources */,
 				4FF0F5FC2405C9DD00587C7B /* ChildProfileMainVC.storyboard in Resources */,
@@ -451,7 +432,6 @@
 				4FD90F3A23FF6AEF00BC4702 /* Apache License.txt in Resources */,
 				4FD90F3E23FF6AEF00BC4702 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				4FD90F3D23FF6AEF00BC4702 /* OpenSans-Bold.ttf in Resources */,
-				DDDE701B240463DD003F8783 /* AddChildParentPin.storyboard in Resources */,
 				4FF0F657240DD01600587C7B /* Nunito-SemiBold.ttf in Resources */,
 				4FD90F3723FF6AEF00BC4702 /* OpenSans-Semibold.ttf in Resources */,
 				4FD90F2923FF361900BC4702 /* Bangers.ttf in Resources */,
