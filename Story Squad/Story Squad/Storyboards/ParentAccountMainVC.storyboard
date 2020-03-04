@@ -260,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="1505.072463768116" y="100.11160714285714"/>
         </scene>
-        <!--ChildSettingsFromParentAccount-->
+        <!--ChildSettings-->
         <scene sceneID="2Go-4D-zUu">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ChildSettingsFromParentAccount" storyboardName="ChildSettingsFromParentAccount" referencedIdentifier="ChildSettingsFromParentAccount" id="Qhg-VJ-6e4" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="ChildSettingsFromParentAccount" storyboardName="ChildSettings" id="Qhg-VJ-6e4" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="sQI-oz-fbM"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zvl-3G-zHB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

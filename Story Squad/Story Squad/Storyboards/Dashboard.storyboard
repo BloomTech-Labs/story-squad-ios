@@ -125,6 +125,8 @@
                                                         <connections>
                                                             <outlet property="avatarImageView" destination="LNJ-x2-ZvP" id="4q3-q3-kwT"/>
                                                             <outlet property="nameLabel" destination="dQH-Dh-edB" id="B0m-TD-Jrg"/>
+                                                            <outlet property="profileCardBlueView" destination="o3d-YY-Zgh" id="fNc-fX-Ov0"/>
+                                                            <outlet property="viewProfileButton" destination="0q7-su-16v" id="4XR-cT-W6X"/>
                                                             <segue destination="4UD-Wr-4QH" kind="show" identifier="ShowChildPinVCSegue" id="86S-OV-Cz3"/>
                                                         </connections>
                                                     </collectionViewCell>
@@ -187,9 +189,7 @@
                     <connections>
                         <outlet property="addChildButton" destination="nPG-jR-aGO" id="HMn-qg-z5F"/>
                         <outlet property="childrenProfilesCollectionView" destination="1EL-Cn-zl2" id="bMy-4w-NE6"/>
-                        <outlet property="profileCardBlueView" destination="o3d-YY-Zgh" id="CrG-oC-M2n"/>
                         <outlet property="storySquadLabel" destination="K7G-Ud-12z" id="TBC-2t-fTx"/>
-                        <outlet property="viewChildProfileButton" destination="0q7-su-16v" id="bVj-lk-Lei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKQ-mh-J90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

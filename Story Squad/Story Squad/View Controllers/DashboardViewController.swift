@@ -55,10 +55,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var storySquadLabel: UILabel!
     @IBOutlet weak var childrenProfilesCollectionView: UICollectionView!
     @IBOutlet weak var addChildButton: UIButton!
-    @IBOutlet weak var viewChildProfileButton: UIButton!
-    @IBOutlet weak var profileCardBlueView: UIView!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -120,8 +117,6 @@ class DashboardViewController: UIViewController {
         storySquadLabel.attributedText = pumkinStrokeAttribute
         storySquadLabel.textColor = UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1)
         
-        profileCardBlueView.layer.cornerRadius = 10
-        viewChildProfileButton.layer.cornerRadius = 10
         //        addChildButton.layer.cornerRadius = 10
         
         // Setup the Children Profiles Collection View
