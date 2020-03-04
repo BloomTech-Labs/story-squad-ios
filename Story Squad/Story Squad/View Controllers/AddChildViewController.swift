@@ -23,8 +23,9 @@ class AddChildViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var gradeTextField: UITextField!
+//    @IBOutlet weak var gradeTextField: UITextField!
     @IBOutlet weak var pinTextField: UITextField!
+    @IBOutlet weak var gradeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,6 @@ class AddChildViewController: UIViewController {
         createPicker()
         createToolbar()
     }
-    
     
     @IBAction func dyslexiaToggleSwitch(_ sender: UISwitch) {
     }
@@ -48,7 +48,7 @@ class AddChildViewController: UIViewController {
             let pinInt = Int16(pin) else { return }
         
         // Check Child's Grade
-        switch gradeTextField.text {
+        switch gradeLabel.text {
         case SchoolGrade.thirdGrade.rawValue:
             grade = 3
         case SchoolGrade.forthGrade.rawValue:
@@ -99,8 +99,13 @@ extension AddChildViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         let gradePicker = UIPickerView()
         gradePicker.delegate = self
         gradePicker.delegate?.pickerView?(gradePicker, didSelectRow: 0, inComponent: 0)
-        gradeTextField.inputView = gradePicker
+//        gradeTextField.inputView = gradePicker
+            
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tap(gestureRecognizer:)))
+            gradeLabel.addGestureRecognizer(tapGesture)
+            gradeLabel.isUserInteractionEnabled = true
     }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -111,7 +116,12 @@ extension AddChildViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         return arrayOfGrades[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        return gradeTextField.text =  arrayOfGrades[row]
+        return gradeLabel.text =  arrayOfGrades[row]
+    }
+    
+    @objc func tap(gestureRecognizer: UITapGestureRecognizer) {
+        print("*")
+        gradePicker.isHidden = false
     }
     
     func createToolbar() {
@@ -120,7 +130,7 @@ extension AddChildViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddChildViewController.closePickerView))
         toolbar.setItems([doneButton], animated: false)
         toolbar.isUserInteractionEnabled = true
-        gradeTextField.inputAccessoryView = toolbar
+//        gradeTextField.inputAccessoryView = toolbar
     }
     
     @objc func closePickerView() {

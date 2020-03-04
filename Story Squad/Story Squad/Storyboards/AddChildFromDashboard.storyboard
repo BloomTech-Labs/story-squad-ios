@@ -204,6 +204,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="gradeLabel" destination="qj6-I7-dcO" id="5RK-fH-MfN"/>
                         <outlet property="nameTextField" destination="Ttd-vU-NQb" id="ZOf-o6-kQy"/>
                         <outlet property="pinTextField" destination="mFk-zc-DVO" id="8sV-SM-QG9"/>
                     </connections>
