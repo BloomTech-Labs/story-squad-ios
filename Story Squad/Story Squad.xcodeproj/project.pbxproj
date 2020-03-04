@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F477121240F590A0067F66B /* FamilySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F477120240F590A0067F66B /* FamilySettingsViewController.swift */; };
 		4FD90F2923FF361900BC4702 /* Bangers.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F2723FF361900BC4702 /* Bangers.ttf */; };
 		4FD90F2A23FF361900BC4702 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F2823FF361900BC4702 /* OFL.txt */; };
 		4FD90F3723FF6AEF00BC4702 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F2C23FF6AEF00BC4702 /* OpenSans-Semibold.ttf */; };
@@ -79,6 +80,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F477120240F590A0067F66B /* FamilySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySettingsViewController.swift; sourceTree = "<group>"; };
 		4FD90F2723FF361900BC4702 /* Bangers.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bangers.ttf; sourceTree = "<group>"; };
 		4FD90F2823FF361900BC4702 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		4FD90F2C23FF6AEF00BC4702 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */,
 				DD7A36F4240DC39E00F5B246 /* LogOutViewController.swift */,
 				4FF0F65B240DDBB900587C7B /* MainTabBarController.swift */,
+				4F477120240F590A0067F66B /* FamilySettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				4FF0F5EC2404986700587C7B /* ChildProfileSettingsTableViewCell.swift in Sources */,
 				DD71FD092406D97F0032EBB5 /* Child+Convenience.swift in Sources */,
 				4FF0F62724071DED00587C7B /* NetworkingError.swift in Sources */,
+				4F477121240F590A0067F66B /* FamilySettingsViewController.swift in Sources */,
 				DD71FD0F2406D9C10032EBB5 /* ParentRepresentation.swift in Sources */,
 				DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */,
 				FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */,
