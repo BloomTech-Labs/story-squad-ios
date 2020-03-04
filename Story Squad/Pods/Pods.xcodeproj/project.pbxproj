@@ -6,68 +6,147 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		2808A5A64BE09AE24607D9C962C82021 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		41AFF35300D595A82A969849CF930155 /* Pods-Story Squad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5358B73298BED60B395D009BFB1A8CEA /* Pods-Story Squad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F325EA3A1C3ECAB75E9B3F6228F6BBC3 /* Pods-Story Squad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70090F370B56EFB87DBFA5E250A2E02E /* Pods-Story Squad-dummy.m */; };
+		214542AE474D0BC82FC2F1A451F83B9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		3936C89D20F377DC53759E1A17A35CFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		701FD32E541A576B60F48C5AA3C4D6FA /* ScalingCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E65DFAE56320A5A11416F17D36A98 /* ScalingCarouselView.swift */; };
+		82646831674E6CE18EC802D6E1DCE28E /* Pods-Story Squad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B656FB07C436E9154B37DFB94042DE0F /* Pods-Story Squad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		853FDAE19636BBDFA505E3E88C45F473 /* ScalingCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF95E9F80C8824297088E77DB5E1B52 /* ScalingCarouselCell.swift */; };
+		904EFCAE255D3D02DA37BAE56CE94912 /* ScalingCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1AD44333D44661E67F1630A0223FD8 /* ScalingCarousel-dummy.m */; };
+		BE7971A59AAEC621AF96AEADBD698850 /* ScalingCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65511CFE6E08ADE80643EAD9DC970244 /* ScalingCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE126631355E0C4ACC5DCE4A555CCEA8 /* Pods-Story Squad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0801F94C40867B583DAB413863A2DEF /* Pods-Story Squad-dummy.m */; };
+		FBA1EE1DA92E81090F16249F3878996F /* ScalingCarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B53EC46EA56E2899CCE7FAEEFAC7ED /* ScalingCarouselLayout.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		18A08BF8A8645D6510AB7EEDD136DE32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
+		28231423175E7C231671F60F4FC7D19E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7050FECE58DF970CF84F4FE403CA67D9;
+			remoteInfo = ScalingCarousel;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		2DDB42116FC948DC8336EA4482541391 /* Pods-Story Squad-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Story Squad-Info.plist"; sourceTree = "<group>"; };
+		1ADB1BB2677BD6A69766C92BC652821E /* Pods-Story Squad-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Story Squad-frameworks.sh"; sourceTree = "<group>"; };
+		1C6E0EDF725B82787AFA9753053C6640 /* ScalingCarousel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScalingCarousel.xcconfig; sourceTree = "<group>"; };
+		24E96286E41476A4E7F4D8742B9B16D7 /* ScalingCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ScalingCarousel.framework; path = ScalingCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3F2069EF9B822D7837F204D9D7ADC34D /* Pods_Story_Squad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Story_Squad.framework; path = "Pods-Story Squad.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5358B73298BED60B395D009BFB1A8CEA /* Pods-Story Squad-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Story Squad-umbrella.h"; sourceTree = "<group>"; };
-		68A17728DFB972764565A0045C5767B7 /* Pods-Story Squad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Story Squad.debug.xcconfig"; sourceTree = "<group>"; };
-		70090F370B56EFB87DBFA5E250A2E02E /* Pods-Story Squad-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Story Squad-dummy.m"; sourceTree = "<group>"; };
-		762AD974C4489B9B86945E9EFE276A90 /* Pods-Story Squad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Story Squad.release.xcconfig"; sourceTree = "<group>"; };
-		948ACB53C905EEB43F1E1F9079A601EC /* Pods-Story Squad.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Story Squad.modulemap"; sourceTree = "<group>"; };
+		4C67590C8A31A9027ACDDEE8C172D440 /* Pods-Story Squad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Story Squad.release.xcconfig"; sourceTree = "<group>"; };
+		57E2D2D4A29F6AE42EF15F9B12903AE0 /* Pods-Story Squad.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Story Squad.modulemap"; sourceTree = "<group>"; };
+		58B3AC0982B289AE4E1981601CF13C2F /* Pods-Story Squad-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Story Squad-acknowledgements.markdown"; sourceTree = "<group>"; };
+		65511CFE6E08ADE80643EAD9DC970244 /* ScalingCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-umbrella.h"; sourceTree = "<group>"; };
+		6A7E65DFAE56320A5A11416F17D36A98 /* ScalingCarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselView.swift; path = ScalingCarousel/Classes/ScalingCarouselView.swift; sourceTree = "<group>"; };
+		6FF95E9F80C8824297088E77DB5E1B52 /* ScalingCarouselCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselCell.swift; path = ScalingCarousel/Classes/ScalingCarouselCell.swift; sourceTree = "<group>"; };
+		7143630A78570806CF23D20CCA0D5259 /* Pods-Story Squad-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Story Squad-Info.plist"; sourceTree = "<group>"; };
+		72E32A53761125D22CE31974E1427B87 /* ScalingCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ScalingCarousel.modulemap; sourceTree = "<group>"; };
+		7FCD65026CD8FAF88D27F8EAB0F37A02 /* Pods-Story Squad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Story Squad.debug.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B58F15D1434042F6D0852DBFB94665F3 /* Pods-Story Squad-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Story Squad-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CEF4EC5273ABC67B10BB600696CA97FF /* Pods-Story Squad-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Story Squad-acknowledgements.plist"; sourceTree = "<group>"; };
+		AB1AD44333D44661E67F1630A0223FD8 /* ScalingCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScalingCarousel-dummy.m"; sourceTree = "<group>"; };
+		B1B53EC46EA56E2899CCE7FAEEFAC7ED /* ScalingCarouselLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselLayout.swift; path = ScalingCarousel/Classes/ScalingCarouselLayout.swift; sourceTree = "<group>"; };
+		B656FB07C436E9154B37DFB94042DE0F /* Pods-Story Squad-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Story Squad-umbrella.h"; sourceTree = "<group>"; };
+		C0801F94C40867B583DAB413863A2DEF /* Pods-Story Squad-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Story Squad-dummy.m"; sourceTree = "<group>"; };
+		DB1A0D32031EA566361BA779D9AB9595 /* Pods-Story Squad-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Story Squad-acknowledgements.plist"; sourceTree = "<group>"; };
+		DD333EE5EC3EECD04CF9F60A6AAF3DFB /* SwiftLint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.xcconfig; sourceTree = "<group>"; };
+		FA44944C47413BB12E5C59EE39637428 /* ScalingCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-prefix.pch"; sourceTree = "<group>"; };
+		FD5947BA75B0666F584EA5A1AF1CE938 /* ScalingCarousel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ScalingCarousel-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		77050BE4DBC4A14522CBE0280F235C62 /* Frameworks */ = {
+		673E5AA0D9050854DC67F30CE56F3BED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2808A5A64BE09AE24607D9C962C82021 /* Foundation.framework in Frameworks */,
+				214542AE474D0BC82FC2F1A451F83B9E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3E30C8FA52EBA62FDB46E8DE16E2311 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3936C89D20F377DC53759E1A17A35CFC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		081E0179156A8E0F309E2A582CE9D33F /* Products */ = {
+		53B7048E3180D4FF6F12209C1EFBF646 /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
-				3F2069EF9B822D7837F204D9D7ADC34D /* Pods_Story_Squad.framework */,
+				F86FF9E84B89EB60ED46AC5BD89E84C8 /* Support Files */,
 			);
-			name = Products;
+			name = SwiftLint;
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
-		1041E022653FF45C608B2DE46CBBA2F8 /* Targets Support Files */ = {
+		83C13862080C4CB7AE092BFE9CE075E9 /* Pods-Story Squad */ = {
 			isa = PBXGroup;
 			children = (
-				9C37EE9F607A4B0387B6BFE55F742F84 /* Pods-Story Squad */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		9C37EE9F607A4B0387B6BFE55F742F84 /* Pods-Story Squad */ = {
-			isa = PBXGroup;
-			children = (
-				948ACB53C905EEB43F1E1F9079A601EC /* Pods-Story Squad.modulemap */,
-				B58F15D1434042F6D0852DBFB94665F3 /* Pods-Story Squad-acknowledgements.markdown */,
-				CEF4EC5273ABC67B10BB600696CA97FF /* Pods-Story Squad-acknowledgements.plist */,
-				70090F370B56EFB87DBFA5E250A2E02E /* Pods-Story Squad-dummy.m */,
-				2DDB42116FC948DC8336EA4482541391 /* Pods-Story Squad-Info.plist */,
-				5358B73298BED60B395D009BFB1A8CEA /* Pods-Story Squad-umbrella.h */,
-				68A17728DFB972764565A0045C5767B7 /* Pods-Story Squad.debug.xcconfig */,
-				762AD974C4489B9B86945E9EFE276A90 /* Pods-Story Squad.release.xcconfig */,
+				57E2D2D4A29F6AE42EF15F9B12903AE0 /* Pods-Story Squad.modulemap */,
+				58B3AC0982B289AE4E1981601CF13C2F /* Pods-Story Squad-acknowledgements.markdown */,
+				DB1A0D32031EA566361BA779D9AB9595 /* Pods-Story Squad-acknowledgements.plist */,
+				C0801F94C40867B583DAB413863A2DEF /* Pods-Story Squad-dummy.m */,
+				1ADB1BB2677BD6A69766C92BC652821E /* Pods-Story Squad-frameworks.sh */,
+				7143630A78570806CF23D20CCA0D5259 /* Pods-Story Squad-Info.plist */,
+				B656FB07C436E9154B37DFB94042DE0F /* Pods-Story Squad-umbrella.h */,
+				7FCD65026CD8FAF88D27F8EAB0F37A02 /* Pods-Story Squad.debug.xcconfig */,
+				4C67590C8A31A9027ACDDEE8C172D440 /* Pods-Story Squad.release.xcconfig */,
 			);
 			name = "Pods-Story Squad";
 			path = "Target Support Files/Pods-Story Squad";
+			sourceTree = "<group>";
+		};
+		95DE5CF3C6AC333A17CE412FDE728EF4 /* ScalingCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				6FF95E9F80C8824297088E77DB5E1B52 /* ScalingCarouselCell.swift */,
+				B1B53EC46EA56E2899CCE7FAEEFAC7ED /* ScalingCarouselLayout.swift */,
+				6A7E65DFAE56320A5A11416F17D36A98 /* ScalingCarouselView.swift */,
+				EA8FBE7E726EC336393E1269E66D571F /* Support Files */,
+			);
+			name = ScalingCarousel;
+			path = ScalingCarousel;
+			sourceTree = "<group>";
+		};
+		A7A26D218D5C86342252330057B351FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95DE5CF3C6AC333A17CE412FDE728EF4 /* ScalingCarousel */,
+				53B7048E3180D4FF6F12209C1EFBF646 /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AB935329D1071A995750376A486D0E1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F2069EF9B822D7837F204D9D7ADC34D /* Pods_Story_Squad.framework */,
+				24E96286E41476A4E7F4D8742B9B16D7 /* ScalingCarousel.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -83,8 +162,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				081E0179156A8E0F309E2A582CE9D33F /* Products */,
-				1041E022653FF45C608B2DE46CBBA2F8 /* Targets Support Files */,
+				A7A26D218D5C86342252330057B351FE /* Pods */,
+				AB935329D1071A995750376A486D0E1F /* Products */,
+				F42110C4ED0D66B354ECCC6CA5B25148 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,14 +176,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA8FBE7E726EC336393E1269E66D571F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				72E32A53761125D22CE31974E1427B87 /* ScalingCarousel.modulemap */,
+				1C6E0EDF725B82787AFA9753053C6640 /* ScalingCarousel.xcconfig */,
+				AB1AD44333D44661E67F1630A0223FD8 /* ScalingCarousel-dummy.m */,
+				FD5947BA75B0666F584EA5A1AF1CE938 /* ScalingCarousel-Info.plist */,
+				FA44944C47413BB12E5C59EE39637428 /* ScalingCarousel-prefix.pch */,
+				65511CFE6E08ADE80643EAD9DC970244 /* ScalingCarousel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ScalingCarousel";
+			sourceTree = "<group>";
+		};
+		F42110C4ED0D66B354ECCC6CA5B25148 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				83C13862080C4CB7AE092BFE9CE075E9 /* Pods-Story Squad */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F86FF9E84B89EB60ED46AC5BD89E84C8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD333EE5EC3EECD04CF9F60A6AAF3DFB /* SwiftLint.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		00CA1DDBBEC2594C9086FD811A26753A /* Headers */ = {
+		3E4455540B0C53CA5013A83952D7CAE8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41AFF35300D595A82A969849CF930155 /* Pods-Story Squad-umbrella.h in Headers */,
+				BE7971A59AAEC621AF96AEADBD698850 /* ScalingCarousel-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5748660E6208FE602ABB700F4815A135 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82646831674E6CE18EC802D6E1DCE28E /* Pods-Story Squad-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,20 +231,40 @@
 /* Begin PBXNativeTarget section */
 		0C8A30C06F76EB5ABDF03B6B82145AAE /* Pods-Story Squad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42ABDB0958D44CC757DB828B33EBF942 /* Build configuration list for PBXNativeTarget "Pods-Story Squad" */;
+			buildConfigurationList = F98824F36D8B97D49676021A6EBFA40E /* Build configuration list for PBXNativeTarget "Pods-Story Squad" */;
 			buildPhases = (
-				00CA1DDBBEC2594C9086FD811A26753A /* Headers */,
-				276021C105B36F9CEE98D11DE8537DE9 /* Sources */,
-				77050BE4DBC4A14522CBE0280F235C62 /* Frameworks */,
-				5E24FCB60CBBEE26DCDF5A6B9F1DB08B /* Resources */,
+				5748660E6208FE602ABB700F4815A135 /* Headers */,
+				1ECECBC290460656D451C2AB73F30DBB /* Sources */,
+				673E5AA0D9050854DC67F30CE56F3BED /* Frameworks */,
+				7B5C63F4D824672C0B3046EF55FDE99F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFA5BF20274E50CC0B7566C946F6A78B /* PBXTargetDependency */,
+				1B574A7729D873FCA4B2636A2F00FABF /* PBXTargetDependency */,
+			);
+			name = "Pods-Story Squad";
+			productName = "Pods-Story Squad";
+			productReference = 3F2069EF9B822D7837F204D9D7ADC34D /* Pods_Story_Squad.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7050FECE58DF970CF84F4FE403CA67D9 /* ScalingCarousel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F8EFF8386604440E2C802707D7DE417 /* Build configuration list for PBXNativeTarget "ScalingCarousel" */;
+			buildPhases = (
+				3E4455540B0C53CA5013A83952D7CAE8 /* Headers */,
+				2CFD1C8707894C045A41052731E8B340 /* Sources */,
+				D3E30C8FA52EBA62FDB46E8DE16E2311 /* Frameworks */,
+				7A1FAB16849279EC59298D88CDADDD0A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Story Squad";
-			productName = "Pods-Story Squad";
-			productReference = 3F2069EF9B822D7837F204D9D7ADC34D /* Pods_Story_Squad.framework */;
+			name = ScalingCarousel;
+			productName = ScalingCarousel;
+			productReference = 24E96286E41476A4E7F4D8742B9B16D7 /* ScalingCarousel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -146,17 +285,26 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 081E0179156A8E0F309E2A582CE9D33F /* Products */;
+			productRefGroup = AB935329D1071A995750376A486D0E1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0C8A30C06F76EB5ABDF03B6B82145AAE /* Pods-Story Squad */,
+				7050FECE58DF970CF84F4FE403CA67D9 /* ScalingCarousel */,
+				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5E24FCB60CBBEE26DCDF5A6B9F1DB08B /* Resources */ = {
+		7A1FAB16849279EC59298D88CDADDD0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5C63F4D824672C0B3046EF55FDE99F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,22 +314,47 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		276021C105B36F9CEE98D11DE8537DE9 /* Sources */ = {
+		1ECECBC290460656D451C2AB73F30DBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F325EA3A1C3ECAB75E9B3F6228F6BBC3 /* Pods-Story Squad-dummy.m in Sources */,
+				DE126631355E0C4ACC5DCE4A555CCEA8 /* Pods-Story Squad-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFD1C8707894C045A41052731E8B340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				904EFCAE255D3D02DA37BAE56CE94912 /* ScalingCarousel-dummy.m in Sources */,
+				853FDAE19636BBDFA505E3E88C45F473 /* ScalingCarouselCell.swift in Sources */,
+				FBA1EE1DA92E81090F16249F3878996F /* ScalingCarouselLayout.swift in Sources */,
+				701FD32E541A576B60F48C5AA3C4D6FA /* ScalingCarouselView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1B574A7729D873FCA4B2636A2F00FABF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 18A08BF8A8645D6510AB7EEDD136DE32 /* PBXContainerItemProxy */;
+		};
+		BFA5BF20274E50CC0B7566C946F6A78B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ScalingCarousel;
+			target = 7050FECE58DF970CF84F4FE403CA67D9 /* ScalingCarousel */;
+			targetProxy = 28231423175E7C231671F60F4FC7D19E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		7BF01B54D7EF0D11643BABA33859627C /* Debug */ = {
+		0EE7F2B1C63CBF8BE3D60A25308B5033 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68A17728DFB972764565A0045C5767B7 /* Pods-Story Squad.debug.xcconfig */;
+			baseConfigurationReference = 1C6E0EDF725B82787AFA9753053C6640 /* ScalingCarousel.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -192,28 +365,81 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Story Squad/Pods-Story Squad-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ScalingCarousel/ScalingCarousel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScalingCarousel/ScalingCarousel-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Story Squad/Pods-Story Squad.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/ScalingCarousel/ScalingCarousel.modulemap";
+				PRODUCT_MODULE_NAME = ScalingCarousel;
+				PRODUCT_NAME = ScalingCarousel;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		84D7C4574E8F0F3095623F0E06F5B402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD333EE5EC3EECD04CF9F60A6AAF3DFB /* SwiftLint.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91D43BCEB16F006E6C23708682BD7C48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C6E0EDF725B82787AFA9753053C6640 /* ScalingCarousel.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ScalingCarousel/ScalingCarousel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScalingCarousel/ScalingCarousel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ScalingCarousel/ScalingCarousel.modulemap";
+				PRODUCT_MODULE_NAME = ScalingCarousel;
+				PRODUCT_NAME = ScalingCarousel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -279,9 +505,9 @@
 			};
 			name = Debug;
 		};
-		B4CFBD7202D39A63ED6BBFC9CD263CD1 /* Release */ = {
+		9E90089D08867BC860D40B694F15F523 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 762AD974C4489B9B86945E9EFE276A90 /* Pods-Story Squad.release.xcconfig */;
+			baseConfigurationReference = 4C67590C8A31A9027ACDDEE8C172D440 /* Pods-Story Squad.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -317,6 +543,22 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		DEED47E09AF743F48544C1C4FEADEF47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD333EE5EC3EECD04CF9F60A6AAF3DFB /* SwiftLint.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -378,14 +620,52 @@
 			};
 			name = Release;
 		};
+		F058BD8636A936B4B1C7A2E89B8F2901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FCD65026CD8FAF88D27F8EAB0F37A02 /* Pods-Story Squad.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Story Squad/Pods-Story Squad-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Story Squad/Pods-Story Squad.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		42ABDB0958D44CC757DB828B33EBF942 /* Build configuration list for PBXNativeTarget "Pods-Story Squad" */ = {
+		2F8EFF8386604440E2C802707D7DE417 /* Build configuration list for PBXNativeTarget "ScalingCarousel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7BF01B54D7EF0D11643BABA33859627C /* Debug */,
-				B4CFBD7202D39A63ED6BBFC9CD263CD1 /* Release */,
+				0EE7F2B1C63CBF8BE3D60A25308B5033 /* Debug */,
+				91D43BCEB16F006E6C23708682BD7C48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -395,6 +675,24 @@
 			buildConfigurations = (
 				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
 				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEED47E09AF743F48544C1C4FEADEF47 /* Debug */,
+				84D7C4574E8F0F3095623F0E06F5B402 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F98824F36D8B97D49676021A6EBFA40E /* Build configuration list for PBXNativeTarget "Pods-Story Squad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F058BD8636A936B4B1C7A2E89B8F2901 /* Debug */,
+				9E90089D08867BC860D40B694F15F523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
