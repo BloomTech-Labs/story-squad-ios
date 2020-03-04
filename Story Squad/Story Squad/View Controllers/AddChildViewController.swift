@@ -33,6 +33,10 @@ class AddChildViewController: UIViewController {
         createToolbar()
     }
     
+    
+    @IBAction func dyslexiaToggleSwitch(_ sender: UISwitch) {
+    }
+    
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         
         // Check all Text Fields are filled
