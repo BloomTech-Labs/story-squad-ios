@@ -8,4 +8,5 @@ target 'Story Squad' do
   # Pods for Story Squad
 
 	pod 'SwiftLint'
+	pod "ScalingCarousel"
 end
