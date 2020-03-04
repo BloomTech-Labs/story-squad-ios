@@ -196,25 +196,25 @@
             </objects>
             <point key="canvasLocation" x="634.78260869565224" y="182.8125"/>
         </scene>
-        <!--AddChildParentPin-->
+        <!--AddChildFromDashboard-->
         <scene sceneID="Ztb-DJ-h13">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddChildParentPin" id="aN3-D4-b1h" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="AddChildFromDashboard" id="aN3-D4-b1h" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="bC6-NW-QY3"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3n6-A1-shg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1507" y="388"/>
+            <point key="canvasLocation" x="1446" y="202"/>
         </scene>
-        <!--ChildsProfilePin-->
+        <!--ChildProfileMainVC-->
         <scene sceneID="KvW-pX-rEq">
             <objects>
-                <viewControllerPlaceholder storyboardName="ChildsProfilePin" id="4UD-Wr-4QH" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ChildProfileMainVC" id="4UD-Wr-4QH" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="jUv-bF-Rry"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4i-Kt-3Kw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1520" y="190"/>
+            <point key="canvasLocation" x="1431" y="167"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="G71-9K-GId">

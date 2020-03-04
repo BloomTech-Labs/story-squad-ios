@@ -90,11 +90,11 @@ class DashboardViewController: UIViewController {
             let parentAccountMainStoryboard = UIStoryboard(name: "SettingsParentPin", bundle: nil)
             
             //swiftlint:disable force_cast
-            let parentSettingsPinVC = parentAccountMainStoryboard.instantiateViewController(withIdentifier: "SettingsParentPinSB") as! SettingsParentPinViewController
+//            let parentSettingsPinVC = parentAccountMainStoryboard.instantiateViewController(withIdentifier: "SettingsParentPinSB") as! SettingsParentPinViewController
             
-            parentSettingsPinVC.parentUser = self.parentUser
-            parentSettingsPinVC.networkingController = self.networkingController
-            self.navigationController!.pushViewController(parentSettingsPinVC, animated: true)
+//            parentSettingsPinVC.parentUser = self.parentUser
+//            parentSettingsPinVC.networkingController = self.networkingController
+//            self.navigationController!.pushViewController(parentSettingsPinVC, animated: true)
             
         case .help:
             let helpStoryboard = UIStoryboard(name: "Help", bundle: nil)
@@ -130,20 +130,20 @@ class DashboardViewController: UIViewController {
         
         // Ask for Parent PIN for adding a new Child
         if segue.identifier == "AddChildSegueToPin" {
-            guard let addChildSegueToPinVC = segue.destination as? AddChildParentPinViewController  else { return }
-            addChildSegueToPinVC.parentUser = self.parentUser
-            addChildSegueToPinVC.networkingController = self.networkingController
+//            guard let addChildSegueToPinVC = segue.destination as? AddChildParentPinViewController  else { return }
+//            addChildSegueToPinVC.parentUser = self.parentUser
+//            addChildSegueToPinVC.networkingController = self.networkingController
             
             // Ask for Child PIN to display Child's Profile
         } else if segue.identifier == "ShowChildPinVCSegue" {
-            guard let childProfilePinVC = segue.destination as? ChildProfilePinViewController else { return }
+//            guard let childProfilePinVC = segue.destination as? ChildProfilePinViewController else { return }
             
             if let sender = sender as? ChildProfileCollectionViewCell {
                 guard let indexPath = childrenProfilesCollectionView.indexPath(for: sender) else { return }
                 
-                childProfilePinVC.parentUser = self.parentUser
-                childProfilePinVC.childUser = fetchResultsController.object(at: indexPath)
-                childProfilePinVC.networkingController = self.networkingController
+//                childProfilePinVC.parentUser = self.parentUser
+//                childProfilePinVC.childUser = fetchResultsController.object(at: indexPath)
+//                childProfilePinVC.networkingController = self.networkingController
             }
         }
     }
