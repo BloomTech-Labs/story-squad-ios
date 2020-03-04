@@ -28,7 +28,6 @@
 		4FF0F5F22404AEF300587C7B /* ChildSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */; };
 		4FF0F5F42405C4F900587C7B /* AddChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F32405C4F900587C7B /* AddChildViewController.swift */; };
 		4FF0F5F62405C67E00587C7B /* ParentAccountMainVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F52405C67E00587C7B /* ParentAccountMainVC.storyboard */; };
-		4FF0F5F82405C6A900587C7B /* ChildSettingsFromParentAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F72405C6A900587C7B /* ChildSettingsFromParentAccount.storyboard */; };
 		4FF0F5FA2405C6CB00587C7B /* AddEditCardFromParentAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F92405C6CB00587C7B /* AddEditCardFromParentAccount.storyboard */; };
 		4FF0F5FC2405C9DD00587C7B /* ChildProfileMainVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5FB2405C9DD00587C7B /* ChildProfileMainVC.storyboard */; };
 		4FF0F5FE2405CB2F00587C7B /* AddChildFromDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5FD2405CB2F00587C7B /* AddChildFromDashboard.storyboard */; };
@@ -61,6 +60,7 @@
 		DDDE701D240463FA003F8783 /* SettingsParentPin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */; };
 		DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */; };
 		DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */; };
+		E398E647240F196900CEB26B /* ChildSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E398E646240F196900CEB26B /* ChildSettings.storyboard */; };
 		E3C82629240ED82200055A77 /* FamilySettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C82628240ED82200055A77 /* FamilySettings.storyboard */; };
 		FA71E3502406F826001385E7 /* ParentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E34F2406F826001385E7 /* ParentInfoViewController.swift */; };
 		FA71E375240B036B001385E7 /* SchoolGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E374240B036B001385E7 /* SchoolGrade.swift */; };
@@ -100,7 +100,6 @@
 		4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildSettingsViewController.swift; sourceTree = "<group>"; };
 		4FF0F5F32405C4F900587C7B /* AddChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildViewController.swift; sourceTree = "<group>"; };
 		4FF0F5F52405C67E00587C7B /* ParentAccountMainVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ParentAccountMainVC.storyboard; sourceTree = "<group>"; };
-		4FF0F5F72405C6A900587C7B /* ChildSettingsFromParentAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChildSettingsFromParentAccount.storyboard; sourceTree = "<group>"; };
 		4FF0F5F92405C6CB00587C7B /* AddEditCardFromParentAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddEditCardFromParentAccount.storyboard; sourceTree = "<group>"; };
 		4FF0F5FB2405C9DD00587C7B /* ChildProfileMainVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChildProfileMainVC.storyboard; sourceTree = "<group>"; };
 		4FF0F5FD2405CB2F00587C7B /* AddChildFromDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddChildFromDashboard.storyboard; sourceTree = "<group>"; };
@@ -134,6 +133,7 @@
 		DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsParentPin.storyboard; sourceTree = "<group>"; };
 		DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildParentPinViewController.swift; sourceTree = "<group>"; };
 		DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsParentPinViewController.swift; sourceTree = "<group>"; };
+		E398E646240F196900CEB26B /* ChildSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildSettings.storyboard; sourceTree = "<group>"; };
 		E3C82628240ED82200055A77 /* FamilySettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FamilySettings.storyboard; sourceTree = "<group>"; };
 		EC8FD35A646613250F69ED2C /* Pods-Story Squad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Story Squad.debug.xcconfig"; path = "Target Support Files/Pods-Story Squad/Pods-Story Squad.debug.xcconfig"; sourceTree = "<group>"; };
 		FA71E34F2406F826001385E7 /* ParentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentInfoViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +249,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E398E648240F30F900CEB26B /* PIN Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */,
+				FA9A34D22405EC0800A2F8FE /* ChildsProfilePin.storyboard */,
+				DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */,
+			);
+			path = "PIN Storyboards";
+			sourceTree = "<group>";
+		};
 		F837914D5F6CBD0BC1DBDF93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,18 +308,16 @@
 			isa = PBXGroup;
 			children = (
 				4FF0F5FD2405CB2F00587C7B /* AddChildFromDashboard.storyboard */,
-				DDDE701A240463DD003F8783 /* AddChildParentPin.storyboard */,
 				4FF0F5F92405C6CB00587C7B /* AddEditCardFromParentAccount.storyboard */,
 				4FF0F5FB2405C9DD00587C7B /* ChildProfileMainVC.storyboard */,
-				4FF0F5F72405C6A900587C7B /* ChildSettingsFromParentAccount.storyboard */,
-				FA9A34D22405EC0800A2F8FE /* ChildsProfilePin.storyboard */,
 				4FF0F5ED2404A7A100587C7B /* Help.storyboard */,
 				FA85E84F23FEF35E008637E0 /* LaunchScreen.storyboard */,
 				FA85E84A23FEF35C008637E0 /* Main.storyboard */,
 				4FF0F5F52405C67E00587C7B /* ParentAccountMainVC.storyboard */,
-				DDDE701C240463FA003F8783 /* SettingsParentPin.storyboard */,
 				DD7A36F2240DC0E000F5B246 /* Dashboard.storyboard */,
 				E3C82628240ED82200055A77 /* FamilySettings.storyboard */,
+				E398E646240F196900CEB26B /* ChildSettings.storyboard */,
+				E398E648240F30F900CEB26B /* PIN Storyboards */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -425,7 +433,7 @@
 				4FD90F3823FF6AEF00BC4702 /* OpenSans-Light.ttf in Resources */,
 				4FF0F658240DD01600587C7B /* Nunito-Bold.ttf in Resources */,
 				4FD90F4023FF6AEF00BC4702 /* OpenSans-Regular.ttf in Resources */,
-				4FF0F5F82405C6A900587C7B /* ChildSettingsFromParentAccount.storyboard in Resources */,
+				E398E647240F196900CEB26B /* ChildSettings.storyboard in Resources */,
 				4FD90F4123FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf in Resources */,
 				FA85E84E23FEF35E008637E0 /* Assets.xcassets in Resources */,
 				DDDE701D240463FA003F8783 /* SettingsParentPin.storyboard in Resources */,
