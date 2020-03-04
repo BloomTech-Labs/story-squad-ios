@@ -28,7 +28,6 @@
 		4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */; };
 		4FF0F5F22404AEF300587C7B /* ChildSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */; };
 		4FF0F5F42405C4F900587C7B /* AddChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F32405C4F900587C7B /* AddChildViewController.swift */; };
-		4FF0F5F62405C67E00587C7B /* ParentAccountMainVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F52405C67E00587C7B /* ParentAccountMainVC.storyboard */; };
 		4FF0F5FA2405C6CB00587C7B /* AddEditCardFromParentAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F92405C6CB00587C7B /* AddEditCardFromParentAccount.storyboard */; };
 		4FF0F5FC2405C9DD00587C7B /* ChildProfileMainVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5FB2405C9DD00587C7B /* ChildProfileMainVC.storyboard */; };
 		4FF0F5FE2405CB2F00587C7B /* AddChildFromDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5FD2405CB2F00587C7B /* AddChildFromDashboard.storyboard */; };
@@ -98,7 +97,6 @@
 		4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildSettingsViewController.swift; sourceTree = "<group>"; };
 		4FF0F5F32405C4F900587C7B /* AddChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildViewController.swift; sourceTree = "<group>"; };
-		4FF0F5F52405C67E00587C7B /* ParentAccountMainVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ParentAccountMainVC.storyboard; sourceTree = "<group>"; };
 		4FF0F5F92405C6CB00587C7B /* AddEditCardFromParentAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddEditCardFromParentAccount.storyboard; sourceTree = "<group>"; };
 		4FF0F5FB2405C9DD00587C7B /* ChildProfileMainVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChildProfileMainVC.storyboard; sourceTree = "<group>"; };
 		4FF0F5FD2405CB2F00587C7B /* AddChildFromDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddChildFromDashboard.storyboard; sourceTree = "<group>"; };
@@ -299,7 +297,6 @@
 				4FF0F5ED2404A7A100587C7B /* Help.storyboard */,
 				FA85E84F23FEF35E008637E0 /* LaunchScreen.storyboard */,
 				FA85E84A23FEF35C008637E0 /* Main.storyboard */,
-				4FF0F5F52405C67E00587C7B /* ParentAccountMainVC.storyboard */,
 				DD7A36F2240DC0E000F5B246 /* Dashboard.storyboard */,
 				E3C82628240ED82200055A77 /* FamilySettings.storyboard */,
 				E398E646240F196900CEB26B /* ChildSettings.storyboard */,
@@ -436,7 +433,6 @@
 				4FD90F3723FF6AEF00BC4702 /* OpenSans-Semibold.ttf in Resources */,
 				4FD90F2923FF361900BC4702 /* Bangers.ttf in Resources */,
 				4FF0F654240DD01600587C7B /* Nunito-ExtraBold.ttf in Resources */,
-				4FF0F5F62405C67E00587C7B /* ParentAccountMainVC.storyboard in Resources */,
 				4FF0F5EE2404A7A100587C7B /* Help.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
