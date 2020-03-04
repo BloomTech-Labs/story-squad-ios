@@ -35,9 +35,9 @@ extension CarouselDatasource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "childCollectionViewCell", for: indexPath)
         
-        if let scalingCell = cell as? ScalingCarouselCell {
-            scalingCell.mainView.backgroundColor = .white
-        }
+       // if let scalingCell = cell as? ScalingCarouselCell {
+           // scalingCell.mainView.backgroundColor = .white
+       // }
 
         DispatchQueue.main.async {
             cell.setNeedsLayout()
@@ -63,7 +63,7 @@ extension ScalingCarouselFlowDelegate: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 0
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
