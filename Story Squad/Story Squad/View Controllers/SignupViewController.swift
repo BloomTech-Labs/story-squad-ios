@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ParentInfoViewController: UIViewController {
+class SignupViewController: UIViewController {
     
     // MARK: - Properties
     let networkingController = NetworkingController()
@@ -118,7 +118,7 @@ class ParentInfoViewController: UIViewController {
 }
 
 // MARK: - Pin TextField Properties Function
-extension ParentInfoViewController: UITextFieldDelegate {
+extension SignupViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
