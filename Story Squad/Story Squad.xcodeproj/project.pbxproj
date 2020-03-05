@@ -45,6 +45,7 @@
 		4FF0F659240DD01600587C7B /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F650240DD01600587C7B /* Nunito-Black.ttf */; };
 		4FF0F65A240DD01600587C7B /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F651240DD01600587C7B /* Nunito-ExtraLight.ttf */; };
 		4FF0F65C240DDBB900587C7B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F65B240DDBB900587C7B /* MainTabBarController.swift */; };
+		4FFA57E224106CF300655C9E /* GradeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFA57E124106CF300655C9E /* GradeTextField.swift */; };
 		59A0C33A80A9EAD6E47C8B8A /* Pods_Story_Squad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B582B6E9B43C2AAFAC54FE00 /* Pods_Story_Squad.framework */; };
 		DD13175B2405B4F100013753 /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13175A2405B4F100013753 /* StringKeys.swift */; };
 		DD71FD042406D2E50032EBB5 /* StorySquad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD71FD022406D2E50032EBB5 /* StorySquad.xcdatamodeld */; };
@@ -114,6 +115,7 @@
 		4FF0F650240DD01600587C7B /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
 		4FF0F651240DD01600587C7B /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
 		4FF0F65B240DDBB900587C7B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4FFA57E124106CF300655C9E /* GradeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeTextField.swift; sourceTree = "<group>"; };
 		63C7C998A68B516E47233BF0 /* Pods-Story Squad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Story Squad.release.xcconfig"; path = "Target Support Files/Pods-Story Squad/Pods-Story Squad.release.xcconfig"; sourceTree = "<group>"; };
 		B582B6E9B43C2AAFAC54FE00 /* Pods_Story_Squad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Story_Squad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD13175A2405B4F100013753 /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				DD7A36F4240DC39E00F5B246 /* LogOutViewController.swift */,
 				4FF0F65B240DDBB900587C7B /* MainTabBarController.swift */,
 				4F477120240F590A0067F66B /* FamilySettingsViewController.swift */,
+				4FFA57E124106CF300655C9E /* GradeTextField.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF0F62524071B4800587C7B /* NetworkingController.swift in Sources */,
+				4FFA57E224106CF300655C9E /* GradeTextField.swift in Sources */,
 				DD71FD0B2406D9930032EBB5 /* Parent+Convenience.swift in Sources */,
 				DD71FD072406D5D80032EBB5 /* CoreDataStack.swift in Sources */,
 				4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */,
