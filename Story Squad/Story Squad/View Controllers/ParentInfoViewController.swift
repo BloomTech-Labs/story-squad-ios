@@ -27,6 +27,8 @@ class ParentInfoViewController: UIViewController {
     @IBOutlet weak var pinTextField: PaddedTextField!
     
     @IBOutlet weak var storySquadLabel: UILabel!
+    @IBOutlet weak var alredyHaveAccountLabel: UILabel!
+    @IBOutlet weak var signupButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +52,6 @@ class ParentInfoViewController: UIViewController {
                 showIncompleteAlert()
                 return
         }
-//            !pin.isEmpty else { return }
         
         let temporaryPIN: Int16 = 0000
         
@@ -73,6 +74,10 @@ class ParentInfoViewController: UIViewController {
     // MARK: - Update Views
     func updateViews() {
         
+        // TODO - Remove this when Login functionality is Implemented
+        signupButton.alpha = 0
+        alredyHaveAccountLabel.alpha = 0
+        
         let pumkinStrokeAttribute = NSAttributedString(string: storySquadLabel.text!, attributes: sqLabelStrokeAttributes)
         
         storySquadLabel.attributedText = pumkinStrokeAttribute
@@ -90,8 +95,8 @@ class ParentInfoViewController: UIViewController {
         confirmPWTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
         pinTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
     }
-    // MARK: - Navigation
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ShowTabBarSegue" {

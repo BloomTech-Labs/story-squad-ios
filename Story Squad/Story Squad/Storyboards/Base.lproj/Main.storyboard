@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kqt-Ts-IS3">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1006.6666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1022.6666666666666"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="uwV-c3-veQ">
                                                 <rect key="frame" x="16" y="32.000000000000007" width="343" height="100.66666666666669"/>
@@ -46,8 +46,8 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RIx-rW-8M2">
-                                                <rect key="frame" x="16" y="480.66666666666663" width="343" height="86"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="RIx-rW-8M2">
+                                                <rect key="frame" x="16" y="480.66666666666663" width="343" height="102"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtQ-Ig-9OR">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="56"/>
@@ -70,7 +70,7 @@
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="axy-tl-x18">
-                                                        <rect key="frame" x="60.666666666666686" y="56" width="222" height="30"/>
+                                                        <rect key="frame" x="60.666666666666686" y="72" width="222" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8r-IM-WGq">
                                                                 <rect key="frame" x="0.0" y="0.0" width="173" height="30"/>
@@ -90,7 +90,7 @@
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQM-JL-KTW">
-                                                <rect key="frame" x="20" y="586.66666666666663" width="335" height="400"/>
+                                                <rect key="frame" x="20" y="602.66666666666663" width="335" height="400"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="400" id="5mx-LW-Sku"/>
@@ -182,11 +182,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="xur-T3-Nrj"/>
                     <connections>
+                        <outlet property="alredyHaveAccountLabel" destination="j8r-IM-WGq" id="QFR-gd-sDX"/>
                         <outlet property="confirmPWTextField" destination="Si7-iD-0wV" id="9KE-NS-dj8"/>
                         <outlet property="emailTextField" destination="HG5-Q6-nVK" id="Bl9-Sm-Shj"/>
                         <outlet property="nameTextField" destination="0MJ-gt-dM1" id="aEp-vC-5id"/>
                         <outlet property="passwordTextField" destination="vKp-qe-yAf" id="fze-iS-3KO"/>
                         <outlet property="pinTextField" destination="f56-Ub-K6a" id="8Wr-xL-FMG"/>
+                        <outlet property="signupButton" destination="Rwy-Tz-PqJ" id="yhg-Gz-LBU"/>
                         <outlet property="storySquadLabel" destination="OGc-Ql-RIf" id="2x3-E4-2rl"/>
                         <segue destination="zsa-An-dBu" kind="show" identifier="ShowTabBarSegue" id="5fd-yD-UrO"/>
                     </connections>
