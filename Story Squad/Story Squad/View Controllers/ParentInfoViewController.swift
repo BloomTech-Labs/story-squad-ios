@@ -45,7 +45,10 @@ class ParentInfoViewController: UIViewController {
             !name.isEmpty,
             !email.isEmpty,
             !password.isEmpty,
-            !confirmPW.isEmpty else { return }
+            !confirmPW.isEmpty else {
+                showIncompleteAlert()
+                return
+        }
 //            !pin.isEmpty else { return }
         
         let temporaryPIN: Int16 = 0000
@@ -59,7 +62,13 @@ class ParentInfoViewController: UIViewController {
         
         performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
     }
-    
+    // MARK: - Incomplete Child Data Alert
+    func showIncompleteAlert() {
+        let alert = UIAlertController(title: "Incomplete Account Information", message: "Please fill in all text fields", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
     // MARK: - Update Views
     func updateViews() {
         
