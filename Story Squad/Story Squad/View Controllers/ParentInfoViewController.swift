@@ -69,11 +69,11 @@ class ParentInfoViewController: UIViewController {
         storySquadLabel.attributedText = pumkinStrokeAttribute
         storySquadLabel.textColor = UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1)
         
-        nameTextField.layer.borderWidth = 0.25
-        emailTextField.layer.borderWidth = 0.25
-        passwordTextField.layer.borderWidth = 0.25
-        confirmPWTextField.layer.borderWidth = 0.25
-        pinTextField.layer.borderWidth = 0.25
+        nameTextField.layer.borderWidth = 0.175
+        emailTextField.layer.borderWidth = 0.175
+        passwordTextField.layer.borderWidth = 0.175
+        confirmPWTextField.layer.borderWidth = 0.175
+        pinTextField.layer.borderWidth = 0.175
         
         nameTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
         emailTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
