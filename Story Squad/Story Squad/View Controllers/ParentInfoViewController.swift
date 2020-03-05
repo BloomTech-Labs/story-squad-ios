@@ -41,11 +41,12 @@ class ParentInfoViewController: UIViewController {
             let email = emailTextField.text,
             let password = passwordTextField.text,
             let confirmPW = confirmPWTextField.text,
-//            let pin = pinTextField.text,
             !name.isEmpty,
             !email.isEmpty,
             !password.isEmpty,
-            !confirmPW.isEmpty else {
+            !confirmPW.isEmpty
+            
+            else {
                 showIncompleteAlert()
                 return
         }
