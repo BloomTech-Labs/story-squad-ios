@@ -100,7 +100,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="saveButtonPressed:" destination="UWi-fO-3FJ" eventType="touchUpInside" id="E5w-ZS-pLT"/>
+                                                    <action selector="addChildButtonPressed:" destination="UWi-fO-3FJ" eventType="touchUpInside" id="E5w-ZS-pLT"/>
                                                 </connections>
                                             </button>
                                         </subviews>

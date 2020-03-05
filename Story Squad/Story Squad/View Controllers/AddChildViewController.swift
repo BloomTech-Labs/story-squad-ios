@@ -36,14 +36,18 @@ class AddChildViewController: UIViewController {
     @IBAction func dyslexiaToggleSwitch(_ sender: UISwitch) {
     }
     
-    @IBAction func saveButtonPressed(_ sender: UIButton) {
+    @IBAction func addChildButtonPressed(_ sender: UIButton) {
         
         // Check all Text Fields are filled
+        
+        guard let name = nameTextField.text,
+            !name.isEmpty else {
+                showIncompleteAlert()
+                return
+        }
+        
         guard let parent = parentUser,
-            let name = nameTextField.text,
             let pin = pinTextField.text,
-            !name.isEmpty,
-            !pin.isEmpty,
             let pinInt = Int16(pin) else { return }
         
         // Check Child's Grade
@@ -68,32 +72,23 @@ class AddChildViewController: UIViewController {
             // Go back to Dashboard
             self.navigationController?.popToRootViewController(animated: true)
         } else {
-            showIncompleteAlert()
+            return
         }
     }
     
     // MARK: - Incomplete Child Data Alert
     func showIncompleteAlert() {
         let alert = UIAlertController(title: "Incomplete Child Information", message: "Please fill in all Text Fields", preferredStyle: .alert)
-
+        
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
 // MARK: - Grade Picker
 extension AddChildViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-        
+    
     func createPicker() {
         let gradePicker = UIPickerView()
         gradePicker.delegate = self
@@ -119,15 +114,15 @@ extension AddChildViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func createToolbar() {
-            let toolbar = UIToolbar()
-            toolbar.sizeToFit()
-            let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddChildViewController.closePickerView))
-            toolbar.setItems([doneButton], animated: false)
-            toolbar.isUserInteractionEnabled = true
-            gradeTextField.inputAccessoryView = toolbar
-        }
-
-    @objc func closePickerView() {
-            view.endEditing(true)
-        }
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddChildViewController.closePickerView))
+        toolbar.setItems([doneButton], animated: false)
+        toolbar.isUserInteractionEnabled = true
+        gradeTextField.inputAccessoryView = toolbar
     }
+    
+    @objc func closePickerView() {
+        view.endEditing(true)
+    }
+}
