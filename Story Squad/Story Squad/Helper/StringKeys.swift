@@ -11,4 +11,9 @@ import Foundation
 extension String {
 
 	static var addChildSegue = "AddChild"
+    
+    // Notification Pattern Keys
+    static var passDataForParentString = "co.lambda.pasDataForParent"
+    static var passDataForChildString = "co.lambda.pasDataForChild"
+    
 }

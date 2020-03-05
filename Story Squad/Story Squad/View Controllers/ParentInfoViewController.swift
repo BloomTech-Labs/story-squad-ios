@@ -41,23 +41,22 @@ class ParentInfoViewController: UIViewController {
             let email = emailTextField.text,
             let password = passwordTextField.text,
             let confirmPW = confirmPWTextField.text,
-            let pin = pinTextField.text,
+//            let pin = pinTextField.text,
             !name.isEmpty,
             !email.isEmpty,
             !password.isEmpty,
-            !confirmPW.isEmpty,
-            !pin.isEmpty else { return }
+            !confirmPW.isEmpty else { return }
+//            !pin.isEmpty else { return }
         
-        // MARK: - Print Statements
-        print(name)
-        print(email)
-        print(password)
-        print(pin)
+        let temporaryPIN: Int16 = 0000
         
-        let pinInt = Int16(pin)
-        
-        let parent = networkingController.createParent(name: name, email: email, password: password, pin: pinInt!, context: CoreDataStack.shared.mainContext)
+        let parent = networkingController.createParent(name: name, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
         self.parentUser = parent
+        
+        // MARK: - Sending data through Notification
+        let parentDataNotificationName = Notification.Name(rawValue: .passDataForParentString)
+        NotificationCenter.default.post(name: parentDataNotificationName, object: nil, userInfo: nil)
+        
         performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
     }
     
@@ -79,15 +78,14 @@ class ParentInfoViewController: UIViewController {
             
 			//swiftlint:disable force_cast
             let navVC = tabBarController?.viewControllers![1] as! UINavigationController
+            let dashboardVC = navVC.topViewController as! DashboardViewController
+            dashboardVC.parentUser = self.parentUser
+            dashboardVC.networkingController = self.networkingController
             
 //            let mainTabBarVC = navVC.topViewController as! MainTabBarController
 //            mainTabBarVC.parentUser = self.parentUser
 //            mainTabBarVC.networkingController = self.networkingController
-            
-           let dashboardVC = navVC.topViewController as? DashboardViewController
-
-            dashboardVC?.parentUser = self.parentUser
-            dashboardVC?.networkingController = self.networkingController
+            //////////////////
             
 //            let settingsVC = navVC.topViewController as? SettingsParentPinViewController
 //
