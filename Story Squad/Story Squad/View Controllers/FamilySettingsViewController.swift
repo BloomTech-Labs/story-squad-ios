@@ -47,6 +47,13 @@ extension CarouselDatasource: UICollectionViewDataSource {
         return cell
     }
 }
+// MARK: - Alert for Update Complete
+func showCompleteAlert() {
+    let alert = UIAlertController(title: "Family Settings", message: "Update Complete", preferredStyle: .alert)
+    
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    self.present(alert, animated: true)
+}
 
 typealias CarouselDelegate = FamilySettingsViewController
 extension FamilySettingsViewController: UICollectionViewDelegate {
