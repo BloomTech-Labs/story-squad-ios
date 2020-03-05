@@ -29,7 +29,7 @@ class DashboardViewController: UIViewController {
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
         
         // Fetch for Children of correct Parent
-        let predicate = NSPredicate(format: "%K == %@", "parent.name", getParentName())
+        let predicate = NSPredicate(format: "parent.id == %d", parentUser?.id ?? 0)
         fetchRequest.predicate = predicate
         
         // Sort Children by Name
@@ -108,14 +108,6 @@ class DashboardViewController: UIViewController {
 
 // MARK: - Fetching Children from CD
 extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {
-    
-    // Get Parent's name as a String
-    private func getParentName() -> String {
-        guard let parent = parentUser,
-            let name = parent.name else { return ""}
-        
-        return name
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return fetchResultsController.fetchedObjects?.count ?? 0
