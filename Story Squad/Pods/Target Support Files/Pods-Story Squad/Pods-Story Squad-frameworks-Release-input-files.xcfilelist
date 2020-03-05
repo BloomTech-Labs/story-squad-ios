@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Story Squad/Pods-Story Squad-frameworks.sh
+${BUILT_PRODUCTS_DIR}/LabelSwitch/LabelSwitch.framework
 ${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework

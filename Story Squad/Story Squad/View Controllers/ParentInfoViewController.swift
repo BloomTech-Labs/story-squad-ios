@@ -19,12 +19,12 @@ class ParentInfoViewController: UIViewController {
      ]
     
     // MARK: - Outlets
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var nameTextField: SignUpTextField!
+    @IBOutlet weak var emailTextField: SignUpTextField!
+    @IBOutlet weak var passwordTextField: SignUpTextField!
     
-    @IBOutlet weak var confirmPWTextField: UITextField!
-    @IBOutlet weak var pinTextField: UITextField!
+    @IBOutlet weak var confirmPWTextField: SignUpTextField!
+    @IBOutlet weak var pinTextField: SignUpTextField!
     
     @IBOutlet weak var storySquadLabel: UILabel!
     
@@ -68,6 +68,18 @@ class ParentInfoViewController: UIViewController {
         
         storySquadLabel.attributedText = pumkinStrokeAttribute
         storySquadLabel.textColor = UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1)
+        
+        nameTextField.layer.borderWidth = 0.25
+        emailTextField.layer.borderWidth = 0.25
+        passwordTextField.layer.borderWidth = 0.25
+        confirmPWTextField.layer.borderWidth = 0.25
+        pinTextField.layer.borderWidth = 0.25
+        
+        nameTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
+        emailTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
+        passwordTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
+        confirmPWTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
+        pinTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
     }
     // MARK: - Navigation
     

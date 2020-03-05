@@ -9,4 +9,5 @@ target 'Story Squad' do
 
 	pod 'SwiftLint'
 	pod "ScalingCarousel"
+	pod 'LabelSwitch'
 end
