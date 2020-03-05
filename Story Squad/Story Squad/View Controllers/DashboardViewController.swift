@@ -166,10 +166,10 @@ class DashboardViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // Ask for Parent PIN for adding a new Child
-        if segue.identifier == "AddChildSegueToPin" {
-//            guard let addChildSegueToPinVC = segue.destination as? AddChildParentPinViewController  else { return }
-//            addChildSegueToPinVC.parentUser = self.parentUser
-//            addChildSegueToPinVC.networkingController = self.networkingController
+        if segue.identifier == "AddChildSegue" {
+            guard let addChildVC = segue.destination as? AddChildViewController  else { return }
+            addChildVC.parentUser = self.parentUser
+            addChildVC.networkingController = self.networkingController
             
             // Ask for Child PIN to display Child's Profile
         } else if segue.identifier == "ShowChildPinVCSegue" {

@@ -148,7 +148,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="aN3-D4-b1h" kind="show" id="1zG-y0-S6V"/>
+                                                    <segue destination="aN3-D4-b1h" kind="show" identifier="AddChildSegue" id="1zG-y0-S6V"/>
                                                 </connections>
                                             </button>
                                         </subviews>
