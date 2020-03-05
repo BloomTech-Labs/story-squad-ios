@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpTextField: UITextField {
+class PaddedTextField: UITextField {
 
         let padding = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 5)
 

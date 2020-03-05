@@ -19,12 +19,12 @@ class ParentInfoViewController: UIViewController {
      ]
     
     // MARK: - Outlets
-    @IBOutlet weak var nameTextField: SignUpTextField!
-    @IBOutlet weak var emailTextField: SignUpTextField!
-    @IBOutlet weak var passwordTextField: SignUpTextField!
+    @IBOutlet weak var nameTextField: PaddedTextField!
+    @IBOutlet weak var emailTextField: PaddedTextField!
+    @IBOutlet weak var passwordTextField: PaddedTextField!
     
-    @IBOutlet weak var confirmPWTextField: SignUpTextField!
-    @IBOutlet weak var pinTextField: SignUpTextField!
+    @IBOutlet weak var confirmPWTextField: PaddedTextField!
+    @IBOutlet weak var pinTextField: PaddedTextField!
     
     @IBOutlet weak var storySquadLabel: UILabel!
     
