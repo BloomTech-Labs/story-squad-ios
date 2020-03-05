@@ -13,6 +13,13 @@ class Cell: ScalingCarouselCell {}
 
 class FamilySettingsViewController: UIViewController {
     @IBOutlet weak var carousel: ScalingCarouselView!
+    @IBOutlet weak var enterNewEmailTextField: UITextField!
+    
+    @IBOutlet weak var enterOldPasswordTextField: UITextField!
+   
+    @IBOutlet weak var enterNewPasswordTextField: UITextField!
+    
+    @IBOutlet weak var reEnterNewPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +30,16 @@ class FamilySettingsViewController: UIViewController {
         carousel.deviceRotated()
     }
     
+    @IBAction func updateButtonTapped(_ sender: UIButton) {
+        showCompleteAlert()
+    }
+// MARK: - Alert for Update Complete
+    func showCompleteAlert() {
+        let alert = UIAlertController(title: "Family Settings", message: "Update Complete", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
 }
 
 typealias CarouselDatasource = FamilySettingsViewController
@@ -34,10 +51,6 @@ extension CarouselDatasource: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "childCollectionViewCell", for: indexPath)
-        
-       // if let scalingCell = cell as? ScalingCarouselCell {
-           // scalingCell.mainView.backgroundColor = .white
-       // }
 
         DispatchQueue.main.async {
             cell.setNeedsLayout()
@@ -47,6 +60,7 @@ extension CarouselDatasource: UICollectionViewDataSource {
         return cell
     }
 }
+
 
 typealias CarouselDelegate = FamilySettingsViewController
 extension FamilySettingsViewController: UICollectionViewDelegate {

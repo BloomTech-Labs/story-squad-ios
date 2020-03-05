@@ -147,24 +147,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fU-j3-NgN">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fU-j3-NgN">
                                 <rect key="frame" x="8" y="380" width="398" height="317"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ozI-16-H7Z">
                                         <rect key="frame" x="8" y="2" width="382" height="212"/>
                                         <subviews>
-                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Enter New Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="97K-sC-WGZ">
+                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Enter New Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="97K-sC-WGZ" customClass="PaddedTextField" customModule="Story_Squad" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="47"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="382" id="JQK-7T-H5u"/>
                                                     <constraint firstAttribute="height" constant="47" id="Rbf-fp-F7i"/>
                                                 </constraints>
-                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Enter Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECv-Ja-Xhb">
+                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Enter Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECv-Ja-Xhb" customClass="PaddedTextField" customModule="Story_Squad" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="55" width="382" height="47"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -174,7 +174,7 @@
                                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Enter New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcY-QH-cJQ">
+                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Enter New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcY-QH-cJQ" customClass="PaddedTextField" customModule="Story_Squad" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="110" width="382" height="47"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -184,7 +184,7 @@
                                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Re-Enter New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVB-jL-wGV">
+                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Re-Enter New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVB-jL-wGV" customClass="PaddedTextField" customModule="Story_Squad" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="165" width="382" height="47"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -215,6 +215,9 @@
                                                 <integer key="value" value="14"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="updateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8eB-is-ppm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.94901960780000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -225,16 +228,18 @@
                                     <constraint firstItem="ozI-16-H7Z" firstAttribute="leading" secondItem="4fU-j3-NgN" secondAttribute="leadingMargin" id="fsA-eb-XGq"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQL-Pd-dzV">
-                                <rect key="frame" x="90" y="713" width="234" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQL-Pd-dzV">
+                                <rect key="frame" x="119.5" y="713" width="175" height="35"/>
                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="18"/>
-                                <state key="normal" title="Manage Family Subscription"/>
+                                <state key="normal" title="Manage Subscription"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vcb-an-ScZ" secondAttribute="trailing" constant="40" id="1bd-mh-MI4"/>
                             <constraint firstItem="wYU-jd-z5b" firstAttribute="top" secondItem="Vcb-an-ScZ" secondAttribute="bottom" constant="16" id="DKn-2z-2LB"/>
+                            <constraint firstItem="4fU-j3-NgN" firstAttribute="centerX" secondItem="wYU-jd-z5b" secondAttribute="centerX" id="H0W-Jm-YEg"/>
+                            <constraint firstItem="PQL-Pd-dzV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KAv-fd-00s"/>
                             <constraint firstItem="e8b-fc-2Qg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NLv-WC-OBv"/>
                             <constraint firstItem="Vcb-an-ScZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="167" id="PHl-aZ-ygE"/>
                             <constraint firstItem="wYU-jd-z5b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qf7-yj-9EW"/>
@@ -254,6 +259,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="carousel" destination="Vcb-an-ScZ" id="DSZ-g1-pxv"/>
+                        <outlet property="enterNewEmailTextField" destination="97K-sC-WGZ" id="36K-4n-oue"/>
+                        <outlet property="enterNewPasswordTextField" destination="dcY-QH-cJQ" id="7fW-xJ-RAV"/>
+                        <outlet property="enterOldPasswordTextField" destination="ECv-Ja-Xhb" id="rdf-FH-neO"/>
+                        <outlet property="reEnterNewPasswordTextField" destination="KVB-jL-wGV" id="VFN-co-WLI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
