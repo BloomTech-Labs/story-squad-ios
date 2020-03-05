@@ -20,6 +20,9 @@ class DashboardViewController: UIViewController {
     var childUser: Child?
     
     let transition = SlideInTransition()
+    let dataForParentNotification = Notification.Name(rawValue: .passDataForParentString)
+    let dataForChildNotification = Notification.Name(rawValue: .passDataForChildString)
+    
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
         .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
         .strokeWidth: -3.5
@@ -128,11 +131,11 @@ class DashboardViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        // Ask for Parent PIN for adding a new Child
-        if segue.identifier == "AddChildSegueToPin" {
-//            guard let addChildSegueToPinVC = segue.destination as? AddChildParentPinViewController  else { return }
-//            addChildSegueToPinVC.parentUser = self.parentUser
-//            addChildSegueToPinVC.networkingController = self.networkingController
+        // Pass data to AddChildVc
+        if segue.identifier == "AddChildSegue" {
+            guard let addChildVC = segue.destination as? AddChildViewController  else { return }
+            addChildVC.parentUser = self.parentUser
+            addChildVC.networkingController = self.networkingController
             
             // Ask for Child PIN to display Child's Profile
         } else if segue.identifier == "ShowChildPinVCSegue" {
