@@ -19,10 +19,6 @@ class DashboardViewController: UIViewController {
     var childrenArray: [Child]?
     var childUser: Child?
     
-    let transition = SlideInTransition()
-    let dataForParentNotification = Notification.Name(rawValue: .passDataForParentString)
-    let dataForChildNotification = Notification.Name(rawValue: .passDataForChildString)
-    
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
         .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
         .strokeWidth: -3.5
@@ -69,48 +65,6 @@ class DashboardViewController: UIViewController {
         super.viewDidAppear(animated)
         
         childrenProfilesCollectionView.reloadData()
-    }
-    
-    // MARK: - Hambuerger Menu
-    @IBAction func hamburgerMenuTapped(_ sender: UIBarButtonItem) {
-        
-        guard let hamburgerMenuVC = storyboard?.instantiateViewController(identifier: "HamburgerMenuViewController") as? HamburgerMenuTableViewController else { return }
-        
-        hamburgerMenuVC.menuOptionTapped = { menueOption in
-            self.transitionTo(menueOption)
-        }
-        hamburgerMenuVC.modalPresentationStyle = .overCurrentContext
-        hamburgerMenuVC.transitioningDelegate = self
-        present(hamburgerMenuVC, animated: true)
-    }
-    
-    // Transitioning from Hamburger Menu
-    func transitionTo(_ menueOption: HamburgerMenuOptions) {
-        
-        switch menueOption {
-            
-        case .parentAccount:
-            let parentAccountMainStoryboard = UIStoryboard(name: "SettingsParentPin", bundle: nil)
-            
-            //swiftlint:disable force_cast
-//            let parentSettingsPinVC = parentAccountMainStoryboard.instantiateViewController(withIdentifier: "SettingsParentPinSB") as! SettingsParentPinViewController
-            
-//            parentSettingsPinVC.parentUser = self.parentUser
-//            parentSettingsPinVC.networkingController = self.networkingController
-//            self.navigationController!.pushViewController(parentSettingsPinVC, animated: true)
-            
-        case .help:
-            let helpStoryboard = UIStoryboard(name: "Help", bundle: nil)
-            
-            //swiftlint:disable force_cast
-            let helpVC = helpStoryboard.instantiateViewController(withIdentifier: "HelpVC") as! HelpViewController
-            
-            self.navigationController!.pushViewController(helpVC, animated: true)
-            
-        case .logout:
-            // TODO: Alert to confirm logout
-            print("alert to logout")
-        }
     }
     
     private func updateViews() {
@@ -169,6 +123,7 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        //swiftlint:disable force_cast
         let cell = childrenProfilesCollectionView.dequeueReusableCell(withReuseIdentifier: "ChildProfileCell", for: indexPath) as! ChildProfileCollectionViewCell
         
         let child = fetchResultsController.object(at: indexPath)
@@ -178,19 +133,5 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    }
-}
-
-// MARK: - Preparing for Transition from HB Menu
-extension DashboardViewController: UIViewControllerTransitioningDelegate {
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.isPresenting = true
-        return transition
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.isPresenting = false
-        return transition
     }
 }
