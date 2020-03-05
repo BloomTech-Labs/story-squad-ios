@@ -82,11 +82,6 @@ class ParentInfoViewController: UIViewController {
             dashboardVC.parentUser = self.parentUser
             dashboardVC.networkingController = self.networkingController
             
-//            let mainTabBarVC = navVC.topViewController as! MainTabBarController
-//            mainTabBarVC.parentUser = self.parentUser
-//            mainTabBarVC.networkingController = self.networkingController
-            //////////////////
-            
 //            let settingsVC = navVC.topViewController as? SettingsParentPinViewController
 //
 //            settingsVC?.parentUser = self.parentUser

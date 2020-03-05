@@ -63,43 +63,12 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         updateViews()
-        createObservers()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         childrenProfilesCollectionView.reloadData()
-    }
-    
-    // Removing Notifications after we are done with them
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
-    func createObservers() {
-        
-        // When Parent User
-        NotificationCenter.default.addObserver(self, selector: #selector(DashboardViewController.updateData(notification:)), name: dataForParentNotification, object: nil)
-        
-        // When Child User
-        NotificationCenter.default.addObserver(self, selector: #selector(DashboardViewController.updateData(notification:)), name: dataForChildNotification, object: nil)
-        
-    }
-    
-    @objc func updateData(notification: Notification) {
-        
-        print("Dasboard has been been nofified!")
-        
-        let isParent = notification.name == dataForParentNotification
-        
-        if isParent {
-            
-        } else {
-            
-        }
-        
-        
     }
     
     // MARK: - Hambuerger Menu
@@ -146,9 +115,6 @@ class DashboardViewController: UIViewController {
     
     private func updateViews() {
         
-        // MARK: - Listening for Notifications
-        
-        
         let pumkinStrokeAttribute = NSAttributedString(string: storySquadLabel.text!, attributes: sqLabelStrokeAttributes)
         
         storySquadLabel.attributedText = pumkinStrokeAttribute
@@ -165,7 +131,7 @@ class DashboardViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        // Ask for Parent PIN for adding a new Child
+        // Pass data to AddChildVc
         if segue.identifier == "AddChildSegue" {
             guard let addChildVC = segue.destination as? AddChildViewController  else { return }
             addChildVC.parentUser = self.parentUser
