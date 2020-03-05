@@ -1,20 +1,24 @@
 PODS:
+  - LabelSwitch (0.1.6)
   - ScalingCarousel (3.0)
   - SwiftLint (0.39.1)
 
 DEPENDENCIES:
+  - LabelSwitch
   - ScalingCarousel
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - LabelSwitch
     - ScalingCarousel
     - SwiftLint
 
 SPEC CHECKSUMS:
+  LabelSwitch: 7f2120e1a567c35daefbcdd509405b63af6661ec
   ScalingCarousel: 7bf711d154b0c5c362c5dd4787ed7d13b489a4cb
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: cf3d2e19e444f524d0a1700d88ff20013ad9263b
+PODFILE CHECKSUM: ad148c839bc3958d44a2deb6a5aadc52a26def1a
 
 COCOAPODS: 1.8.4
