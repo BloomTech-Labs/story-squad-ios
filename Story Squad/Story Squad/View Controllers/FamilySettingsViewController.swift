@@ -12,6 +12,7 @@ import ScalingCarousel
 class Cell: ScalingCarouselCell {}
 
 class FamilySettingsViewController: UIViewController {
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var carousel: ScalingCarouselView!
     @IBOutlet weak var enterNewEmailTextField: UITextField!
     
@@ -23,8 +24,9 @@ class FamilySettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        scrollView.isScrollEnabled = true
     }
+
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         carousel.deviceRotated()
