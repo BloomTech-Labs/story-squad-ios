@@ -45,11 +45,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <real key="value" value="0.25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Parent Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HG5-Q6-nVK" customClass="SignUpTextField" customModule="Story_Squad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60" width="375" height="60"/>
@@ -58,11 +53,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <real key="value" value="0.25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vKp-qe-yAf" customClass="SignUpTextField" customModule="Story_Squad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120.00000000000003" width="375" height="60"/>
@@ -71,11 +61,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <real key="value" value="0.25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ReEnter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Si7-iD-0wV" customClass="SignUpTextField" customModule="Story_Squad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="180.00000000000003" width="375" height="60"/>
@@ -84,11 +69,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <real key="value" value="0.25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Create 4 Digit Parent PIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f56-Ub-K6a" customClass="SignUpTextField" customModule="Story_Squad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="240" width="375" height="60"/>
@@ -97,11 +77,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <real key="value" value="0.25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                             </stackView>
