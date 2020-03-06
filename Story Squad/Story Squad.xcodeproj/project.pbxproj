@@ -61,6 +61,8 @@
 		DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */; };
 		DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */; };
 		E398E647240F196900CEB26B /* ChildSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E398E646240F196900CEB26B /* ChildSettings.storyboard */; };
+		E39963592411909500F542C2 /* ManageSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39963582411909500F542C2 /* ManageSubscription.storyboard */; };
+		E399635B2411927500F542C2 /* ManageSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E399635A2411927500F542C2 /* ManageSubscriptionViewController.swift */; };
 		E3C82629240ED82200055A77 /* FamilySettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C82628240ED82200055A77 /* FamilySettings.storyboard */; };
 		FA71E3502406F826001385E7 /* ParentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E34F2406F826001385E7 /* ParentInfoViewController.swift */; };
 		FA71E375240B036B001385E7 /* SchoolGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E374240B036B001385E7 /* SchoolGrade.swift */; };
@@ -133,6 +135,8 @@
 		DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildParentPinViewController.swift; sourceTree = "<group>"; };
 		DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsParentPinViewController.swift; sourceTree = "<group>"; };
 		E398E646240F196900CEB26B /* ChildSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildSettings.storyboard; sourceTree = "<group>"; };
+		E39963582411909500F542C2 /* ManageSubscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageSubscription.storyboard; sourceTree = "<group>"; };
+		E399635A2411927500F542C2 /* ManageSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSubscriptionViewController.swift; sourceTree = "<group>"; };
 		E3C82628240ED82200055A77 /* FamilySettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FamilySettings.storyboard; sourceTree = "<group>"; };
 		EC8FD35A646613250F69ED2C /* Pods-Story Squad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Story Squad.debug.xcconfig"; path = "Target Support Files/Pods-Story Squad/Pods-Story Squad.debug.xcconfig"; sourceTree = "<group>"; };
 		FA71E34F2406F826001385E7 /* ParentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentInfoViewController.swift; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 				DD7A36F2240DC0E000F5B246 /* Dashboard.storyboard */,
 				E3C82628240ED82200055A77 /* FamilySettings.storyboard */,
 				E398E646240F196900CEB26B /* ChildSettings.storyboard */,
+				E39963582411909500F542C2 /* ManageSubscription.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				4F477120240F590A0067F66B /* FamilySettingsViewController.swift */,
 				4FFA57E124106CF300655C9E /* GradeTextField.swift */,
 				4FFA57E52410827B00655C9E /* SignUpTextField.swift */,
+				E399635A2411927500F542C2 /* ManageSubscriptionViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				4FF0F659240DD01600587C7B /* Nunito-Black.ttf in Resources */,
 				4FD90F3B23FF6AEF00BC4702 /* OpenSans-ExtraBold.ttf in Resources */,
 				4FF0F65A240DD01600587C7B /* Nunito-ExtraLight.ttf in Resources */,
+				E39963592411909500F542C2 /* ManageSubscription.storyboard in Resources */,
 				4FF0F5FA2405C6CB00587C7B /* AddEditCardFromParentAccount.storyboard in Resources */,
 				4FF0F652240DD01600587C7B /* Nunito-Medium.ttf in Resources */,
 				4FF0F5FE2405CB2F00587C7B /* AddChildFromDashboard.storyboard in Resources */,
@@ -510,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF0F62524071B4800587C7B /* NetworkingController.swift in Sources */,
+				E399635B2411927500F542C2 /* ManageSubscriptionViewController.swift in Sources */,
 				4FFA57E224106CF300655C9E /* GradeTextField.swift in Sources */,
 				DD71FD0B2406D9930032EBB5 /* Parent+Convenience.swift in Sources */,
 				DD71FD072406D5D80032EBB5 /* CoreDataStack.swift in Sources */,
@@ -688,7 +696,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BHPNM53Q62;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "Story Squad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -707,7 +715,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BHPNM53Q62;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "Story Squad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
