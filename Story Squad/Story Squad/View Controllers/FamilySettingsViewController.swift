@@ -44,9 +44,15 @@ class FamilySettingsViewController: UIViewController {
         carousel.deviceRotated()
     }
     
+    @IBAction func addChildButtonTapped(_ sender: UIButton) {
+    }
+    
+    
     @IBAction func updateButtonTapped(_ sender: UIButton) {
         showCompleteAlert()
     }
+    
+    
 // MARK: - Alert for Update Complete
     func showCompleteAlert() {
         let alert = UIAlertController(title: "Family Settings", message: "Update Complete", preferredStyle: .alert)
