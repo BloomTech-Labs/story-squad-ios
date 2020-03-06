@@ -124,6 +124,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DAb-y6-rzR"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7e-AP-XUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
