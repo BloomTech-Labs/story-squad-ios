@@ -31,6 +31,10 @@ class FamilySettingsViewController: UIViewController {
         receiveDataFromSignup()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        carousel.reloadData()
+    }
+    
     // To receive the Parent and NetworkingController from the Tab Bar
     func receiveDataFromSignup() {
         guard let tabBar = tabBarController as? MainTabBarController else { return }
@@ -47,11 +51,9 @@ class FamilySettingsViewController: UIViewController {
     @IBAction func addChildButtonTapped(_ sender: UIButton) {
     }
     
-    
     @IBAction func updateButtonTapped(_ sender: UIButton) {
         showCompleteAlert()
     }
-    
     
 // MARK: - Alert for Update Complete
     func showCompleteAlert() {
