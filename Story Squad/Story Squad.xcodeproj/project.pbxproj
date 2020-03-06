@@ -59,6 +59,8 @@
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
 		DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */; };
 		DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */; };
+		E35F0403241292940099F4A1 /* ManageSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E35F0402241292940099F4A1 /* ManageSubscription.storyboard */; };
+		E35F0405241292E90099F4A1 /* ManageSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35F0404241292E90099F4A1 /* ManageSubscriptionViewController.swift */; };
 		E398E647240F196900CEB26B /* ChildSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E398E646240F196900CEB26B /* ChildSettings.storyboard */; };
 		E3C82629240ED82200055A77 /* FamilySettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C82628240ED82200055A77 /* FamilySettings.storyboard */; };
 		FA71E3502406F826001385E7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E34F2406F826001385E7 /* SignupViewController.swift */; };
@@ -130,6 +132,8 @@
 		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildParentPinViewController.swift; sourceTree = "<group>"; };
 		DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsParentPinViewController.swift; sourceTree = "<group>"; };
+		E35F0402241292940099F4A1 /* ManageSubscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageSubscription.storyboard; sourceTree = "<group>"; };
+		E35F0404241292E90099F4A1 /* ManageSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSubscriptionViewController.swift; sourceTree = "<group>"; };
 		E398E646240F196900CEB26B /* ChildSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildSettings.storyboard; sourceTree = "<group>"; };
 		E3C82628240ED82200055A77 /* FamilySettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FamilySettings.storyboard; sourceTree = "<group>"; };
 		EC8FD35A646613250F69ED2C /* Pods-Story Squad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Story Squad.debug.xcconfig"; path = "Target Support Files/Pods-Story Squad/Pods-Story Squad.debug.xcconfig"; sourceTree = "<group>"; };
@@ -301,6 +305,7 @@
 				DD7A36F2240DC0E000F5B246 /* Dashboard.storyboard */,
 				E3C82628240ED82200055A77 /* FamilySettings.storyboard */,
 				E398E646240F196900CEB26B /* ChildSettings.storyboard */,
+				E35F0402241292940099F4A1 /* ManageSubscription.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				4F477120240F590A0067F66B /* FamilySettingsViewController.swift */,
 				4FFA57E124106CF300655C9E /* GradeTextField.swift */,
 				4FFA57E52410827B00655C9E /* PaddedTextField.swift */,
+				E35F0404241292E90099F4A1 /* ManageSubscriptionViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 				DDD7D24D23FF179900C9DF2B /* README.md in Resources */,
 				FA85E84C23FEF35C008637E0 /* Main.storyboard in Resources */,
 				4FD90F3A23FF6AEF00BC4702 /* Apache License.txt in Resources */,
+				E35F0403241292940099F4A1 /* ManageSubscription.storyboard in Resources */,
 				4FD90F3E23FF6AEF00BC4702 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				4FD90F3D23FF6AEF00BC4702 /* OpenSans-Bold.ttf in Resources */,
 				4FF0F657240DD01600587C7B /* Nunito-SemiBold.ttf in Resources */,
@@ -506,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF0F62524071B4800587C7B /* NetworkingController.swift in Sources */,
+				E35F0405241292E90099F4A1 /* ManageSubscriptionViewController.swift in Sources */,
 				4FFA57E224106CF300655C9E /* GradeTextField.swift in Sources */,
 				DD71FD0B2406D9930032EBB5 /* Parent+Convenience.swift in Sources */,
 				DD71FD072406D5D80032EBB5 /* CoreDataStack.swift in Sources */,
@@ -693,7 +701,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.Story-Squad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -712,7 +720,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.Story-Squad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
