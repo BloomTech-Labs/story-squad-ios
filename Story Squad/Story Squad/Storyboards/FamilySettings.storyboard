@@ -48,6 +48,9 @@
                                                         <integer key="value" value="14"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addChildButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gnm-4g-uxn"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ccq-DT-z9O">
                                                 <rect key="frame" x="16" y="121" width="406" height="914.5"/>
@@ -214,6 +217,9 @@
                                                                                 <integer key="value" value="14"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="updateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dFG-zc-jCm"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -281,6 +287,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="carousel" destination="gWh-Yy-jiU" id="731-xU-1A8"/>
+                        <outlet property="enterNewEmailTextField" destination="H6T-Jc-v1g" id="X0v-lP-fpO"/>
+                        <outlet property="enterNewPasswordTextField" destination="Fj7-6Q-d3h" id="PL2-Fl-zKY"/>
+                        <outlet property="enterOldPasswordTextField" destination="61Y-wi-wxN" id="slH-1v-ZDZ"/>
+                        <outlet property="reEnterNewPasswordTextField" destination="jX3-Kg-bau" id="4OL-XZ-khb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

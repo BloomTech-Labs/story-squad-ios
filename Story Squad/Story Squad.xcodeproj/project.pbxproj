@@ -329,8 +329,6 @@
 				DD7A36F4240DC39E00F5B246 /* LogOutViewController.swift */,
 				4FF0F65B240DDBB900587C7B /* MainTabBarController.swift */,
 				4F477120240F590A0067F66B /* FamilySettingsViewController.swift */,
-				4FFA57E124106CF300655C9E /* GradeTextField.swift */,
-				4FFA57E52410827B00655C9E /* PaddedTextField.swift */,
 				E35F0404241292E90099F4A1 /* ManageSubscriptionViewController.swift */,
 			);
 			path = "View Controllers";
@@ -339,6 +337,8 @@
 		FAB94F97240469B200905211 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				4FFA57E52410827B00655C9E /* PaddedTextField.swift */,
+				4FFA57E124106CF300655C9E /* GradeTextField.swift */,
 				DD71FD062406D5D80032EBB5 /* CoreDataStack.swift */,
 				FAB94F9A2404AC1D00905211 /* HamburgerMenuOptions.swift */,
 				FAB94F9824046A3C00905211 /* SlideInTransition.swift */,
