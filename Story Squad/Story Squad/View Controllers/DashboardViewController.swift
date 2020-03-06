@@ -12,7 +12,6 @@ import CoreData
 class DashboardViewController: UIViewController {
     
     // MARK: - Properties
-    
     var networkingController: NetworkingController?
     
     var parentUser: Parent?
@@ -50,7 +49,6 @@ class DashboardViewController: UIViewController {
     }
     
     // MARK: - Outlets
-    
     @IBOutlet weak var storySquadLabel: UILabel!
     @IBOutlet weak var childrenProfilesCollectionView: UICollectionView!
     @IBOutlet weak var addChildButton: UIButton!
@@ -59,12 +57,21 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         updateViews()
+        receiveDataFromSignup()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         childrenProfilesCollectionView.reloadData()
+    }
+    
+    // To receive the Parent and NetworkingController from the Tab Ba
+    func receiveDataFromSignup() {
+        guard let tabBar = tabBarController as? MainTabBarController else { return }
+        
+        self.parentUser = tabBar.parentUser
+        self.networkingController = tabBar.networkingController
     }
     
     private func updateViews() {

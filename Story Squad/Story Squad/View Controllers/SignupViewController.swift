@@ -32,6 +32,7 @@ class SignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         pinTextField.delegate = self
         updateViews()
     }
@@ -100,19 +101,10 @@ class SignupViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ShowTabBarSegue" {
+            guard let tabBarController = segue.destination as? MainTabBarController else { return }
             
-            let tabBarController = segue.destination as? UITabBarController
-            
-			//swiftlint:disable force_cast
-            let navVC = tabBarController?.viewControllers![1] as! UINavigationController
-            let dashboardVC = navVC.topViewController as! DashboardViewController
-            dashboardVC.parentUser = self.parentUser
-            dashboardVC.networkingController = self.networkingController
-            
-//            let settingsVC = navVC.topViewController as? SettingsParentPinViewController
-//
-//            settingsVC?.parentUser = self.parentUser
-//            settingsVC?.networkingController = self.networkingController
+            tabBarController.parentUser = self.parentUser
+            tabBarController.networkingController = self.networkingController
         }
     }
 }

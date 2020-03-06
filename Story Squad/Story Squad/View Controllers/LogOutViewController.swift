@@ -9,14 +9,25 @@
 import UIKit
 
 class LogOutViewController: UIViewController {
+    
+    // MARK: - Properties
+    var networkingController: NetworkingController?
+    var parentUser: Parent?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        receiveDataFromSignup()
     }
     
-
+    // To receive the Parent and NetworkingController from the Tab Bar
+    func receiveDataFromSignup() {
+        guard let tabBar = tabBarController as? MainTabBarController else { return }
+        
+        self.parentUser = tabBar.parentUser
+        self.networkingController = tabBar.networkingController
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -26,5 +37,4 @@ class LogOutViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

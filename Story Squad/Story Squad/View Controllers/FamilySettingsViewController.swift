@@ -13,17 +13,30 @@ class Cell: ScalingCarouselCell {}
 
 class FamilySettingsViewController: UIViewController {
     
+    // MARK: - Properties
+    var networkingController: NetworkingController?
+    var parentUser: Parent?
+    
+    // MARK: - Outlets
     @IBOutlet weak var carousel: ScalingCarouselView!
+    
     @IBOutlet weak var enterNewEmailTextField: UITextField!
-    
     @IBOutlet weak var enterOldPasswordTextField: UITextField!
-   
     @IBOutlet weak var enterNewPasswordTextField: UITextField!
-    
     @IBOutlet weak var reEnterNewPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        receiveDataFromSignup()
+    }
+    
+    // To receive the Parent and NetworkingController from the Tab Bar
+    func receiveDataFromSignup() {
+        guard let tabBar = tabBarController as? MainTabBarController else { return }
+        
+        self.parentUser = tabBar.parentUser
+        self.networkingController = tabBar.networkingController
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -61,7 +74,6 @@ extension CarouselDatasource: UICollectionViewDataSource {
         return cell
     }
 }
-
 
 typealias CarouselDelegate = FamilySettingsViewController
 extension FamilySettingsViewController: UICollectionViewDelegate {
