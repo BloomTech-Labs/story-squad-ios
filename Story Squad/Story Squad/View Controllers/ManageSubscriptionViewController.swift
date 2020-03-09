@@ -45,6 +45,7 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
     // MARK: - Outlets
   
     @IBOutlet weak var childCollectionView: UICollectionView!
+
     
     override func viewDidAppear(_ animated: Bool) {
         childCollectionView.reloadData()
@@ -102,6 +103,15 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
         // Pass the selected object to the new view controller.
     }
     */
+
+    
+    // MARK: - Alert for Update Complete
+    func showCompleteAlert() {
+        let alert = UIAlertController(title: "Family Settings", message: "Update Complete", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
 
 }
 
