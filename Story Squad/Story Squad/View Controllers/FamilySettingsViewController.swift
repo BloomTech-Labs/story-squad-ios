@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import ScalingCarousel
-
-class Cell: ScalingCarouselCell {}
+import CoreData
 
 class FamilySettingsViewController: UIViewController {
     
@@ -17,9 +15,8 @@ class FamilySettingsViewController: UIViewController {
     var networkingController: NetworkingController?
     var parentUser: Parent?
     
-    // MARK: - Outlets
-    @IBOutlet weak var carousel: ScalingCarouselView!
     
+    // MARK: - Outlets
     @IBOutlet weak var enterNewEmailTextField: UITextField!
     @IBOutlet weak var enterOldPasswordTextField: UITextField!
     @IBOutlet weak var enterNewPasswordTextField: UITextField!
@@ -30,22 +27,13 @@ class FamilySettingsViewController: UIViewController {
         
         receiveDataFromSignup()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        carousel.reloadData()
-    }
-    
+
     // To receive the Parent and NetworkingController from the Tab Bar
     func receiveDataFromSignup() {
         guard let tabBar = tabBarController as? MainTabBarController else { return }
         
         self.parentUser = tabBar.parentUser
         self.networkingController = tabBar.networkingController
-    }
-
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        carousel.deviceRotated()
     }
     
     @IBAction func addChildButtonTapped(_ sender: UIButton) {
@@ -62,47 +50,20 @@ class FamilySettingsViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
+    
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           
+           if segue.identifier == "ToManageSubscriptionSegue" {
+            guard let manageSubscriptionVC = segue.destination as? ManageSubscriptionViewController else { return }
+            manageSubscriptionVC.parentUser = self.parentUser
+            manageSubscriptionVC.networkingController = self.networkingController
+            
+           }
+       }
 }
 
-typealias CarouselDatasource = FamilySettingsViewController
-extension CarouselDatasource: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "childCollectionViewCell", for: indexPath)
 
-        DispatchQueue.main.async {
-            cell.setNeedsLayout()
-            cell.layoutIfNeeded()
-        }
-        
-        return cell
-    }
-}
 
-typealias CarouselDelegate = FamilySettingsViewController
-extension FamilySettingsViewController: UICollectionViewDelegate {
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        carousel.didScroll()
-        
-       // guard let currentCenterIndex = carousel.currentCenterCellIndex?.row else { return }
-    }
-}
 
-private typealias ScalingCarouselFlowDelegate = FamilySettingsViewController
-extension ScalingCarouselFlowDelegate: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        
-        return 0
-    }
-}
