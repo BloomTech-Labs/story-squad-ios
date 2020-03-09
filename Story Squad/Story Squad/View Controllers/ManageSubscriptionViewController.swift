@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ManageSubscriptionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ManageSubscriptionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, NSFetchedResultsControllerDelegate {
  
     // MARK: - Properties
     var networkingController: NetworkingController?
@@ -29,8 +29,8 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
         
         let moc = CoreDataStack.shared.mainContext
         let fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
-        //swiftlint:disable:next force_cast
-        fetchResultsController.delegate = self as! NSFetchedResultsControllerDelegate
+        
+        fetchResultsController.delegate = self
         
         // Try to perform Fetch
         do {
@@ -70,16 +70,23 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
     // MARK: - UICollectionView Delegates and DataSource Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
       // return children.count
-        5
+//        5
+        return fetchResultsController.fetchedObjects?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     //swiftlint:disable:next force_cast
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "childCollectionViewCellIdentifier", for: indexPath) as! ChildCollectionViewCell
         
-        //cell.avatarImageView.image = child?.avatar
-        // cell.nameLabel.text = child?.name
-        cell.nameLabel.text = "Name"
+        let child = fetchResultsController.object(at: indexPath)
+        
+        if let avatar = child.avatar {
+            let avatarImage = UIImage(data: avatar)
+            cell.avatarImageView.image = avatarImage
+        }
+        
+        cell.nameLabel.text = child.name
+
         return cell
     }
     
