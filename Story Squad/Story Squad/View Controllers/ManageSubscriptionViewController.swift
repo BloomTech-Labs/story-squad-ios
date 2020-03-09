@@ -50,11 +50,18 @@ class ManageSubscriptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+           carousel.reloadData()
+       }
+    
 
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        carousel.deviceRotated()
+    }
+    
     /*
     // MARK: - Navigation
 
