@@ -194,6 +194,9 @@
                     <navigationItem key="navigationItem" title="Family Settings" id="dMN-4q-kSV">
                         <barButtonItem key="rightBarButtonItem" image="questionmark.circle" catalog="system" style="plain" id="GZv-gN-MkH">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="wx0-k1-t10" kind="show" identifier="ShowHelpVC" id="eJf-iM-oKs"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1200"/>
@@ -208,6 +211,16 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
         </scene>
+        <!--Help-->
+        <scene sceneID="Yhm-mq-wpB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Help" id="wx0-k1-t10" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RSw-vJ-lfW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JTq-OJ-Hno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="108"/>
+        </scene>
         <!--ManageSubscription-->
         <scene sceneID="bt5-LG-gZV">
             <objects>
@@ -216,7 +229,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDF-cR-Lfz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734" y="249"/>
+            <point key="canvasLocation" x="1833" y="142"/>
         </scene>
         <!--Settings-->
         <scene sceneID="hgD-OH-MGA">
