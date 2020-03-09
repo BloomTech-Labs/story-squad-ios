@@ -50,6 +50,20 @@ class FamilySettingsViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
+    
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           
+           if segue.identifier == "ToManageSubscriptionSegue" {
+            guard let manageSubscriptionVC = segue.destination as? ManageSubscriptionViewController else { return }
+            manageSubscriptionVC.parentUser = self.parentUser
+            manageSubscriptionVC.networkingController = self.networkingController
+            
+           }
+       }
 }
+
+
 
 
