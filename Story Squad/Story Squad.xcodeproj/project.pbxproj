@@ -23,7 +23,6 @@
 		4FD90F4123FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F3623FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf */; };
 		4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */; };
 		4FF0F5E92404975A00587C7B /* ChildrenProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */; };
-		4FF0F5EC2404986700587C7B /* ChildProfileSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5EB2404986700587C7B /* ChildProfileSettingsTableViewCell.swift */; };
 		4FF0F5EE2404A7A100587C7B /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5ED2404A7A100587C7B /* Help.storyboard */; };
 		4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */; };
 		4FF0F5F22404AEF300587C7B /* ChildSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */; };
@@ -98,7 +97,6 @@
 		4FD90F3623FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChildrenProfileTableView.swift; path = "Story Squad/Storyboards/Pins Storyboards/ChildrenProfileTableView.swift"; sourceTree = SOURCE_ROOT; };
-		4FF0F5EB2404986700587C7B /* ChildProfileSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		4FF0F5ED2404A7A100587C7B /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildSettingsViewController.swift; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 			children = (
 				4FFA57EF2416D62900655C9E /* UPCarouselFlowLayout.swift */,
 				4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */,
-				4FF0F5EB2404986700587C7B /* ChildProfileSettingsTableViewCell.swift */,
 				4FFA57EB2416C60C00655C9E /* ChildCollectionViewCell.swift */,
 				4FFA57EC2416C60C00655C9E /* ChildCollectionViewCell.xib */,
 			);
@@ -533,7 +530,6 @@
 				FA71E3502406F826001385E7 /* SignupViewController.swift in Sources */,
 				FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */,
 				DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */,
-				4FF0F5EC2404986700587C7B /* ChildProfileSettingsTableViewCell.swift in Sources */,
 				DD71FD092406D97F0032EBB5 /* Child+Convenience.swift in Sources */,
 				4FF0F62724071DED00587C7B /* NetworkingError.swift in Sources */,
 				4F477121240F590A0067F66B /* FamilySettingsViewController.swift in Sources */,

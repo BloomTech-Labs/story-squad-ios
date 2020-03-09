@@ -29,6 +29,7 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
         
         let moc = CoreDataStack.shared.mainContext
         let fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        //swiftlint:disable:next force_cast
         fetchResultsController.delegate = self as! NSFetchedResultsControllerDelegate
         
         // Try to perform Fetch
@@ -52,14 +53,14 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        childCollectionView.register(UINib.init(nibName: "ChildCollectionViewCell.xib", bundle: nil), forCellWithReuseIdentifier: "childCollectionViewCellIdentifier")
+        childCollectionView.register(UINib.init(nibName: "ChildCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "childCollectionViewCellIdentifier")
         
         let flowLayout = UPCarouselFlowLayout()
-        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 60.0, height: childCollectionView.frame.size.height)
+        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 100.0, height: childCollectionView.frame.size.height)
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 0.8
         flowLayout.sideItemAlpha = 1.0
-        flowLayout.spacingMode = .fixed(spacing: 5.0)
+        flowLayout.spacingMode = .fixed(spacing: 10.0)
         childCollectionView.collectionViewLayout = flowLayout
         
         childCollectionView.delegate = self
@@ -68,16 +69,22 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
     
     // MARK: - UICollectionView Delegates and DataSource Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       // return children.count
-        return 5
+      // return children.count
+        5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "childCollectionViewCellIdentifier", for: indexPath) as! ChildCollectionViewCell
+    //swiftlint:disable:next force_cast
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "childCollectionViewCellIdentifier", for: indexPath) as! ChildCollectionViewCell
         
         //cell.avatarImageView.image = child?.avatar
-        cell.nameLabel.text = child?.name
+        // cell.nameLabel.text = child?.name
+        cell.nameLabel.text = "Name"
         return cell
+    }
+    
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("child selected == \(indexPath.row)")
     }
     /*
     // MARK: - Navigation

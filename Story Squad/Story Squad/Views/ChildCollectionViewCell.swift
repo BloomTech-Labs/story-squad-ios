@@ -16,19 +16,13 @@ class ChildCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var childSettingsLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-        DispatchQueue.main.async {
-            self.cntView.layer.shadowColor = UIColor.gray.cgColor
-            self.cntView.layer.shadowOpacity = 0.5
-            self.cntView.layer.shadowOpacity = 10.0
-            self.cntView.layer.shadowOffset = .zero
-            self.cntView.layer.shadowPath = UIBezierPath(rect: self.cntView.bounds).cgPath
+            self.cntView.layer.cornerRadius = 14.0
             self.cntView.layer.shouldRasterize = true
-        }
+            self.childSettingsLabel.layer.cornerRadius = 14.0
     }
 
 }

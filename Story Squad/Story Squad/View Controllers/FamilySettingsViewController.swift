@@ -63,7 +63,3 @@ class FamilySettingsViewController: UIViewController {
            }
        }
 }
-
-
-
-

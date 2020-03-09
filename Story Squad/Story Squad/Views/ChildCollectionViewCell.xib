@@ -25,23 +25,28 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZP-XX-XeS">
-                        <rect key="frame" x="10" y="10" width="296" height="414"/>
+                        <rect key="frame" x="16" y="50" width="284" height="334"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Tcg-wL-R93">
-                                <rect key="frame" x="70" y="42" width="156" height="156"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="156" id="6B2-0z-iLn"/>
-                                    <constraint firstAttribute="width" constant="156" id="Que-eW-njv"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MN6-uk-Mfc">
-                                <rect key="frame" x="8" y="206" width="280" height="31"/>
-                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y8u-uh-Oxm">
+                                <rect key="frame" x="64" y="23" width="156" height="194.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Tcg-wL-R93">
+                                        <rect key="frame" x="0.0" y="0.0" width="156" height="156"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="156" id="6B2-0z-iLn"/>
+                                            <constraint firstAttribute="width" constant="156" id="Que-eW-njv"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MN6-uk-Mfc">
+                                        <rect key="frame" x="45.5" y="164" width="65" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bD2-1B-MJa">
-                                <rect key="frame" x="8" y="245" width="280" height="37.5"/>
+                                <rect key="frame" x="8" y="233.5" width="268" height="37.5"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37.5" id="2YS-ig-h9L"/>
@@ -56,30 +61,38 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.81176470590000005" green="0.94901960780000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MN6-uk-Mfc" firstAttribute="top" secondItem="Tcg-wL-R93" secondAttribute="bottom" constant="8" id="3Ct-Od-hKV"/>
-                            <constraint firstItem="Tcg-wL-R93" firstAttribute="top" secondItem="TZP-XX-XeS" secondAttribute="top" constant="42" id="B2l-96-Qxn"/>
-                            <constraint firstAttribute="trailing" secondItem="MN6-uk-Mfc" secondAttribute="trailing" constant="8" id="FPk-pc-pcZ"/>
-                            <constraint firstItem="bD2-1B-MJa" firstAttribute="top" secondItem="MN6-uk-Mfc" secondAttribute="bottom" constant="8" id="Ny9-1e-NIm"/>
-                            <constraint firstItem="MN6-uk-Mfc" firstAttribute="centerX" secondItem="TZP-XX-XeS" secondAttribute="centerX" id="XA4-5V-Yrr"/>
-                            <constraint firstItem="MN6-uk-Mfc" firstAttribute="leading" secondItem="TZP-XX-XeS" secondAttribute="leading" constant="8" id="cDc-dw-2RY"/>
-                            <constraint firstAttribute="trailing" secondItem="bD2-1B-MJa" secondAttribute="trailing" constant="8" id="cwb-N0-ODI"/>
-                            <constraint firstItem="bD2-1B-MJa" firstAttribute="leading" secondItem="TZP-XX-XeS" secondAttribute="leading" constant="8" id="gkh-eM-2Z5"/>
-                            <constraint firstItem="Tcg-wL-R93" firstAttribute="centerX" secondItem="TZP-XX-XeS" secondAttribute="centerX" id="laI-g1-il6"/>
-                            <constraint firstItem="bD2-1B-MJa" firstAttribute="centerX" secondItem="TZP-XX-XeS" secondAttribute="centerX" id="tgA-mr-28M"/>
+                            <constraint firstItem="bD2-1B-MJa" firstAttribute="leading" secondItem="TZP-XX-XeS" secondAttribute="leading" constant="8" id="1Me-ik-FPj"/>
+                            <constraint firstAttribute="width" secondItem="TZP-XX-XeS" secondAttribute="height" multiplier="142:167" id="HSy-rn-7k1"/>
+                            <constraint firstItem="y8u-uh-Oxm" firstAttribute="top" secondItem="TZP-XX-XeS" secondAttribute="top" constant="23" id="KrX-Br-0Jv"/>
+                            <constraint firstItem="bD2-1B-MJa" firstAttribute="top" secondItem="y8u-uh-Oxm" secondAttribute="bottom" constant="16" id="cuD-lc-Kez"/>
+                            <constraint firstItem="y8u-uh-Oxm" firstAttribute="centerX" secondItem="TZP-XX-XeS" secondAttribute="centerX" id="yOY-9E-MpD"/>
+                            <constraint firstItem="y8u-uh-Oxm" firstAttribute="centerX" secondItem="bD2-1B-MJa" secondAttribute="centerX" id="z7Y-DR-m21"/>
+                            <constraint firstAttribute="trailing" secondItem="bD2-1B-MJa" secondAttribute="trailing" constant="8" id="zmN-jH-cMc"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="TZP-XX-XeS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="A6Y-ZA-APg"/>
-                <constraint firstAttribute="bottom" secondItem="TZP-XX-XeS" secondAttribute="bottom" constant="10" id="Mu4-5I-a3M"/>
-                <constraint firstAttribute="trailing" secondItem="TZP-XX-XeS" secondAttribute="trailing" constant="10" id="OeS-Bf-p38"/>
-                <constraint firstItem="TZP-XX-XeS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="SZK-xa-iQg"/>
+                <constraint firstItem="TZP-XX-XeS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="50" id="A6Y-ZA-APg"/>
+                <constraint firstAttribute="bottom" secondItem="TZP-XX-XeS" secondAttribute="bottom" constant="50" id="Mu4-5I-a3M"/>
+                <constraint firstAttribute="trailing" secondItem="TZP-XX-XeS" secondAttribute="trailing" constant="16" id="OeS-Bf-p38"/>
+                <constraint firstItem="TZP-XX-XeS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="ezQ-B8-piW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="316" height="434"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="14"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="avatarImageView" destination="Tcg-wL-R93" id="a2P-yr-NLC"/>
                 <outlet property="childSettingsLabel" destination="bD2-1B-MJa" id="YSi-bf-obC"/>
