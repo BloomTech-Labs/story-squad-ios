@@ -47,7 +47,7 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
     @IBOutlet weak var childCollectionView: UICollectionView!
     
     override func viewDidAppear(_ animated: Bool) {
-          // carousel.reloadData()
+        childCollectionView.reloadData()
        }
     
     override func viewDidLoad() {
