@@ -45,7 +45,7 @@ class ManageSubscriptionViewController: UIViewController {
 
 
     // MARK: - Outlets
-     @IBOutlet weak var carousel: ScalingCarouselView!
+    @IBOutlet weak var carousel: ScalingCarouselView!
     
     
     override func viewDidLoad() {
