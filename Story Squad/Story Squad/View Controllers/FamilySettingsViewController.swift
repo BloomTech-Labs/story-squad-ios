@@ -8,14 +8,14 @@
 
 import UIKit
 import ScalingCarousel
-
-class Cell: ScalingCarouselCell {}
+import CoreData
 
 class FamilySettingsViewController: UIViewController {
     
     // MARK: - Properties
     var networkingController: NetworkingController?
     var parentUser: Parent?
+    
     
     // MARK: - Outlets
     @IBOutlet weak var carousel: ScalingCarouselView!
@@ -64,8 +64,8 @@ class FamilySettingsViewController: UIViewController {
     }
 }
 
-typealias CarouselDatasource = FamilySettingsViewController
-extension CarouselDatasource: UICollectionViewDataSource {
+
+extension FamilySettingsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -81,20 +81,12 @@ extension CarouselDatasource: UICollectionViewDataSource {
         
         return cell
     }
-}
-
-typealias CarouselDelegate = FamilySettingsViewController
-extension FamilySettingsViewController: UICollectionViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         carousel.didScroll()
         
        // guard let currentCenterIndex = carousel.currentCenterCellIndex?.row else { return }
     }
-}
-
-private typealias ScalingCarouselFlowDelegate = FamilySettingsViewController
-extension ScalingCarouselFlowDelegate: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
@@ -106,3 +98,4 @@ extension ScalingCarouselFlowDelegate: UICollectionViewDelegateFlowLayout {
         return 0
     }
 }
+
