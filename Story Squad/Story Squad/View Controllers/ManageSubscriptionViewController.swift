@@ -7,16 +7,14 @@
 //
 
 import UIKit
-import ScalingCarousel
 import CoreData
 
-class Cell: ScalingCarouselCell {}
-
-class ManageSubscriptionViewController: UIViewController {
+class ManageSubscriptionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
     // MARK: - Properties
     var networkingController: NetworkingController?
     var parentUser: Parent?
+    var child: Child?
     
     var fetchResultsController: NSFetchedResultsController<Child> {
         
@@ -31,8 +29,7 @@ class ManageSubscriptionViewController: UIViewController {
         
         let moc = CoreDataStack.shared.mainContext
         let fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
-        
-        fetchResultsController.delegate = self
+        fetchResultsController.delegate = self as! NSFetchedResultsControllerDelegate
         
         // Try to perform Fetch
         do {
@@ -45,23 +42,43 @@ class ManageSubscriptionViewController: UIViewController {
 
 
     // MARK: - Outlets
-    @IBOutlet weak var carousel: ScalingCarouselView!
+  
+    @IBOutlet weak var childCollectionView: UICollectionView!
     
+    override func viewDidAppear(_ animated: Bool) {
+          // carousel.reloadData()
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        childCollectionView.register(UINib.init(nibName: "ChildCollectionViewCell.xib", bundle: nil), forCellWithReuseIdentifier: "childCollectionViewCellIdentifier")
+        
+        let flowLayout = UPCarouselFlowLayout()
+        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 60.0, height: childCollectionView.frame.size.height)
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.sideItemScale = 0.8
+        flowLayout.sideItemAlpha = 1.0
+        flowLayout.spacingMode = .fixed(spacing: 5.0)
+        childCollectionView.collectionViewLayout = flowLayout
+        
+        childCollectionView.delegate = self
+        childCollectionView.dataSource = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-           carousel.reloadData()
-       }
-    
-
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        carousel.deviceRotated()
+    // MARK: - UICollectionView Delegates and DataSource Methods
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+       // return children.count
+        return 5
     }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "childCollectionViewCellIdentifier", for: indexPath) as! ChildCollectionViewCell
+        
+        //cell.avatarImageView.image = child?.avatar
+        cell.nameLabel.text = child?.name
+        return cell
+    }
     /*
     // MARK: - Navigation
 
@@ -74,64 +91,3 @@ class ManageSubscriptionViewController: UIViewController {
 
 }
 
-extension ManageSubscriptionViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //return 10
-        return fetchResultsController.fetchedObjects?.count ?? 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "childCollectionViewCell", for: indexPath)
-
-        // FOR JONALYNN!! This is the correct child that you need, but not sure how you want to use this.
-        let child = fetchResultsController.object(at: indexPath)
-        
-        DispatchQueue.main.async {
-            cell.setNeedsLayout()
-            cell.layoutIfNeeded()
-        }
-        
-        return cell
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        carousel.didScroll()
-        
-       // guard let currentCenterIndex = carousel.currentCenterCellIndex?.row else { return }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        
-        return 0
-    }
-}
-
-//typealias CarouselDelegate = FamilySettingsViewController
-//extension FamilySettingsViewController: UICollectionViewDelegate {
-//
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        carousel.didScroll()
-//
-//       // guard let currentCenterIndex = carousel.currentCenterCellIndex?.row else { return }
-//    }
-//}
-//
-//private typealias ScalingCarouselFlowDelegate = FamilySettingsViewController
-//extension ScalingCarouselFlowDelegate: UICollectionViewDelegateFlowLayout {
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//
-//        return 10
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//
-//        return 0
-//    }
-//}

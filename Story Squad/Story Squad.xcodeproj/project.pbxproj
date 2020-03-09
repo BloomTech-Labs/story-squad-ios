@@ -46,6 +46,9 @@
 		4FF0F65C240DDBB900587C7B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F65B240DDBB900587C7B /* MainTabBarController.swift */; };
 		4FFA57E224106CF300655C9E /* GradeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFA57E124106CF300655C9E /* GradeTextField.swift */; };
 		4FFA57E62410827B00655C9E /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFA57E52410827B00655C9E /* PaddedTextField.swift */; };
+		4FFA57ED2416C60C00655C9E /* ChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFA57EB2416C60C00655C9E /* ChildCollectionViewCell.swift */; };
+		4FFA57EE2416C60C00655C9E /* ChildCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFA57EC2416C60C00655C9E /* ChildCollectionViewCell.xib */; };
+		4FFA57F02416D62900655C9E /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFA57EF2416D62900655C9E /* UPCarouselFlowLayout.swift */; };
 		59A0C33A80A9EAD6E47C8B8A /* Pods_Story_Squad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B582B6E9B43C2AAFAC54FE00 /* Pods_Story_Squad.framework */; };
 		DD13175B2405B4F100013753 /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13175A2405B4F100013753 /* StringKeys.swift */; };
 		DD71FD042406D2E50032EBB5 /* StorySquad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD71FD022406D2E50032EBB5 /* StorySquad.xcdatamodeld */; };
@@ -118,6 +121,9 @@
 		4FF0F65B240DDBB900587C7B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4FFA57E124106CF300655C9E /* GradeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeTextField.swift; sourceTree = "<group>"; };
 		4FFA57E52410827B00655C9E /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
+		4FFA57EB2416C60C00655C9E /* ChildCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCollectionViewCell.swift; sourceTree = "<group>"; };
+		4FFA57EC2416C60C00655C9E /* ChildCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildCollectionViewCell.xib; sourceTree = "<group>"; };
+		4FFA57EF2416D62900655C9E /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		63C7C998A68B516E47233BF0 /* Pods-Story Squad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Story Squad.release.xcconfig"; path = "Target Support Files/Pods-Story Squad/Pods-Story Squad.release.xcconfig"; sourceTree = "<group>"; };
 		B582B6E9B43C2AAFAC54FE00 /* Pods_Story_Squad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Story_Squad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD13175A2405B4F100013753 /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
@@ -198,8 +204,11 @@
 		4FF0F5EA2404983300587C7B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4FFA57EF2416D62900655C9E /* UPCarouselFlowLayout.swift */,
 				4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */,
 				4FF0F5EB2404986700587C7B /* ChildProfileSettingsTableViewCell.swift */,
+				4FFA57EB2416C60C00655C9E /* ChildCollectionViewCell.swift */,
+				4FFA57EC2416C60C00655C9E /* ChildCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -411,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD90F3923FF6AEF00BC4702 /* OpenSans-Italic.ttf in Resources */,
+				4FFA57EE2416C60C00655C9E /* ChildCollectionViewCell.xib in Resources */,
 				4FF0F659240DD01600587C7B /* Nunito-Black.ttf in Resources */,
 				4FD90F3B23FF6AEF00BC4702 /* OpenSans-ExtraBold.ttf in Resources */,
 				4FF0F65A240DD01600587C7B /* Nunito-ExtraLight.ttf in Resources */,
@@ -519,6 +529,7 @@
 				DD71FD072406D5D80032EBB5 /* CoreDataStack.swift in Sources */,
 				4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */,
 				4FF0F6022405CE7900587C7B /* ParentAccountMainVC.swift in Sources */,
+				4FFA57F02416D62900655C9E /* UPCarouselFlowLayout.swift in Sources */,
 				FA71E3502406F826001385E7 /* SignupViewController.swift in Sources */,
 				FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */,
 				DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */,
@@ -547,6 +558,7 @@
 				4FF0F65C240DDBB900587C7B /* MainTabBarController.swift in Sources */,
 				FA71E375240B036B001385E7 /* SchoolGrade.swift in Sources */,
 				4FF0F5E92404975A00587C7B /* ChildrenProfileTableView.swift in Sources */,
+				4FFA57ED2416C60C00655C9E /* ChildCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
