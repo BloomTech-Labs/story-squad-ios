@@ -18,11 +18,14 @@ class ChildCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
-            self.cntView.layer.cornerRadius = 14.0
-            self.cntView.layer.shouldRasterize = true
-            self.childSettingsLabel.layer.cornerRadius = 14.0
+        updateViews()
     }
-
+    
+    private func updateViews() {
+        self.cntView.layer.cornerRadius = 14
+        self.cntView.layer.shouldRasterize = true
+        self.childSettingsLabel.layer.cornerRadius = 14
+        self.childSettingsLabel.layer.shouldRasterize = true
+    }
 }
