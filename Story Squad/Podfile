@@ -11,4 +11,5 @@ target 'Story Squad' do
 	pod "ScalingCarousel"
 	pod 'LabelSwitch'
   pod 'GoogleAnalytics'
+  pod 'Firebase/Analytics'
 end
