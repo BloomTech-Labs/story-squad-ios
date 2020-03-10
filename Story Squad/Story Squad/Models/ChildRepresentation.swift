@@ -30,5 +30,5 @@ struct ChildRepresentation: Codable {
 	var grade: Int16
 	var dyslexiaPreference: Bool = false
 	var pin: Int16
-    var avatar: Data?
+    var avatar: String?
 }

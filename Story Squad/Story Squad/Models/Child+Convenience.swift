@@ -11,19 +11,23 @@ import CoreData
 
 extension Child {
     
-        var childRepresentation: ChildRepresentation? {
-            
-            guard let name = name,
-                let username = username,
-                let parent = parent?.parentRepresentation,
-                let cohort = cohort,
-                let avatar = avatar else { return nil }
-            
-            return ChildRepresentation(name: name, username: username, parent: parent, id: id, cohort: cohort, grade: grade, dyslexiaPreference: dyslexiaPreference, pin: pin, avatar: avatar)
+    var childRepresentation: ChildRepresentation? {
+        let arrayOfAvatars = ["Hero 6.png", "Hero 11.png", "Hero 12.png", "Hero 13.png", "Hero 14.png", "Hero 15.png", "Hero 16.png", "Hero 18.png", "Hero 19.png"]
+        
+        // Generate random avatar
+        let randomAvatar = arrayOfAvatars.randomElement()
+        
+        guard let name = name,
+            let username = username,
+            let parent = parent?.parentRepresentation,
+            let cohort = cohort,
+            let avatar = randomAvatar else { return nil }
+        
+        return ChildRepresentation(name: name, username: username, parent: parent, id: id, cohort: cohort, grade: grade, dyslexiaPreference: dyslexiaPreference, pin: pin, avatar: avatar)
     }
     
     // MARK: CoreData Initializer
-    @discardableResult convenience init(name: String, id: Int16, username: String?, parent: Parent, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: Data?, context: NSManagedObjectContext) {
+    @discardableResult convenience init(name: String, id: Int16, username: String?, parent: Parent, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: String?, context: NSManagedObjectContext) {
         self.init(context: context)
         
         self.name = name
@@ -34,6 +38,7 @@ extension Child {
         self.grade = grade
         self.cohort = cohort
         self.dyslexiaPreference = dyslexiaPreference
+        self.avatar = avatar
     }
     
 //    // MARK: Init from Representation

@@ -79,12 +79,8 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         
         let child = fetchResultsController.object(at: indexPath)
         
-        if let avatar = child.avatar {
-            let avatarImage = UIImage(data: avatar)
-            cell.avatarImageView.image = avatarImage
-        }
-        
         cell.nameLabel.text = child.name
+        cell.image = child.avatar
         return cell
     }
     
