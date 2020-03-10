@@ -55,10 +55,10 @@ class FamilySettingsViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            
-           if segue.identifier == "ToManageSubscriptionSegue" {
-            guard let manageSubscriptionVC = segue.destination as? ManageSubscriptionViewController else { return }
-            manageSubscriptionVC.parentUser = self.parentUser
-            manageSubscriptionVC.networkingController = self.networkingController
+           if segue.identifier == "ManageChildProfilesSegue" {
+            guard let manageChildProfilesVC = segue.destination as? ManageChildProfilesViewController else { return }
+            manageChildProfilesVC.parentUser = self.parentUser
+            manageChildProfilesVC.networkingController = self.networkingController
             
            } else if segue.identifier == "toAddChildSegue" {
             guard let addChildVC = segue.destination as? AddChildViewController else { return }

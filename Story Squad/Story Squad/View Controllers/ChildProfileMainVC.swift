@@ -16,6 +16,7 @@ class ChildProfileMainVC: UIViewController {
     var parentUser: Parent?
     var childUser: Child?
 
+    @IBOutlet weak var comingSoonLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +24,7 @@ class ChildProfileMainVC: UIViewController {
     }
     
     private func updateViews() {
+        comingSoonLabel.transform = CGAffineTransform.init(rotationAngle: 0.75)
     }
     
     /*

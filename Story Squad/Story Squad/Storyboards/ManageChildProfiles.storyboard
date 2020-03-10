@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ch1-6F-6PW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Manage Child Profiles-->
+        <scene sceneID="g29-LM-Mc6">
+            <objects>
+                <viewController storyboardIdentifier="ManageChildProfiles" title="Manage Child Profiles" id="ch1-6F-6PW" userLabel="Manage Child Profiles" customClass="ManageChildProfilesViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DJn-h9-hbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kjz-sm-LiH">
+                                <rect key="frame" x="0.0" y="138" width="414" height="649"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="afS-Z8-rKO">
+                                    <size key="itemSize" width="414" height="608"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChildSettingsFromManageProfilesSegue" id="c6H-bN-uLw" customClass="ChildCollectionViewCell" customModule="Story_Squad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SU-AG-Vf7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="7SU-AG-Vf7" firstAttribute="top" secondItem="c6H-bN-uLw" secondAttribute="topMargin" constant="-8" id="DU1-u6-95A"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="7SU-AG-Vf7" secondAttribute="bottom" constant="-8" id="WE0-1k-GeE"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="7SU-AG-Vf7" secondAttribute="trailing" constant="-8" id="pL1-KE-mqU"/>
+                                            <constraint firstItem="7SU-AG-Vf7" firstAttribute="leading" secondItem="c6H-bN-uLw" secondAttribute="leadingMargin" constant="-8" id="sAQ-8Z-OXO"/>
+                                        </constraints>
+                                        <size key="customSize" width="414" height="608"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="aUI-OI-IBe" kind="show" identifier="ChildSettingsFromManageProfilesSegue" id="2Ru-i5-LNs"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </collectionView>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MH-k2-kIR">
+                                <rect key="frame" x="108" y="795" width="198" height="35"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                <state key="normal" title="Cancel Subscription">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="trailing" secondItem="Esg-lb-SU9" secondAttribute="trailing" id="K10-wf-Zlq"/>
+                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="top" secondItem="Esg-lb-SU9" secondAttribute="top" constant="50" id="QNS-72-kcX"/>
+                            <constraint firstItem="Esg-lb-SU9" firstAttribute="bottom" secondItem="9MH-k2-kIR" secondAttribute="bottom" constant="32" id="UC3-rp-bZe"/>
+                            <constraint firstItem="9MH-k2-kIR" firstAttribute="leading" secondItem="Esg-lb-SU9" secondAttribute="leading" constant="108" id="azS-bX-IWf"/>
+                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="leading" secondItem="Esg-lb-SU9" secondAttribute="leading" id="ilV-WJ-hdV"/>
+                            <constraint firstItem="Esg-lb-SU9" firstAttribute="trailing" secondItem="9MH-k2-kIR" secondAttribute="trailing" constant="108" id="nJS-Yt-OOf"/>
+                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="centerY" secondItem="DJn-h9-hbZ" secondAttribute="centerY" constant="14.5" id="u4u-mY-Rgn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Esg-lb-SU9"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="childCollectionView" destination="Kjz-sm-LiH" id="lid-Ar-MoH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ko9-r3-wsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149.27536231884059" y="20.758928571428569"/>
+        </scene>
+        <!--ChildSettings-->
+        <scene sceneID="wld-TY-NLa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChildSettings" id="aUI-OI-IBe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6Dy-hN-sIQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBZ-6c-gn5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="-18"/>
+        </scene>
+    </scenes>
+</document>
