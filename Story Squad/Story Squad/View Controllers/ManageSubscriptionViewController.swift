@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class ManageSubscriptionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, NSFetchedResultsControllerDelegate {
- 
+    
     // MARK: - Properties
     var networkingController: NetworkingController?
     var parentUser: Parent?
@@ -40,16 +40,17 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
         }
         return fetchResultsController
     }
-
-
+    
+    
     // MARK: - Outlets
-  
+    
     @IBOutlet weak var childCollectionView: UICollectionView!
-
+    @IBOutlet weak var cancelSubscriptionButton: UIButton!
+    
     
     override func viewDidAppear(_ animated: Bool) {
         childCollectionView.reloadData()
-       }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,13 +71,13 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
     
     // MARK: - UICollectionView Delegates and DataSource Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      // return children.count
-//        5
+        // return children.count
+        //        5
         return fetchResultsController.fetchedObjects?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    //swiftlint:disable:next force_cast
+        //swiftlint:disable:next force_cast
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "childCollectionViewCellIdentifier", for: indexPath) as! ChildCollectionViewCell
         
         let child = fetchResultsController.object(at: indexPath)
@@ -87,31 +88,31 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
         }
         
         cell.nameLabel.text = child.name
-
+        
         return cell
     }
     
-     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("child selected == \(indexPath.row)")
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
+    @IBAction func cancelSubsctiptionButtonTapped(_ sender: UIButton) {
+        showCancelSubscriptionAlert()
+    }
     // MARK: - Alert for Update Complete
-    func showCompleteAlert() {
-        let alert = UIAlertController(title: "Family Settings", message: "Update Complete", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    func showCancelSubscriptionAlert() {
+        let alert = UIAlertController(title: "Cancel Subscription", message: "Are you sure you want to cancel subscription? You will no longer have access to member only content.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: nil))
         self.present(alert, animated: true)
     }
-
+    
 }
-

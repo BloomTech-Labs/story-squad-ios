@@ -26,6 +26,6 @@ class ChildCollectionViewCell: UICollectionViewCell {
         self.cntView.layer.cornerRadius = 14
         self.cntView.layer.shouldRasterize = true
         self.childSettingsLabel.layer.cornerRadius = 14
-        self.childSettingsLabel.layer.shouldRasterize = true
+        self.childSettingsLabel.layer.masksToBounds = true
     }
 }
