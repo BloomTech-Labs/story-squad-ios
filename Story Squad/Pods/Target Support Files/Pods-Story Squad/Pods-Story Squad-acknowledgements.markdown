@@ -1,6 +1,10 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## GoogleAnalytics
+
+Copyright 2016 Google
+
 ## LabelSwitch
 
 Copyright (c) 2018 cookiezby@gmail.com <cookiezby@gmail.com>

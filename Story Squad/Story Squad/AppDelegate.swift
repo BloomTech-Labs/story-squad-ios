@@ -12,7 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+       guard let gai = GAI.sharedInstance() else {
+          assert(false, "Google Analytics not configured correctly")
+        }
+        gai.tracker(withTrackingId: "YOUR_TRACKING_ID")
+        // Optional: automatically report uncaught exceptions.
+        gai.trackUncaughtExceptions = true
+
+        // Optional: set Logger to VERBOSE for debug information.
+        // Remove before app release.
+        gai.logger.logLevel = .verbose;
         return true
     }
 

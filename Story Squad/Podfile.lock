@@ -1,24 +1,28 @@
 PODS:
+  - GoogleAnalytics (3.17.0)
   - LabelSwitch (0.1.6)
   - ScalingCarousel (3.0)
   - SwiftLint (0.39.1)
 
 DEPENDENCIES:
+  - GoogleAnalytics
   - LabelSwitch
   - ScalingCarousel
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - GoogleAnalytics
     - LabelSwitch
     - ScalingCarousel
     - SwiftLint
 
 SPEC CHECKSUMS:
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   LabelSwitch: 7f2120e1a567c35daefbcdd509405b63af6661ec
   ScalingCarousel: 7bf711d154b0c5c362c5dd4787ed7d13b489a4cb
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: ad148c839bc3958d44a2deb6a5aadc52a26def1a
+PODFILE CHECKSUM: 3f88d20d3caf40faf60eab0764c1c1b771eaf2fe
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

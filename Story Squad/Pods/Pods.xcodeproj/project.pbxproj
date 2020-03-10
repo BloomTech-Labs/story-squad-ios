@@ -16,43 +16,59 @@
 			);
 			name = SwiftLint;
 		};
+		968D06ADB152B8D9FA77D570E2335002 /* GoogleAnalytics */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FF1D5B6DF1B08E65E07E827B139A9266 /* Build configuration list for PBXAggregateTarget "GoogleAnalytics" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = GoogleAnalytics;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0316B0754A0F192F8C80F1A584AA7CD0 /* Pods-Story Squad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0801F94C40867B583DAB413863A2DEF /* Pods-Story Squad-dummy.m */; };
 		0C441C402FA427DEACCA96171FAA8FF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		2FFA088509DB79E281CAC484DB18227F /* LabelSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5BF95D659E37D3013E544EA0305E0E /* LabelSwitch.swift */; };
+		0F4648CA67D65D0246014D9FD6DD76EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		2FFA088509DB79E281CAC484DB18227F /* LabelSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55939AB583ADF331651648868FCE4BE8 /* LabelSwitch.swift */; };
 		3936C89D20F377DC53759E1A17A35CFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		701FD32E541A576B60F48C5AA3C4D6FA /* ScalingCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8144FE31B8EAE7D75322FC04E856FE50 /* ScalingCarouselView.swift */; };
-		853FDAE19636BBDFA505E3E88C45F473 /* ScalingCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DAAC1D8746967945EA882352EF5EC8 /* ScalingCarouselCell.swift */; };
-		8D4ECC72B8968E4C4D4BC2C3E3C16B16 /* Pods-Story Squad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0801F94C40867B583DAB413863A2DEF /* Pods-Story Squad-dummy.m */; };
-		8FDBC4ED6DE4FF56B5A410A371252EC8 /* Pods-Story Squad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B656FB07C436E9154B37DFB94042DE0F /* Pods-Story Squad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		904EFCAE255D3D02DA37BAE56CE94912 /* ScalingCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AE01A68826E586251C1F0D73F39A66 /* ScalingCarousel-dummy.m */; };
-		A37EEFF1027A286CFE9F050531A46E0F /* LabelSwitch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E850362A9F7B1CBDE43C6277F7CB98A6 /* LabelSwitch-dummy.m */; };
-		AC2999C91EB13DEB8BF2E640797BA395 /* LabelSwitchConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D69477C4BE12DC61CF642721D8A3E8 /* LabelSwitchConfig.swift */; };
-		BE7971A59AAEC621AF96AEADBD698850 /* ScalingCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E33580C2FCF03448A500AAFD6E734705 /* ScalingCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8A9846C4D7B793770177C6BE6B9B5A0 /* LabelSwitchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBB39BA082C6CF42E3ABCA1C69B526A /* LabelSwitchState.swift */; };
-		CF7015475FC5F85BD4600F3C43FEF17E /* LabelSwitch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82FAFF7931E625644D71A791135E035F /* LabelSwitch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEDB28C8D5F25FF30A6D655D11F8B823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		E1B69F38CC3A698DE29D161D279916B0 /* LabelSwitchBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683E0375A6C91977F6D7297D9005D36E /* LabelSwitchBackView.swift */; };
-		FBA1EE1DA92E81090F16249F3878996F /* ScalingCarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E168FE7AE8B157420A99C32C74B20E11 /* ScalingCarouselLayout.swift */; };
+		701FD32E541A576B60F48C5AA3C4D6FA /* ScalingCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85C187934EFAACB92553FC8B17FDFA /* ScalingCarouselView.swift */; };
+		853FDAE19636BBDFA505E3E88C45F473 /* ScalingCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AC526A20EFA943CD4168FC9666B109 /* ScalingCarouselCell.swift */; };
+		904EFCAE255D3D02DA37BAE56CE94912 /* ScalingCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2EB7EDBB8835119CCC0E539DD6A21A /* ScalingCarousel-dummy.m */; };
+		A37EEFF1027A286CFE9F050531A46E0F /* LabelSwitch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2586EC10ABEBDD68FCC2EE2D048FC1C /* LabelSwitch-dummy.m */; };
+		A715EEF048657896AFCF71C3A2F703CC /* Pods-Story Squad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B656FB07C436E9154B37DFB94042DE0F /* Pods-Story Squad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC2999C91EB13DEB8BF2E640797BA395 /* LabelSwitchConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB571DD32A069EBF84F4A46743C6E9B2 /* LabelSwitchConfig.swift */; };
+		BE7971A59AAEC621AF96AEADBD698850 /* ScalingCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C775FA3A51D1A18A6FEF6C805424C3 /* ScalingCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8A9846C4D7B793770177C6BE6B9B5A0 /* LabelSwitchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779EDD4D1E5799B2989985D8B51A13AA /* LabelSwitchState.swift */; };
+		CF7015475FC5F85BD4600F3C43FEF17E /* LabelSwitch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65AE3C09EB1F35FC41DEBD6FA929D56E /* LabelSwitch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1B69F38CC3A698DE29D161D279916B0 /* LabelSwitchBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14977375A8AF7B304A32A331A4533AD /* LabelSwitchBackView.swift */; };
+		FBA1EE1DA92E81090F16249F3878996F /* ScalingCarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98165A9F4A20A158EA920F7D3A6F7F2D /* ScalingCarouselLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		19404C1815D61663CE3AECC8459D83BD /* PBXContainerItemProxy */ = {
+		0ECDA6A21E169FCA53BD9EAED2C065EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
 			remoteInfo = SwiftLint;
 		};
-		55326B14DA9E139B066B5C590E4C4627 /* PBXContainerItemProxy */ = {
+		87BBE3C0C779F592D5F7754AA86FC072 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 658879BACA4E6B5C0FBA1F2E51506219;
 			remoteInfo = LabelSwitch;
 		};
-		67C7A9A6EF3950DC595F30C7165DE141 /* PBXContainerItemProxy */ = {
+		A81B28D8864CF1ED2721DC0254B4A86F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 968D06ADB152B8D9FA77D570E2335002;
+			remoteInfo = GoogleAnalytics;
+		};
+		FA1397C13BAACF8138BF7EABDDA0D875 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -62,56 +78,72 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08EA0B09FDF2949596487B54DC426C56 /* ScalingCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ScalingCarousel.modulemap; sourceTree = "<group>"; };
+		068C5CD424132B9B77833FD5EC9940F6 /* ScalingCarousel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScalingCarousel.debug.xcconfig; sourceTree = "<group>"; };
+		0A832E532D0AFAD7B0A29A6792D3A2D6 /* LabelSwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LabelSwitch.debug.xcconfig; sourceTree = "<group>"; };
 		1ADB1BB2677BD6A69766C92BC652821E /* Pods-Story Squad-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Story Squad-frameworks.sh"; sourceTree = "<group>"; };
 		24E96286E41476A4E7F4D8742B9B16D7 /* ScalingCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ScalingCarousel.framework; path = ScalingCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A3CC16D3BD15C4982882304DC74DB89 /* LabelSwitch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LabelSwitch.modulemap; sourceTree = "<group>"; };
-		30D2811FB70B01197956A221CE624173 /* LabelSwitch-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LabelSwitch-Info.plist"; sourceTree = "<group>"; };
+		29C775FA3A51D1A18A6FEF6C805424C3 /* ScalingCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-umbrella.h"; sourceTree = "<group>"; };
+		2FD3C188C462A4291A28C2AB24E587FC /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3CBB39BA082C6CF42E3ABCA1C69B526A /* LabelSwitchState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchState.swift; path = LabelSwitch/Classes/LabelSwitchState.swift; sourceTree = "<group>"; };
+		39F124957F2F728F65DDD17C82C9C1CD /* GAILogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = Sources/GAILogger.h; sourceTree = "<group>"; };
 		3F2069EF9B822D7837F204D9D7ADC34D /* Pods_Story_Squad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Story_Squad.framework; path = "Pods-Story Squad.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		44BF451C18BB69C2C78C2233C602F0EE /* ScalingCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-prefix.pch"; sourceTree = "<group>"; };
-		45AE01A68826E586251C1F0D73F39A66 /* ScalingCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScalingCarousel-dummy.m"; sourceTree = "<group>"; };
+		4A1A1BA2024CF31C0B1E19D5C7BB9F0E /* libGoogleAnalytics.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = Libraries/libGoogleAnalytics.a; sourceTree = "<group>"; };
 		4C67590C8A31A9027ACDDEE8C172D440 /* Pods-Story Squad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Story Squad.release.xcconfig"; sourceTree = "<group>"; };
-		5236C1E541794D089D2272B4278FB15E /* SwiftLint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.xcconfig; sourceTree = "<group>"; };
+		5411E98B6992D947445EE00EE6D92D61 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProduct.h; path = Sources/GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		55939AB583ADF331651648868FCE4BE8 /* LabelSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitch.swift; path = LabelSwitch/Classes/LabelSwitch.swift; sourceTree = "<group>"; };
 		57E2D2D4A29F6AE42EF15F9B12903AE0 /* Pods-Story Squad.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Story Squad.modulemap"; sourceTree = "<group>"; };
 		58B3AC0982B289AE4E1981601CF13C2F /* Pods-Story Squad-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Story Squad-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5AB391478A3E9B2402C5FDF53F286A9D /* LabelSwitch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-prefix.pch"; sourceTree = "<group>"; };
 		60BA7420798C419DCC0C93F68F6A2679 /* LabelSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LabelSwitch.framework; path = LabelSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		683E0375A6C91977F6D7297D9005D36E /* LabelSwitchBackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchBackView.swift; path = LabelSwitch/Classes/LabelSwitchBackView.swift; sourceTree = "<group>"; };
+		6551B931E7FB3DD3E575B79B141BF062 /* GoogleAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleAnalytics.debug.xcconfig; sourceTree = "<group>"; };
+		65AE3C09EB1F35FC41DEBD6FA929D56E /* LabelSwitch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-umbrella.h"; sourceTree = "<group>"; };
 		7143630A78570806CF23D20CCA0D5259 /* Pods-Story Squad-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Story Squad-Info.plist"; sourceTree = "<group>"; };
-		78993E810D810BDC81F1BF1FF94AFACF /* ScalingCarousel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScalingCarousel.xcconfig; sourceTree = "<group>"; };
-		7D1FC964195EC008D5DB07F71E56F671 /* LabelSwitch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LabelSwitch.xcconfig; sourceTree = "<group>"; };
+		779EDD4D1E5799B2989985D8B51A13AA /* LabelSwitchState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchState.swift; path = LabelSwitch/Classes/LabelSwitchState.swift; sourceTree = "<group>"; };
+		78C48821C298A45937F9FD2FCB64E86C /* GoogleAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleAnalytics.release.xcconfig; sourceTree = "<group>"; };
+		78F44503E84A57FE6604CD4168A229EE /* GAIFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = Sources/GAIFields.h; sourceTree = "<group>"; };
 		7FCD65026CD8FAF88D27F8EAB0F37A02 /* Pods-Story Squad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Story Squad.debug.xcconfig"; sourceTree = "<group>"; };
-		8144FE31B8EAE7D75322FC04E856FE50 /* ScalingCarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselView.swift; path = ScalingCarousel/Classes/ScalingCarouselView.swift; sourceTree = "<group>"; };
-		82FAFF7931E625644D71A791135E035F /* LabelSwitch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-umbrella.h"; sourceTree = "<group>"; };
+		8A310A80BF77A8C47C80DCFF455D6C1D /* LabelSwitch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LabelSwitch.modulemap; sourceTree = "<group>"; };
+		90D4768E30285DAD0FA5452BF5A2F1A3 /* LabelSwitch-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LabelSwitch-Info.plist"; sourceTree = "<group>"; };
+		958741E9BA67B951297E7CD56F2EC36D /* GAITracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Sources/GAITracker.h; sourceTree = "<group>"; };
+		98165A9F4A20A158EA920F7D3A6F7F2D /* ScalingCarouselLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselLayout.swift; path = ScalingCarousel/Classes/ScalingCarouselLayout.swift; sourceTree = "<group>"; };
+		9C2EB7EDBB8835119CCC0E539DD6A21A /* ScalingCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScalingCarousel-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B4D69477C4BE12DC61CF642721D8A3E8 /* LabelSwitchConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchConfig.swift; path = LabelSwitch/Classes/LabelSwitchConfig.swift; sourceTree = "<group>"; };
+		9F5C17BED510125CE0702365B9EF9CED /* GAI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Sources/GAI.h; sourceTree = "<group>"; };
+		A1E6D85DBF04E54573D86CDDD6A6DE26 /* ScalingCarousel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ScalingCarousel-Info.plist"; sourceTree = "<group>"; };
+		AC840D52918ADBA82320929519559BBA /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
+		AF88D0AB2B3215E41D4319DE4598B89C /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProductAction.h; path = Sources/GAIEcommerceProductAction.h; sourceTree = "<group>"; };
 		B656FB07C436E9154B37DFB94042DE0F /* Pods-Story Squad-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Story Squad-umbrella.h"; sourceTree = "<group>"; };
+		BA8A5F7899CBD11E40CA4E94547BB997 /* ScalingCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ScalingCarousel.modulemap; sourceTree = "<group>"; };
+		BB571DD32A069EBF84F4A46743C6E9B2 /* LabelSwitchConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchConfig.swift; path = LabelSwitch/Classes/LabelSwitchConfig.swift; sourceTree = "<group>"; };
 		C0801F94C40867B583DAB413863A2DEF /* Pods-Story Squad-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Story Squad-dummy.m"; sourceTree = "<group>"; };
-		CF8F4FFB64FC6E275A789BAA5AC2BB8C /* LabelSwitch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-prefix.pch"; sourceTree = "<group>"; };
+		C665707252706D84A39C9810F9232FE7 /* ScalingCarousel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScalingCarousel.release.xcconfig; sourceTree = "<group>"; };
+		C7AC526A20EFA943CD4168FC9666B109 /* ScalingCarouselCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselCell.swift; path = ScalingCarousel/Classes/ScalingCarouselCell.swift; sourceTree = "<group>"; };
+		C9D6FE2FD9686271A219D2CA54021ACB /* ScalingCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-prefix.pch"; sourceTree = "<group>"; };
+		D14977375A8AF7B304A32A331A4533AD /* LabelSwitchBackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchBackView.swift; path = LabelSwitch/Classes/LabelSwitchBackView.swift; sourceTree = "<group>"; };
+		D2586EC10ABEBDD68FCC2EE2D048FC1C /* LabelSwitch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LabelSwitch-dummy.m"; sourceTree = "<group>"; };
+		D33128DE46077FF228DD7CCEFF07B571 /* LabelSwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LabelSwitch.release.xcconfig; sourceTree = "<group>"; };
 		DB1A0D32031EA566361BA779D9AB9595 /* Pods-Story Squad-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Story Squad-acknowledgements.plist"; sourceTree = "<group>"; };
-		DDA1D583082055530BE8CB87075E7187 /* ScalingCarousel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ScalingCarousel-Info.plist"; sourceTree = "<group>"; };
-		E168FE7AE8B157420A99C32C74B20E11 /* ScalingCarouselLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselLayout.swift; path = ScalingCarousel/Classes/ScalingCarouselLayout.swift; sourceTree = "<group>"; };
-		E33580C2FCF03448A500AAFD6E734705 /* ScalingCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-umbrella.h"; sourceTree = "<group>"; };
-		E850362A9F7B1CBDE43C6277F7CB98A6 /* LabelSwitch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LabelSwitch-dummy.m"; sourceTree = "<group>"; };
-		ED5BF95D659E37D3013E544EA0305E0E /* LabelSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitch.swift; path = LabelSwitch/Classes/LabelSwitch.swift; sourceTree = "<group>"; };
-		F5DAAC1D8746967945EA882352EF5EC8 /* ScalingCarouselCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselCell.swift; path = ScalingCarousel/Classes/ScalingCarouselCell.swift; sourceTree = "<group>"; };
+		E119B6B5FE92F0B2932CC15EFEF3F132 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = Sources/GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		E8E79E942E178B8EFDE0EEC74A5D5520 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceFields.h; path = Sources/GAIEcommerceFields.h; sourceTree = "<group>"; };
+		EA84C52EBFF99CA4DFB8743EF6A98511 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommercePromotion.h; path = Sources/GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		EB85C187934EFAACB92553FC8B17FDFA /* ScalingCarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselView.swift; path = ScalingCarousel/Classes/ScalingCarouselView.swift; sourceTree = "<group>"; };
+		FDB010EE063EE30F884656319EC75EBD /* GAITrackedViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Sources/GAITrackedViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1B4F72FE2903E7CF8795052A5D5E7587 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DEDB28C8D5F25FF30A6D655D11F8B823 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9A22E2C1FD49082780B222DCB95B17EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0C441C402FA427DEACCA96171FAA8FF1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D19EE9356AD91E0E259A766D0E22F2AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F4648CA67D65D0246014D9FD6DD76EC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,38 +158,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1DD50FD5BF5000CE30678F21DA134E74 /* LabelSwitch */ = {
+		15E630A54FE032B9E2761D3521613504 /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
-				ED5BF95D659E37D3013E544EA0305E0E /* LabelSwitch.swift */,
-				683E0375A6C91977F6D7297D9005D36E /* LabelSwitchBackView.swift */,
-				B4D69477C4BE12DC61CF642721D8A3E8 /* LabelSwitchConfig.swift */,
-				3CBB39BA082C6CF42E3ABCA1C69B526A /* LabelSwitchState.swift */,
-				BE4F52E145A2A694D4F437D619366ABE /* Support Files */,
-			);
-			name = LabelSwitch;
-			path = LabelSwitch;
-			sourceTree = "<group>";
-		};
-		3BD5226AEDD1B53564A226980F3132CC /* ScalingCarousel */ = {
-			isa = PBXGroup;
-			children = (
-				F5DAAC1D8746967945EA882352EF5EC8 /* ScalingCarouselCell.swift */,
-				E168FE7AE8B157420A99C32C74B20E11 /* ScalingCarouselLayout.swift */,
-				8144FE31B8EAE7D75322FC04E856FE50 /* ScalingCarouselView.swift */,
-				FB868F06116B7B1134C38D4BB8ECB23E /* Support Files */,
-			);
-			name = ScalingCarousel;
-			path = ScalingCarousel;
-			sourceTree = "<group>";
-		};
-		7F9B9B3D41685B484C43E476826C4341 /* SwiftLint */ = {
-			isa = PBXGroup;
-			children = (
-				D7446610E238D76621341DAB0F3608D5 /* Support Files */,
+				E64F8530D57B1657B1474077A2AE4C6D /* Support Files */,
 			);
 			name = SwiftLint;
 			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+		16DBF5A4408CF3A39CB8643F770312E1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A310A80BF77A8C47C80DCFF455D6C1D /* LabelSwitch.modulemap */,
+				D2586EC10ABEBDD68FCC2EE2D048FC1C /* LabelSwitch-dummy.m */,
+				90D4768E30285DAD0FA5452BF5A2F1A3 /* LabelSwitch-Info.plist */,
+				5AB391478A3E9B2402C5FDF53F286A9D /* LabelSwitch-prefix.pch */,
+				65AE3C09EB1F35FC41DEBD6FA929D56E /* LabelSwitch-umbrella.h */,
+				0A832E532D0AFAD7B0A29A6792D3A2D6 /* LabelSwitch.debug.xcconfig */,
+				D33128DE46077FF228DD7CCEFF07B571 /* LabelSwitch.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LabelSwitch";
+			sourceTree = "<group>";
+		};
+		2B9E1CE9EC76B81F5BC61C1EFEA98F1A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6551B931E7FB3DD3E575B79B141BF062 /* GoogleAnalytics.debug.xcconfig */,
+				78C48821C298A45937F9FD2FCB64E86C /* GoogleAnalytics.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleAnalytics";
+			sourceTree = "<group>";
+		};
+		46433E9274E69154D13DA6AEDD146404 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E462FEA840C61D4C250F19EF0AB25767 /* GoogleAnalytics */,
+				D74756BD026FD4DE2E0F5DE7EA5D5BA2 /* LabelSwitch */,
+				76D5E352B917E0AA13B35B4672E157E3 /* ScalingCarousel */,
+				15E630A54FE032B9E2761D3521613504 /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		76D5E352B917E0AA13B35B4672E157E3 /* ScalingCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				C7AC526A20EFA943CD4168FC9666B109 /* ScalingCarouselCell.swift */,
+				98165A9F4A20A158EA920F7D3A6F7F2D /* ScalingCarouselLayout.swift */,
+				EB85C187934EFAACB92553FC8B17FDFA /* ScalingCarouselView.swift */,
+				E51789CF5A294CA648B2FD0C050F6B9F /* Support Files */,
+			);
+			name = ScalingCarousel;
+			path = ScalingCarousel;
 			sourceTree = "<group>";
 		};
 		83C13862080C4CB7AE092BFE9CE075E9 /* Pods-Story Squad */ = {
@@ -187,20 +242,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE4F52E145A2A694D4F437D619366ABE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2A3CC16D3BD15C4982882304DC74DB89 /* LabelSwitch.modulemap */,
-				7D1FC964195EC008D5DB07F71E56F671 /* LabelSwitch.xcconfig */,
-				E850362A9F7B1CBDE43C6277F7CB98A6 /* LabelSwitch-dummy.m */,
-				30D2811FB70B01197956A221CE624173 /* LabelSwitch-Info.plist */,
-				CF8F4FFB64FC6E275A789BAA5AC2BB8C /* LabelSwitch-prefix.pch */,
-				82FAFF7931E625644D71A791135E035F /* LabelSwitch-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/LabelSwitch";
-			sourceTree = "<group>";
-		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,12 +250,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		CE154AC3CDB97D87C34F7043453AA6DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A1A1BA2024CF31C0B1E19D5C7BB9F0E /* libGoogleAnalytics.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				D5008957CBD9CE089035065C8004F88B /* Pods */,
+				46433E9274E69154D13DA6AEDD146404 /* Pods */,
 				87A4F1102A44D7F9EB6A80FF5AAD61F1 /* Products */,
 				F42110C4ED0D66B354ECCC6CA5B25148 /* Targets Support Files */,
 			);
@@ -228,20 +277,59 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D5008957CBD9CE089035065C8004F88B /* Pods */ = {
+		D74756BD026FD4DE2E0F5DE7EA5D5BA2 /* LabelSwitch */ = {
 			isa = PBXGroup;
 			children = (
-				1DD50FD5BF5000CE30678F21DA134E74 /* LabelSwitch */,
-				3BD5226AEDD1B53564A226980F3132CC /* ScalingCarousel */,
-				7F9B9B3D41685B484C43E476826C4341 /* SwiftLint */,
+				55939AB583ADF331651648868FCE4BE8 /* LabelSwitch.swift */,
+				D14977375A8AF7B304A32A331A4533AD /* LabelSwitchBackView.swift */,
+				BB571DD32A069EBF84F4A46743C6E9B2 /* LabelSwitchConfig.swift */,
+				779EDD4D1E5799B2989985D8B51A13AA /* LabelSwitchState.swift */,
+				16DBF5A4408CF3A39CB8643F770312E1 /* Support Files */,
 			);
-			name = Pods;
+			name = LabelSwitch;
+			path = LabelSwitch;
 			sourceTree = "<group>";
 		};
-		D7446610E238D76621341DAB0F3608D5 /* Support Files */ = {
+		E462FEA840C61D4C250F19EF0AB25767 /* GoogleAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				5236C1E541794D089D2272B4278FB15E /* SwiftLint.xcconfig */,
+				9F5C17BED510125CE0702365B9EF9CED /* GAI.h */,
+				E119B6B5FE92F0B2932CC15EFEF3F132 /* GAIDictionaryBuilder.h */,
+				E8E79E942E178B8EFDE0EEC74A5D5520 /* GAIEcommerceFields.h */,
+				5411E98B6992D947445EE00EE6D92D61 /* GAIEcommerceProduct.h */,
+				AF88D0AB2B3215E41D4319DE4598B89C /* GAIEcommerceProductAction.h */,
+				EA84C52EBFF99CA4DFB8743EF6A98511 /* GAIEcommercePromotion.h */,
+				78F44503E84A57FE6604CD4168A229EE /* GAIFields.h */,
+				39F124957F2F728F65DDD17C82C9C1CD /* GAILogger.h */,
+				FDB010EE063EE30F884656319EC75EBD /* GAITrackedViewController.h */,
+				958741E9BA67B951297E7CD56F2EC36D /* GAITracker.h */,
+				CE154AC3CDB97D87C34F7043453AA6DA /* Frameworks */,
+				2B9E1CE9EC76B81F5BC61C1EFEA98F1A /* Support Files */,
+			);
+			name = GoogleAnalytics;
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		E51789CF5A294CA648B2FD0C050F6B9F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA8A5F7899CBD11E40CA4E94547BB997 /* ScalingCarousel.modulemap */,
+				9C2EB7EDBB8835119CCC0E539DD6A21A /* ScalingCarousel-dummy.m */,
+				A1E6D85DBF04E54573D86CDDD6A6DE26 /* ScalingCarousel-Info.plist */,
+				C9D6FE2FD9686271A219D2CA54021ACB /* ScalingCarousel-prefix.pch */,
+				29C775FA3A51D1A18A6FEF6C805424C3 /* ScalingCarousel-umbrella.h */,
+				068C5CD424132B9B77833FD5EC9940F6 /* ScalingCarousel.debug.xcconfig */,
+				C665707252706D84A39C9810F9232FE7 /* ScalingCarousel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ScalingCarousel";
+			sourceTree = "<group>";
+		};
+		E64F8530D57B1657B1474077A2AE4C6D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC840D52918ADBA82320929519559BBA /* SwiftLint.debug.xcconfig */,
+				2FD3C188C462A4291A28C2AB24E587FC /* SwiftLint.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftLint";
@@ -255,23 +343,17 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		FB868F06116B7B1134C38D4BB8ECB23E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				08EA0B09FDF2949596487B54DC426C56 /* ScalingCarousel.modulemap */,
-				78993E810D810BDC81F1BF1FF94AFACF /* ScalingCarousel.xcconfig */,
-				45AE01A68826E586251C1F0D73F39A66 /* ScalingCarousel-dummy.m */,
-				DDA1D583082055530BE8CB87075E7187 /* ScalingCarousel-Info.plist */,
-				44BF451C18BB69C2C78C2233C602F0EE /* ScalingCarousel-prefix.pch */,
-				E33580C2FCF03448A500AAFD6E734705 /* ScalingCarousel-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ScalingCarousel";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		34E8EF29BD9B7F6DDA518CD799375DEC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A715EEF048657896AFCF71C3A2F703CC /* Pods-Story Squad-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3E4455540B0C53CA5013A83952D7CAE8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -288,32 +370,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93DDD7F14EBF573539A195898EE3211A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8FDBC4ED6DE4FF56B5A410A371252EC8 /* Pods-Story Squad-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0C8A30C06F76EB5ABDF03B6B82145AAE /* Pods-Story Squad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C83965C74AFFFC876C81219FF7F74C5E /* Build configuration list for PBXNativeTarget "Pods-Story Squad" */;
+			buildConfigurationList = D400AF86CA34D975A72B212F97728F6D /* Build configuration list for PBXNativeTarget "Pods-Story Squad" */;
 			buildPhases = (
-				93DDD7F14EBF573539A195898EE3211A /* Headers */,
-				3A1AF9874F91C9A624FB5CB13B6F2F2A /* Sources */,
-				1B4F72FE2903E7CF8795052A5D5E7587 /* Frameworks */,
-				5760500075F2BC34EC488E3454F2934D /* Resources */,
+				34E8EF29BD9B7F6DDA518CD799375DEC /* Headers */,
+				706933C9D6DE1846FD974F7C3CEA0452 /* Sources */,
+				D19EE9356AD91E0E259A766D0E22F2AB /* Frameworks */,
+				546C5C2343B06895DCD467BC58EEC2F4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D27A928BF08706BFEF3A4C15535CB8D1 /* PBXTargetDependency */,
-				8E9EF28F4B42EEBDB023228D9753E570 /* PBXTargetDependency */,
-				535F43D58CAE073634BDB139FE010A36 /* PBXTargetDependency */,
+				29466FC4F6E60311C124D9F82B289123 /* PBXTargetDependency */,
+				1567E33B5449BC3EC758FC63D14BAC90 /* PBXTargetDependency */,
+				5685FBA596F653DAC76F5B0D0D03C15A /* PBXTargetDependency */,
+				701440A762327F424A03850178D9AC2F /* PBXTargetDependency */,
 			);
 			name = "Pods-Story Squad";
 			productName = "Pods-Story Squad";
@@ -378,6 +453,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				968D06ADB152B8D9FA77D570E2335002 /* GoogleAnalytics */,
 				658879BACA4E6B5C0FBA1F2E51506219 /* LabelSwitch */,
 				0C8A30C06F76EB5ABDF03B6B82145AAE /* Pods-Story Squad */,
 				7050FECE58DF970CF84F4FE403CA67D9 /* ScalingCarousel */,
@@ -387,7 +463,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5760500075F2BC34EC488E3454F2934D /* Resources */ = {
+		546C5C2343B06895DCD467BC58EEC2F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -422,11 +498,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A1AF9874F91C9A624FB5CB13B6F2F2A /* Sources */ = {
+		706933C9D6DE1846FD974F7C3CEA0452 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D4ECC72B8968E4C4D4BC2C3E3C16B16 /* Pods-Story Squad-dummy.m in Sources */,
+				0316B0754A0F192F8C80F1A584AA7CD0 /* Pods-Story Squad-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,30 +521,71 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		535F43D58CAE073634BDB139FE010A36 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftLint;
-			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = 19404C1815D61663CE3AECC8459D83BD /* PBXContainerItemProxy */;
-		};
-		8E9EF28F4B42EEBDB023228D9753E570 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ScalingCarousel;
-			target = 7050FECE58DF970CF84F4FE403CA67D9 /* ScalingCarousel */;
-			targetProxy = 67C7A9A6EF3950DC595F30C7165DE141 /* PBXContainerItemProxy */;
-		};
-		D27A928BF08706BFEF3A4C15535CB8D1 /* PBXTargetDependency */ = {
+		1567E33B5449BC3EC758FC63D14BAC90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LabelSwitch;
 			target = 658879BACA4E6B5C0FBA1F2E51506219 /* LabelSwitch */;
-			targetProxy = 55326B14DA9E139B066B5C590E4C4627 /* PBXContainerItemProxy */;
+			targetProxy = 87BBE3C0C779F592D5F7754AA86FC072 /* PBXContainerItemProxy */;
+		};
+		29466FC4F6E60311C124D9F82B289123 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleAnalytics;
+			target = 968D06ADB152B8D9FA77D570E2335002 /* GoogleAnalytics */;
+			targetProxy = A81B28D8864CF1ED2721DC0254B4A86F /* PBXContainerItemProxy */;
+		};
+		5685FBA596F653DAC76F5B0D0D03C15A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ScalingCarousel;
+			target = 7050FECE58DF970CF84F4FE403CA67D9 /* ScalingCarousel */;
+			targetProxy = FA1397C13BAACF8138BF7EABDDA0D875 /* PBXContainerItemProxy */;
+		};
+		701440A762327F424A03850178D9AC2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 0ECDA6A21E169FCA53BD9EAED2C065EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0EE7F2B1C63CBF8BE3D60A25308B5033 /* Debug */ = {
+		03F27F1D18DF987492E488C7D3A680F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78993E810D810BDC81F1BF1FF94AFACF /* ScalingCarousel.xcconfig */;
+			baseConfigurationReference = 0A832E532D0AFAD7B0A29A6792D3A2D6 /* LabelSwitch.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LabelSwitch/LabelSwitch-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LabelSwitch/LabelSwitch-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LabelSwitch/LabelSwitch.modulemap";
+				PRODUCT_MODULE_NAME = LabelSwitch;
+				PRODUCT_NAME = LabelSwitch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1C44751C4E1693621512F58EB9023FB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 068C5CD424132B9B77833FD5EC9940F6 /* ScalingCarousel.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -502,10 +619,11 @@
 			};
 			name = Debug;
 		};
-		1A7CC10326372A7CC9F817380E9C9197 /* Release */ = {
+		23FC74437DE1332D91706CE5A8EB1BF3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D1FC964195EC008D5DB07F71E56F671 /* LabelSwitch.xcconfig */;
+			baseConfigurationReference = C665707252706D84A39C9810F9232FE7 /* ScalingCarousel.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -515,22 +633,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LabelSwitch/LabelSwitch-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LabelSwitch/LabelSwitch-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ScalingCarousel/ScalingCarousel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScalingCarousel/ScalingCarousel-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/LabelSwitch/LabelSwitch.modulemap";
-				PRODUCT_MODULE_NAME = LabelSwitch;
-				PRODUCT_NAME = LabelSwitch;
+				MODULEMAP_FILE = "Target Support Files/ScalingCarousel/ScalingCarousel.modulemap";
+				PRODUCT_MODULE_NAME = ScalingCarousel;
+				PRODUCT_NAME = ScalingCarousel;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -538,44 +656,9 @@
 			};
 			name = Release;
 		};
-		1B394FC7E8832234F7486C433E85A4B6 /* Debug */ = {
+		244478A8DC6F84524E25FE8A3D962B70 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D1FC964195EC008D5DB07F71E56F671 /* LabelSwitch.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LabelSwitch/LabelSwitch-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LabelSwitch/LabelSwitch-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/LabelSwitch/LabelSwitch.modulemap";
-				PRODUCT_MODULE_NAME = LabelSwitch;
-				PRODUCT_NAME = LabelSwitch;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		84D7C4574E8F0F3095623F0E06F5B402 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5236C1E541794D089D2272B4278FB15E /* SwiftLint.xcconfig */;
+			baseConfigurationReference = 78C48821C298A45937F9FD2FCB64E86C /* GoogleAnalytics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -590,40 +673,36 @@
 			};
 			name = Release;
 		};
-		91D43BCEB16F006E6C23708682BD7C48 /* Release */ = {
+		46EECD2DED30D7C5FE141C0B267C2D3F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78993E810D810BDC81F1BF1FF94AFACF /* ScalingCarousel.xcconfig */;
+			baseConfigurationReference = AC840D52918ADBA82320929519559BBA /* SwiftLint.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ScalingCarousel/ScalingCarousel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ScalingCarousel/ScalingCarousel-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/ScalingCarousel/ScalingCarousel.modulemap";
-				PRODUCT_MODULE_NAME = ScalingCarousel;
-				PRODUCT_NAME = ScalingCarousel;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55DD740115BE746C8DBB7753806D85D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FD3C188C462A4291A28C2AB24E587FC /* SwiftLint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -691,7 +770,59 @@
 			};
 			name = Debug;
 		};
-		B3B31A34AFE725F10A4F5A84F00468B9 /* Debug */ = {
+		948BC1793DCDD7E4B1CA134B8589CF3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6551B931E7FB3DD3E575B79B141BF062 /* GoogleAnalytics.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B84BE144C22016CC4981AC8D2EF1F63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D33128DE46077FF228DD7CCEFF07B571 /* LabelSwitch.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LabelSwitch/LabelSwitch-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LabelSwitch/LabelSwitch-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LabelSwitch/LabelSwitch.modulemap";
+				PRODUCT_MODULE_NAME = LabelSwitch;
+				PRODUCT_NAME = LabelSwitch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CFC1AB2C9030D50FE377D7EAEA8DE254 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7FCD65026CD8FAF88D27F8EAB0F37A02 /* Pods-Story Squad.debug.xcconfig */;
 			buildSettings = {
@@ -729,7 +860,7 @@
 			};
 			name = Debug;
 		};
-		C4BEB625510B7CF49D237478DCB0A50D /* Release */ = {
+		E44B0DE48984C88FADF622E8C3AFB90C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C67590C8A31A9027ACDDEE8C172D440 /* Pods-Story Squad.release.xcconfig */;
 			buildSettings = {
@@ -767,22 +898,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		DEED47E09AF743F48544C1C4FEADEF47 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5236C1E541794D089D2272B4278FB15E /* SwiftLint.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -850,8 +965,8 @@
 		1454827286BB933089E84B8A560F4113 /* Build configuration list for PBXNativeTarget "LabelSwitch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B394FC7E8832234F7486C433E85A4B6 /* Debug */,
-				1A7CC10326372A7CC9F817380E9C9197 /* Release */,
+				03F27F1D18DF987492E488C7D3A680F8 /* Debug */,
+				9B84BE144C22016CC4981AC8D2EF1F63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -859,8 +974,8 @@
 		2F8EFF8386604440E2C802707D7DE417 /* Build configuration list for PBXNativeTarget "ScalingCarousel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0EE7F2B1C63CBF8BE3D60A25308B5033 /* Debug */,
-				91D43BCEB16F006E6C23708682BD7C48 /* Release */,
+				1C44751C4E1693621512F58EB9023FB6 /* Debug */,
+				23FC74437DE1332D91706CE5A8EB1BF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -877,17 +992,26 @@
 		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DEED47E09AF743F48544C1C4FEADEF47 /* Debug */,
-				84D7C4574E8F0F3095623F0E06F5B402 /* Release */,
+				46EECD2DED30D7C5FE141C0B267C2D3F /* Debug */,
+				55DD740115BE746C8DBB7753806D85D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C83965C74AFFFC876C81219FF7F74C5E /* Build configuration list for PBXNativeTarget "Pods-Story Squad" */ = {
+		D400AF86CA34D975A72B212F97728F6D /* Build configuration list for PBXNativeTarget "Pods-Story Squad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B3B31A34AFE725F10A4F5A84F00468B9 /* Debug */,
-				C4BEB625510B7CF49D237478DCB0A50D /* Release */,
+				CFC1AB2C9030D50FE377D7EAEA8DE254 /* Debug */,
+				E44B0DE48984C88FADF622E8C3AFB90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF1D5B6DF1B08E65E07E827B139A9266 /* Build configuration list for PBXAggregateTarget "GoogleAnalytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				948BC1793DCDD7E4B1CA134B8589CF3A /* Debug */,
+				244478A8DC6F84524E25FE8A3D962B70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
