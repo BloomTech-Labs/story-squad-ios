@@ -8,6 +8,17 @@
 
 import Foundation
 
-var arrayOfAvatars = ["Hero 6.png, Hero 11.png, Hero 12.png, Hero 13.png, Hero 14.png, Hero 15.png, Hero 16.png, Hero 18.png, Hero 19.png"]
+func getRandomAvatar() -> Data? {
+let arrayOfAvatars = ["Hero 6.png, Hero 11.png, Hero 12.png, Hero 13.png, Hero 14.png, Hero 15.png, Hero 16.png, Hero 18.png, Hero 19.png"]
 
 let randomAvatar = arrayOfAvatars.randomElement()
+
+let randomAvatarImageData = Data(randomAvatar!.utf8)
+return randomAvatarImageData
+}
+
+
+
+
+
+
