@@ -33,6 +33,17 @@ class AddChildViewController: UIViewController {
         createToolbar()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Adds Google Analytics tracking for this view controller
+        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
+        tracker.set(kGAIScreenName, value: "AddChildViewController")
+
+        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
+    
     @IBAction func dyslexiaToggleSwitch(_ sender: UISwitch) {
     }
     
