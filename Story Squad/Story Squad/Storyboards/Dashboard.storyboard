@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OE9-MW-BQN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OE9-MW-BQN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -81,7 +81,7 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Odl-4b-VSh">
                                                                             <rect key="frame" x="36" y="16" width="310" height="85"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="LNJ-x2-ZvP">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hero 12" translatesAutoresizingMaskIntoConstraints="NO" id="LNJ-x2-ZvP">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" secondItem="LNJ-x2-ZvP" secondAttribute="height" multiplier="1:1" id="DFL-0X-lKz"/>
@@ -241,7 +241,7 @@
     </scenes>
     <resources>
         <image name="Add a Child Button" width="343" height="118"/>
-        <image name="Image-1" width="59" height="75"/>
+        <image name="Hero 12" width="200" height="295"/>
         <image name="square.grid.2x2" catalog="system" width="64" height="56"/>
     </resources>
 </document>

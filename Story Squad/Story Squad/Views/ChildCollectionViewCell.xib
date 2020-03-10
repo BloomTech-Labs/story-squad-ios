@@ -28,9 +28,9 @@
                         <rect key="frame" x="16" y="50" width="330" height="440"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="y8u-uh-Oxm">
-                                <rect key="frame" x="87" y="75" width="156" height="218.5"/>
+                                <rect key="frame" x="87" y="75" width="156" height="216"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Tcg-wL-R93">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hero 6" translatesAutoresizingMaskIntoConstraints="NO" id="Tcg-wL-R93">
                                         <rect key="frame" x="0.0" y="0.0" width="156" height="156"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="156" id="6B2-0z-iLn"/>
@@ -38,7 +38,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MN6-uk-Mfc">
-                                        <rect key="frame" x="45.5" y="188" width="65" height="30.5"/>
+                                        <rect key="frame" x="46" y="188" width="64" height="28"/>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Child Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bD2-1B-MJa">
-                                <rect key="frame" x="8" y="368.5" width="314" height="65"/>
+                                <rect key="frame" x="8" y="366" width="314" height="65"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="2YS-ig-h9L"/>
@@ -97,6 +97,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Image" width="50" height="77"/>
+        <image name="Hero 6" width="200" height="322"/>
     </resources>
 </document>

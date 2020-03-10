@@ -25,6 +25,7 @@
 		4FD90F4023FF6AEF00BC4702 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F3523FF6AEF00BC4702 /* OpenSans-Regular.ttf */; };
 		4FD90F4123FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F3623FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf */; };
 		4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */; };
+		4FE21E4524181F8000FA8F24 /* RandomAvatarGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE21E4424181F8000FA8F24 /* RandomAvatarGenerator.swift */; };
 		4FF0F5E92404975A00587C7B /* ChildrenProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */; };
 		4FF0F5EE2404A7A100587C7B /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5ED2404A7A100587C7B /* Help.storyboard */; };
 		4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */; };
@@ -103,6 +104,7 @@
 		4FD90F3523FF6AEF00BC4702 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		4FD90F3623FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		4FE21E4424181F8000FA8F24 /* RandomAvatarGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAvatarGenerator.swift; sourceTree = "<group>"; };
 		4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChildrenProfileTableView.swift; path = "Story Squad/Storyboards/Pins Storyboards/ChildrenProfileTableView.swift"; sourceTree = SOURCE_ROOT; };
 		4FF0F5ED2404A7A100587C7B /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 				DD13175A2405B4F100013753 /* StringKeys.swift */,
 				4FF0F62624071DED00587C7B /* NetworkingError.swift */,
 				FA71E374240B036B001385E7 /* SchoolGrade.swift */,
+				4FE21E4424181F8000FA8F24 /* RandomAvatarGenerator.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				DD71FD042406D2E50032EBB5 /* StorySquad.xcdatamodeld in Sources */,
 				DD7A36F5240DC39E00F5B246 /* LogOutViewController.swift in Sources */,
 				FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */,
+				4FE21E4524181F8000FA8F24 /* RandomAvatarGenerator.swift in Sources */,
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,
 				FA9A34D52405FFB700A2F8FE /* CreditCardViewController.swift in Sources */,
 				4FF0F6002405CE5A00587C7B /* ChildProfileMainVC.swift in Sources */,
