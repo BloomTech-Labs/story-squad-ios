@@ -88,7 +88,6 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
         }
         
         cell.nameLabel.text = child.name
-        
         return cell
     }
     
@@ -106,12 +105,14 @@ class ManageSubscriptionViewController: UIViewController, UICollectionViewDelega
      */
     
     @IBAction func cancelSubsctiptionButtonTapped(_ sender: UIButton) {
+         
         showCancelSubscriptionAlert()
     }
     // MARK: - Alert for Update Complete
     func showCancelSubscriptionAlert() {
-        let alert = UIAlertController(title: "Cancel Subscription", message: "Are you sure you want to cancel subscription? You will no longer have access to member only content.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: nil))
+        let alert = UIAlertController(title: "Cancel Subscription", message: "Cancelling subscription will prevent you from accessing member content.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Keep Subscription", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel Subscription", style: .destructive, handler: nil))
         self.present(alert, animated: true)
     }
     
