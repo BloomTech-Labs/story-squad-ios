@@ -149,6 +149,7 @@
                                                             <outlet property="nameLabel" destination="dQH-Dh-edB" id="B0m-TD-Jrg"/>
                                                             <outlet property="profileCardBlueView" destination="o3d-YY-Zgh" id="fNc-fX-Ov0"/>
                                                             <outlet property="viewProfileButton" destination="0q7-su-16v" id="4XR-cT-W6X"/>
+                                                            <segue destination="4UD-Wr-4QH" kind="show" identifier="ChildProfileFromDashboardSegue" id="DAB-cn-stE"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>

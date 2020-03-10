@@ -10,9 +10,11 @@ import UIKit
 
 class ManageSubscriptionViewController: UIViewController {
 
+    @IBOutlet weak var comingSoonLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        comingSoonLabel.transform = CGAffineTransform.init(rotationAngle: 0.75)
         // Do any additional setup after loading the view.
     }
     

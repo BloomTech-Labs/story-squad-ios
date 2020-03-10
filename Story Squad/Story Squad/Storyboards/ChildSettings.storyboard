@@ -10,15 +10,15 @@
         <array key="Nunito-Regular.ttf">
             <string>Nunito-Regular</string>
         </array>
-        <array key="TimesNewRoman.ttf">
-            <string>.SFUI-Regular</string>
+        <array key="Nunito-SemiBold.ttf">
+            <string>Nunito-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Child Settings View Controller-->
+        <!--Child Settings-->
         <scene sceneID="1yt-ET-m2B">
             <objects>
-                <viewController storyboardIdentifier="AddChildFromDashboardVC" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rc8-C2-qc1" customClass="ChildSettingsViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddChildFromDashboardVC" title="Child Settings" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rc8-C2-qc1" customClass="ChildSettingsViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WxE-jZ-l6l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,7 +96,7 @@
                                             <constraint firstAttribute="width" constant="227" id="0Hl-8C-Cx2"/>
                                             <constraint firstAttribute="height" constant="42.710000000000001" id="Mw9-CZ-3LY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="18"/>
                                         <state key="normal" title="Update">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>

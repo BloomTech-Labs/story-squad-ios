@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0zb-v7-rKJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0zb-v7-rKJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,129 +10,42 @@
         <array key="Bangers.ttf">
             <string>Bangers-Regular</string>
         </array>
-        <array key="OpenSans-Regular.ttf">
-            <string>OpenSans</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Child Profile MainVC-->
         <scene sceneID="LDC-st-c7b">
             <objects>
                 <viewController storyboardIdentifier="ChildProfileVC" id="0zb-v7-rKJ" customClass="ChildProfileMainVC" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="w0u-qz-pAa">
+                    <view key="view" contentMode="scaleToFill" id="s81-MP-KeR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARE YOU READY FOR ADVENTURE?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpE-eK-WYI">
-                                <rect key="frame" x="79.5" y="76" width="255.5" height="26"/>
-                                <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2020-03-09 at 8.33.39 PM" translatesAutoresizingMaskIntoConstraints="NO" id="eS7-Xx-cxx">
+                                <rect key="frame" x="0.0" y="196" width="414" height="316"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming Soon!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agE-au-LzC">
+                                <rect key="frame" x="20" y="329" width="374" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="74"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rDw-nB-dip">
-                                <rect key="frame" x="36" y="205" width="343" height="243"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2B7-xF-pNb">
-                                        <rect key="frame" x="22" y="4" width="298" height="235"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMg-wt-9fG">
-                                                <rect key="frame" x="0.0" y="0.0" width="298" height="71"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6pd-wG-Kih">
-                                                        <rect key="frame" x="0.0" y="0.0" width="298" height="71"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="feC-zY-Wxk">
-                                                                <rect key="frame" x="0.0" y="1.5" width="71" height="68.5"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="feC-zY-Wxk" secondAttribute="height" multiplier="1:1" id="H4r-0i-M0P"/>
-                                                                    <constraint firstAttribute="width" constant="75" id="uHq-wV-G74"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D4r-qg-tkR">
-                                                                <rect key="frame" x="81" y="10.5" width="217" height="50"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-qf-Fdb">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="217" height="25"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="24.670000000000002" id="7JJ-NT-ADL"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVB-eF-ahn">
-                                                                        <rect key="frame" x="0.0" y="25" width="217" height="25"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="24.670000000000002" id="Wdt-wd-ilK"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="6pd-wG-Kih" secondAttribute="bottom" id="W8y-71-r2A"/>
-                                                    <constraint firstItem="6pd-wG-Kih" firstAttribute="top" secondItem="gMg-wt-9fG" secondAttribute="top" id="kDL-Wo-Dcl"/>
-                                                    <constraint firstAttribute="trailing" secondItem="6pd-wG-Kih" secondAttribute="trailing" id="nNA-3d-WvO"/>
-                                                    <constraint firstItem="6pd-wG-Kih" firstAttribute="leading" secondItem="gMg-wt-9fG" secondAttribute="leading" id="tr5-J0-u1y"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                        <color key="value" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCEPT THE MISSION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5F-ET-ICG">
-                                                <rect key="frame" x="0.0" y="86" width="298" height="54"/>
-                                                <color key="backgroundColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="54" id="scn-7p-SMv"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="28"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dasboard Icon Set" translatesAutoresizingMaskIntoConstraints="NO" id="9CO-jc-AZi">
-                                                <rect key="frame" x="0.0" y="155" width="298" height="80"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="8hZ-To-ncV"/>
-                                                    <constraint firstAttribute="width" constant="298" id="gio-Nq-61U"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75347933739999995" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="hpE-eK-WYI" firstAttribute="top" secondItem="1St-GH-u2r" secondAttribute="top" constant="32" id="BPx-eJ-JtN"/>
-                            <constraint firstItem="hpE-eK-WYI" firstAttribute="centerX" secondItem="w0u-qz-pAa" secondAttribute="centerX" id="BTV-5H-Bvn"/>
-                            <constraint firstItem="rDw-nB-dip" firstAttribute="top" secondItem="hpE-eK-WYI" secondAttribute="top" constant="72" id="Nea-5U-kye"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="1St-GH-u2r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="954-em-fTw"/>
                     </view>
                     <navigationItem key="navigationItem" id="aqt-kf-nJy"/>
+                    <connections>
+                        <outlet property="comingSoonLabel" destination="agE-au-LzC" id="sUS-0f-oXu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4V-VY-hu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="171"/>
+            <point key="canvasLocation" x="1371.0144927536232" y="170.75892857142856"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Dasboard Icon Set" width="500" height="117"/>
-        <image name="person" catalog="system" width="64" height="58"/>
+        <image name="Screen Shot 2020-03-09 at 8.33.39 PM" width="914" height="715"/>
     </resources>
 </document>

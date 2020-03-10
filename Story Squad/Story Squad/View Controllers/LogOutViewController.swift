@@ -14,18 +14,28 @@ class LogOutViewController: UIViewController {
     var networkingController: NetworkingController?
     var parentUser: Parent?
 
+    @IBOutlet weak var helloParentLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         receiveDataFromSignup()
+        updateViews()
     }
     
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        
+    }
     // To receive the Parent and NetworkingController from the Tab Bar
     func receiveDataFromSignup() {
         guard let tabBar = tabBarController as? MainTabBarController else { return }
         
         self.parentUser = tabBar.parentUser
         self.networkingController = tabBar.networkingController
+    }
+    
+    func updateViews() {
+        guard let name = parentUser?.name else { return }
+        helloParentLabel.text = "Hello \(name)!"
     }
     
     /*
