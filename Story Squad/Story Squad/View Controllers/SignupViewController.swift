@@ -59,24 +59,37 @@ class SignupViewController: UIViewController {
             !name.isEmpty,
             !email.isEmpty,
             !password.isEmpty,
-            !confirmPW.isEmpty
-            
-            else {
+            !confirmPW.isEmpty else {
+                
                 showIncompleteAlert()
                 return
         }
         
-        let temporaryPIN: Int16 = 0000
-        
-        let parent = networkingController.createParent(name: name, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
-        self.parentUser = parent
-        
-        // MARK: - Sending data through Notification
-        let parentDataNotificationName = Notification.Name(rawValue: .passDataForParentString)
-        NotificationCenter.default.post(name: parentDataNotificationName, object: nil, userInfo: nil)
-        
-        performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+        if password == confirmPW {
+            
+            let temporaryPIN: Int16 = 0000
+            
+            let parent = networkingController.createParent(name: name, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
+            self.parentUser = parent
+            
+            // MARK: - Sending data through Notification
+            let parentDataNotificationName = Notification.Name(rawValue: .passDataForParentString)
+            NotificationCenter.default.post(name: parentDataNotificationName, object: nil, userInfo: nil)
+            
+            performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+        } else {
+            showPasswordsMismatchAlert()
+        }
     }
+    
+    // MARK: - Password missMatch
+    func showPasswordsMismatchAlert() {
+        let alert = UIAlertController(title: "Passwords don't match", message: "Please check passwords entries and try again", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
     // MARK: - Incomplete Child Data Alert
     func showIncompleteAlert() {
         let alert = UIAlertController(title: "Incomplete Account Information", message: "Please fill in all text fields", preferredStyle: .alert)

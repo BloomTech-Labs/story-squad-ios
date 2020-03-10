@@ -32,7 +32,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fnp-Ku-I2X">
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="163"/>
                                                 <subviews>
-                                                    <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ttd-vU-NQb">
+                                                    <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ttd-vU-NQb" customClass="PaddedTextField" customModule="Story_Squad" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="311" height="41"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -51,7 +51,7 @@
                                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Set PIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mFk-zc-DVO">
+                                                    <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Set PIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mFk-zc-DVO" customClass="PaddedTextField" customModule="Story_Squad" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="122" width="311" height="41"/>
                                                         <color key="backgroundColor" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -78,7 +78,7 @@
                                                         <color key="tintColor" red="0.0" green="0.47799999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="onTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <connections>
-                                                            <action selector="dyslexiaToggleSwitch:" destination="UWi-fO-3FJ" eventType="valueChanged" id="pKr-Gn-Mgv"/>
+                                                            <action selector="dyslexiaToggleSwitch:" destination="UWi-fO-3FJ" eventType="valueChanged" id="92d-Tc-ZX4"/>
                                                         </connections>
                                                     </switch>
                                                 </subviews>
@@ -100,7 +100,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="addChildButtonPressed:" destination="UWi-fO-3FJ" eventType="touchUpInside" id="E5w-ZS-pLT"/>
+                                                    <action selector="addChildButtonPressed:" destination="UWi-fO-3FJ" eventType="touchUpInside" id="33X-yw-SwA"/>
                                                 </connections>
                                             </button>
                                         </subviews>

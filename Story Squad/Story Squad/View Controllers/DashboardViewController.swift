@@ -106,16 +106,16 @@ class DashboardViewController: UIViewController {
             addChildVC.networkingController = self.networkingController
             
             // Ask for Child PIN to display Child's Profile
-        } else if segue.identifier == "ShowChildPinVCSegue" {
+     //   } else if segue.identifier == "ShowChildPinVCSegue" {
 //            guard let childProfilePinVC = segue.destination as? ChildProfilePinViewController else { return }
             
-            if let sender = sender as? ChildProfileCollectionViewCell {
-                guard let indexPath = childrenProfilesCollectionView.indexPath(for: sender) else { return }
+          //  if let sender = sender as? ChildProfileCollectionViewCell {
+            //    guard let indexPath = childrenProfilesCollectionView.indexPath(for: sender) else { return }
                 
 //                childProfilePinVC.parentUser = self.parentUser
 //                childProfilePinVC.childUser = fetchResultsController.object(at: indexPath)
 //                childProfilePinVC.networkingController = self.networkingController
-            }
+            
         }
     }
 }
@@ -139,5 +139,6 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    //performSegue(withIdentifier: "ChildProfileFromDashboardSegue", sender: self)
     }
 }

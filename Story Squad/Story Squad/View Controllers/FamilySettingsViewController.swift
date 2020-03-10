@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import ScalingCarousel
-
-class Cell: ScalingCarouselCell {}
+import CoreData
 
 class FamilySettingsViewController: UIViewController {
     
@@ -17,9 +15,8 @@ class FamilySettingsViewController: UIViewController {
     var networkingController: NetworkingController?
     var parentUser: Parent?
     
-    // MARK: - Outlets
-    @IBOutlet weak var carousel: ScalingCarouselView!
     
+    // MARK: - Outlets
     @IBOutlet weak var enterNewEmailTextField: UITextField!
     @IBOutlet weak var enterOldPasswordTextField: UITextField!
     @IBOutlet weak var enterNewPasswordTextField: UITextField!
@@ -50,11 +47,6 @@ class FamilySettingsViewController: UIViewController {
         self.parentUser = tabBar.parentUser
         self.networkingController = tabBar.networkingController
     }
-
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        carousel.deviceRotated()
-    }
     
     @IBAction func addChildButtonTapped(_ sender: UIButton) {
     }
@@ -70,47 +62,21 @@ class FamilySettingsViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
-}
+    
+    // MARK: - Navigation
 
-typealias CarouselDatasource = FamilySettingsViewController
-extension CarouselDatasource: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "childCollectionViewCell", for: indexPath)
-
-        DispatchQueue.main.async {
-            cell.setNeedsLayout()
-            cell.layoutIfNeeded()
-        }
-        
-        return cell
-    }
-}
-
-typealias CarouselDelegate = FamilySettingsViewController
-extension FamilySettingsViewController: UICollectionViewDelegate {
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        carousel.didScroll()
-        
-       // guard let currentCenterIndex = carousel.currentCenterCellIndex?.row else { return }
-    }
-}
-
-private typealias ScalingCarouselFlowDelegate = FamilySettingsViewController
-extension ScalingCarouselFlowDelegate: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        
-        return 0
-    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           
+           if segue.identifier == "ManageChildProfilesSegue" {
+            guard let manageChildProfilesVC = segue.destination as? ManageChildProfilesViewController else { return }
+            manageChildProfilesVC.parentUser = self.parentUser
+            manageChildProfilesVC.networkingController = self.networkingController
+            
+           } else if segue.identifier == "toAddChildSegue" {
+            guard let addChildVC = segue.destination as? AddChildViewController else { return }
+            addChildVC.parentUser = self.parentUser
+            addChildVC.networkingController = self.networkingController
+            
+           }
+       }
 }
