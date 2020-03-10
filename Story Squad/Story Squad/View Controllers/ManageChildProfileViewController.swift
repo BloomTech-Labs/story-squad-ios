@@ -80,7 +80,7 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         let child = fetchResultsController.object(at: indexPath)
         
         cell.nameLabel.text = child.name
-        cell.image = child.avatar
+        cell.avatarImageView.image = UIImage(named: "\(child.avatar)")
         return cell
     }
     
