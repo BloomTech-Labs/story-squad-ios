@@ -24,6 +24,14 @@ class HelpViewController: UIViewController {
     }
     
     @IBAction func faqButtonPressed(_ sender: UIButton) {
+        comingSoonAlert()
+    }
+    
+    func comingSoonAlert() {
+        let alert = UIAlertController(title: "Coming Soon", message: "Check Back Later", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
     private func updateViews() {

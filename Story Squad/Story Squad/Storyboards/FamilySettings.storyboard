@@ -246,7 +246,9 @@
         <scene sceneID="hgD-OH-MGA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KHs-h2-RcQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="zrJ-6V-LxJ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="zrJ-6V-LxJ">
+                        <color key="badgeColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MN7-lf-Va9">

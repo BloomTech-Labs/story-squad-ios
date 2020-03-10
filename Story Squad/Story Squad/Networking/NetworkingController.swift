@@ -23,7 +23,7 @@ class NetworkingController {
     // Create Parent
     func createParent(name: String, email: String, password: String, pin: Int16, context: NSManagedObjectContext) -> Parent? {
         
-        let id = Int16.random(in: 1..<1000)
+        let id = Int16.random(in: 1..<10000)
         let parent = Parent(name: name, id: id, email: email, password: password, pin: pin, context: CoreDataStack.shared.mainContext)
         
         // Saving to CoreData
