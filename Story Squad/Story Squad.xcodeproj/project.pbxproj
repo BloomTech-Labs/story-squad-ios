@@ -64,14 +64,11 @@
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
 		DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */; };
 		DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */; };
-<<<<<<< HEAD
 		E350FE642417002000759D36 /* GoogleAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = E350FE632417001F00759D36 /* GoogleAnalytics.m */; };
 		E350FE662417B7C900759D36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E350FE652417B7C900759D36 /* GoogleService-Info.plist */; };
 		E35F0403241292940099F4A1 /* ManageSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E35F0402241292940099F4A1 /* ManageSubscription.storyboard */; };
 		E35F0405241292E90099F4A1 /* ManageSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35F0404241292E90099F4A1 /* ManageSubscriptionViewController.swift */; };
-=======
 		E35F0403241292940099F4A1 /* ManageChildProfiles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E35F0402241292940099F4A1 /* ManageChildProfiles.storyboard */; };
->>>>>>> 1ebf348395d0105db297b6a8eb8f3ec632fb15af
 		E398E647240F196900CEB26B /* ChildSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E398E646240F196900CEB26B /* ChildSettings.storyboard */; };
 		E3C82629240ED82200055A77 /* FamilySettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C82628240ED82200055A77 /* FamilySettings.storyboard */; };
 		FA71E3502406F826001385E7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E34F2406F826001385E7 /* SignupViewController.swift */; };

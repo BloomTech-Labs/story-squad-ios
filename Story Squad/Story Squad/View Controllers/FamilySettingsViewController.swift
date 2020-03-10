@@ -30,7 +30,7 @@ class FamilySettingsViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        carousel.reloadData()
+        
         
         // Adds Google Analytics tracking for this view controller
         guard let tracker = GAI.sharedInstance().defaultTracker else { return }
