@@ -22,15 +22,16 @@ class ChildProfileCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var viewProfileButton: UIButton!
     @IBOutlet weak var profileCardBlueView: UIView!
+    @IBOutlet weak var viewProfileLabel: UILabel!
     
     // MARK: - Methods
     
     private func updateViews() {
         
         profileCardBlueView.layer.cornerRadius = 10
-        viewProfileButton.layer.cornerRadius = 10
+        viewProfileLabel.layer.masksToBounds = true
+        viewProfileLabel.layer.cornerRadius = 10
         
         guard let child = childUser else { return }
         
