@@ -60,6 +60,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.5.1):
     - GoogleUtilities/Logger
+  - iCarousel (1.8.3)
   - LabelSwitch (0.1.6)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -73,6 +74,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Analytics
   - GoogleAnalytics
+  - iCarousel
   - LabelSwitch
   - ScalingCarousel
   - SwiftLint
@@ -90,6 +92,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
+    - iCarousel
     - LabelSwitch
     - nanopb
     - PromisesObjC
@@ -108,12 +111,13 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 653963cf5be60fb59cf051e070f0836fdc305f81
   GoogleDataTransportCCTSupport: 84e4d4bbab642f2e9d83ee65d78aca2b5527d314
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   LabelSwitch: 7f2120e1a567c35daefbcdd509405b63af6661ec
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   ScalingCarousel: 7bf711d154b0c5c362c5dd4787ed7d13b489a4cb
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: cecede1a19ac0ea932cf174b5688662627b4b88c
+PODFILE CHECKSUM: f519c5ea28632a0b10a671f8cb1ca11e170f1a02
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.8.4
