@@ -64,14 +64,7 @@
 		DDD7D24D23FF179900C9DF2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D24C23FF179900C9DF2B /* README.md */; };
 		DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */; };
 		DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */; };
-<<<<<<< HEAD
-		E350FE642417002000759D36 /* GoogleAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = E350FE632417001F00759D36 /* GoogleAnalytics.m */; };
-		E350FE662417B7C900759D36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E350FE652417B7C900759D36 /* GoogleService-Info.plist */; };
-		E35F0403241292940099F4A1 /* ManageSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E35F0402241292940099F4A1 /* ManageSubscription.storyboard */; };
-		E35F0405241292E90099F4A1 /* ManageSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35F0404241292E90099F4A1 /* ManageSubscriptionViewController.swift */; };
-=======
 		E35F0403241292940099F4A1 /* ManageChildProfiles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E35F0402241292940099F4A1 /* ManageChildProfiles.storyboard */; };
->>>>>>> 1ebf348395d0105db297b6a8eb8f3ec632fb15af
 		E398E647240F196900CEB26B /* ChildSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E398E646240F196900CEB26B /* ChildSettings.storyboard */; };
 		E3C82629240ED82200055A77 /* FamilySettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C82628240ED82200055A77 /* FamilySettings.storyboard */; };
 		FA71E3502406F826001385E7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E34F2406F826001385E7 /* SignupViewController.swift */; };
@@ -148,11 +141,6 @@
 		DDD7D24C23FF179900C9DF2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildParentPinViewController.swift; sourceTree = "<group>"; };
 		DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsParentPinViewController.swift; sourceTree = "<group>"; };
-		E350FE622417001F00759D36 /* Story Squad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Story Squad-Bridging-Header.h"; sourceTree = "<group>"; };
-		E350FE632417001F00759D36 /* GoogleAnalytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleAnalytics.m; sourceTree = "<group>"; };
-		E350FE652417B7C900759D36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E35F0402241292940099F4A1 /* ManageSubscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageSubscription.storyboard; sourceTree = "<group>"; };
-		E35F0404241292E90099F4A1 /* ManageSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSubscriptionViewController.swift; sourceTree = "<group>"; };
 		E35F0402241292940099F4A1 /* ManageChildProfiles.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageChildProfiles.storyboard; sourceTree = "<group>"; };
 		E398E646240F196900CEB26B /* ChildSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildSettings.storyboard; sourceTree = "<group>"; };
 		E3C82628240ED82200055A77 /* FamilySettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FamilySettings.storyboard; sourceTree = "<group>"; };
@@ -300,7 +288,6 @@
 		FA85E84323FEF35C008637E0 /* Story Squad */ = {
 			isa = PBXGroup;
 			children = (
-				E350FE652417B7C900759D36 /* GoogleService-Info.plist */,
 				FA85E85823FEF38D008637E0 /* Storyboards */,
 				FA85E85923FEF3B1008637E0 /* View Controllers */,
 				4FF0F5EA2404983300587C7B /* Views */,
@@ -313,8 +300,6 @@
 				FA85E84623FEF35C008637E0 /* SceneDelegate.swift */,
 				FA85E85223FEF35E008637E0 /* Info.plist */,
 				DDD7D24C23FF179900C9DF2B /* README.md */,
-				E350FE632417001F00759D36 /* GoogleAnalytics.m */,
-				E350FE622417001F00759D36 /* Story Squad-Bridging-Header.h */,
 			);
 			path = "Story Squad";
 			sourceTree = "<group>";
@@ -411,7 +396,6 @@
 				TargetAttributes = {
 					FA85E84023FEF35C008637E0 = {
 						CreatedOnToolsVersion = 11.3.1;
-						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -469,7 +453,6 @@
 				4FD90F3E23FF6AEF00BC4702 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				4FD90F3D23FF6AEF00BC4702 /* OpenSans-Bold.ttf in Resources */,
 				4FF0F657240DD01600587C7B /* Nunito-SemiBold.ttf in Resources */,
-				E350FE662417B7C900759D36 /* GoogleService-Info.plist in Resources */,
 				4FD90F3723FF6AEF00BC4702 /* OpenSans-Semibold.ttf in Resources */,
 				4FD90F2923FF361900BC4702 /* Bangers.ttf in Resources */,
 				4FF0F654240DD01600587C7B /* Nunito-ExtraBold.ttf in Resources */,
@@ -560,7 +543,6 @@
 				DD71FD0F2406D9C10032EBB5 /* ParentRepresentation.swift in Sources */,
 				DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */,
 				4FFA57E62410827B00655C9E /* PaddedTextField.swift in Sources */,
-				E350FE642417002000759D36 /* GoogleAnalytics.m in Sources */,
 				FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */,
 				4FF0F5F42405C4F900587C7B /* AddChildViewController.swift in Sources */,
 				FAB94F9624045C4500905211 /* HamburgerMenuTableViewController.swift in Sources */,
@@ -725,7 +707,6 @@
 			baseConfigurationReference = EC8FD35A646613250F69ED2C /* Pods-Story Squad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BHPNM53Q62;
 				INFOPLIST_FILE = "Story Squad/Info.plist";
@@ -735,8 +716,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.Story-Squad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Story Squad/Story Squad-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -747,7 +726,6 @@
 			baseConfigurationReference = 63C7C998A68B516E47233BF0 /* Pods-Story Squad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BHPNM53Q62;
 				INFOPLIST_FILE = "Story Squad/Info.plist";
@@ -757,7 +735,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.Story-Squad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Story Squad/Story Squad-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
