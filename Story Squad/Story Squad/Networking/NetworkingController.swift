@@ -89,7 +89,7 @@ class NetworkingController {
     // create Child
     func createChildAndAddToParent(parent: Parent, name: String, username: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool = false, avatar: Data?, context: NSManagedObjectContext) {
     // Generate random avatar
-        let arrayOfAvatars = ["Hero 6.png, Hero 11.png, Hero 12.png, Hero 13.png, Hero 14.png, Hero 15.png, Hero 16.png, Hero 18.png, Hero 19.png"]
+        let arrayOfAvatars = ["Hero 6.png", "Hero 11.png", "Hero 12.png", "Hero 13.png", "Hero 14.png", "Hero 15.png", "Hero 16.png", "Hero 18.png", "Hero 19.png"]
 
         let randomAvatar = arrayOfAvatars.randomElement()
     // convert random avatar string into Data
