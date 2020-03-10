@@ -136,7 +136,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="addChildButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gnm-4g-uxn"/>
-                                                            <segue destination="rj3-Rb-yce" kind="show" id="Yse-pw-0bE"/>
+                                                            <segue destination="rj3-Rb-yce" kind="show" identifier="toAddChildSegue" id="Yse-pw-0bE"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRL-Ci-asa">

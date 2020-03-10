@@ -60,6 +60,11 @@ class FamilySettingsViewController: UIViewController {
             manageSubscriptionVC.parentUser = self.parentUser
             manageSubscriptionVC.networkingController = self.networkingController
             
+           } else if segue.identifier == "toAddChildSegue" {
+            guard let addChildVC = segue.destination as? AddChildViewController else { return }
+            addChildVC.parentUser = self.parentUser
+            addChildVC.networkingController = self.networkingController
+            
            }
        }
 }
