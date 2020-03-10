@@ -25,17 +25,17 @@ class ChildSettingsViewController: UIViewController {
     @IBAction func dyslexiaSliderToggled(_ sender: UISwitch) {
     }
     
-    @IBAction func saveButtonTapped(_ sender: UIButton) {
-        
-        guard let name = nameTextField.text,
-            let pin = pinTextField.text,
-            let pinConfirmation = pinConfirmationTextField.text,
-            !name.isEmpty,
-            !pin.isEmpty,
-            !pinConfirmation.isEmpty else { return }
-        
-        // TODO: save switch state if changed to .isOn
-    }
+    @IBAction func saveButtonTapped(_ sender: Any) {
+                showCompleteAlert()
+            }
+            
+        // MARK: - Alert for Update Complete
+            func showCompleteAlert() {
+                let alert = UIAlertController(title: "Child Settings", message: "Update Complete", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
     
     /*
     // MARK: - Navigation

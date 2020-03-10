@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ch1-6F-6PW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8mA-s5-12U">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -14,77 +13,41 @@
     </customFonts>
     <scenes>
         <!--Manage Subscription-->
-        <scene sceneID="g29-LM-Mc6">
+        <scene sceneID="Qjk-v3-iTV">
             <objects>
-                <viewController title="Manage Subscription" id="ch1-6F-6PW" customClass="ManageSubscriptionViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DJn-h9-hbZ">
+                <viewController title="Manage Subscription" id="8mA-s5-12U" customClass="ManageSubscriptionViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bml-sn-YxF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kjz-sm-LiH">
-                                <rect key="frame" x="0.0" y="138" width="414" height="649"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="afS-Z8-rKO">
-                                    <size key="itemSize" width="414" height="608"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="c6H-bN-uLw" customClass="ChildCollectionViewCell" customModule="Story_Squad" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SU-AG-Vf7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="414" height="608"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="14"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </collectionViewCell>
-                                </cells>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="14"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MH-k2-kIR">
-                                <rect key="frame" x="108" y="795" width="198" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manage Subscription Coming  Soon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrS-SH-m7P">
+                                <rect key="frame" x="55" y="202" width="299" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbM-Mp-7fL">
+                                <rect key="frame" x="127" y="605" width="161" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                 <state key="normal" title="Cancel Subscription">
-                                    <color key="titleColor" red="0.58039215686274503" green="0.58039215686274503" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelSubsctiptionButtonTapped:" destination="ch1-6F-6PW" eventType="touchUpInside" id="LxC-HR-oxR"/>
+                                    <action selector="cancelSubscriptionButtonTapped:" destination="8mA-s5-12U" eventType="touchUpInside" id="e3D-aw-LbW"/>
+                                    <action selector="cancelSubsctiptionButtonTapped:" destination="9On-Cw-JIO" eventType="touchUpInside" id="CS5-T7-VmI"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="trailing" secondItem="Esg-lb-SU9" secondAttribute="trailing" id="K10-wf-Zlq"/>
-                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="top" secondItem="Esg-lb-SU9" secondAttribute="top" constant="50" id="QNS-72-kcX"/>
-                            <constraint firstItem="Esg-lb-SU9" firstAttribute="bottom" secondItem="9MH-k2-kIR" secondAttribute="bottom" constant="32" id="UC3-rp-bZe"/>
-                            <constraint firstItem="9MH-k2-kIR" firstAttribute="leading" secondItem="Esg-lb-SU9" secondAttribute="leading" constant="108" id="azS-bX-IWf"/>
-                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="leading" secondItem="Esg-lb-SU9" secondAttribute="leading" id="ilV-WJ-hdV"/>
-                            <constraint firstItem="Esg-lb-SU9" firstAttribute="trailing" secondItem="9MH-k2-kIR" secondAttribute="trailing" constant="108" id="nJS-Yt-OOf"/>
-                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="centerY" secondItem="DJn-h9-hbZ" secondAttribute="centerY" constant="14.5" id="u4u-mY-Rgn"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Esg-lb-SU9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bwm-Ow-kJK"/>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="cancelSubscriptionButton" destination="9MH-k2-kIR" id="q0p-2V-Mmu"/>
-                        <outlet property="childCollectionView" destination="Kjz-sm-LiH" id="lid-Ar-MoH"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ko9-r3-wsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dF-E6-CO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9On-Cw-JIO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-149.27536231884059" y="20.758928571428569"/>
+            <point key="canvasLocation" x="-308.69565217391306" y="3.3482142857142856"/>
         </scene>
     </scenes>
 </document>
