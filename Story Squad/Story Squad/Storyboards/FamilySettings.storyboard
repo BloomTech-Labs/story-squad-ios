@@ -36,7 +36,7 @@
                                                 <rect key="frame" x="16" y="20" width="406" height="882.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Email or Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4i-YM-dtQ">
-                                                        <rect key="frame" x="58" y="0.0" width="290.5" height="30.5"/>
+                                                        <rect key="frame" x="57.5" y="0.0" width="291.5" height="30.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30.5" id="f5m-LR-AIP"/>
                                                         </constraints>
@@ -123,7 +123,6 @@
                                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="47" id="Bni-wE-N5I"/>
-                                                            <constraint firstAttribute="width" constant="374" id="fpm-yc-MrB"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
                                                         <state key="normal" title="Add a Child">
@@ -143,7 +142,6 @@
                                                         <rect key="frame" x="16" y="490.5" width="374" height="47"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="374" id="SPV-w1-jyJ"/>
                                                             <constraint firstAttribute="height" constant="47" id="n4U-c3-bTu"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
@@ -161,7 +159,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRL-Ci-asa">
-                                                        <rect key="frame" x="117" y="567.5" width="172" height="35"/>
+                                                        <rect key="frame" x="16" y="567.5" width="374" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="AF2-mT-XbA"/>
                                                         </constraints>
@@ -180,7 +178,10 @@
                                                     </view>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="nRL-Ci-asa" firstAttribute="width" secondItem="Efx-Aw-1iD" secondAttribute="width" id="QpJ-o8-mnB"/>
                                                     <constraint firstItem="W0T-z9-EFs" firstAttribute="width" secondItem="Ccq-DT-z9O" secondAttribute="width" id="Z66-E8-KWe"/>
+                                                    <constraint firstItem="6p9-Z6-6If" firstAttribute="width" secondItem="Efx-Aw-1iD" secondAttribute="width" id="mbh-iK-lyf"/>
+                                                    <constraint firstItem="C8U-6u-Ot8" firstAttribute="width" secondItem="Efx-Aw-1iD" secondAttribute="width" id="yhS-sP-mWb"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
