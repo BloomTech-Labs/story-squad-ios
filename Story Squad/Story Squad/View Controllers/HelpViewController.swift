@@ -23,17 +23,6 @@ class HelpViewController: UIViewController {
         updateViews()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-           super.viewDidAppear(animated)
-           
-           // Adds Google Analytics tracking for this view controller
-           guard let tracker = GAI.sharedInstance().defaultTracker else { return }
-           tracker.set(kGAIScreenName, value: "HelpViewController")
-
-           guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
-           tracker.send(builder.build() as [NSObject : AnyObject])
-       }
-    
     @IBAction func faqButtonPressed(_ sender: UIButton) {
         comingSoonAlert()
     }
