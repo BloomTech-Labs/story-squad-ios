@@ -64,13 +64,7 @@ class DashboardViewController: UIViewController {
         super.viewDidAppear(animated)
         
         childrenProfilesCollectionView.reloadData()
-        
-        // Adds Google Analytics tracking for this view controller
-        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
-        tracker.set(kGAIScreenName, value: "DashboardViewController")
 
-        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
-        tracker.send(builder.build() as [NSObject : AnyObject])
     }
     
     // To receive the Parent and NetworkingController from the Tab Ba

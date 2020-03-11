@@ -31,7 +31,6 @@ PODS:
     - FirebaseCore (~> 6.6)
     - GoogleUtilities/UserDefaults (~> 6.5)
     - PromisesObjC (~> 1.2)
-  - GoogleAnalytics (3.17.0)
   - GoogleAppMeasurement (6.3.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -72,7 +71,6 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Analytics
-  - GoogleAnalytics
   - LabelSwitch
   - ScalingCarousel
   - SwiftLint
@@ -85,7 +83,6 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseCoreDiagnosticsInterop
     - FirebaseInstallations
-    - GoogleAnalytics
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
@@ -103,7 +100,6 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: e9b4cd8ba60dee0f2d13347332e4b7898cca5b61
   FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
   FirebaseInstallations: 575cd32f2aec0feeb0e44f5d0110a09e5e60b47b
-  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleAppMeasurement: c29d405ff76e18551b5d158eaba6753fda8c7542
   GoogleDataTransport: a857c6a002d201b524dd4bc2ed7e7355ed07e785
   GoogleDataTransportCCTSupport: 32f75fbe904c82772fcbb6b6bd4525bfb6f2a862
@@ -114,6 +110,6 @@ SPEC CHECKSUMS:
   ScalingCarousel: 7bf711d154b0c5c362c5dd4787ed7d13b489a4cb
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 8005fe3dce54362051cb8176ec1026f8a7fb21ad
+PODFILE CHECKSUM: 4994ad333bd4fbc61aac1de331d463df8b203821
 
 COCOAPODS: 1.9.1
