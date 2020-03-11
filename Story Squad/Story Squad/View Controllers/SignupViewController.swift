@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import CoreData
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class SignupViewController: UIViewController {
     
@@ -14,9 +18,9 @@ class SignupViewController: UIViewController {
     let networkingController = NetworkingController()
     var parentUser: Parent?
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
-         .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
-         .strokeWidth: -3.5
-     ]
+        .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
+        .strokeWidth: -3.5
+    ]
     
     // MARK: - Outlets
     @IBOutlet weak var nameTextField: PaddedTextField!
@@ -44,34 +48,120 @@ class SignupViewController: UIViewController {
     // MARK: - Actions
     @IBAction func signUpButton(_ sender: Any) {
         
-        guard let name = nameTextField.text,
-            let email = emailTextField.text,
-            let password = passwordTextField.text,
-            let confirmPW = confirmPWTextField.text,
-            !name.isEmpty,
-            !email.isEmpty,
-            !password.isEmpty,
-            !confirmPW.isEmpty else {
+        //        guard let name = nameTextField.text,
+        //            let email = emailTextField.text,
+        //            let password = passwordTextField.text,
+        //            let confirmPW = confirmPWTextField.text,
+        //            !name.isEmpty,
+        //            !email.isEmpty,
+        //            !password.isEmpty,
+        //            !confirmPW.isEmpty else {
+        //
+        //                showIncompleteAlert()
+        //                return
+        //        }
+        //
+        //        if password == confirmPW {
+        //
+        //            let temporaryPIN: Int16 = 0000
+        //
+        //            let parent = networkingController.createParent(name: name, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
+        //            self.parentUser = parent
+        //
+        //            // MARK: - Sending data through Notification
+        //            let parentDataNotificationName = Notification.Name(rawValue: .passDataForParentString)
+        //            NotificationCenter.default.post(name: parentDataNotificationName, object: nil, userInfo: nil)
+        //
+        //            performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+        //        } else {
+        //            showPasswordsMismatchAlert()
+        //        }
+        
+        registerNewParentAccount()
+    }
+    
+    func registerNewParentAccount() {
+        
+        // Validate the fields, or save error mesage to display
+        let error = validateFields()
+        
+        if error != nil {
+            showErrorAlert(errorMessage: error!)
+        } else {
+            
+            guard let password = passwordTextField.text,
+                let email = emailTextField.text,
+                let name = nameTextField.text,
+                let confirmPW = confirmPWTextField.text else { return }
+            
+            if password == confirmPW {
                 
-                showIncompleteAlert()
-                return
+                // Creating new Account in Firebase
+                Auth.auth().createUser(withEmail: email, password: password) { (_, err) in
+                    self.networkingController.getCredentials()
+                    
+                    if let err = err {
+                        self.showErrorAlert(errorMessage: "Error creating Account: \(err.localizedDescription)")
+                        NSLog("Error creating parent account to PUT in Firebase: \(err)")
+                        
+                    } else {
+                        let db = Firestore.firestore()
+                        db.collection("ParentAccount").addDocument(data: ["name": name]) { (error) in
+                            
+                            let temporaryPIN: Int16 = 0000
+                            
+                            let parent = self.networkingController.createParent(name: name, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
+                            self.parentUser = parent
+                            
+                            if let error = error {
+                                // Family account was created but couldn't save the response gotten back from Firebase
+                                self.showErrorAlert(errorMessage: "Error creating Account")
+                                NSLog("Account was created in Firebase, but got bad response: \(error)")
+                            }
+                        }
+                        self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+                    }
+                }
+            } else {
+                showPasswordsMismatchAlert()
+            }
+        }
+    }
+    
+    func showErrorAlert(errorMessage: String) {
+        let alert = UIAlertController(title: "Oops!", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func validateFields() -> String? {
+        
+        // Check that all fields are filled in
+        if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            confirmPWTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            
+            return "Please fill in all fields."
         }
         
-        if password == confirmPW {
-            
-            let temporaryPIN: Int16 = 0000
-            
-            let parent = networkingController.createParent(name: name, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
-            self.parentUser = parent
-            
-            // MARK: - Sending data through Notification
-            let parentDataNotificationName = Notification.Name(rawValue: .passDataForParentString)
-            NotificationCenter.default.post(name: parentDataNotificationName, object: nil, userInfo: nil)
-            
-            performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
-        } else {
-            showPasswordsMismatchAlert()
-        }
+        // TODO: Comment back in for production
+        
+        //        // Check if the password is secure enough
+        //        if isPasswordValid(cleanedPassword) == false {
+        //
+        //            return "Please make sure your password is at least 8 characters, contains a special character and a number."
+        //        }
+        return nil
+    }
+    
+    func isPasswordValid(_ password: String) -> Bool {
+        // 1 - Password length is 8.
+        // 2 - One Alphabet in Password.
+        // 3 - One Special Character in Password.
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        return passwordTest.evaluate(with: password)
     }
     
     // MARK: - Password missMatch
@@ -89,6 +179,7 @@ class SignupViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
+    
     // MARK: - Update Views
     func updateViews() {
         

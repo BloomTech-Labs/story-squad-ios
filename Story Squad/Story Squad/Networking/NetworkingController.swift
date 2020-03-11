@@ -8,8 +8,36 @@
 
 import Foundation
 import CoreData
+import FirebaseAuth
+import FirebaseFirestore
+import UIKit
+import Firebase
 
 class NetworkingController {
+    
+    private let baseURL = URL(string: "https://story-squad-f67eb.firebaseio.com/")!
+    
+    private var token = "token"
+    private let db = Firestore.firestore()
+    private var userID: String?
+    
+    func getCredentials() {
+        let user = Auth.auth().currentUser
+        user?.getIDToken(completion: { (token, error) in
+            if let error = error as NSError? {
+                NSLog("error getting token: \(error)")
+                return
+            }
+            UserDefaults.standard.set(token, forKey: self.token)
+            UserDefaults.standard.set(Auth.auth().currentUser?.uid, forKey: "userID")
+            self.userID = Auth.auth().currentUser?.uid
+        })
+    }
+    
+    func signOut() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.removeObject(forKey: token)
+    }
     
     // MARK: - Properties
     
@@ -70,10 +98,6 @@ class NetworkingController {
         
         // Saving to CoreData
         CoreDataStack.shared.save(context: context)
-        
-        // TODO: WR Check if you need this from Tasks Project
-        //        let context = CoreDataStack.shared.container.newBackgroundContext()
-        //        context.performAndWait {
     }
     
     // Delete Parent
