@@ -16,6 +16,9 @@
         <array key="Nunito-Regular.ttf">
             <string>Nunito-Regular</string>
         </array>
+        <array key="Nunito-SemiBold.ttf">
+            <string>Nunito-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Signup View Controller-->
@@ -84,6 +87,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwy-Tz-PqJ">
                                                                 <rect key="frame" x="175" y="0.0" width="47" height="30"/>
                                                                 <state key="normal" title="Sign In"/>
+                                                                <connections>
+                                                                    <segue destination="gHV-IQ-dpr" kind="show" id="mi4-hl-MkX"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -198,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caO-dC-y9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1060" y="182.51231527093597"/>
+            <point key="canvasLocation" x="-1817" y="311"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="c7h-CB-aVj">
@@ -219,6 +225,123 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHe-wO-8Ti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-549" y="743"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="iEH-am-3XS">
+            <objects>
+                <viewController title="Log In View Controller" modalPresentationStyle="fullScreen" id="gHV-IQ-dpr" customClass="LogInViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OKp-0V-3mj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hCS-so-L1n" customClass="PaddedTextField" customModule="Story_Squad" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="239" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="i0o-Gw-32L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xe3-ye-ZKe" customClass="PaddedTextField" customModule="Story_Squad" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="299" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="e6j-bm-vfc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Squad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9j-Gv-76L">
+                                <rect key="frame" x="20" y="76" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back, Sign in to continue." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc3-EQ-KeN">
+                                <rect key="frame" x="101.5" y="146.5" width="211" height="60.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="24"/>
+                                <color key="textColor" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" id="tb6-CT-aIm">
+                                <rect key="frame" x="67" y="469" width="269" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyX-ZF-R0r">
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="30"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="15"/>
+                                        <color key="textColor" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLV-an-p6n">
+                                        <rect key="frame" x="161" y="0.0" width="108" height="30"/>
+                                        <state key="normal" title="Create account"/>
+                                        <connections>
+                                            <segue destination="xCY-LR-Z8x" kind="show" id="LkL-Cz-7tf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="EQ6-vN-8C1"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-Ai-BC0" userLabel="Sign In">
+                                <rect key="frame" x="16" y="397" width="382" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="vfo-Z6-aBA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signUpButton:" destination="xCY-LR-Z8x" eventType="touchUpInside" id="Gsq-EP-ew8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZV-dh-9j8">
+                                <rect key="frame" x="285" y="315" width="109" height="29"/>
+                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="13"/>
+                                <state key="normal" title="Forgot Password?"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="R9j-Gv-76L" firstAttribute="top" secondItem="mJ2-SD-UfJ" secondAttribute="top" constant="32" id="1yC-iL-4OW"/>
+                            <constraint firstItem="mJ2-SD-UfJ" firstAttribute="trailing" secondItem="fc3-EQ-KeN" secondAttribute="trailing" constant="101.5" id="4pU-P7-DV3"/>
+                            <constraint firstItem="UZV-dh-9j8" firstAttribute="leading" secondItem="mJ2-SD-UfJ" secondAttribute="leading" constant="285" id="6N2-cK-2Fr"/>
+                            <constraint firstAttribute="trailing" secondItem="hCS-so-L1n" secondAttribute="trailing" id="7H9-cE-Gj0"/>
+                            <constraint firstItem="mJ2-SD-UfJ" firstAttribute="trailing" secondItem="gLJ-Ai-BC0" secondAttribute="trailing" constant="16" id="9sX-Uk-ofB"/>
+                            <constraint firstItem="fc3-EQ-KeN" firstAttribute="top" secondItem="R9j-Gv-76L" secondAttribute="bottom" constant="32" id="9xk-xb-ACm"/>
+                            <constraint firstItem="Xe3-ye-ZKe" firstAttribute="trailing" secondItem="mJ2-SD-UfJ" secondAttribute="trailing" id="Kk5-bl-YGR"/>
+                            <constraint firstItem="Xe3-ye-ZKe" firstAttribute="leading" secondItem="mJ2-SD-UfJ" secondAttribute="leading" id="Pmp-vG-Js2"/>
+                            <constraint firstItem="hCS-so-L1n" firstAttribute="leading" secondItem="OKp-0V-3mj" secondAttribute="leading" id="Sha-ei-QJ9"/>
+                            <constraint firstItem="UZV-dh-9j8" firstAttribute="top" secondItem="hCS-so-L1n" secondAttribute="bottom" constant="16" id="Upl-KM-4KT"/>
+                            <constraint firstItem="fc3-EQ-KeN" firstAttribute="leading" secondItem="mJ2-SD-UfJ" secondAttribute="leading" constant="101.5" id="Xlt-wb-Ibz"/>
+                            <constraint firstItem="mJ2-SD-UfJ" firstAttribute="trailing" secondItem="R9j-Gv-76L" secondAttribute="trailing" constant="20" id="c1H-zy-n2J"/>
+                            <constraint firstItem="Xe3-ye-ZKe" firstAttribute="top" secondItem="hCS-so-L1n" secondAttribute="bottom" id="c9S-WN-DQv"/>
+                            <constraint firstItem="mJ2-SD-UfJ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UZV-dh-9j8" secondAttribute="trailing" id="e4X-yq-JLa"/>
+                            <constraint firstItem="tb6-CT-aIm" firstAttribute="top" secondItem="gLJ-Ai-BC0" secondAttribute="bottom" constant="16" id="gvK-rc-Ye2"/>
+                            <constraint firstItem="gLJ-Ai-BC0" firstAttribute="leading" secondItem="mJ2-SD-UfJ" secondAttribute="leading" constant="16" id="sFd-DB-Yls"/>
+                            <constraint firstItem="hCS-so-L1n" firstAttribute="top" secondItem="fc3-EQ-KeN" secondAttribute="bottom" constant="32" id="shT-4O-Ubw"/>
+                            <constraint firstItem="R9j-Gv-76L" firstAttribute="leading" secondItem="mJ2-SD-UfJ" secondAttribute="leading" constant="20" id="taH-S4-cPp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mJ2-SD-UfJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qp6-lr-DYi"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="hCS-so-L1n" id="IzT-pp-wVH"/>
+                        <outlet property="forgotPasswordButton" destination="UZV-dh-9j8" id="ixF-8g-NXA"/>
+                        <outlet property="passwordTextField" destination="Xe3-ye-ZKe" id="Wiu-rV-Nut"/>
+                        <outlet property="storySquadLabel" destination="R9j-Gv-76L" id="u6S-hk-tZu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5D6-Ra-im7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1062.3188405797102" y="-373.66071428571428"/>
         </scene>
         <!--Logout-->
         <scene sceneID="0PG-Lx-cF5">
@@ -260,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2o-26-l51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495.6521739130435" y="1092.8571428571429"/>
+            <point key="canvasLocation" x="-1062" y="1056"/>
         </scene>
         <!--tabBarController-->
         <scene sceneID="zNK-hS-obg">
@@ -281,10 +404,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4d-Om-I2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-123" y="183"/>
+            <point key="canvasLocation" x="-600" y="311"/>
         </scene>
     </scenes>
     <resources>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="LkL-Cz-7tf"/>
+    </inferredMetricsTieBreakers>
 </document>
