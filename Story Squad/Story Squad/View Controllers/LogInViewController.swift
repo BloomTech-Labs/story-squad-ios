@@ -24,10 +24,14 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var emailTextField: PaddedTextField!
     @IBOutlet weak var passwordTextField: PaddedTextField!
     @IBOutlet weak var forgotPasswordButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
         // Do any additional setup after loading the view.
+    }
+    @IBAction func signInButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
     }
     
     func updateViews() {

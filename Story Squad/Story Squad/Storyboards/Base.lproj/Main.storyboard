@@ -299,6 +299,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="signInButtonTapped:" destination="gHV-IQ-dpr" eventType="touchUpInside" id="xdk-YH-Z9e"/>
                                     <action selector="signUpButton:" destination="xCY-LR-Z8x" eventType="touchUpInside" id="Gsq-EP-ew8"/>
                                 </connections>
                             </button>
@@ -337,6 +338,7 @@
                         <outlet property="forgotPasswordButton" destination="UZV-dh-9j8" id="ixF-8g-NXA"/>
                         <outlet property="passwordTextField" destination="Xe3-ye-ZKe" id="Wiu-rV-Nut"/>
                         <outlet property="storySquadLabel" destination="R9j-Gv-76L" id="u6S-hk-tZu"/>
+                        <segue destination="zsa-An-dBu" kind="show" identifier="ShowTabBarSegue" id="Dxv-Gs-sEA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5D6-Ra-im7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -411,6 +413,7 @@
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Dxv-Gs-sEA"/>
         <segue reference="LkL-Cz-7tf"/>
     </inferredMetricsTieBreakers>
 </document>
