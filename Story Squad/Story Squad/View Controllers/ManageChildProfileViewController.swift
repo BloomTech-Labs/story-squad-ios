@@ -78,9 +78,10 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "childCollectionViewCellIdentifier", for: indexPath) as! ChildCollectionViewCell
         
         let child = fetchResultsController.object(at: indexPath)
+        let avatar = child.avatar
         
+        cell.avatarImageView.image = UIImage(named: avatar ?? "Hero 12.png")
         cell.nameLabel.text = child.name
-        cell.avatarImageView.image = UIImage(named: "\(child.avatar)")
         return cell
     }
     
@@ -89,14 +90,14 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         print("child selected == \(indexPath.row)")
     }
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ChildSettingsFromManageProfilesSegue" {
             if let sender = sender as? ChildCollectionViewCell {
                 guard childCollectionView.indexPath(for: sender) != nil else { return }
             }
         }
-     }
+    }
 }
