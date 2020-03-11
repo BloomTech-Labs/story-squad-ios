@@ -50,7 +50,7 @@ import UIKit
 //            
 //            let childProfileMainSB = UIStoryboard(name: "ChildProfileMainVC", bundle: nil)
 //            //swiftlint:disable:next force_cast
-//            let childProfileMainVC = childProfileMainSB.instantiateViewController(withIdentifier: "ChildProfileVC") as! ChildProfileMainVC
+//            let childProfileMainVC = childProfileMainSB.instantiateViewController(withIdentifier: "ChildProfileVC") as! ChildProfileMainVC // swiftlint:disable:this superfluous_disable_command
 //            
 //            // Pass Parent, Child and NetworkingController to Child's ProfileVC
 //            childProfileMainVC.networkingController = self.networkingController
