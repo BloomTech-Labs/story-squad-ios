@@ -59,7 +59,7 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
         
         UIView.animate(withDuration: duration, animations: {
             self.isPresenting ? transform() : identity()
-        }) { (_) in
+        }) { (_) in // swiftlint:disable:this multiple_closures_with_trailing_closure
             transitionContext.completeTransition(!isCancelled)
         }
     }

@@ -27,9 +27,7 @@ class ChildSettingsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
            super.viewDidAppear(animated)
-           
-        
-       }
+   }
     func receiveDataFromSignup() {
         guard let tabBar = tabBarController as? MainTabBarController else { return }
         self.parentUser = tabBar.parentUser

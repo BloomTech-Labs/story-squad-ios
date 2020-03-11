@@ -25,8 +25,6 @@ class HelpViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
            super.viewDidAppear(animated)
-           
-           
        }
     
     @IBAction func faqButtonPressed(_ sender: UIButton) {

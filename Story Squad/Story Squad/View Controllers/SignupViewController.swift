@@ -38,9 +38,7 @@ class SignupViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
+        super.viewDidAppear(animated)   
     }
     
     // MARK: - Actions

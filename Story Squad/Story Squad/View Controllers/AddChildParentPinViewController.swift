@@ -50,8 +50,8 @@ import UIKit
 //            // The name for UIStoryboard is the file name of the storyboard without the .storyboard extension
 //            let addChildFromDashboardSB = UIStoryboard(name: "AddChildFromDashboard", bundle: nil)
 //
-//			//swiftlint:disable:next force_cast identifier_name
-//            let AddChildFromDashboardVC = addChildFromDashboardSB.instantiateViewController(withIdentifier: "AddChildFromDashboardVC") as! AddChildViewController
+
+// let AddChildFromDashboardVC = addChildFromDashboardSB.instantiateViewController(withIdentifier: "AddChildFromDashboardVC") as! AddChildViewController
 //            
 //            // Passing Parent and NetworkingController
 //            AddChildFromDashboardVC.parentUser = self.parentUser
@@ -72,7 +72,7 @@ import UIKit
 //        self.present(alert, animated: true)
 //    }
 //    
-///*
+//
 //    // MARK: - Navigation
 //
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
