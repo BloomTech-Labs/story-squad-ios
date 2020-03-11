@@ -28,12 +28,7 @@ class ChildSettingsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
            super.viewDidAppear(animated)
            
-           // Adds Google Analytics tracking for this view controller
-           guard let tracker = GAI.sharedInstance().defaultTracker else { return }
-           tracker.set(kGAIScreenName, value: "ChildSettingsViewController")
-
-           guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
-           tracker.send(builder.build() as [NSObject : AnyObject])
+        
        }
     func receiveDataFromSignup() {
         guard let tabBar = tabBarController as? MainTabBarController else { return }
