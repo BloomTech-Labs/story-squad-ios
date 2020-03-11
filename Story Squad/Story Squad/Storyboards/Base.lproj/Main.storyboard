@@ -248,7 +248,7 @@
                                     <constraint firstAttribute="height" constant="60" id="e6j-bm-vfc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Squad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9j-Gv-76L">
                                 <rect key="frame" x="20" y="76" width="374" height="38.5"/>
@@ -275,6 +275,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLV-an-p6n">
                                         <rect key="frame" x="161" y="0.0" width="108" height="30"/>
                                         <state key="normal" title="Create account"/>
+                                        <connections>
+                                            <segue destination="xCY-LR-Z8x" kind="show" id="LkL-Cz-7tf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="EQ6-vN-8C1"/>
@@ -331,6 +334,7 @@
                     <navigationItem key="navigationItem" id="qp6-lr-DYi"/>
                     <connections>
                         <outlet property="emailTextField" destination="hCS-so-L1n" id="IzT-pp-wVH"/>
+                        <outlet property="forgotPasswordButton" destination="UZV-dh-9j8" id="ixF-8g-NXA"/>
                         <outlet property="passwordTextField" destination="Xe3-ye-ZKe" id="Wiu-rV-Nut"/>
                         <outlet property="storySquadLabel" destination="R9j-Gv-76L" id="u6S-hk-tZu"/>
                     </connections>
@@ -406,4 +410,7 @@
     <resources>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="LkL-Cz-7tf"/>
+    </inferredMetricsTieBreakers>
 </document>

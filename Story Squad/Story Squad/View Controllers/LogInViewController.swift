@@ -23,6 +23,7 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var storySquadLabel: UILabel!
     @IBOutlet weak var emailTextField: PaddedTextField!
     @IBOutlet weak var passwordTextField: PaddedTextField!
+    @IBOutlet weak var forgotPasswordButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
@@ -30,6 +31,9 @@ class LogInViewController: UIViewController {
     }
     
     func updateViews() {
+    // TODO: Remove when functionality is there for Forgot Password
+    forgotPasswordButton.alpha = 0
+        
     let pumkinStrokeAttribute = NSAttributedString(string: storySquadLabel.text!, attributes: sqLabelStrokeAttributes)
     
     storySquadLabel.attributedText = pumkinStrokeAttribute

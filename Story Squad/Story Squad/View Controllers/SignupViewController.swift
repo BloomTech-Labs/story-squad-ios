@@ -48,7 +48,6 @@ class SignupViewController: UIViewController {
         tracker.send(builder.build() as [NSObject : AnyObject])
     }
     
-    
     // MARK: - Actions
     @IBAction func signUpButton(_ sender: Any) {
         
@@ -100,10 +99,6 @@ class SignupViewController: UIViewController {
     // MARK: - Update Views
     func updateViews() {
         
-        // TODO - Remove this when Login functionality is Implemented
-        signupButton.alpha = 0
-        alredyHaveAccountLabel.alpha = 0
-        
         let pumkinStrokeAttribute = NSAttributedString(string: storySquadLabel.text!, attributes: sqLabelStrokeAttributes)
         
         storySquadLabel.attributedText = pumkinStrokeAttribute
@@ -143,13 +138,6 @@ extension SignupViewController: UITextFieldDelegate {
         let currentString: NSString = pinTextField.text! as NSString
         let newString: NSString =
             currentString.replacingCharacters(in: range, with: string) as NSString
-        
-        // Mobile validation
-        //        if textField == pinTextField {
-        //            let allowedCharacters = CharacterSet(charactersIn: "0123456789")//Here change this characters based on your requirement
-        //            let characterSet = CharacterSet(charactersIn: string)
-        //            return allowedCharacters.isSuperset(of: characterSet)
-        //        }
         return newString.length <= maxLength
     }
 }
