@@ -87,11 +87,17 @@ class NetworkingController {
     // MARK: - Child CRUD Methods
     
     // create Child
-    func createChildAndAddToParent(parent: Parent, name: String, username: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool = false, avatar: Data?, context: NSManagedObjectContext) {
+    func createChildAndAddToParent(parent: Parent, name: String, username: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool = false, avatar: String?, context: NSManagedObjectContext) {
+    // Generate random avatar
+        let arrayOfAvatars = ["Hero 6.png", "Hero 11.png", "Hero 12.png", "Hero 13.png", "Hero 14.png", "Hero 15.png", "Hero 16.png", "Hero 18.png", "Hero 19.png"]
+
+        let randomAvatar = arrayOfAvatars.randomElement()
         
+    // generate random ID
         let randomID = Int16.random(in: 1..<1000)
-		// swiftlint:disable:next line_length
-        let child = Child(name: name, id: randomID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: avatar, context: context)
+        
+    // swiftlint:disable:next line_length
+        let child = Child(name: name, id: randomID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: randomAvatar, context: context)
         
         // Adding child to it's parent in Core Data
         parent.addToChildren(child)
@@ -100,7 +106,7 @@ class NetworkingController {
     
     // Update Child
 	// swiftlint:disable:next function_parameter_count
-    func updateChild(name: String?, id: Int16, username: String?, pin: Int16?, grade: Int16?, cohort: String?, dyslexiaPreference: Bool?, avatar: Data?, context: NSManagedObjectContext) {
+    func updateChild(name: String?, id: Int16, username: String?, pin: Int16?, grade: Int16?, cohort: String?, dyslexiaPreference: Bool?, avatar: String?, context: NSManagedObjectContext) {
         
         guard let child = fetchChildFromCD(with: id) else { return }
         

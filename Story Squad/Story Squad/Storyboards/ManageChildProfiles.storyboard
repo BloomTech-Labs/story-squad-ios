@@ -34,16 +34,11 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChildSettingsFromManageProfilesSegue" id="c6H-bN-uLw" customClass="ChildCollectionViewCell" customModule="Story_Squad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SU-AG-Vf7">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SU-AG-Vf7">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="7SU-AG-Vf7" firstAttribute="top" secondItem="c6H-bN-uLw" secondAttribute="topMargin" constant="-8" id="DU1-u6-95A"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="7SU-AG-Vf7" secondAttribute="bottom" constant="-8" id="WE0-1k-GeE"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="7SU-AG-Vf7" secondAttribute="trailing" constant="-8" id="pL1-KE-mqU"/>
-                                            <constraint firstItem="7SU-AG-Vf7" firstAttribute="leading" secondItem="c6H-bN-uLw" secondAttribute="leadingMargin" constant="-8" id="sAQ-8Z-OXO"/>
-                                        </constraints>
                                         <size key="customSize" width="414" height="608"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

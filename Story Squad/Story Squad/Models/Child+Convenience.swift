@@ -11,19 +11,19 @@ import CoreData
 
 extension Child {
     
-        var childRepresentation: ChildRepresentation? {
-            
-            guard let name = name,
-                let username = username,
-                let parent = parent?.parentRepresentation,
-                let cohort = cohort,
-                let avatar = avatar else { return nil }
-            
-            return ChildRepresentation(name: name, username: username, parent: parent, id: id, cohort: cohort, grade: grade, dyslexiaPreference: dyslexiaPreference, pin: pin, avatar: avatar)
+    var childRepresentation: ChildRepresentation? {
+        
+        guard let name = name,
+            let username = username,
+            let parent = parent?.parentRepresentation,
+            let cohort = cohort,
+            let avatar = avatar else { return nil }
+        
+        return ChildRepresentation(name: name, username: username, parent: parent, id: id, cohort: cohort, grade: grade, dyslexiaPreference: dyslexiaPreference, pin: pin, avatar: avatar)
     }
     
     // MARK: CoreData Initializer
-    @discardableResult convenience init(name: String, id: Int16, username: String?, parent: Parent, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: Data?, context: NSManagedObjectContext) {
+    @discardableResult convenience init(name: String, id: Int16, username: String?, parent: Parent, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: String?, context: NSManagedObjectContext) {
         self.init(context: context)
         
         self.name = name
@@ -34,6 +34,7 @@ extension Child {
         self.grade = grade
         self.cohort = cohort
         self.dyslexiaPreference = dyslexiaPreference
+        self.avatar = avatar
     }
     
 //    // MARK: Init from Representation

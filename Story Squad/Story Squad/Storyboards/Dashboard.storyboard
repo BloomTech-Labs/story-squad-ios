@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OE9-MW-BQN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OE9-MW-BQN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,13 +31,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STORY SQUAD " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7G-Ud-12z">
-                                                <rect key="frame" x="94" y="32" width="226" height="51.5"/>
+                                                <rect key="frame" x="31.5" y="32" width="351.5" height="56"/>
                                                 <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="48"/>
                                                 <color key="textColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPG-jR-aGO">
-                                                <rect key="frame" x="16" y="99.5" width="382" height="117"/>
+                                                <rect key="frame" x="16" y="104" width="382" height="117"/>
                                                 <color key="backgroundColor" red="0.8117328882" green="0.94999581580000003" blue="0.92587035890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="117" id="BGT-yy-Ve9"/>
@@ -55,7 +55,7 @@
                                                 </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1EL-Cn-zl2" customClass="DashboardProfilesCollectionView" customModule="Story_Squad" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="232.5" width="414" height="450"/>
+                                                <rect key="frame" x="0.0" y="237" width="414" height="450"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="450" id="Xp7-nd-iGF"/>
@@ -81,7 +81,7 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Odl-4b-VSh">
                                                                             <rect key="frame" x="36" y="16" width="310" height="85"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="LNJ-x2-ZvP">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hero 12" translatesAutoresizingMaskIntoConstraints="NO" id="LNJ-x2-ZvP">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" secondItem="LNJ-x2-ZvP" secondAttribute="height" multiplier="1:1" id="DFL-0X-lKz"/>
@@ -241,7 +241,7 @@
     </scenes>
     <resources>
         <image name="Add a Child Button" width="343" height="118"/>
-        <image name="Image-1" width="59" height="75"/>
+        <image name="Hero 12" width="200" height="295"/>
         <image name="square.grid.2x2" catalog="system" width="64" height="56"/>
     </resources>
 </document>

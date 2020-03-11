@@ -33,15 +33,11 @@ class ChildProfileCollectionViewCell: UICollectionViewCell {
         viewProfileLabel.layer.masksToBounds = true
         viewProfileLabel.layer.cornerRadius = 10
         
-        guard let child = childUser else { return }
+        guard let child = childUser,
+            let avatar = child.avatar else { return }
         
         nameLabel.text = child.name
-//        teamLabel.text = child.cohort
         
-        // Setting Child avatar if not nil
-        if let avatar = child.avatar {
-            let avatarImage = UIImage(data: avatar)
-            avatarImageView.image = avatarImage
+        avatarImageView.image = UIImage(named: avatar)
         }
     }
-}
