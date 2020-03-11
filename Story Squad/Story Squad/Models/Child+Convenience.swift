@@ -12,16 +12,12 @@ import CoreData
 extension Child {
     
     var childRepresentation: ChildRepresentation? {
-        let arrayOfAvatars = ["Hero 6.png", "Hero 11.png", "Hero 12.png", "Hero 13.png", "Hero 14.png", "Hero 15.png", "Hero 16.png", "Hero 18.png", "Hero 19.png"]
-        
-        // Generate random avatar
-        let randomAvatar = arrayOfAvatars.randomElement()
         
         guard let name = name,
             let username = username,
             let parent = parent?.parentRepresentation,
             let cohort = cohort,
-            let avatar = randomAvatar else { return nil }
+            let avatar = avatar else { return nil }
         
         return ChildRepresentation(name: name, username: username, parent: parent, id: id, cohort: cohort, grade: grade, dyslexiaPreference: dyslexiaPreference, pin: pin, avatar: avatar)
     }

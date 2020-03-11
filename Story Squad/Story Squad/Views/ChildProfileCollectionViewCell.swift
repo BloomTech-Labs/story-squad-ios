@@ -33,11 +33,11 @@ class ChildProfileCollectionViewCell: UICollectionViewCell {
         viewProfileLabel.layer.masksToBounds = true
         viewProfileLabel.layer.cornerRadius = 10
         
-        guard let child = childUser else { return }
+        guard let child = childUser,
+            let avatar = child.avatar else { return }
         
         nameLabel.text = child.name
-        avatarImageView.image = UIImage(named: "\(child.avatar)")
+        
+        avatarImageView.image = UIImage(named: avatar)
         }
     }
-
-

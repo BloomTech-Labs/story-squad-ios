@@ -97,7 +97,7 @@ class NetworkingController {
         let randomID = Int16.random(in: 1..<1000)
         
     // swiftlint:disable:next line_length
-        let child = Child(name: name, id: randomID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: avatar, context: context)
+        let child = Child(name: name, id: randomID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: randomAvatar, context: context)
         
         // Adding child to it's parent in Core Data
         parent.addToChildren(child)
