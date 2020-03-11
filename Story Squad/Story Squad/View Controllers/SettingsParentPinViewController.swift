@@ -50,7 +50,7 @@ import UIKit
 //        if pinInt == parent.pin {
 //            let parentAccountMainSB = UIStoryboard(name: "ParentAccountMainVC", bundle: nil)
 //
-//			//swiftlint:disable force_cast
+
 //			let parentAccountMainVC = parentAccountMainSB.instantiateViewController(withIdentifier: "ParentAccountVC") as! ParentAccountMainVC
 //            
 //            // Pass Parent ans NetworkingController

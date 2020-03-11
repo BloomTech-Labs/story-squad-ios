@@ -23,9 +23,7 @@ class LogOutViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
+        super.viewDidAppear(animated) 
     }
     
     @IBAction func logOutButtonTapped(_ sender: Any) {

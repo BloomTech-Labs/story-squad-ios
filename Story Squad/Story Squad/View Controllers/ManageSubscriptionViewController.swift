@@ -12,9 +12,8 @@ class ManageSubscriptionViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-       
     }
+    
     @IBOutlet weak var comingSoonLabel: UILabel!
     
     override func viewDidLoad() {

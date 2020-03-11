@@ -25,8 +25,6 @@ class ChildProfileMainVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        
     }
     
     private func updateViews() {

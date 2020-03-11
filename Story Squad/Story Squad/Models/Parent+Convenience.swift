@@ -13,12 +13,11 @@ extension Parent {
     
         var parentRepresentation: ParentRepresentation? {
 
-		// swiftlint:disable unused_declaration
+		// swiftlint:disable:next unused_declaration
         guard let name = name,
                 let email = email,
                 let password = password,
                 let children = children else { return nil }
-
 //        return ParentRepresentation(name: name, password: password, email: email, children: children, id: id, pin: pin)
             return nil
     }

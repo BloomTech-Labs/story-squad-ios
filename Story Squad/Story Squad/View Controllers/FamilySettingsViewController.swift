@@ -14,8 +14,7 @@ class FamilySettingsViewController: UIViewController {
     // MARK: - Properties
     var networkingController: NetworkingController?
     var parentUser: Parent?
-    
-    
+
     // MARK: - Outlets
     @IBOutlet weak var enterNewEmailTextField: UITextField!
     @IBOutlet weak var enterOldPasswordTextField: UITextField!
@@ -29,10 +28,7 @@ class FamilySettingsViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
-       
+        super.viewDidAppear(animated) 
     }
     
     // To receive the Parent and NetworkingController from the Tab Bar

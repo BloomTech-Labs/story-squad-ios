@@ -34,9 +34,7 @@ class AddChildViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    
+        super.viewDidAppear(animated) 
     }
     
     @IBAction func dyslexiaToggleSwitch(_ sender: UISwitch) {
