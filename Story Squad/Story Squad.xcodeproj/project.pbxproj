@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F477121240F590A0067F66B /* FamilySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F477120240F590A0067F66B /* FamilySettingsViewController.swift */; };
+		4F67B1B124187AED00FD7E07 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67B1B024187AED00FD7E07 /* LogInViewController.swift */; };
 		4F83116F241736790098DEFA /* ManageSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F83116E241736790098DEFA /* ManageSubscription.storyboard */; };
 		4F831171241738050098DEFA /* ManageChildProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F831170241738050098DEFA /* ManageChildProfileViewController.swift */; };
 		4F831173241739580098DEFA /* ManageSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F831172241739580098DEFA /* ManageSubscriptionViewController.swift */; };
@@ -86,6 +87,7 @@
 
 /* Begin PBXFileReference section */
 		4F477120240F590A0067F66B /* FamilySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySettingsViewController.swift; sourceTree = "<group>"; };
+		4F67B1B024187AED00FD7E07 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		4F83116E241736790098DEFA /* ManageSubscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageSubscription.storyboard; sourceTree = "<group>"; };
 		4F831170241738050098DEFA /* ManageChildProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageChildProfileViewController.swift; sourceTree = "<group>"; };
 		4F831172241739580098DEFA /* ManageSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSubscriptionViewController.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				4F477120240F590A0067F66B /* FamilySettingsViewController.swift */,
 				4F831170241738050098DEFA /* ManageChildProfileViewController.swift */,
 				4F831172241739580098DEFA /* ManageSubscriptionViewController.swift */,
+				4F67B1B024187AED00FD7E07 /* LogInViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				DD71FD0D2406D9AD0032EBB5 /* ChildRepresentation.swift in Sources */,
 				4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */,
 				4F831171241738050098DEFA /* ManageChildProfileViewController.swift in Sources */,
+				4F67B1B124187AED00FD7E07 /* LogInViewController.swift in Sources */,
 				FAB94F9B2404AC1D00905211 /* HamburgerMenuOptions.swift in Sources */,
 				DD13175B2405B4F100013753 /* StringKeys.swift in Sources */,
 				4FF0F65C240DDBB900587C7B /* MainTabBarController.swift in Sources */,
