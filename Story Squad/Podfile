@@ -10,5 +10,8 @@ target 'Story Squad' do
 	pod 'SwiftLint'
 	pod "ScalingCarousel"
 	pod 'LabelSwitch'
-	pod 'Firebase/Analytics'
+  
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
 end

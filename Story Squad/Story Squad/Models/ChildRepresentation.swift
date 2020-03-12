@@ -25,7 +25,7 @@ struct ChildRepresentation: Codable {
 	var name: String
 	var username: String?
 	var parent: ParentRepresentation
-	var id: Int16
+	var id: String
 	var cohort: String?
 	var grade: Int16
 	var dyslexiaPreference: Bool = false

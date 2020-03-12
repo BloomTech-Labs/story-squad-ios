@@ -7,19 +7,23 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class LogInViewController: UIViewController {
 
     // MARK: - Properties
     let networkingController = NetworkingController()
     var parentUser: Parent?
+    var parentID: String?
+    
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
          .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
          .strokeWidth: -3.5
      ]
     
     // MARK: - Outlets
-    
     @IBOutlet weak var storySquadLabel: UILabel!
     @IBOutlet weak var emailTextField: PaddedTextField!
     @IBOutlet weak var passwordTextField: PaddedTextField!
@@ -27,35 +31,103 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         updateViews()
-        // Do any additional setup after loading the view.
+        checkLoginStatus()
     }
+    
+    // MARK: - IBActions
     @IBAction func signInButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+        login()
+    }
+    
+    // Automatically Log in if tocken is valid
+    func checkLoginStatus() {
+        if UserDefaults.standard.object(forKey: "token") != nil {
+            performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
+        } else {
+            return
+        }
+    }
+    
+    func login() {
+        
+        // Validate the fields, or save error mesage to display
+        let error = validateFields()
+        
+        if error != nil {
+            showErrorAlert(errorMessage: error!)
+        } else {
+            
+            // Clean version of data entry
+            guard let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+                let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
+            
+            // Login to Account in Firebase
+            Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
+                self.networkingController.getCredentials()
+                
+                if let err = err {
+                    
+                    // Encountered error creating user in Firebase
+                    self.showErrorAlert(errorMessage: "Unsuccessful Login: \(err.localizedDescription)")
+                    NSLog("Error trying to login: \(err)")
+                } else {
+                    
+                    // User was Successfully fetched from Firebase
+                    let id = result?.user.uid
+                    self.parentID = id
+                    self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
+                }
+            }
+        }
+    }
+    
+    func showErrorAlert(errorMessage: String) {
+        let alert = UIAlertController(title: "Oops!", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func validateFields() -> String? {
+        
+        // Check that all fields are filled in
+        if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            
+            return "Please fill in all fields."
+        }
+        return nil
     }
     
     func updateViews() {
-    // TODO: Remove when functionality is there for Forgot Password
-    forgotPasswordButton.alpha = 0
+        // TODO: Remove when functionality is there for Forgot Password
+        forgotPasswordButton.alpha = 0
         
-    let pumkinStrokeAttribute = NSAttributedString(string: storySquadLabel.text!, attributes: sqLabelStrokeAttributes)
-    
-    storySquadLabel.attributedText = pumkinStrokeAttribute
-    storySquadLabel.textColor = UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1)
-    emailTextField.layer.borderWidth = 0.175
-    passwordTextField.layer.borderWidth = 0.175
-    emailTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
-    passwordTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
+        let pumkinStrokeAttribute = NSAttributedString(string: storySquadLabel.text!, attributes: sqLabelStrokeAttributes)
+        
+        storySquadLabel.attributedText = pumkinStrokeAttribute
+        storySquadLabel.textColor = UIColor(red: 0, green: 0.477, blue: 0.733, alpha: 1)
+        emailTextField.layer.borderWidth = 0.175
+        passwordTextField.layer.borderWidth = 0.175
+        emailTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
+        passwordTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
     }
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "ShowTabBarSegue" {
+        // Segue to LoginVC
+        if segue.identifier == "ShowTabBarFromLoginSegue" {
             guard let tabBarController = segue.destination as? MainTabBarController else { return }
             
-            tabBarController.parentUser = self.parentUser
+            guard let userID = parentID,
+                let parent = networkingController.fetchParentFromCD(with: userID) else { return }
+            
+            self.parentUser = parent
+            tabBarController.parentUser = parentUser
             tabBarController.networkingController = self.networkingController
         }
     }
-
 }

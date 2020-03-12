@@ -8,22 +8,47 @@
 
 import Foundation
 import CoreData
+import FirebaseAuth
+import FirebaseFirestore
+import UIKit
+import Firebase
 
 class NetworkingController {
     
     // MARK: - Properties
+    private let baseURL = URL(string: "https://story-squad-f67eb.firebaseio.com/")!
     
-    // private let baseURL = URL(string: "")!
-    var parent: Parent?
+    var parentUser: Parent?
     var children: [Child]?
     var child: Child?
+    
+    private var token = "token"
+    private let db = Firestore.firestore()
+    var userID: String?
+    
+    func getCredentials() {
+        let user = Auth.auth().currentUser
+        user?.getIDToken(completion: { (token, error) in
+            if let error = error as NSError? {
+                NSLog("error getting token: \(error)")
+                return
+            }
+                UserDefaults.standard.set(token, forKey: self.token)
+                UserDefaults.standard.set(Auth.auth().currentUser?.uid, forKey: "userID")
+                self.userID = Auth.auth().currentUser?.uid
+        })
+    }
+    
+    func signOut() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.removeObject(forKey: token)
+    }
     
     // MARK: - Parent CRUD Methods
     
     // Create Parent
-    func createParent(name: String, email: String, password: String, pin: Int16, context: NSManagedObjectContext) -> Parent? {
+    func createParent(name: String, id: String, email: String, password: String, pin: Int16, context: NSManagedObjectContext) -> Parent? {
         
-        let id = Int16.random(in: 1..<10000)
         let parent = Parent(name: name, id: id, email: email, password: password, pin: pin, context: CoreDataStack.shared.mainContext)
         
         // Saving to CoreData
@@ -32,7 +57,7 @@ class NetworkingController {
     }
     
     // Update Parent
-    func updateParent(name: String?, id: Int16, email: String?, pin: Int16?, password: String?, context: NSManagedObjectContext) {
+    func updateParent(name: String?, id: String, email: String?, pin: Int16?, password: String?, context: NSManagedObjectContext) {
         
         guard let parent = fetchParentFromCD(with: id) else { return }
         
@@ -70,10 +95,6 @@ class NetworkingController {
         
         // Saving to CoreData
         CoreDataStack.shared.save(context: context)
-        
-        // TODO: WR Check if you need this from Tasks Project
-        //        let context = CoreDataStack.shared.container.newBackgroundContext()
-        //        context.performAndWait {
     }
     
     // Delete Parent
@@ -87,17 +108,20 @@ class NetworkingController {
     // MARK: - Child CRUD Methods
     
     // create Child
-    func createChildAndAddToParent(parent: Parent, name: String, username: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool = false, avatar: String?, context: NSManagedObjectContext) {
-    // Generate random avatar
+    func createChildAndAddToParent(parent: Parent, name: String, username: String?, id: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool = false, avatar: String?, context: NSManagedObjectContext) {
+        
+        // Generate random avatar
         let arrayOfAvatars = ["Hero 6.png", "Hero 11.png", "Hero 12.png", "Hero 13.png", "Hero 14.png", "Hero 15.png", "Hero 16.png", "Hero 18.png", "Hero 19.png"]
-
+        
         let randomAvatar = arrayOfAvatars.randomElement()
         
-    // generate random ID
-        let randomID = Int16.random(in: 1..<1000)
+        // generate random ID
+        let temporaryID = UUID().uuidString
         
-    // swiftlint:disable:next line_length
-        let child = Child(name: name, id: randomID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: randomAvatar, context: context)
+        //        let randomID = Int16.random(in: 1..<1000)
+        
+        // swiftlint:disable:next line_length
+        let child = Child(name: name, id: temporaryID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: randomAvatar, context: context)
         
         // Adding child to it's parent in Core Data
         parent.addToChildren(child)
@@ -106,7 +130,7 @@ class NetworkingController {
     
     // Update Child
 	// swiftlint:disable:next function_parameter_count
-    func updateChild(name: String?, id: Int16, username: String?, pin: Int16?, grade: Int16?, cohort: String?, dyslexiaPreference: Bool?, avatar: String?, context: NSManagedObjectContext) {
+    func updateChild(name: String?, id: String, username: String?, pin: Int16?, grade: Int16?, cohort: String?, dyslexiaPreference: Bool?, avatar: String?, context: NSManagedObjectContext) {
         
         guard let child = fetchChildFromCD(with: id) else { return }
         
@@ -150,10 +174,6 @@ class NetworkingController {
         
         // Saving to CoreData
         CoreDataStack.shared.save(context: context)
-        
-		// TODO: WR Check if you need this from Tasks Project
-        //        let context = CoreDataStack.shared.container.newBackgroundContext()
-        //        context.performAndWait {
     }
     
     // Delete Child
@@ -168,7 +188,7 @@ class NetworkingController {
     // MARK: - Fetch From CoreData
     
     // Parent
-    func fetchParentFromCD(with id: Int16) -> Parent? {
+    func fetchParentFromCD(with id: String) -> Parent? {
         
         let moc = CoreDataStack.shared.mainContext
         let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
@@ -181,16 +201,16 @@ class NetworkingController {
         for parent in parents {
             
             if parent.id == id {
-                self.parent = parent
+                self.parentUser = parent
             } else {
                 print("Couldn't fetch parent from CoreData")
             }
         }
-        return parent
+        return parentUser
     }
     
     // Child
-    func fetchChildFromCD(with id: Int16) -> Child? {
+    func fetchChildFromCD(with id: String) -> Child? {
         
         let moc = CoreDataStack.shared.mainContext
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()

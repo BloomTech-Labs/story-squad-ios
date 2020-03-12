@@ -23,6 +23,6 @@ struct ParentRepresentation: Codable {
 	var password: String
 	var email: String
 	var children: [ChildRepresentation]?
-	var id: Int16
+	var id: String
 	var pin: Int16
 }

@@ -28,7 +28,7 @@ class DashboardViewController: UIViewController {
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
         
         // Fetch for Children of correct Parent
-        let predicate = NSPredicate(format: "parent.id == %d", parentUser?.id ?? 0)
+        let predicate = NSPredicate(format: "parent.id == %@", getParentID())
         fetchRequest.predicate = predicate
         
         // Sort Children by Name
@@ -41,7 +41,7 @@ class DashboardViewController: UIViewController {
         
         // Try to perform Fetch
         do {
-            try fetchResultsController.performFetch()
+            try fetchResultsController.performFetch() // fail
         } catch {
             fatalError("Failed to fetch child entities: \(error)")
         }
@@ -64,15 +64,22 @@ class DashboardViewController: UIViewController {
         super.viewDidAppear(animated)
         
         childrenProfilesCollectionView.reloadData()
-
     }
     
-    // To receive the Parent and NetworkingController from the Tab Ba
+    // To receive the Parent and NetworkingController from the Tab Bar
     func receiveDataFromSignup() {
         guard let tabBar = tabBarController as? MainTabBarController else { return }
         
         self.parentUser = tabBar.parentUser
         self.networkingController = tabBar.networkingController
+    }
+    
+    // Get Parent's id as a string to fetch Children from CoreData
+    private func getParentID() -> String {
+        guard let parent = parentUser,
+            let id = parent.id else { return ""}
+        
+        return id
     }
     
     private func updateViews() {
@@ -93,23 +100,11 @@ class DashboardViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        // Pass data to AddChildVc
+        // Pass data to AddChildVC
         if segue.identifier == "AddChildSegue" {
             guard let addChildVC = segue.destination as? AddChildViewController  else { return }
             addChildVC.parentUser = self.parentUser
             addChildVC.networkingController = self.networkingController
-            
-            // Ask for Child PIN to display Child's Profile
-     //   } else if segue.identifier == "ShowChildPinVCSegue" {
-//            guard let childProfilePinVC = segue.destination as? ChildProfilePinViewController else { return }
-            
-          //  if let sender = sender as? ChildProfileCollectionViewCell {
-            //    guard let indexPath = childrenProfilesCollectionView.indexPath(for: sender) else { return }
-                
-//                childProfilePinVC.parentUser = self.parentUser
-//                childProfilePinVC.childUser = fetchResultsController.object(at: indexPath)
-//                childProfilePinVC.networkingController = self.networkingController
-            
         }
     }
 }
