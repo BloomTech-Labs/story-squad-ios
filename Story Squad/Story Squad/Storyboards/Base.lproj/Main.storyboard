@@ -88,7 +88,7 @@
                                                                 <rect key="frame" x="175" y="0.0" width="47" height="30"/>
                                                                 <state key="normal" title="Sign In"/>
                                                                 <connections>
-                                                                    <segue destination="gHV-IQ-dpr" kind="show" id="mi4-hl-MkX"/>
+                                                                    <segue destination="gHV-IQ-dpr" kind="show" identifier="GoToLoginFromSignupSegue" id="mi4-hl-MkX"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -338,7 +338,7 @@
                         <outlet property="forgotPasswordButton" destination="UZV-dh-9j8" id="ixF-8g-NXA"/>
                         <outlet property="passwordTextField" destination="Xe3-ye-ZKe" id="Wiu-rV-Nut"/>
                         <outlet property="storySquadLabel" destination="R9j-Gv-76L" id="u6S-hk-tZu"/>
-                        <segue destination="zsa-An-dBu" kind="show" identifier="ShowTabBarSegue" id="Dxv-Gs-sEA"/>
+                        <segue destination="zsa-An-dBu" kind="show" identifier="ShowTabBarFromLoginSegue" id="Dxv-Gs-sEA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5D6-Ra-im7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -413,7 +413,7 @@
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5fd-yD-UrO"/>
+        <segue reference="Dxv-Gs-sEA"/>
         <segue reference="LkL-Cz-7tf"/>
     </inferredMetricsTieBreakers>
 </document>

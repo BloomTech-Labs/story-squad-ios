@@ -45,7 +45,7 @@ class LogInViewController: UIViewController {
     // Automatically Log in if tocken is valid
     func checkLoginStatus() {
         if UserDefaults.standard.object(forKey: "token") != nil {
-            performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+            performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
         } else {
             return
         }
@@ -72,7 +72,7 @@ class LogInViewController: UIViewController {
                     NSLog("Error trying to login: \(err)")
                     
                 } else {
-                    self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+                    self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
                 }
             }
         }
@@ -131,7 +131,7 @@ class LogInViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "ShowTabBarSegue" {
+        if segue.identifier == "ShowTabBarFromLoginSegue" {
             guard let tabBarController = segue.destination as? MainTabBarController else { return }
             
             guard let userID = networkingController.userID,
