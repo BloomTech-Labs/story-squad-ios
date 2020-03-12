@@ -100,23 +100,11 @@ class DashboardViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        // Pass data to AddChildVc
+        // Pass data to AddChildVC
         if segue.identifier == "AddChildSegue" {
             guard let addChildVC = segue.destination as? AddChildViewController  else { return }
             addChildVC.parentUser = self.parentUser
             addChildVC.networkingController = self.networkingController
-            
-            // Ask for Child PIN to display Child's Profile
-     //   } else if segue.identifier == "ShowChildPinVCSegue" {
-//            guard let childProfilePinVC = segue.destination as? ChildProfilePinViewController else { return }
-            
-          //  if let sender = sender as? ChildProfileCollectionViewCell {
-            //    guard let indexPath = childrenProfilesCollectionView.indexPath(for: sender) else { return }
-                
-//                childProfilePinVC.parentUser = self.parentUser
-//                childProfilePinVC.childUser = fetchResultsController.object(at: indexPath)
-//                childProfilePinVC.networkingController = self.networkingController
-            
         }
     }
 }

@@ -16,6 +16,7 @@ class LogInViewController: UIViewController {
     // MARK: - Properties
     let networkingController = NetworkingController()
     var parentUser: Parent?
+    var parentID: String?
     
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
          .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
@@ -37,8 +38,6 @@ class LogInViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func signInButtonTapped(_ sender: Any) {
-//        performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
-        
         login()
     }
     
@@ -64,14 +63,20 @@ class LogInViewController: UIViewController {
             guard let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
                 let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
             
-            Auth.auth().signIn(withEmail: email, password: password) { (_, err) in
+            // Login to Account in Firebase
+            Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
                 self.networkingController.getCredentials()
                 
                 if let err = err {
+                    
+                    // Encountered error creating user in Firebase
                     self.showErrorAlert(errorMessage: "Unsuccessful Login: \(err.localizedDescription)")
                     NSLog("Error trying to login: \(err)")
-                    
                 } else {
+                    
+                    // User was Successfully fetched from Firebase
+                    let id = result?.user.uid
+                    self.parentID = id
                     self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
                 }
             }
@@ -87,32 +92,13 @@ class LogInViewController: UIViewController {
     
     func validateFields() -> String? {
         
-//        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
         // Check that all fields are filled in
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
             return "Please fill in all fields."
         }
-        
-        // TODO: Comment back in for production
-        
-        //        // Check if the password is secure enough
-        //        if isPasswordValid(cleanedPassword) == false {
-        //
-        //            return "Please make sure your password is at least 8 characters, contains a special character and a number."
-        //        }
-        
         return nil
-    }
-    
-    func isPasswordValid(_ password: String) -> Bool {
-        // 1 - Password length is 8.
-        // 2 - One Alphabet in Password.
-        // 3 - One Special Character in Password.
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
-        return passwordTest.evaluate(with: password)
     }
     
     func updateViews() {
@@ -129,17 +115,18 @@ class LogInViewController: UIViewController {
         passwordTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
     }
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        // Segue to LoginVC
         if segue.identifier == "ShowTabBarFromLoginSegue" {
             guard let tabBarController = segue.destination as? MainTabBarController else { return }
             
-            guard let userID = networkingController.userID,
+            guard let userID = parentID,
                 let parent = networkingController.fetchParentFromCD(with: userID) else { return }
             
-//            self.parentUser = parent
-            
-            tabBarController.parentUser = parent
+            self.parentUser = parent
+            tabBarController.parentUser = parentUser
             tabBarController.networkingController = self.networkingController
         }
     }

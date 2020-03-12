@@ -15,7 +15,12 @@ import Firebase
 
 class NetworkingController {
     
+    // MARK: - Properties
     private let baseURL = URL(string: "https://story-squad-f67eb.firebaseio.com/")!
+    
+    var parentUser: Parent?
+    var children: [Child]?
+    var child: Child?
     
     private var token = "token"
     private let db = Firestore.firestore()
@@ -28,9 +33,9 @@ class NetworkingController {
                 NSLog("error getting token: \(error)")
                 return
             }
-            UserDefaults.standard.set(token, forKey: self.token)
-            UserDefaults.standard.set(Auth.auth().currentUser?.uid, forKey: "userID")
-            self.userID = Auth.auth().currentUser?.uid
+                UserDefaults.standard.set(token, forKey: self.token)
+                UserDefaults.standard.set(Auth.auth().currentUser?.uid, forKey: "userID")
+                self.userID = Auth.auth().currentUser?.uid
         })
     }
     
@@ -39,21 +44,10 @@ class NetworkingController {
         userDefaults.removeObject(forKey: token)
     }
     
-    // MARK: - Properties
-    
-    // private let baseURL = URL(string: "")!
-    var parent: Parent?
-    var children: [Child]?
-    var child: Child?
-    
     // MARK: - Parent CRUD Methods
     
     // Create Parent
-    func createParent(name: String, email: String, password: String, pin: Int16, context: NSManagedObjectContext) -> Parent? {
-        
-//        let id = Int16.random(in: 1..<10000)
-        
-        guard let id = self.userID else { return nil }
+    func createParent(name: String, id: String, email: String, password: String, pin: Int16, context: NSManagedObjectContext) -> Parent? {
         
         let parent = Parent(name: name, id: id, email: email, password: password, pin: pin, context: CoreDataStack.shared.mainContext)
         
@@ -180,10 +174,6 @@ class NetworkingController {
         
         // Saving to CoreData
         CoreDataStack.shared.save(context: context)
-        
-		// TODO: WR Check if you need this from Tasks Project
-        //        let context = CoreDataStack.shared.container.newBackgroundContext()
-        //        context.performAndWait {
     }
     
     // Delete Child
@@ -211,12 +201,12 @@ class NetworkingController {
         for parent in parents {
             
             if parent.id == id {
-                self.parent = parent
+                self.parentUser = parent
             } else {
                 print("Couldn't fetch parent from CoreData")
             }
         }
-        return parent
+        return parentUser
     }
     
     // Child

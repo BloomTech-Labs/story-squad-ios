@@ -47,35 +47,6 @@ class SignupViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func signUpButton(_ sender: Any) {
-        
-        //        guard let name = nameTextField.text,
-        //            let email = emailTextField.text,
-        //            let password = passwordTextField.text,
-        //            let confirmPW = confirmPWTextField.text,
-        //            !name.isEmpty,
-        //            !email.isEmpty,
-        //            !password.isEmpty,
-        //            !confirmPW.isEmpty else {
-        //
-        //                showIncompleteAlert()
-        //                return
-        //        }
-        //
-        //        if password == confirmPW {
-        //
-        //            let temporaryPIN: Int16 = 0000
-        //
-        //            let parent = networkingController.createParent(name: name, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
-        //            self.parentUser = parent
-        //
-        //            // MARK: - Sending data through Notification
-        //            let parentDataNotificationName = Notification.Name(rawValue: .passDataForParentString)
-        //            NotificationCenter.default.post(name: parentDataNotificationName, object: nil, userInfo: nil)
-        //
-        //            performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
-        //        } else {
-        //            showPasswordsMismatchAlert()
-        //        }
         registerNewParentAccount()
     }
     
@@ -93,33 +64,39 @@ class SignupViewController: UIViewController {
                 let name = nameTextField.text,
                 let confirmPW = confirmPWTextField.text else { return }
             
+            // Check if password textFields match
             if password == confirmPW {
                 
                 // Creating new Account in Firebase
-                Auth.auth().createUser(withEmail: email, password: password) { (_, err) in
+                Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                     self.networkingController.getCredentials()
                     
                     if let err = err {
+                        
+                        // Encountered error creating user in Firebase
                         self.showErrorAlert(errorMessage: "Error creating Account: \(err.localizedDescription)")
                         NSLog("Error creating parent account to PUT in Firebase: \(err)")
-                        
                     } else {
+                        
+                        // User was created Successfully
                         let db = Firestore.firestore()
-                        db.collection("ParentAccount").addDocument(data: ["name": name]) { (error) in
+                        db.collection("ParentAccount").addDocument(data: ["name": name, "id": result!.user.uid]) { (error) in
                             
+                            if let error = error {
+                                
+                                // Family account was created but couldn't save the response gotten back from Firebase
+                                self.showErrorAlert(errorMessage: "Error creating Parent Account")
+                                NSLog("Account was created in Firebase, but got bad response: \(error)")
+                            }
+                            
+                            // Save Parent to CoreData and perform Segue to TabBar
                             let temporaryPIN: Int16 = 0000
                             
-                            let parent = self.networkingController.createParent(name: name, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
+                            let parent = self.networkingController.createParent(name: name, id: result!.user.uid, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
                             self.parentUser = parent
                             
                             self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
-                            
-                            if let error = error {
-                                // Family account was created but couldn't save the response gotten back from Firebase
-                                self.showErrorAlert(errorMessage: "Error creating Account")
-                                NSLog("Account was created in Firebase, but got bad response: \(error)")
-                            }
-                        }//
+                        }
                     }
                 }
             } else {
