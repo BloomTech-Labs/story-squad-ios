@@ -28,7 +28,7 @@ class DashboardViewController: UIViewController {
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
         
         // Fetch for Children of correct Parent
-        let predicate = NSPredicate(format: "parent.id == %d", parentUser?.id ?? 0)
+        let predicate = NSPredicate(format: "parent.id == %@", getParentID())
         fetchRequest.predicate = predicate
         
         // Sort Children by Name
@@ -41,7 +41,7 @@ class DashboardViewController: UIViewController {
         
         // Try to perform Fetch
         do {
-            try fetchResultsController.performFetch()
+            try fetchResultsController.performFetch() // fail
         } catch {
             fatalError("Failed to fetch child entities: \(error)")
         }
@@ -64,7 +64,6 @@ class DashboardViewController: UIViewController {
         super.viewDidAppear(animated)
         
         childrenProfilesCollectionView.reloadData()
-
     }
     
     // To receive the Parent and NetworkingController from the Tab Ba
@@ -73,6 +72,13 @@ class DashboardViewController: UIViewController {
         
         self.parentUser = tabBar.parentUser
         self.networkingController = tabBar.networkingController
+    }
+    
+    private func getParentID() -> String {
+        guard let parent = parentUser,
+            let id = parent.id else { return ""}
+        
+        return id
     }
     
     private func updateViews() {
