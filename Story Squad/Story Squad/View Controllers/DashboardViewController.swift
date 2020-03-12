@@ -66,7 +66,7 @@ class DashboardViewController: UIViewController {
         childrenProfilesCollectionView.reloadData()
     }
     
-    // To receive the Parent and NetworkingController from the Tab Ba
+    // To receive the Parent and NetworkingController from the Tab Bar
     func receiveDataFromSignup() {
         guard let tabBar = tabBarController as? MainTabBarController else { return }
         
@@ -74,6 +74,7 @@ class DashboardViewController: UIViewController {
         self.networkingController = tabBar.networkingController
     }
     
+    // Get Parent's id as a string to fetch Children from CoreData
     private func getParentID() -> String {
         guard let parent = parentUser,
             let id = parent.id else { return ""}

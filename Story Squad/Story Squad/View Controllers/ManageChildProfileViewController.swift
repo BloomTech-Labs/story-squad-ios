@@ -21,7 +21,7 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
         
         // Fetch for Children of correct Parent
-        let predicate = NSPredicate(format: "parent.id == %d", parentUser?.id ?? 0)
+        let predicate = NSPredicate(format: "parent.id == %@", getParentID())
         fetchRequest.predicate = predicate
         
         // Sort Children by Name
@@ -52,6 +52,19 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupChildCollectionView()
+    }
+    
+    // Get Parent's id as a string to fetch Children from CoreData
+    private func getParentID() -> String {
+        guard let parent = parentUser,
+            let id = parent.id else { return ""}
+        
+        return id
+    }
+    
+    // Setup ChildCollectionView's Properties
+    private func setupChildCollectionView() {
         childCollectionView.register(UINib.init(nibName: "ChildCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "childCollectionViewCellIdentifier")
         
         let flowLayout = UPCarouselFlowLayout()
