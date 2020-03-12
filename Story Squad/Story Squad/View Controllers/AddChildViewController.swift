@@ -71,7 +71,7 @@ class AddChildViewController: UIViewController {
         // Continue if grade is not nil
         if let grade = grade {
             
-            networkingController?.createChildAndAddToParent(parent: parent, name: name, username: nil, pin: pinInt, grade: grade, cohort: nil, avatar: nil, context: CoreDataStack.shared.mainContext)
+            networkingController?.createChildAndAddToParent(parent: parent, name: name, username: nil, id: nil, pin: pinInt, grade: grade, cohort: nil, avatar: nil, context: CoreDataStack.shared.mainContext)
             
             // Go back to Dashboard
             self.navigationController?.popToRootViewController(animated: true)

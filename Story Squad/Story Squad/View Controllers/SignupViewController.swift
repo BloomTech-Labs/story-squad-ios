@@ -76,7 +76,6 @@ class SignupViewController: UIViewController {
         //        } else {
         //            showPasswordsMismatchAlert()
         //        }
-        
         registerNewParentAccount()
     }
     
@@ -113,13 +112,14 @@ class SignupViewController: UIViewController {
                             let parent = self.networkingController.createParent(name: name, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
                             self.parentUser = parent
                             
+                            self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+                            
                             if let error = error {
                                 // Family account was created but couldn't save the response gotten back from Firebase
                                 self.showErrorAlert(errorMessage: "Error creating Account")
                                 NSLog("Account was created in Firebase, but got bad response: \(error)")
                             }
-                        }
-                        self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+                        }//
                     }
                 }
             } else {

@@ -134,7 +134,12 @@ class LogInViewController: UIViewController {
         if segue.identifier == "ShowTabBarSegue" {
             guard let tabBarController = segue.destination as? MainTabBarController else { return }
             
-            tabBarController.parentUser = self.parentUser
+            guard let userID = networkingController.userID,
+                let parent = networkingController.fetchParentFromCD(with: userID) else { return }
+            
+//            self.parentUser = parent
+            
+            tabBarController.parentUser = parent
             tabBarController.networkingController = self.networkingController
         }
     }
