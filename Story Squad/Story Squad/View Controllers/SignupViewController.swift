@@ -33,7 +33,7 @@ class SignupViewController: UIViewController {
     
     @IBOutlet weak var storySquadLabel: UILabel!
     @IBOutlet weak var alredyHaveAccountLabel: UILabel!
-    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var signinButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,13 @@ class SignupViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func signUpButton(_ sender: Any) {
+//        self.navigationController.setRoo
         signupParentAccount()
+    }
+    
+    @IBAction func signInButton(_ sender: UIButton) {
+        // "GoToLoginFromSignupSegue"
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func signupParentAccount() {
@@ -154,6 +160,9 @@ class SignupViewController: UIViewController {
     // MARK: - Update Views
     func updateViews() {
         
+        // Hiding the Navigation tab bar
+        navigationController?.navigationBar.isHidden = true
+        
         let pumkinStrokeAttribute = NSAttributedString(string: storySquadLabel.text!, attributes: sqLabelStrokeAttributes)
         
         storySquadLabel.attributedText = pumkinStrokeAttribute
@@ -176,6 +185,13 @@ class SignupViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ShowTabBarSegue" {
+            
+            // Removing the previous Navigation Controller
+            guard let navigationController = self.navigationController else { return }
+            var navigationArray = navigationController.viewControllers // To get all the previous NavControllers as an Array
+            navigationArray.removeAll() // To remove all UIViewControllers out of this Array
+            self.navigationController?.viewControllers = navigationArray // Setting this array as the navigationController?.viewControllers
+            
             guard let tabBarController = segue.destination as? MainTabBarController else { return }
             
             tabBarController.parentUser = self.parentUser

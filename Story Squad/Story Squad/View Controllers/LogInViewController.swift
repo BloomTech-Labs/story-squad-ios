@@ -110,6 +110,13 @@ class LogInViewController: UIViewController {
         
         // Segue to TabBar
         if segue.identifier == "ShowTabBarFromLoginSegue" {
+            
+            // Removing the previous Navigation Controller
+            guard let navigationController = self.navigationController else { return }
+            var navigationArray = navigationController.viewControllers // To get all the previous NavControllers as an Array
+            navigationArray.removeAll() // To remove all UIViewControllers out of this Array
+            self.navigationController?.viewControllers = navigationArray // Setting this array as the navigationController?.viewControllers
+            
             guard let tabBarController = segue.destination as? MainTabBarController else { return }
             
             tabBarController.parentUser = self.parentUser
