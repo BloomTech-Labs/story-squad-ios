@@ -20,7 +20,7 @@ extension Child {
             let avatar = avatar,
             let id = id else { return nil }
         
-        return ChildRepresentation(name: name, username: username, parent: parent, id: id, cohort: cohort, grade: grade, dyslexiaPreference: dyslexiaPreference, pin: pin, avatar: avatar)
+        return ChildRepresentation(name: name, id: id, parent: parent, username: username, cohort: cohort, grade: grade, dyslexiaPreference: dyslexiaPreference, pin: pin, avatar: avatar)
     }
     
     // MARK: CoreData Initializer

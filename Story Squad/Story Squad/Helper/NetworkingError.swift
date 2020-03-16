@@ -11,9 +11,11 @@ import Foundation
 enum NetworkingError: Error {
     case noBearer
     case serverError(Error)
-    case unexpectedStatusCode
     case badDecode
     case unauthorized
     case noData
-    case unableToPost
+    case unexpectedStatusCode(Int)
+    case badEncoding
+    case noRepresentation
+    case formattedJSONIncorrectly
 }

@@ -52,35 +52,35 @@ class LogInViewController: UIViewController {
     
     func login() {
         
-        // Validate the fields, or save error mesage to display
-        let error = validateFields()
-        
-        if error != nil {
-            showErrorAlert(errorMessage: error!)
-        } else {
-            
-            // Clean version of data entry
-            guard let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
-                let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
-            
-            // Login to Account in Firebase
-            Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
-                self.networkingController.getCredentials()
-                
-                if let err = err {
-                    
-                    // Encountered error creating user in Firebase
-                    self.showErrorAlert(errorMessage: "Unsuccessful Login: \(err.localizedDescription)")
-                    NSLog("Error trying to login: \(err)")
-                } else {
-                    
-                    // User was Successfully fetched from Firebase
-                    let id = result?.user.uid
-                    self.parentID = id
-                    self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
-                }
-            }
-        }
+//        // Validate the fields, or save error mesage to display
+//        let error = validateFields()
+//        
+//        if error != nil {
+//            showErrorAlert(errorMessage: error!)
+//        } else {
+//            
+//            // Clean version of data entry
+//            guard let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+//                let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
+//            
+//            // Login to Account in Firebase
+//            Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
+//                self.networkingController.getCredentials()
+//                
+//                if let err = err {
+//                    
+//                    // Encountered error creating user in Firebase
+//                    self.showErrorAlert(errorMessage: "Unsuccessful Login: \(err.localizedDescription)")
+//                    NSLog("Error trying to login: \(err)")
+//                } else {
+//                    
+//                    // User was Successfully fetched from Firebase
+//                    let id = result?.user.uid
+//                    self.parentID = id
+//                    self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
+//                }
+//            }
+//        }
     }
     
     func showErrorAlert(errorMessage: String) {
