@@ -72,8 +72,7 @@ class NetworkingController {
                 // Create Parent in CoreData
                 let temporaryID = UUID().uuidString
                 let temporaryPIN = Int16.random(in: 0..<1_000)
-                let parent = self.createParent(name: name, id: temporaryID, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
-                self.parentUser = parent
+                self.createParent(name: name, id: temporaryID, email: email, password: password, pin: temporaryPIN)
                 
                 //                let parentRepresentation = try JSONDecoder().decode(ParentRepresentation.self, from: data)
                 // self.parentUser?.parentRepresentation = parentRepresentation
@@ -224,16 +223,11 @@ class NetworkingController {
                 print("response Token Data: \(String(describing: dataString))")
                 self.bearer = try JSONDecoder().decode(Bearer.self, from: data)
                 
-                // Fetching Parent from CoreData and setting it as self.ParenUser
-                _ = self.fetchParentFromCDWithEmail(email: email)
-                
-                if self.parentUser == nil {
-                    // Create Parent in CoreData
-                    let temporaryID = UUID().uuidString
-                    let temporaryPIN = Int16.random(in: 0..<1_000)
-                    let parent = self.createParent(name: " ", id: temporaryID, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
-                    self.parentUser = parent
-                }
+                // Fetching parent from CD, or create a new managed parent
+                // Either way, assigns managed object to self.parentUser
+                // (Object is fetched/created on main context so safe to use in
+                // view controllers
+                self.fetchOrCreateParent(with: email, password: password)
                 
                 // Return the Bearer
                 completion(.success(self.bearer))
@@ -250,13 +244,15 @@ class NetworkingController {
     // MARK: - Parent CRUD Methods
     
     // Create Parent
-    func createParent(name: String, id: String, email: String, password: String, pin: Int16, context: NSManagedObjectContext) -> Parent? {
+    func createParent(name: String, id: String, email: String, password: String, pin: Int16) {
         
-        let parent = Parent(name: name, id: id, email: email, password: password, pin: pin, context: CoreDataStack.shared.mainContext)
-        
-        // Saving to CoreData
-        CoreDataStack.shared.save(context: context)
-        return parent
+        DispatchQueue.main.async {
+            let moc = CoreDataStack.shared.mainContext
+            self.parentUser = Parent(name: name, id: id, email: email, password: password, pin: pin, context: moc)
+            
+            // Saving to CoreData
+            CoreDataStack.shared.save(context: moc)
+        }
     }
     
     // Update Parent
@@ -410,6 +406,28 @@ class NetworkingController {
             }
         }
         return parentUser
+    }
+    
+    func fetchOrCreateParent(with email: String, password: String) {
+        
+        DispatchQueue.main.async {
+            var parent: Parent?
+            let moc = CoreDataStack.shared.mainContext
+            let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "email == %@", email)
+            
+            do {
+                parent = try moc.fetch(fetchRequest).first
+            } catch {
+                // handle the fetch error
+            }
+            
+            if let parent = parent {
+                self.parentUser = parent
+            } else {
+                self.createParent(name: "", id: UUID().uuidString, email: email, password: password, pin: 0)
+            }
+        }
     }
     
     func fetchParentFromCDWithEmail(email: String) -> Parent? {

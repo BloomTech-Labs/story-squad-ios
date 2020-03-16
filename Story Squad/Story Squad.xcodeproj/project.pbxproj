@@ -266,6 +266,7 @@
 		DD71FD052406D2ED0032EBB5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA6EC429241EDD5C00F4C79F /* Bearer.swift */,
 				DD71FD082406D97F0032EBB5 /* Child+Convenience.swift */,
 				DD71FD0C2406D9AD0032EBB5 /* ChildRepresentation.swift */,
 				DD71FD0A2406D9930032EBB5 /* Parent+Convenience.swift */,
@@ -368,7 +369,6 @@
 				4FF0F62624071DED00587C7B /* NetworkingError.swift */,
 				FA71E374240B036B001385E7 /* SchoolGrade.swift */,
 				FA6EC427241EDC9F00F4C79F /* HTTPMethod.swift */,
-				FA6EC429241EDD5C00F4C79F /* Bearer.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
