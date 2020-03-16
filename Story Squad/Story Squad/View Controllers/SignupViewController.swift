@@ -82,6 +82,7 @@ class SignupViewController: UIViewController {
                         print("Bearer Token result: \(String(describing: bearer))")
                         // let parentRepresentation = result
                         //print("Parent Representation result: \(String(describing: parentRepresentation))")
+                        
                         DispatchQueue.main.async {
                             self.parentUser = self.networkingController.parentUser
                             self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
@@ -90,7 +91,6 @@ class SignupViewController: UIViewController {
                         print("Didn't get a succesfull Result")
                         
                         DispatchQueue.main.async {
-                            
                             self.showErrorAlert(errorMessage: "Couldn't Sign up")
                         }
                     }

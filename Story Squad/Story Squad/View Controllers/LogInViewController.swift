@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
 import FirebaseFirestore
 
 class LogInViewController: UIViewController {
@@ -16,7 +15,7 @@ class LogInViewController: UIViewController {
     // MARK: - Properties
     let networkingController = NetworkingController()
     var parentUser: Parent?
-    var parentID: String?
+    var bearerToken: Bearer?
     
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
          .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
@@ -33,7 +32,6 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         
         updateViews()
-        checkLoginStatus()
     }
     
     // MARK: - IBActions
@@ -41,46 +39,38 @@ class LogInViewController: UIViewController {
         login()
     }
     
-    // Automatically Log in if tocken is valid
-    func checkLoginStatus() {
-        if UserDefaults.standard.object(forKey: "token") != nil {
-            performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
-        } else {
-            return
-        }
-    }
-    
     func login() {
         
-//        // Validate the fields, or save error mesage to display
-//        let error = validateFields()
-//        
-//        if error != nil {
-//            showErrorAlert(errorMessage: error!)
-//        } else {
-//            
-//            // Clean version of data entry
-//            guard let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
-//                let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
-//            
-//            // Login to Account in Firebase
-//            Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
-//                self.networkingController.getCredentials()
-//                
-//                if let err = err {
-//                    
-//                    // Encountered error creating user in Firebase
-//                    self.showErrorAlert(errorMessage: "Unsuccessful Login: \(err.localizedDescription)")
-//                    NSLog("Error trying to login: \(err)")
-//                } else {
-//                    
-//                    // User was Successfully fetched from Firebase
-//                    let id = result?.user.uid
-//                    self.parentID = id
-//                    self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
-//                }
-//            }
-//        }
+        // Validate the fields, or save error mesage to display
+        let error = validateFields()
+        
+        if error != nil {
+            showErrorAlert(errorMessage: error!)
+        } else {
+            
+            // Clean version of data entry
+            guard let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+                let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
+            
+            // Try Login
+            networkingController.loginParent(email: email, password: password) { (result) in
+                do {
+                    
+                    // Set bearer and parentUser
+                    let result = try result.get()
+                    self.bearerToken = result
+                    self.parentUser = self.networkingController.parentUser
+                    
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        self.showErrorAlert(errorMessage: "Unsuccessful Login. Please try again.")
+                    }
+                }
+            }
+        }
     }
     
     func showErrorAlert(errorMessage: String) {
@@ -118,15 +108,11 @@ class LogInViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        // Segue to LoginVC
+        // Segue to TabBar
         if segue.identifier == "ShowTabBarFromLoginSegue" {
             guard let tabBarController = segue.destination as? MainTabBarController else { return }
             
-            guard let userID = parentID,
-                let parent = networkingController.fetchParentFromCD(with: userID) else { return }
-            
-            self.parentUser = parent
-            tabBarController.parentUser = parentUser
+            tabBarController.parentUser = self.parentUser
             tabBarController.networkingController = self.networkingController
         }
     }
