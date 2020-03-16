@@ -83,15 +83,21 @@ class SignupViewController: UIViewController {
                 networkingController.signupParent(email: email, password: password, termsOfService: true, name: name) { (result) in
                     do {
                         let result = try result.get()
-                        let bearer = result
-                        self.bearerToken = bearer
-                        print("Bearer Token result: \(String(describing: bearer))")
+                        self.bearerToken = result
+                        self.parentUser = self.networkingController.parentUser
                         // let parentRepresentation = result
                         //print("Parent Representation result: \(String(describing: parentRepresentation))")
                         
                         DispatchQueue.main.async {
-                            self.parentUser = self.networkingController.parentUser
-                            self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+                            
+                            if let parent = self.networkingController.parentUser {
+                                
+                                self.parentUser = parent
+                                self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+                            } else {
+                                self.showErrorAlert(errorMessage: "Timed out. Please try again")
+                                NSLog("Couldn't get response from server.")
+                            }
                         }
                     } catch {
                         print("Didn't get a succesfull Result")

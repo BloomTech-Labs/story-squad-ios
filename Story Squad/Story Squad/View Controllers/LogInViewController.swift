@@ -59,10 +59,17 @@ class LogInViewController: UIViewController {
                     // Set bearer and parentUser
                     let result = try result.get()
                     self.bearerToken = result
-                    self.parentUser = self.networkingController.parentUser
                     
                     DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
+                        
+                        if let parent = self.networkingController.parentUser {
+                            
+                            self.parentUser = parent
+                            self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
+                        } else {
+                            self.showErrorAlert(errorMessage: "Timed out. Please try again")
+                            NSLog("Couldn't get response from server.")
+                        }
                     }
                 } catch {
                     DispatchQueue.main.async {
@@ -72,6 +79,15 @@ class LogInViewController: UIViewController {
             }
         }
     }
+    /*
+     if let parent = self.networkingController.parentUser {
+         
+         self.parentUser = parent
+         self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+     } else {
+         self.showErrorAlert(errorMessage: "Couldn't get response from server.")
+     }
+     */
     
     func showErrorAlert(errorMessage: String) {
         let alert = UIAlertController(title: "Oops!", message: errorMessage, preferredStyle: .alert)
