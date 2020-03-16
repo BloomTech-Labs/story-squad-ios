@@ -227,7 +227,13 @@ class NetworkingController {
                 // Fetching Parent from CoreData and setting it as self.ParenUser
                 _ = self.fetchParentFromCDWithEmail(email: email)
                 
-                // TODO: Make sure you create a new Parent if couldn't fetch from CoreData
+                if self.parentUser == nil {
+                    // Create Parent in CoreData
+                    let temporaryID = UUID().uuidString
+                    let temporaryPIN = Int16.random(in: 0..<1_000)
+                    let parent = self.createParent(name: " ", id: temporaryID, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
+                    self.parentUser = parent
+                }
                 
                 // Return the Bearer
                 completion(.success(self.bearer))
