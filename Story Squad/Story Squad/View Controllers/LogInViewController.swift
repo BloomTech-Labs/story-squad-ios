@@ -92,6 +92,10 @@ class LogInViewController: UIViewController {
     }
     
     func updateViews() {
+        
+        // Hide NavigationController Bar
+        navigationController?.navigationBar.isHidden = true
+        
         // TODO: Remove when functionality is there for Forgot Password
         forgotPasswordButton.alpha = 0
         
