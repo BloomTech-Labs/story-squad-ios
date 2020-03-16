@@ -69,6 +69,8 @@
 		E35F0403241292940099F4A1 /* ManageChildProfiles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E35F0402241292940099F4A1 /* ManageChildProfiles.storyboard */; };
 		E398E647240F196900CEB26B /* ChildSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E398E646240F196900CEB26B /* ChildSettings.storyboard */; };
 		E3C82629240ED82200055A77 /* FamilySettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C82628240ED82200055A77 /* FamilySettings.storyboard */; };
+		FA6EC428241EDC9F00F4C79F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EC427241EDC9F00F4C79F /* HTTPMethod.swift */; };
+		FA6EC42A241EDD5C00F4C79F /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EC429241EDD5C00F4C79F /* Bearer.swift */; };
 		FA71E3502406F826001385E7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E34F2406F826001385E7 /* SignupViewController.swift */; };
 		FA71E375240B036B001385E7 /* SchoolGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E374240B036B001385E7 /* SchoolGrade.swift */; };
 		FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E84423FEF35C008637E0 /* AppDelegate.swift */; };
@@ -149,6 +151,8 @@
 		E35F0402241292940099F4A1 /* ManageChildProfiles.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageChildProfiles.storyboard; sourceTree = "<group>"; };
 		E398E646240F196900CEB26B /* ChildSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildSettings.storyboard; sourceTree = "<group>"; };
 		E3C82628240ED82200055A77 /* FamilySettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FamilySettings.storyboard; sourceTree = "<group>"; };
+		FA6EC427241EDC9F00F4C79F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		FA6EC429241EDD5C00F4C79F /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		FA71E34F2406F826001385E7 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		FA71E374240B036B001385E7 /* SchoolGrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolGrade.swift; sourceTree = "<group>"; };
 		FA85E84123FEF35C008637E0 /* Story Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Story Squad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -363,6 +367,8 @@
 				DD13175A2405B4F100013753 /* StringKeys.swift */,
 				4FF0F62624071DED00587C7B /* NetworkingError.swift */,
 				FA71E374240B036B001385E7 /* SchoolGrade.swift */,
+				FA6EC427241EDC9F00F4C79F /* HTTPMethod.swift */,
+				FA6EC429241EDD5C00F4C79F /* Bearer.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -534,6 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6EC42A241EDD5C00F4C79F /* Bearer.swift in Sources */,
 				4FF0F62524071B4800587C7B /* NetworkingController.swift in Sources */,
 				4FFA57E224106CF300655C9E /* GradeTextField.swift in Sources */,
 				DD71FD0B2406D9930032EBB5 /* Parent+Convenience.swift in Sources */,
@@ -557,6 +564,7 @@
 				FA9A34D7240606C800A2F8FE /* ChildProfilePinViewController.swift in Sources */,
 				DD71FD042406D2E50032EBB5 /* StorySquad.xcdatamodeld in Sources */,
 				DD7A36F5240DC39E00F5B246 /* LogOutViewController.swift in Sources */,
+				FA6EC428241EDC9F00F4C79F /* HTTPMethod.swift in Sources */,
 				FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */,
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,
 				FA9A34D52405FFB700A2F8FE /* CreditCardViewController.swift in Sources */,

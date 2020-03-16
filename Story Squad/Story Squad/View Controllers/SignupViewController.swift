@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 import Firebase
-import FirebaseAuth
 import FirebaseFirestore
 
 class SignupViewController: UIViewController {
@@ -17,6 +16,8 @@ class SignupViewController: UIViewController {
     // MARK: - Properties
     let networkingController = NetworkingController()
     var parentUser: Parent?
+    var bearerToken: Bearer?
+    
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
         .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
         .strokeWidth: -3.5
@@ -47,60 +48,53 @@ class SignupViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func signUpButton(_ sender: Any) {
-        registerNewParentAccount()
+        signupParentAccount()
     }
     
-    func registerNewParentAccount() {
+    func signupParentAccount() {
         
         // Validate the fields, or save error mesage to display
-        let error = validateFields()
+        let validateErrorMessage = validateFields()
         
-        if error != nil {
-            showErrorAlert(errorMessage: error!)
+        if validateErrorMessage != nil {
+            showErrorAlert(errorMessage: validateErrorMessage!)
+            
         } else {
             
+            // Grab Parent info
             guard let password = passwordTextField.text,
                 let email = emailTextField.text,
                 let name = nameTextField.text,
                 let confirmPW = confirmPWTextField.text else { return }
             
             // Check if password textFields match
-            if password == confirmPW {
+            if password != confirmPW {
+                showPasswordsMismatchAlert()
                 
-                // Creating new Account in Firebase
-                Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
-                    self.networkingController.getCredentials()
-                    
-                    if let err = err {
+            } else {
+                
+                // Try Signup Parent Account
+                networkingController.signupParent(email: email, password: password, termsOfService: true, name: name) { (result) in
+                    do {
+                        let result = try result.get()
+                        let bearer = result
+                        self.bearerToken = bearer
+                        print("Bearer Token result: \(String(describing: bearer))")
+                        // let parentRepresentation = result
+                        //print("Parent Representation result: \(String(describing: parentRepresentation))")
                         
-                        // Encountered error creating user in Firebase
-                        self.showErrorAlert(errorMessage: "Error creating Account: \(err.localizedDescription)")
-                        NSLog("Error creating parent account to PUT in Firebase: \(err)")
-                    } else {
-                        
-                        // User was created Successfully
-                        let db = Firestore.firestore()
-                        db.collection("ParentAccount").addDocument(data: ["name": name, "id": result!.user.uid]) { (error) in
-                            
-                            if let error = error {
-                                
-                                // Family account was created but couldn't save the response gotten back from Firebase
-                                self.showErrorAlert(errorMessage: "Error creating Parent Account")
-                                NSLog("Account was created in Firebase, but got bad response: \(error)")
-                            }
-                            
-                            // Save Parent to CoreData and perform Segue to TabBar
-                            let temporaryPIN: Int16 = 0000
-                            
-                            let parent = self.networkingController.createParent(name: name, id: result!.user.uid, email: email, password: password, pin: temporaryPIN, context: CoreDataStack.shared.mainContext)
-                            self.parentUser = parent
-                            
+                        DispatchQueue.main.async {
+                            self.parentUser = self.networkingController.parentUser
                             self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
+                        }
+                    } catch {
+                        print("Didn't get a succesfull Result")
+                        
+                        DispatchQueue.main.async {
+                            self.showErrorAlert(errorMessage: "Couldn't Sign up")
                         }
                     }
                 }
-            } else {
-                showPasswordsMismatchAlert()
             }
         }
     }
