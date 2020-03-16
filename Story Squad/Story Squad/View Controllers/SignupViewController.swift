@@ -160,6 +160,9 @@ class SignupViewController: UIViewController {
     // MARK: - Update Views
     func updateViews() {
         
+        // Hiding the Navigation tab bar
+        navigationController?.navigationBar.isHidden = true
+        
         let pumkinStrokeAttribute = NSAttributedString(string: storySquadLabel.text!, attributes: sqLabelStrokeAttributes)
         
         storySquadLabel.attributedText = pumkinStrokeAttribute
