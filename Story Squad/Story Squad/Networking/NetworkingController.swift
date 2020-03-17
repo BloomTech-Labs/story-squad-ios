@@ -27,8 +27,8 @@ class NetworkingController {
         //        func signupParent(email: String, password: String, termsOfService: Bool,  completion: @escaping(Result<ParentRepresentation?, NetworkingError>) -> Void) {
         
         let headers = [
-            "content-type": "application/json",
-            "authorization": "Bearer undefined"
+            "Content-Type": "application/json",
+            "Authorization": "Bearer undefined"
         ]
         let json = """
         {
@@ -175,7 +175,7 @@ class NetworkingController {
         
         var request = URLRequest(url: registerURL)
         request.httpMethod = HTTPMethod.post.rawValue
-        request.allHTTPHeaderFields = ["content-type": "application/json"]
+        request.allHTTPHeaderFields = ["Content-Type": "application/json"]
         
         let json = """
         {
