@@ -38,6 +38,8 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        passwordTextField.textContentType = .oneTimeCode
+        confirmPWTextField.textContentType = .oneTimeCode
         pinTextField.delegate = self
         updateViews()
     }
