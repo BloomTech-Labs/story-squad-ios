@@ -63,7 +63,7 @@ class SignupViewController: UIViewController {
         let validateErrorMessage = validateFields()
         
         if validateErrorMessage != nil {
-            showErrorAlert(errorMessage: validateErrorMessage!)
+            showErrorAlert(errorTitle: "Oops!", errorMessage: validateErrorMessage!)
             
         } else {
             
@@ -84,7 +84,7 @@ class SignupViewController: UIViewController {
                     do {
                         let result = try result.get()
                         self.bearerToken = result
-                        self.parentUser = self.networkingController.parentUser
+//                        self.parentUser = self.networkingController.parentUser
                         // let parentRepresentation = result
                         //print("Parent Representation result: \(String(describing: parentRepresentation))")
                         
@@ -95,15 +95,15 @@ class SignupViewController: UIViewController {
                                 self.parentUser = parent
                                 self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
                             } else {
-                                self.showErrorAlert(errorMessage: "Timed out. Please try again")
-                                NSLog("Couldn't get response from server.")
+                                self.showErrorAlert(errorTitle: "Oops!", errorMessage: "Couldn't get all necessary data. Please try again")
+                                NSLog("Some of the data is not complete")
                             }
                         }
                     } catch {
                         print("Didn't get a succesfull Result")
                         
                         DispatchQueue.main.async {
-                            self.showErrorAlert(errorMessage: "Couldn't Sign up")
+                            self.showErrorAlert(errorTitle: "Signup unseccessful", errorMessage: "Please check your credentials and try again")
                         }
                     }
                 }
@@ -111,8 +111,8 @@ class SignupViewController: UIViewController {
         }
     }
     
-    func showErrorAlert(errorMessage: String) {
-        let alert = UIAlertController(title: "Oops!", message: errorMessage, preferredStyle: .alert)
+    func showErrorAlert(errorTitle: String, errorMessage: String) {
+        let alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
         self.present(alert, animated: true, completion: nil)

@@ -45,7 +45,7 @@ class LogInViewController: UIViewController {
         let error = validateFields()
         
         if error != nil {
-            showErrorAlert(errorMessage: error!)
+            showErrorAlert(errorTitle: "Sorry", errorMessage: error!)
         } else {
             
             // Clean version of data entry
@@ -67,13 +67,13 @@ class LogInViewController: UIViewController {
                             self.parentUser = parent
                             self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
                         } else {
-                            self.showErrorAlert(errorMessage: "Timed out. Please try again")
+                            self.showErrorAlert(errorTitle: "Oops!", errorMessage: "Couldn't get all necessary data. Please try again")
                             NSLog("Couldn't get response from server.")
                         }
                     }
                 } catch {
                     DispatchQueue.main.async {
-                        self.showErrorAlert(errorMessage: "Unsuccessful Login. Please try again.")
+                        self.showErrorAlert(errorTitle: "Unsuccessful Login", errorMessage: "Please check your credentials and try again.")
                     }
                 }
             }
@@ -89,8 +89,8 @@ class LogInViewController: UIViewController {
      }
      */
     
-    func showErrorAlert(errorMessage: String) {
-        let alert = UIAlertController(title: "Oops!", message: errorMessage, preferredStyle: .alert)
+    func showErrorAlert(errorTitle: String, errorMessage: String) {
+        let alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
