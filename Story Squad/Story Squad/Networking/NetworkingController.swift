@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreData
-import FirebaseFirestore
 import UIKit
 import Firebase
 
