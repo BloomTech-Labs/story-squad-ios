@@ -10,53 +10,76 @@ import Foundation
 
 struct ChildRepresentation: Codable {
 
-	enum ChildCodingKeys: String, CodingKey {
-		case name
-		case username
-		case parent
-		case id
-		case cohort
-		case grade
-		case dyslexiaPreference
-		case pin
-        case avatar
-	}
+        enum ChildCodingKeys: String, CodingKey {
+            case child
+            
+            enum ChildPropertiesCodingKeys: String, CodingKey {
+                
+                case username
+                case id
+                case cohort
+                case grade
+                case avatar
+                case dyslexiaPreference = "preferences"
+                //            case name
+                //            case parent
+                //            case pin
+                
+                enum DyslexiaCodingKeys: String, CodingKey {
+                    case dyslexia
+                }
+            }
+        }
 
-	var name: String
     var id: String
-    var parent: ParentRepresentation
     var username: String?
-	var cohort: String?
-	var grade: Int16
-	var dyslexiaPreference: Bool = false
-	var pin: Int16
+    var grade: Int16
+    var dyslexiaPreference: Bool = false
     var avatar: String?
     
-    init(name: String, id: String, parent: ParentRepresentation, username: String?, cohort: String?, grade: Int16, dyslexiaPreference: Bool, pin: Int16, avatar: String?) {
+    //    var name: String
+    //    var parent: ParentRepresentation
+    //    var cohort: String?
+    //    var pin: Int16
+    
+    // Regular init
+    init(name: String?, id: String, username: String?, cohort: String?, grade: Int16, dyslexiaPreference: Bool, pin: Int16?, avatar: String?) {
+//        init(name: String, id: String, username: String?, cohort: String?, grade: Int16, dyslexiaPreference: Bool, pin: Int16, avatar: String?) {
         
-        self.name = name
         self.id = id
-        self.parent = parent
         self.username = username
-        self.cohort = cohort
         self.grade = grade
         self.dyslexiaPreference = dyslexiaPreference
-        self.pin = pin
         self.avatar = avatar
+        
+        //        self.name = name
+        //        self.parent = parent
+        //        self.cohort = cohort
+        //        self.pin = pin
     }
     
-    init(from decoder: Decoder) throws {
-        let childContainer = try decoder.container(keyedBy: ChildCodingKeys.self)
-        //            let userContainer = try container.nestedContainer(keyedBy: ConsumerCodingKeys.userCodingKeys.self, forKey: .user)
-        
-        name = try childContainer.decode(String.self, forKey: .name)
-        username = try childContainer.decode(String?.self, forKey: .username)
-        parent = try childContainer.decode(ParentRepresentation.self, forKey: .parent)
-        id = try childContainer.decode(String.self, forKey: .id)
-        cohort = try childContainer.decode(String?.self, forKey: .cohort)
-        grade = try childContainer.decode(Int16.self, forKey: .grade)
-        dyslexiaPreference = try childContainer.decode(Bool.self, forKey: .dyslexiaPreference)
-        pin = try childContainer.decode(Int16.self, forKey: .pin)
-        avatar = try childContainer.decode(String?.self, forKey: .avatar)
-    }
+        // init when Decoding
+        init(from decoder: Decoder) throws {
+            
+            let childContainer = try decoder.container(keyedBy: ChildCodingKeys.self)
+            let propertiesContainer = try childContainer.nestedContainer(keyedBy: ChildCodingKeys.ChildPropertiesCodingKeys.self, forKey: .child)
+            let dyslexiaContainer = try propertiesContainer.nestedContainer(keyedBy: ChildCodingKeys.ChildPropertiesCodingKeys.DyslexiaCodingKeys.self, forKey: .dyslexiaPreference)
+            
+            let idInt = try propertiesContainer.decode(Int.self, forKey: .id)
+            username = try propertiesContainer.decode(String?.self, forKey: .username)
+            grade = try propertiesContainer.decode(Int16.self, forKey: .grade)
+            dyslexiaPreference = try dyslexiaContainer.decode(Bool.self, forKey: .dyslexia)
+            avatar = try propertiesContainer.decode(String?.self, forKey: .avatar)
+            
+            //        name = try propertiesContainer.decode(String.self, forKey: .name)
+            //        parent = try propertiesContainer.decode(ParentRepresentation.self, forKey: .parent)
+            //        cohort = try propertiesContainer.decode(String?.self, forKey: .cohort)
+            //        pin = try propertiesContainer.decode(Int16.self, forKey: .pin)
+            
+            id = String(idInt)
+//            parent = nil
+//           name = ""
+//            pin = 1234
+//            cohort = ""
+        }
 }
