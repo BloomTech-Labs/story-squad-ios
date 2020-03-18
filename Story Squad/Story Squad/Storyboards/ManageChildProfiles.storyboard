@@ -11,6 +11,9 @@
         <array key="Nunito-Regular.ttf">
             <string>Nunito-Regular</string>
         </array>
+        <array key="Nunito-SemiBold.ttf">
+            <string>Nunito-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Manage Child Profiles-->
@@ -21,26 +24,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MH-k2-kIR">
+                                <rect key="frame" x="108" y="795" width="198" height="35"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                <state key="normal" title="Manage Subscription">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpj-Fg-7Lp">
+                                <rect key="frame" x="51.5" y="588" width="311" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="1A6-BM-83k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="18"/>
+                                <state key="normal" title="Add a Child">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kjz-sm-LiH">
-                                <rect key="frame" x="0.0" y="138" width="414" height="649"/>
+                                <rect key="frame" x="0.0" y="142" width="414" height="378"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="afS-Z8-rKO">
-                                    <size key="itemSize" width="414" height="608"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="40" id="afS-Z8-rKO" customClass="UPCarouselFlowLayout" customModule="Story_Squad" customModuleProvider="target">
+                                    <size key="itemSize" width="156" height="312"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="40" minY="0.0" maxX="40" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChildSettingsFromManageProfilesSegue" id="c6H-bN-uLw" customClass="ChildCollectionViewCell" customModule="Story_Squad" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
+                                        <rect key="frame" x="129" y="0.0" width="156" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SU-AG-Vf7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" placeholderIntrinsicWidth="156" placeholderIntrinsicHeight="312" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SU-AG-Vf7">
+                                            <rect key="frame" x="0.0" y="0.0" width="156" height="312"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="414" height="608"/>
+                                        <constraints>
+                                            <constraint firstItem="7SU-AG-Vf7" firstAttribute="top" secondItem="c6H-bN-uLw" secondAttribute="topMargin" constant="-8" id="YTb-qq-SaK"/>
+                                            <constraint firstItem="7SU-AG-Vf7" firstAttribute="leading" secondItem="c6H-bN-uLw" secondAttribute="leadingMargin" constant="-8" id="rSn-CI-S4K"/>
+                                        </constraints>
+                                        <size key="customSize" width="156" height="312"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="14"/>
@@ -57,23 +86,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MH-k2-kIR">
-                                <rect key="frame" x="108" y="795" width="198" height="35"/>
-                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
-                                <state key="normal" title="Cancel Subscription">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="gpj-Fg-7Lp" firstAttribute="top" secondItem="Esg-lb-SU9" secondAttribute="top" constant="500" id="8r4-jz-UFD"/>
                             <constraint firstItem="Kjz-sm-LiH" firstAttribute="trailing" secondItem="Esg-lb-SU9" secondAttribute="trailing" id="K10-wf-Zlq"/>
-                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="top" secondItem="Esg-lb-SU9" secondAttribute="top" constant="50" id="QNS-72-kcX"/>
+                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="top" secondItem="Esg-lb-SU9" secondAttribute="top" constant="54" id="QNS-72-kcX"/>
                             <constraint firstItem="Esg-lb-SU9" firstAttribute="bottom" secondItem="9MH-k2-kIR" secondAttribute="bottom" constant="32" id="UC3-rp-bZe"/>
                             <constraint firstItem="9MH-k2-kIR" firstAttribute="leading" secondItem="Esg-lb-SU9" secondAttribute="leading" constant="108" id="azS-bX-IWf"/>
                             <constraint firstItem="Kjz-sm-LiH" firstAttribute="leading" secondItem="Esg-lb-SU9" secondAttribute="leading" id="ilV-WJ-hdV"/>
                             <constraint firstItem="Esg-lb-SU9" firstAttribute="trailing" secondItem="9MH-k2-kIR" secondAttribute="trailing" constant="108" id="nJS-Yt-OOf"/>
-                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="centerY" secondItem="DJn-h9-hbZ" secondAttribute="centerY" constant="14.5" id="u4u-mY-Rgn"/>
+                            <constraint firstItem="Esg-lb-SU9" firstAttribute="trailing" secondItem="gpj-Fg-7Lp" secondAttribute="trailing" constant="51.5" id="p2M-IA-bHJ"/>
+                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="centerY" secondItem="DJn-h9-hbZ" secondAttribute="centerY" constant="-117" id="u4u-mY-Rgn"/>
+                            <constraint firstItem="Kjz-sm-LiH" firstAttribute="centerX" secondItem="DJn-h9-hbZ" secondAttribute="centerX" id="wX4-gn-7OW"/>
+                            <constraint firstItem="gpj-Fg-7Lp" firstAttribute="leading" secondItem="Esg-lb-SU9" secondAttribute="leading" constant="51.5" id="xS6-Hp-fbc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Esg-lb-SU9"/>
                     </view>
