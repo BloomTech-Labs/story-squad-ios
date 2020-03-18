@@ -52,6 +52,7 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        receiveDataFromSignup()
         setupChildCollectionView()
     }
     
@@ -77,6 +78,14 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         
         childCollectionView.delegate = self
         childCollectionView.dataSource = self
+    }
+    
+    // To receive the Parent and NetworkingController from the Tab Bar
+    func receiveDataFromSignup() {
+        guard let tabBar = tabBarController as? MainTabBarController else { return }
+        
+        self.parentUser = tabBar.parentUser
+        self.networkingController = tabBar.networkingController
     }
     
     // MARK: - UICollectionView Delegates and DataSource Methods
