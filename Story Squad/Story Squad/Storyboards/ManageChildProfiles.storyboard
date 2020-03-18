@@ -66,10 +66,8 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="7SU-AG-Vf7" secondAttribute="bottom" constant="8" id="5Wg-cF-x0D"/>
-                                            <constraint firstItem="7SU-AG-Vf7" firstAttribute="leading" secondItem="c6H-bN-uLw" secondAttribute="leadingMargin" constant="8" id="HeE-6q-YDq"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="7SU-AG-Vf7" secondAttribute="trailing" constant="8" id="hfk-BF-QrN"/>
-                                            <constraint firstItem="7SU-AG-Vf7" firstAttribute="top" secondItem="c6H-bN-uLw" secondAttribute="topMargin" constant="8" id="jVl-29-OLq"/>
+                                            <constraint firstItem="7SU-AG-Vf7" firstAttribute="leading" secondItem="c6H-bN-uLw" secondAttribute="leadingMargin" constant="-8" id="7fM-GB-gvP"/>
+                                            <constraint firstItem="7SU-AG-Vf7" firstAttribute="top" secondItem="c6H-bN-uLw" secondAttribute="topMargin" constant="-8" id="Jvu-y5-wQo"/>
                                         </constraints>
                                         <size key="customSize" width="156" height="312"/>
                                         <userDefinedRuntimeAttributes>
