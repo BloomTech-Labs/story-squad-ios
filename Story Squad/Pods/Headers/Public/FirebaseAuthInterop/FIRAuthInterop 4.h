@@ -1,0 +1,1 @@
+../../../FirebaseAuthInterop/Interop/Auth/Public/FIRAuthInterop 4.h
