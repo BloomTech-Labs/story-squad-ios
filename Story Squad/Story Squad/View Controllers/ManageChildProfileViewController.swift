@@ -68,11 +68,11 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         childCollectionView.register(UINib.init(nibName: "ChildCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "childCollectionViewCellIdentifier")
         
         let flowLayout = UPCarouselFlowLayout()
-        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 100.0, height: childCollectionView.frame.size.height)
+        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 200.0, height: childCollectionView.frame.size.height)
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 0.8
         flowLayout.sideItemAlpha = 1.0
-        flowLayout.spacingMode = .fixed(spacing: 10.0)
+        flowLayout.spacingMode = .fixed(spacing: 40.0)
         childCollectionView.collectionViewLayout = flowLayout
         
         childCollectionView.delegate = self
