@@ -72,7 +72,7 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 200.0, height: childCollectionView.frame.size.height)
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 0.8
-        flowLayout.sideItemAlpha = 1.0
+        flowLayout.sideItemAlpha = 0.3
         flowLayout.spacingMode = .fixed(spacing: 40.0)
         childCollectionView.collectionViewLayout = flowLayout
         
