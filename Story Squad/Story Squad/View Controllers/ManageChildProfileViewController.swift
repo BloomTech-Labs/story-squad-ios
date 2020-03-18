@@ -52,6 +52,7 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        receiveDataFromSignup()
         setupChildCollectionView()
     }
     
@@ -71,12 +72,20 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 200.0, height: childCollectionView.frame.size.height)
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 0.8
-        flowLayout.sideItemAlpha = 1.0
+        flowLayout.sideItemAlpha = 0.3
         flowLayout.spacingMode = .fixed(spacing: 40.0)
         childCollectionView.collectionViewLayout = flowLayout
         
         childCollectionView.delegate = self
         childCollectionView.dataSource = self
+    }
+    
+    // To receive the Parent and NetworkingController from the Tab Bar
+    func receiveDataFromSignup() {
+        guard let tabBar = tabBarController as? MainTabBarController else { return }
+        
+        self.parentUser = tabBar.parentUser
+        self.networkingController = tabBar.networkingController
     }
     
     // MARK: - UICollectionView Delegates and DataSource Methods
