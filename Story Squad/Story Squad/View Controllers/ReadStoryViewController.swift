@@ -13,6 +13,16 @@ enum Pages: CaseIterable {
     case pageOne
     case pageTwo
     
+    var currentPageNumber: String {
+    switch self {
+    case .pageZero:
+        return "1"
+    case .pageOne:
+        return "2"
+    case .pageTwo:
+        return "3"
+        }
+    }
     var index: Int {
         switch self {
         case .pageZero:
@@ -30,10 +40,16 @@ class ReadStoryViewController: UIViewController {
     private var pages: [Pages] = Pages.allCases
     private var currentIndex: Int = 0
 
+    @IBOutlet weak var currentPageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         updateViews()
         self.setupPageController()
+    }
+    
+    func updateViews() {
+        currentPageLabel.text = "\(Pages.allCases)"
     }
     
     private func setupPageController() {
@@ -95,11 +111,12 @@ extension ReadStoryViewController: UIPageViewControllerDataSource, UIPageViewCon
         return vc
     }
     
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
         return pages.count
     }
     
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return self.currentIndex
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return currentIndex
     }
 }
+

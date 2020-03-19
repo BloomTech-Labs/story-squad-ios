@@ -12,6 +12,7 @@ class PagesContentVC: UIViewController {
     
     var textView: UITextView?
     var page: Pages
+    var pageLabel: UILabel?
     
     init(with page: Pages) {
         self.page = page
@@ -24,6 +25,6 @@ class PagesContentVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        pageLabel?.text = page.currentPageNumber
     }
 }
