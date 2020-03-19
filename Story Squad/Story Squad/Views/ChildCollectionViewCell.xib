@@ -28,19 +28,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="156" height="440"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="y8u-uh-Oxm">
-                                <rect key="frame" x="3" y="52" width="156" height="216"/>
+                                <rect key="frame" x="3" y="52" width="156" height="218.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hero 6" translatesAutoresizingMaskIntoConstraints="NO" id="Tcg-wL-R93">
-                                        <rect key="frame" x="0.0" y="0.0" width="156" height="156"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="156" height="156.00000000000006"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="156" id="6B2-0z-iLn"/>
                                             <constraint firstAttribute="width" constant="156" id="Que-eW-njv"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MN6-uk-Mfc">
-                                        <rect key="frame" x="46" y="188" width="64" height="28"/>
+                                        <rect key="frame" x="45.5" y="188" width="65" height="30.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="24"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -49,7 +49,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Child Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bD2-1B-MJa">
-                                <rect key="frame" x="5" y="328" width="146" height="37"/>
+                                <rect key="frame" x="5" y="330.5" width="146" height="37"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="2YS-ig-h9L"/>

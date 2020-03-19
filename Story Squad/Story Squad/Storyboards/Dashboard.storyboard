@@ -94,7 +94,7 @@
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQH-Dh-edB">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="209" height="30"/>
                                                                                             <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="24"/>
-                                                                                            <nil key="textColor"/>
+                                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFQ-MI-IIk">
@@ -206,10 +206,10 @@
             </objects>
             <point key="canvasLocation" x="1446" y="202"/>
         </scene>
-        <!--ChildProfileMainVC-->
+        <!--ChildDashboard-->
         <scene sceneID="KvW-pX-rEq">
             <objects>
-                <viewControllerPlaceholder storyboardName="ChildProfileMainVC" id="4UD-Wr-4QH" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ChildDashboard" id="4UD-Wr-4QH" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="jUv-bF-Rry"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4i-Kt-3Kw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
