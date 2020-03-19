@@ -11,7 +11,7 @@
         <!--AcceptMission-->
         <scene sceneID="2fz-qi-FTR">
             <objects>
-                <viewController storyboardIdentifier="AcceptMission" title="AcceptMission" modalPresentationStyle="fullScreen" id="5mP-Wz-2Iy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AcceptMission" title="AcceptMission" modalPresentationStyle="fullScreen" id="5mP-Wz-2Iy" customClass="AcceptMission" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LYG-1h-PAq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="height" constant="105" id="qiw-Ll-gUJ"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="w8y-yh-l4M">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="w8y-yh-l4M" userLabel="AcceptMissionCollectionView">
                                 <rect key="frame" x="0.0" y="149" width="414" height="664"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jvX-wz-whe">
@@ -32,7 +32,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="efS-pe-dU9">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="efS-pe-dU9" customClass="ReadCell" customModule="Story_Squad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="221"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vsZ-lY-Jkl">
@@ -67,10 +67,12 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="221"/>
                                         <connections>
+                                            <outlet property="checkMarkLabel" destination="o00-Gp-GbO" id="Sdi-Lf-Pg1"/>
+                                            <outlet property="readCellImageView" destination="YO6-hR-O1T" id="ExW-eW-y2O"/>
                                             <segue destination="7lF-2S-Ljd" kind="show" identifier="ReadSegue" id="nXV-r0-sI1"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="WriteSegue" id="NSt-kA-J0R">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="WriteSegue" id="NSt-kA-J0R" userLabel="Write Cell" customClass="WriteCell" customModule="Story_Squad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="221" width="414" height="221"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="P4F-1U-KmL">
@@ -104,10 +106,12 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="221"/>
                                         <connections>
-                                            <segue destination="OFS-ha-Ce5" kind="show" id="sfw-bK-JX5"/>
+                                            <outlet property="checkMarkLabel" destination="HaP-eT-kiY" id="RtP-4R-PgF"/>
+                                            <outlet property="writeCellImageView" destination="C2m-EU-v8y" id="MNw-y9-xJb"/>
+                                            <segue destination="OFS-ha-Ce5" kind="show" identifier="WriteSegue" id="sfw-bK-JX5"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DrawSegue" id="WSG-Vo-te7">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DrawSegue" id="WSG-Vo-te7" userLabel="Draw Cell" customClass="DrawCell" customModule="Story_Squad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="442" width="414" height="221"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gtF-Zp-TAv">
@@ -141,7 +145,9 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="221"/>
                                         <connections>
-                                            <segue destination="7sn-Zv-dTe" kind="show" id="OfQ-8p-dZg"/>
+                                            <outlet property="checkMarkLabel" destination="L4S-2h-7UP" id="lr0-h6-NXM"/>
+                                            <outlet property="drawCellImageView" destination="DHQ-fx-FVY" id="JW6-eS-zO6"/>
+                                            <segue destination="7sn-Zv-dTe" kind="show" identifier="DrawSegue" id="OfQ-8p-dZg"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

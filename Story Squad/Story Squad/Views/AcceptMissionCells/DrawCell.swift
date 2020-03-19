@@ -10,4 +10,6 @@ import UIKit
 
 class DrawCell: UICollectionViewCell {
     
+    @IBOutlet weak var drawCellImageView: UIImageView!
+    @IBOutlet weak var checkMarkLabel: UILabel!
 }

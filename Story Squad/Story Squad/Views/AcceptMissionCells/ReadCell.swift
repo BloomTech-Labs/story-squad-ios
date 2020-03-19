@@ -10,4 +10,6 @@ import UIKit
 
 class ReadCell: UICollectionViewCell {
     
+    @IBOutlet weak var readCellImageView: UIImageView!
+    @IBOutlet weak var checkMarkLabel: UILabel!
 }

@@ -10,4 +10,6 @@ import UIKit
 
 class WriteCell: UICollectionViewCell {
     
+    @IBOutlet weak var writeCellImageView: UIImageView!
+    @IBOutlet weak var checkMarkLabel: UILabel!
 }

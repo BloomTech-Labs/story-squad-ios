@@ -21,6 +21,7 @@
 		4F3EB05224232BD000C858B8 /* ReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05124232BD000C858B8 /* ReadCell.swift */; };
 		4F3EB05424232BDD00C858B8 /* WriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05324232BDD00C858B8 /* WriteCell.swift */; };
 		4F3EB05624232BEB00C858B8 /* DrawCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05524232BEB00C858B8 /* DrawCell.swift */; };
+		4F3EB05A24232F3700C858B8 /* AcceptMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05924232F3700C858B8 /* AcceptMission.swift */; };
 		4F477121240F590A0067F66B /* FamilySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F477120240F590A0067F66B /* FamilySettingsViewController.swift */; };
 		4F67B1B124187AED00FD7E07 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67B1B024187AED00FD7E07 /* LogInViewController.swift */; };
 		4F83116F241736790098DEFA /* ManageSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F83116E241736790098DEFA /* ManageSubscription.storyboard */; };
@@ -117,6 +118,7 @@
 		4F3EB05124232BD000C858B8 /* ReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadCell.swift; sourceTree = "<group>"; };
 		4F3EB05324232BDD00C858B8 /* WriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCell.swift; sourceTree = "<group>"; };
 		4F3EB05524232BEB00C858B8 /* DrawCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawCell.swift; sourceTree = "<group>"; };
+		4F3EB05924232F3700C858B8 /* AcceptMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptMission.swift; sourceTree = "<group>"; };
 		4F477120240F590A0067F66B /* FamilySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySettingsViewController.swift; sourceTree = "<group>"; };
 		4F67B1B024187AED00FD7E07 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		4F83116E241736790098DEFA /* ManageSubscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageSubscription.storyboard; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 				4F831170241738050098DEFA /* ManageChildProfileViewController.swift */,
 				4F831172241739580098DEFA /* ManageSubscriptionViewController.swift */,
 				4F67B1B024187AED00FD7E07 /* LogInViewController.swift */,
+				4F3EB05924232F3700C858B8 /* AcceptMission.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				4FF0F6022405CE7900587C7B /* ParentAccountMainVC.swift in Sources */,
 				4FFA57F02416D62900655C9E /* UPCarouselFlowLayout.swift in Sources */,
 				4F3EB03E2423056700C858B8 /* ChangeYourAvatarCell.swift in Sources */,
+				4F3EB05A24232F3700C858B8 /* AcceptMission.swift in Sources */,
 				FA71E3502406F826001385E7 /* SignupViewController.swift in Sources */,
 				FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */,
 				DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */,
