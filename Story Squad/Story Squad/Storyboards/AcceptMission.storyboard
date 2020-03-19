@@ -167,6 +167,9 @@
                         <viewLayoutGuide key="safeArea" id="h9A-Rc-3vG"/>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="acceptMissionCollectionView" destination="w8y-yh-l4M" id="q6W-et-7lV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="toU-T1-YMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
