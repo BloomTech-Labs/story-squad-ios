@@ -8,13 +8,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Storyboard Reference-->
+        <!--AcceptMission-->
         <scene sceneID="skY-k1-rZ9">
             <objects>
-                <viewControllerPlaceholder id="9h6-VP-rPW" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="AcceptMission" storyboardName="AcceptMission" id="9h6-VP-rPW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nbd-mS-EjD"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Kj-U3-v6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2833" y="18"/>
+            <point key="canvasLocation" x="2889" y="17"/>
         </scene>
         <!--Mission Control-->
         <scene sceneID="LDC-st-c7b">
@@ -55,6 +57,7 @@
                                         <size key="customSize" width="414" height="205"/>
                                         <connections>
                                             <outlet property="acceptMissionImageView" destination="1ld-UJ-Kcx" id="dvg-rB-dek"/>
+                                            <segue destination="9h6-VP-rPW" kind="show" identifier="AcceptMissionSegue" id="ybg-rG-wHb"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="AdventurePassportCell" id="wdB-88-Qh7" customClass="AdventurePassportCell" customModule="Story_Squad" customModuleProvider="target">
@@ -64,15 +67,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Passport" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-k6-jYa">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Passport" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-k6-jYa">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5tr-k6-jYa" firstAttribute="leading" secondItem="Nny-o6-rvh" secondAttribute="leading" id="FeS-hm-NC7"/>
+                                                <constraint firstAttribute="trailing" secondItem="5tr-k6-jYa" secondAttribute="trailing" id="bfi-eT-icV"/>
+                                                <constraint firstItem="5tr-k6-jYa" firstAttribute="top" secondItem="Nny-o6-rvh" secondAttribute="top" id="fCk-DF-Bvf"/>
+                                                <constraint firstAttribute="bottom" secondItem="5tr-k6-jYa" secondAttribute="bottom" id="fLB-lm-Vrv"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="205"/>
                                         <connections>
                                             <outlet property="adventurePassportImageView" destination="Nny-o6-rvh" id="FUh-1s-65b"/>
+                                            <segue destination="3Nj-DO-1hz" kind="show" identifier="AdventurePassportSegue" id="fdb-Hg-i3s"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ChangeYourAvatarCell" id="5xl-a7-48b" customClass="ChangeYourAvatarCell" customModule="Story_Squad" customModuleProvider="target">
@@ -82,15 +91,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="H8P-G6-9eX">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="H8P-G6-9eX">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="H8P-G6-9eX" secondAttribute="bottom" id="4ZC-S0-yVH"/>
+                                                <constraint firstAttribute="trailing" secondItem="H8P-G6-9eX" secondAttribute="trailing" id="Knl-7K-Sdk"/>
+                                                <constraint firstItem="H8P-G6-9eX" firstAttribute="top" secondItem="FXk-Ic-duc" secondAttribute="top" id="iTP-sN-rx1"/>
+                                                <constraint firstItem="H8P-G6-9eX" firstAttribute="leading" secondItem="FXk-Ic-duc" secondAttribute="leading" id="m9C-h6-aZ9"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="205"/>
                                         <connections>
                                             <outlet property="changeAvatarImageView" destination="H8P-G6-9eX" id="94t-wt-AV4"/>
+                                            <segue destination="WMO-Sg-ACl" kind="show" identifier="ChangeAvatarSegue" id="f4Q-rM-X8k"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="TrophyRoomCell" id="qUz-vd-KUR" customClass="TrophyRoomCell" customModule="Story_Squad" customModuleProvider="target">
@@ -100,15 +115,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Trophy" translatesAutoresizingMaskIntoConstraints="NO" id="Myn-8t-n47">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trophy" translatesAutoresizingMaskIntoConstraints="NO" id="Myn-8t-n47">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Myn-8t-n47" firstAttribute="top" secondItem="7ph-4z-22W" secondAttribute="top" id="PQy-ml-7UC"/>
+                                                <constraint firstAttribute="bottom" secondItem="Myn-8t-n47" secondAttribute="bottom" id="hPJ-Rq-LAp"/>
+                                                <constraint firstItem="Myn-8t-n47" firstAttribute="leading" secondItem="7ph-4z-22W" secondAttribute="leading" id="rGP-gz-bcH"/>
+                                                <constraint firstAttribute="trailing" secondItem="Myn-8t-n47" secondAttribute="trailing" id="sVx-0d-QWf"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="205"/>
                                         <connections>
                                             <outlet property="trophyRoomImageView" destination="Myn-8t-n47" id="OwZ-e7-qXy"/>
+                                            <segue destination="HDf-Ht-pdb" kind="show" identifier="TrophyRoomSegue" id="w6c-3r-jeS"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -144,29 +165,35 @@
             </objects>
             <point key="canvasLocation" x="2339" y="213"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--AdventurePassport-->
         <scene sceneID="qm8-Gk-sMd">
             <objects>
-                <viewControllerPlaceholder id="3Nj-DO-1hz" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="AdventurePassport" id="3Nj-DO-1hz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WuU-K8-u8U"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQM-v1-LbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2833" y="143"/>
+            <point key="canvasLocation" x="2947" y="162"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--ChangeAvatar-->
         <scene sceneID="elv-vb-FfF">
             <objects>
-                <viewControllerPlaceholder id="WMO-Sg-ACl" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ChangeAvatar" id="WMO-Sg-ACl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8V4-zw-4PO"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMk-2m-Rt4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2833" y="285"/>
+            <point key="canvasLocation" x="2969" y="248"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--TrophyRoom-->
         <scene sceneID="r9u-AC-ZWn">
             <objects>
-                <viewControllerPlaceholder id="HDf-Ht-pdb" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="TrophyRoom" id="HDf-Ht-pdb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Q0E-jQ-gPM"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySw-ve-YUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2833" y="421"/>
+            <point key="canvasLocation" x="2880" y="478"/>
         </scene>
     </scenes>
     <resources>
