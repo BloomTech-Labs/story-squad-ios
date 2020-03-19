@@ -14,7 +14,7 @@ class FamilySettingsViewController: UIViewController {
     // MARK: - Properties
     var networkingController: NetworkingController?
     var parentUser: Parent?
-
+    
     // MARK: - Outlets
     @IBOutlet weak var enterNewEmailTextField: UITextField!
     @IBOutlet weak var enterOldPasswordTextField: UITextField!
@@ -26,7 +26,7 @@ class FamilySettingsViewController: UIViewController {
         
         receiveDataFromSignup()
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated) 
     }
@@ -46,7 +46,7 @@ class FamilySettingsViewController: UIViewController {
         showCompleteAlert()
     }
     
-// MARK: - Alert for Update Complete
+    // MARK: - Alert for Update Complete
     func showCompleteAlert() {
         let alert = UIAlertController(title: "Family Settings", message: "Update Complete", preferredStyle: .alert)
         
@@ -55,19 +55,19 @@ class FamilySettingsViewController: UIViewController {
     }
     
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           
-           if segue.identifier == "ManageChildProfilesSegue" {
+        
+        if segue.identifier == "ManageChildProfilesSegue" {
             guard let manageChildProfilesVC = segue.destination as? ManageChildProfilesViewController else { return }
             manageChildProfilesVC.parentUser = self.parentUser
             manageChildProfilesVC.networkingController = self.networkingController
             
-           } else if segue.identifier == "toAddChildSegue" {
+        } else if segue.identifier == "toAddChildSegue" {
             guard let addChildVC = segue.destination as? AddChildViewController else { return }
             addChildVC.parentUser = self.parentUser
             addChildVC.networkingController = self.networkingController
             
-           }
-       }
+        }
+    }
 }

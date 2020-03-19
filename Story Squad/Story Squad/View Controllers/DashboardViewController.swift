@@ -58,7 +58,6 @@ class DashboardViewController: UIViewController {
         
         updateViews()
         receiveDataFromSignup()
-//        updateParentInfo()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,34 +73,7 @@ class DashboardViewController: UIViewController {
         self.parentUser = tabBar.parentUser
         self.networkingController = tabBar.networkingController
     }
-    
-//    private func updateParentInfo() {
-//
-//        guard let parentUser = parentUser else { return }
-//
-//        networkingController?.updateParentWithServer(parent: parentUser, completion: { (result) in
-//            do {
-//                let parent = try result.get()
-//                self.parentUser = parent
-//                print("\nUpdated Parent with Server")
-//
-//            } catch {
-//                NSLog("Couldn't update Parent with Server")
-//
-//                DispatchQueue.main.async {
-//                    self.showErrorAlert(errorTitle: "Sorry", errorMessage: "Couldn't reach server to update Family Account")
-//                }
-//            }
-//        })
-//    }
-//
-//    private func showErrorAlert(errorTitle: String, errorMessage: String) {
-//        let alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//
-//        self.present(alert, animated: true, completion: nil)
-//    }
-    
+
     private func updateViews() {
         
         let pumkinStrokeAttribute = NSAttributedString(string: storySquadLabel.text!, attributes: sqLabelStrokeAttributes)

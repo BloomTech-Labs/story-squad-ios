@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 
-
 class LogInViewController: UIViewController {
 
     // MARK: - Properties
@@ -79,15 +78,6 @@ class LogInViewController: UIViewController {
             }
         }
     }
-    /*
-     if let parent = self.networkingController.parentUser {
-         
-         self.parentUser = parent
-         self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
-     } else {
-         self.showErrorAlert(errorMessage: "Couldn't get response from server.")
-     }
-     */
     
     private func showErrorAlert(errorTitle: String, errorMessage: String) {
         let alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
