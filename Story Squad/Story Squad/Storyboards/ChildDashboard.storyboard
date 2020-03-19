@@ -12,10 +12,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Child Profile MainVC-->
+        <!--Child Dashboard-->
         <scene sceneID="LDC-st-c7b">
             <objects>
-                <viewController storyboardIdentifier="ChildProfileVC" id="0zb-v7-rKJ" customClass="ChildProfileMainVC" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChildProfileVC" id="0zb-v7-rKJ" customClass="ChildDashboard" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s81-MP-KeR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

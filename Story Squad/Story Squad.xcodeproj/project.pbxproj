@@ -34,7 +34,7 @@
 		4FF0F5F42405C4F900587C7B /* AddChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5F32405C4F900587C7B /* AddChildViewController.swift */; };
 		4FF0F5FC2405C9DD00587C7B /* ChildDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5FB2405C9DD00587C7B /* ChildDashboard.storyboard */; };
 		4FF0F5FE2405CB2F00587C7B /* AddChildFromDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0F5FD2405CB2F00587C7B /* AddChildFromDashboard.storyboard */; };
-		4FF0F6002405CE5A00587C7B /* ChildProfileMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5FF2405CE5A00587C7B /* ChildProfileMainVC.swift */; };
+		4FF0F6002405CE5A00587C7B /* ChildDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F5FF2405CE5A00587C7B /* ChildDashboard.swift */; };
 		4FF0F6022405CE7900587C7B /* ParentAccountMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F6012405CE7900587C7B /* ParentAccountMainVC.swift */; };
 		4FF0F62524071B4800587C7B /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F62424071B4800587C7B /* NetworkingController.swift */; };
 		4FF0F62724071DED00587C7B /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F62624071DED00587C7B /* NetworkingError.swift */; };
@@ -116,7 +116,7 @@
 		4FF0F5F32405C4F900587C7B /* AddChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildViewController.swift; sourceTree = "<group>"; };
 		4FF0F5FB2405C9DD00587C7B /* ChildDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChildDashboard.storyboard; sourceTree = "<group>"; };
 		4FF0F5FD2405CB2F00587C7B /* AddChildFromDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddChildFromDashboard.storyboard; sourceTree = "<group>"; };
-		4FF0F5FF2405CE5A00587C7B /* ChildProfileMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileMainVC.swift; sourceTree = "<group>"; };
+		4FF0F5FF2405CE5A00587C7B /* ChildDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildDashboard.swift; sourceTree = "<group>"; };
 		4FF0F6012405CE7900587C7B /* ParentAccountMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentAccountMainVC.swift; sourceTree = "<group>"; };
 		4FF0F62424071B4800587C7B /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
 		4FF0F62624071DED00587C7B /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
@@ -338,7 +338,7 @@
 			children = (
 				DDDE70212404646E003F8783 /* AddChildParentPinViewController.swift */,
 				4FF0F5F32405C4F900587C7B /* AddChildViewController.swift */,
-				4FF0F5FF2405CE5A00587C7B /* ChildProfileMainVC.swift */,
+				4FF0F5FF2405CE5A00587C7B /* ChildDashboard.swift */,
 				FA9A34D6240606C700A2F8FE /* ChildProfilePinViewController.swift */,
 				4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */,
 				4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */,
@@ -572,7 +572,7 @@
 				FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */,
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,
 				FA9A34D52405FFB700A2F8FE /* CreditCardViewController.swift in Sources */,
-				4FF0F6002405CE5A00587C7B /* ChildProfileMainVC.swift in Sources */,
+				4FF0F6002405CE5A00587C7B /* ChildDashboard.swift in Sources */,
 				4FF0F5F22404AEF300587C7B /* ChildSettingsViewController.swift in Sources */,
 				DD71FD0D2406D9AD0032EBB5 /* ChildRepresentation.swift in Sources */,
 				4FD90F4723FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift in Sources */,
