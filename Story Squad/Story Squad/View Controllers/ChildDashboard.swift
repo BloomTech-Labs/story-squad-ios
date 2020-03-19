@@ -83,6 +83,18 @@ extension ChildDashboard: UICollectionViewDataSource, UICollectionViewDelegate, 
     }
         //swiftlint:disable force_cast
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    //performSegue(withIdentifier: "ChildProfileFromDashboardSegue", sender: self)
+        
+//        if indexPath.item == 0 {
+//        performSegue(withIdentifier: "AcceptMissionSegue", sender: self)
+//            
+//        } else if indexPath.item == 1 {
+//        performSegue(withIdentifier: "AdventurePassportSegue", sender: self)
+//            
+//        } else if indexPath.item == 2 {
+//        performSegue(withIdentifier: "ChangeAvatarSegue", sender: self)
+//            
+//        } else {
+//        performSegue(withIdentifier: "TrophyRoomSegue", sender: self)
+//        }
     }
 }

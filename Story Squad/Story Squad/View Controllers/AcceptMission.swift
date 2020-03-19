@@ -51,7 +51,7 @@ class AcceptMission: UIViewController {
 extension AcceptMission: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -76,8 +76,16 @@ extension AcceptMission: UICollectionViewDataSource, UICollectionViewDelegate, U
             
         }
     }
-        //swiftlint:disable force_cast
+        
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    //performSegue(withIdentifier: "ChildProfileFromDashboardSegue", sender: self)
+//        if indexPath.item == 0 {
+//            performSegue(withIdentifier: "ReadSegue", sender: self)
+//            
+//        } else if indexPath.item == 1 {
+//            performSegue(withIdentifier: "WriteSegue", sender: self)
+//            
+//        } else {
+//            performSegue(withIdentifier: "DrawSegue", sender: self)
+//        }
     }
 }
