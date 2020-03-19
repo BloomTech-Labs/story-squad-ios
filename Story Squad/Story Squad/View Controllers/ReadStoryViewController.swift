@@ -12,15 +12,6 @@ enum Pages: CaseIterable {
     case pageZero
     case pageOne
     case pageTwo
-    case pageThree
-    case pageFour
-    case pageFive
-    case pageSix
-    case pageSeven
-    case pageEight
-    case pageNine
-    case pageTen
-    }
     
     var index: Int {
         switch self {
@@ -30,25 +21,9 @@ enum Pages: CaseIterable {
             return 1
         case .pageTwo:
             return 2
-        case .pageThree:
-            return 3
-        case .pageFour:
-            return 4
-        case .pageFive:
-            return 5
-        case .pageSix:
-            return 6
-        case .pageSeven:
-            return 7
-        case .pageEight:
-            return 8
-        case .pageNine:
-            return 9
-        case .pageTen:
-            return 10
         }
     }
-
+}
 class ReadStoryViewController: UIViewController {
     
     private var pageController: UIPageViewController?
@@ -62,12 +37,12 @@ class ReadStoryViewController: UIViewController {
     }
     
     private func setupPageController() {
-        
+        //swiftlint:disable force_cast
         self.pageController = UIPageViewController(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
         self.pageController?.dataSource = self
         self.pageController?.delegate = self
-        self.addChild(self.pageController!)
-        self.view.addSubview(self.pageController!.view)
+//        self.addChild(self.pageController!)
+//        self.view.addSubview(self.pageController!.view)
         
         let initialVC = PagesContentVC(with: pages[0])
         
@@ -76,7 +51,7 @@ class ReadStoryViewController: UIViewController {
                                                 animated: true,
                                                 completion: nil)
         
-        self.pageController?.didMove(toParent: self)
+//        self.pageController?.didMove(toParent: self)
     }
 }
 
@@ -121,7 +96,7 @@ extension ReadStoryViewController: UIPageViewControllerDataSource, UIPageViewCon
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return self.pages.count
+        return pages.count
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {

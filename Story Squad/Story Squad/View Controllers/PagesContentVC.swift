@@ -15,7 +15,6 @@ class PagesContentVC: UIViewController {
     
     init(with page: Pages) {
         self.page = page
-        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,7 +25,5 @@ class PagesContentVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.addSubview(textView!)
     }
 }
-

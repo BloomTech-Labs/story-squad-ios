@@ -18,8 +18,8 @@
         <!--Read Story View Controller-->
         <scene sceneID="dkH-Jh-Mx8">
             <objects>
-                <viewController storyboardIdentifier="Page0ViewController" id="kDZ-ax-vg9" customClass="ReadStoryViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rYC-Kz-hYr">
+                <viewController storyboardIdentifier="Read" id="kDZ-ax-vg9" customClass="ReadStoryViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rYC-Kz-hYr" customClass="UIPageControl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -30,10 +30,10 @@
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmO-m4-cTv">
-                                <rect key="frame" x="0.0" y="119.5" width="414" height="648.5"/>
+                                <rect key="frame" x="0.0" y="124" width="414" height="644"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="8KX-Cr-Oz7">
-                                        <rect key="frame" x="8" y="0.0" width="398" height="640.5"/>
+                                        <rect key="frame" x="8" y="0.0" width="398" height="636"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,7 +50,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom &amp; Boom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU0-mm-Ira">
-                                <rect key="frame" x="0.0" y="60" width="414" height="51.5"/>
+                                <rect key="frame" x="0.0" y="60" width="414" height="56"/>
                                 <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="48"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -76,130 +76,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aj9-iE-liC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="373.91304347826087" y="4.6875"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="7cd-ov-xGy">
-            <objects>
-                <viewController storyboardIdentifier="Page1ViewController" id="m3Z-t3-aIt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xw6-hM-WIP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="ml0-Vn-jcR">
-                                <rect key="frame" x="20" y="776" width="374" height="37"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="pageIndicatorTintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7f-aM-nbO">
-                                <rect key="frame" x="0.0" y="120" width="414" height="648"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="bU2-zi-Cqd">
-                                        <rect key="frame" x="8" y="0.0" width="398" height="640"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="bU2-zi-Cqd" secondAttribute="bottom" constant="8" id="BMN-mh-KDU"/>
-                                    <constraint firstItem="bU2-zi-Cqd" firstAttribute="top" secondItem="a7f-aM-nbO" secondAttribute="top" id="Gx9-sv-NUW"/>
-                                    <constraint firstAttribute="trailing" secondItem="bU2-zi-Cqd" secondAttribute="trailing" constant="8" id="O7d-yg-G43"/>
-                                    <constraint firstItem="bU2-zi-Cqd" firstAttribute="leading" secondItem="a7f-aM-nbO" secondAttribute="leading" constant="8" id="moc-nf-QRM"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom &amp; Boom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZI1-6J-ijs">
-                                <rect key="frame" x="0.0" y="60" width="414" height="52"/>
-                                <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="48"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="k9D-uf-ZBP" firstAttribute="trailing" secondItem="ml0-Vn-jcR" secondAttribute="trailing" constant="20" id="0sZ-LW-dJz"/>
-                            <constraint firstItem="a7f-aM-nbO" firstAttribute="leading" secondItem="k9D-uf-ZBP" secondAttribute="leading" id="5KY-bP-9EA"/>
-                            <constraint firstItem="k9D-uf-ZBP" firstAttribute="trailing" secondItem="ZI1-6J-ijs" secondAttribute="trailing" id="A0Y-gY-4fk"/>
-                            <constraint firstItem="ml0-Vn-jcR" firstAttribute="top" secondItem="a7f-aM-nbO" secondAttribute="bottom" constant="8" id="ISv-9W-ckL"/>
-                            <constraint firstItem="a7f-aM-nbO" firstAttribute="top" secondItem="ZI1-6J-ijs" secondAttribute="bottom" constant="8" id="MT5-bl-zDz"/>
-                            <constraint firstItem="ZI1-6J-ijs" firstAttribute="top" secondItem="k9D-uf-ZBP" secondAttribute="top" constant="16" id="MXH-xa-4ce"/>
-                            <constraint firstItem="ZI1-6J-ijs" firstAttribute="leading" secondItem="k9D-uf-ZBP" secondAttribute="leading" id="PFl-8T-ekS"/>
-                            <constraint firstItem="ml0-Vn-jcR" firstAttribute="leading" secondItem="k9D-uf-ZBP" secondAttribute="leading" constant="20" id="QvG-K5-70P"/>
-                            <constraint firstItem="ml0-Vn-jcR" firstAttribute="bottom" secondItem="k9D-uf-ZBP" secondAttribute="bottom" id="XOC-6x-Les"/>
-                            <constraint firstItem="a7f-aM-nbO" firstAttribute="trailing" secondItem="k9D-uf-ZBP" secondAttribute="trailing" id="gz9-p3-N3u"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="k9D-uf-ZBP"/>
-                    </view>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="njy-s2-YcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1069.5652173913045" y="6.6964285714285712"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="h8c-wE-j8d">
-            <objects>
-                <viewController storyboardIdentifier="Page2ViewController" id="Tyd-Bc-4Ot" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9x6-US-zIk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="xnp-An-uIN">
-                                <rect key="frame" x="20" y="776" width="374" height="37"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="pageIndicatorTintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgB-Oh-bmm">
-                                <rect key="frame" x="0.0" y="120" width="414" height="648"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-DQ-3Hn">
-                                        <rect key="frame" x="8" y="0.0" width="398" height="640"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="1tE-DQ-3Hn" secondAttribute="trailing" constant="8" id="1Vr-kC-krM"/>
-                                    <constraint firstItem="1tE-DQ-3Hn" firstAttribute="top" secondItem="rgB-Oh-bmm" secondAttribute="top" id="3KI-w8-e2i"/>
-                                    <constraint firstItem="1tE-DQ-3Hn" firstAttribute="leading" secondItem="rgB-Oh-bmm" secondAttribute="leading" constant="8" id="9tk-kf-K2G"/>
-                                    <constraint firstAttribute="bottom" secondItem="1tE-DQ-3Hn" secondAttribute="bottom" constant="8" id="eef-SD-Acz"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom &amp; Boom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmC-nz-t26">
-                                <rect key="frame" x="0.0" y="60" width="414" height="52"/>
-                                <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="48"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="xnp-An-uIN" firstAttribute="bottom" secondItem="fMr-hN-37w" secondAttribute="bottom" id="3B6-tK-DCx"/>
-                            <constraint firstItem="fMr-hN-37w" firstAttribute="trailing" secondItem="xnp-An-uIN" secondAttribute="trailing" constant="20" id="5T7-3e-axo"/>
-                            <constraint firstItem="rgB-Oh-bmm" firstAttribute="leading" secondItem="fMr-hN-37w" secondAttribute="leading" id="HEJ-EV-rXH"/>
-                            <constraint firstItem="xnp-An-uIN" firstAttribute="top" secondItem="rgB-Oh-bmm" secondAttribute="bottom" constant="8" id="Iee-5B-Os6"/>
-                            <constraint firstItem="fMr-hN-37w" firstAttribute="trailing" secondItem="TmC-nz-t26" secondAttribute="trailing" id="ONZ-fF-1lF"/>
-                            <constraint firstItem="TmC-nz-t26" firstAttribute="leading" secondItem="fMr-hN-37w" secondAttribute="leading" id="bpn-Qp-qaI"/>
-                            <constraint firstItem="rgB-Oh-bmm" firstAttribute="trailing" secondItem="fMr-hN-37w" secondAttribute="trailing" id="gBm-dm-JUD"/>
-                            <constraint firstItem="rgB-Oh-bmm" firstAttribute="top" secondItem="TmC-nz-t26" secondAttribute="bottom" constant="8" id="icT-B4-ohD"/>
-                            <constraint firstItem="TmC-nz-t26" firstAttribute="top" secondItem="fMr-hN-37w" secondAttribute="top" constant="16" id="qZx-0p-w3y"/>
-                            <constraint firstItem="xnp-An-uIN" firstAttribute="leading" secondItem="fMr-hN-37w" secondAttribute="leading" constant="20" id="xCV-QD-ABu"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="fMr-hN-37w"/>
-                    </view>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Jk-yN-NOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1757.9710144927537" y="4.6875"/>
         </scene>
     </scenes>
 </document>
