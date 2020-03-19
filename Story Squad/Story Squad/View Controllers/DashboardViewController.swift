@@ -28,7 +28,7 @@ class DashboardViewController: UIViewController {
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
         
         // Fetch for Children of correct Parent
-        let predicate = NSPredicate(format: "parent.id == %@", getParentID())
+        let predicate = NSPredicate(format: "parent.id == %i", parentUser?.id ?? 0)
         fetchRequest.predicate = predicate
         
         // Sort Children by Name
@@ -67,21 +67,13 @@ class DashboardViewController: UIViewController {
     }
     
     // To receive the Parent and NetworkingController from the Tab Bar
-    func receiveDataFromSignup() {
+    private func receiveDataFromSignup() {
         guard let tabBar = tabBarController as? MainTabBarController else { return }
         
         self.parentUser = tabBar.parentUser
         self.networkingController = tabBar.networkingController
     }
-    
-    // Get Parent's id as a string to fetch Children from CoreData
-    private func getParentID() -> String {
-        guard let parent = parentUser,
-            let id = parent.id else { return ""}
-        
-        return id
-    }
-    
+
     private func updateViews() {
         
         let pumkinStrokeAttribute = NSAttributedString(string: storySquadLabel.text!, attributes: sqLabelStrokeAttributes)

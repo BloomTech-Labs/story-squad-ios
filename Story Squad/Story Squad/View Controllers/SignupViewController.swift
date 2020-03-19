@@ -49,12 +49,12 @@ class SignupViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func signUpButton(_ sender: Any) {
-//        self.navigationController.setRoo
+
         signupParentAccount()
     }
     
     @IBAction func signInButton(_ sender: UIButton) {
-        // "GoToLoginFromSignupSegue"
+
         self.navigationController?.popToRootViewController(animated: true)
     }
     
@@ -85,9 +85,6 @@ class SignupViewController: UIViewController {
                     do {
                         let result = try result.get()
                         self.bearerToken = result
-//                        self.parentUser = self.networkingController.parentUser
-                        // let parentRepresentation = result
-                        //print("Parent Representation result: \(String(describing: parentRepresentation))")
                         
                         DispatchQueue.main.async {
                             

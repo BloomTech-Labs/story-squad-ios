@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 
-
 class LogInViewController: UIViewController {
 
     // MARK: - Properties
@@ -79,24 +78,15 @@ class LogInViewController: UIViewController {
             }
         }
     }
-    /*
-     if let parent = self.networkingController.parentUser {
-         
-         self.parentUser = parent
-         self.performSegue(withIdentifier: "ShowTabBarSegue", sender: self)
-     } else {
-         self.showErrorAlert(errorMessage: "Couldn't get response from server.")
-     }
-     */
     
-    func showErrorAlert(errorTitle: String, errorMessage: String) {
+    private func showErrorAlert(errorTitle: String, errorMessage: String) {
         let alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
     }
     
-    func validateFields() -> String? {
+    private func validateFields() -> String? {
         
         // Check that all fields are filled in
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
@@ -107,7 +97,7 @@ class LogInViewController: UIViewController {
         return nil
     }
     
-    func updateViews() {
+    private func updateViews() {
         
         // Hide NavigationController Bar
         navigationController?.navigationBar.isHidden = true

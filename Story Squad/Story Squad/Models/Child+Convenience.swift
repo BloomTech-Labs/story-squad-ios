@@ -16,14 +16,14 @@ extension Child {
         guard let name = name,
             let username = username,
             let cohort = cohort,
-            let avatar = avatar,
-            let id = id else { return nil }
+            let avatar = avatar else { return nil }
+//            let id = id else { return nil }
         
         return ChildRepresentation(name: name, id: id, username: username, cohort: cohort, grade: grade, dyslexiaPreference: dyslexiaPreference, pin: pin, avatar: avatar)
     }
     
     // MARK: CoreData Initializer
-    @discardableResult convenience init(name: String, id: String, username: String?, parent: Parent, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: String?, context: NSManagedObjectContext) {
+    @discardableResult convenience init(name: String, id: Int16, username: String?, parent: Parent, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: String?, context: NSManagedObjectContext) {
         self.init(context: context)
         
         self.name = name

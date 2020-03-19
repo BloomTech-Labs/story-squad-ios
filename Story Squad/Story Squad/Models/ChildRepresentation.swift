@@ -31,7 +31,7 @@ struct ChildRepresentation: Codable {
             }
         }
 
-    var id: String
+    var id: Int16
     var username: String?
     var grade: Int16
     var dyslexiaPreference: Bool = false
@@ -43,7 +43,7 @@ struct ChildRepresentation: Codable {
     //    var pin: Int16
     
     // Regular init
-    init(name: String?, id: String, username: String?, cohort: String?, grade: Int16, dyslexiaPreference: Bool, pin: Int16?, avatar: String?) {
+    init(name: String?, id: Int16, username: String?, cohort: String?, grade: Int16, dyslexiaPreference: Bool, pin: Int16?, avatar: String?) {
 //        init(name: String, id: String, username: String?, cohort: String?, grade: Int16, dyslexiaPreference: Bool, pin: Int16, avatar: String?) {
         
         self.id = id
@@ -65,7 +65,7 @@ struct ChildRepresentation: Codable {
             let propertiesContainer = try childContainer.nestedContainer(keyedBy: ChildCodingKeys.ChildPropertiesCodingKeys.self, forKey: .child)
             let dyslexiaContainer = try propertiesContainer.nestedContainer(keyedBy: ChildCodingKeys.ChildPropertiesCodingKeys.DyslexiaCodingKeys.self, forKey: .dyslexiaPreference)
             
-            let idInt = try propertiesContainer.decode(Int.self, forKey: .id)
+            id = try propertiesContainer.decode(Int16.self, forKey: .id)
             username = try propertiesContainer.decode(String?.self, forKey: .username)
             grade = try propertiesContainer.decode(Int16.self, forKey: .grade)
             dyslexiaPreference = try dyslexiaContainer.decode(Bool.self, forKey: .dyslexia)
@@ -76,7 +76,6 @@ struct ChildRepresentation: Codable {
             //        cohort = try propertiesContainer.decode(String?.self, forKey: .cohort)
             //        pin = try propertiesContainer.decode(Int16.self, forKey: .pin)
             
-            id = String(idInt)
 //            parent = nil
 //           name = ""
 //            pin = 1234

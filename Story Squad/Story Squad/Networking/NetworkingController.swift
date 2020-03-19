@@ -22,6 +22,70 @@ class NetworkingController {
     var parentBearer: Bearer?
     var childBearer: Bearer?
     
+    // MARK: - Create Parent using Server
+    func updateParentWithServer(parent: Parent, completion: @escaping(Result<Parent?, NetworkingError>) -> Void) {
+        
+        guard let parentBearer = parentBearer else {
+            completion(Result.failure(NetworkingError.noBearer))
+            return
+        }
+        
+        let registerURL = baseURL
+            .appendingPathComponent("parents")
+            .appendingPathComponent("me")
+        
+        var request = URLRequest(url: registerURL)
+        
+        request.httpMethod = HTTPMethod.get.rawValue
+        //        request.setValue("application/json", forHTTPHeaderField: HeaderNames.contentType.rawValue)
+        request.setValue("\(parentBearer.token)", forHTTPHeaderField: HeaderNames.authorization.rawValue)
+        
+        print("Request: \(request)")
+        
+        URLSession.shared.dataTask(with: request) { (data , response, error) in
+            
+            if let error = error {
+                print("Error getting response: \(error)")
+                completion(.failure(.serverError(error)))
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                if response.statusCode == 200 {
+                    print("Good 200 response")
+                } else {
+                    print("Bad response, code: \(response.statusCode)")
+                    print("Response description: \(response.description)")
+                    print("Response debug description: \(response.debugDescription)")
+                    completion(.failure(.unexpectedStatusCode(response.statusCode)))
+                    return
+                }
+            }
+            
+            guard let data = data else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            do {
+                let dataString = String(data: data, encoding: .utf8)
+                print("parent response as data: \(String(describing: dataString))")
+                
+                // Update in CoreData with ParentRepresentation
+                let parentRep = try JSONDecoder().decode(ParentRepresentation.self, from: data)
+                self.updateParentInCoreData(with: parentRep)
+
+                completion(.success(self.parentUser))
+                return
+                
+            } catch {
+                print("Error decoding: \(error)")
+                completion(.failure(.badDecode))
+                return
+            }
+        }.resume()
+    }
+    
     // MARK: - Update a Child Account
     func updateChildAccountInServer(child: Child, username: String?, dyslexiaPreference: Bool?, grade: Int16?, completion: @escaping(Result<Child?, NetworkingError>) -> Void) {
         
@@ -30,7 +94,8 @@ class NetworkingController {
             return
         }
         
-        guard let id = child.id else { return }
+//        guard let id = child.id else { return }
+        let id = child.id
         
         let registerURL = baseURL
             .appendingPathComponent("children")
@@ -45,7 +110,7 @@ class NetworkingController {
         {
         "username": "\(usernameString)",
         "preferences": {
-            "dyslexia": \(dyslexiaString)
+        "dyslexia": \(dyslexiaString)
         },
         "grade": \(gradeString)
         }
@@ -161,14 +226,9 @@ class NetworkingController {
                 self.parentBearer = parentBearer
                 
                 // Create Parent in CoreData
-                let temporaryID = UUID().uuidString
+                let temporaryID = Int16.random(in: 0..<1_000)
                 let temporaryPIN = Int16.random(in: 0..<1_000)
                 self.createParent(name: name, id: temporaryID, email: email, password: password, pin: temporaryPIN)
-                
-                //                let parentRepresentation = try JSONDecoder().decode(ParentRepresentation.self, from: data)
-                // self.parentUser?.parentRepresentation = parentRepresentation
-                //                print("Parent Representation: \(parentRepresentation)")
-                //                completion(.success(parentRepresentation))
                 
                 // Return the Bearer
                 completion(.success(parentBearer))
@@ -335,7 +395,7 @@ class NetworkingController {
     // MARK: - Parent CRUD Methods
     
     // Create Parent
-    func createParent(name: String, id: String, email: String, password: String, pin: Int16) {
+    func createParent(name: String, id: Int16, email: String, password: String, pin: Int16) {
         
         DispatchQueue.main.async {
             let moc = CoreDataStack.shared.mainContext
@@ -347,7 +407,7 @@ class NetworkingController {
     }
     
     // Update Parent
-    func updateParent(name: String?, id: String, email: String?, pin: Int16?, password: String?, context: NSManagedObjectContext) {
+    func updateParent(name: String?, id: Int16, email: String?, pin: Int16?, password: String?, context: NSManagedObjectContext) {
         
         guard let parent = fetchParentFromCD(with: id) else { return }
         
@@ -398,23 +458,38 @@ class NetworkingController {
     // MARK: - Update using Representations
     
     // Parent
+    private func updateParentInCoreData(with representation: ParentRepresentation) {
+        
+        guard let parentUser = parentUser else { return }
+        
+        parentUser.id = representation.id
+        parentUser.email = representation.email
+        
+        CoreDataStack.shared.save(context: CoreDataStack.shared.mainContext)
+        
+        self.parentUser = parentUser
+    }
+    
+    // Child
     private func updateChildInCoreData(with representation: ChildRepresentation) {
         
         guard let childUser = childUser else { return }
         
         childUser.username = representation.username
-//        childUser.id = representation.id
+        //        childUser.id = representation.id
         childUser.grade = representation.grade
         childUser.avatar = representation.avatar
         childUser.dyslexiaPreference = representation.dyslexiaPreference
         
         CoreDataStack.shared.save(context: CoreDataStack.shared.mainContext)
+        
+        self.childUser = childUser
     }
     
     // MARK: - Child CRUD Methods
     
     // create Child
-    func createChildAndAddToParent(parent: Parent, name: String, username: String?, id: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool = false, avatar: String?, context: NSManagedObjectContext) {
+    func createChildAndAddToParent(parent: Parent, name: String, username: String?, id: Int16?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool = false, avatar: String?, context: NSManagedObjectContext) {
         
         // Generate random avatar
         let arrayOfAvatars = ["Hero 6.png", "Hero 11.png", "Hero 12.png", "Hero 13.png", "Hero 14.png", "Hero 15.png", "Hero 16.png", "Hero 18.png", "Hero 19.png"]
@@ -422,7 +497,7 @@ class NetworkingController {
         let randomAvatar = arrayOfAvatars.randomElement()
         
         // generate random ID
-        let temporaryID = UUID().uuidString
+        let temporaryID = Int16.random(in: 0..<1_000)
         
         //        let randomID = Int16.random(in: 1..<1000)
         
@@ -436,7 +511,7 @@ class NetworkingController {
     
     // Update Child
     // swiftlint:disable:next function_parameter_count
-    func updateChildInCoreDataWith(name: String?, id: String, username: String?, pin: Int16?, grade: Int16?, cohort: String?, dyslexiaPreference: Bool?, avatar: String?, context: NSManagedObjectContext) {
+    func updateChildInCoreDataWith(name: String?, id: Int16, username: String?, pin: Int16?, grade: Int16?, cohort: String?, dyslexiaPreference: Bool?, avatar: String?, context: NSManagedObjectContext) {
         
         guard let child = fetchChildFromCD(with: id) else { return }
         
@@ -494,7 +569,7 @@ class NetworkingController {
     // MARK: - Fetch From CoreData
     
     // Parent
-    func fetchParentFromCD(with id: String) -> Parent? {
+    func fetchParentFromCD(with id: Int16) -> Parent? {
         
         let moc = CoreDataStack.shared.mainContext
         let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
@@ -532,7 +607,9 @@ class NetworkingController {
             if let parent = parent {
                 self.parentUser = parent
             } else {
-                self.createParent(name: "", id: UUID().uuidString, email: email, password: password, pin: 0)
+                let temporaryID = Int16.random(in: 0..<1_000)
+                let temporaryPIN = Int16.random(in: 0..<1_000)
+                self.createParent(name: "", id: temporaryID, email: email, password: password, pin: temporaryPIN)
             }
         }
     }
@@ -559,7 +636,7 @@ class NetworkingController {
     }
     
     // Child
-    func fetchChildFromCD(with id: String) -> Child? {
+    func fetchChildFromCD(with id: Int16) -> Child? {
         
         let moc = CoreDataStack.shared.mainContext
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()

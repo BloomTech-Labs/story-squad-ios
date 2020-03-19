@@ -5,7 +5,7 @@
         <attribute name="cohort" optional="YES" attributeType="String"/>
         <attribute name="dyslexiaPreference" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="grade" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="pin" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="username" optional="YES" attributeType="String"/>
@@ -13,7 +13,7 @@
     </entity>
     <entity name="Parent" representedClassName="Parent" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="pin" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
