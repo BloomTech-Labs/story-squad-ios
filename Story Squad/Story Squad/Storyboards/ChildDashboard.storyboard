@@ -4,48 +4,203 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Bangers.ttf">
-            <string>Bangers-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
-        <!--Child Profile MainVC-->
+        <!--AcceptMission-->
+        <scene sceneID="skY-k1-rZ9">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AcceptMission" storyboardName="AcceptMission" id="9h6-VP-rPW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nbd-mS-EjD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Kj-U3-v6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2889" y="17"/>
+        </scene>
+        <!--Mission Control-->
         <scene sceneID="LDC-st-c7b">
             <objects>
-                <viewController storyboardIdentifier="ChildProfileVC" id="0zb-v7-rKJ" customClass="ChildProfileMainVC" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChildProfileVC" title="Mission Control" modalPresentationStyle="fullScreen" id="0zb-v7-rKJ" customClass="ChildDashboard" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s81-MP-KeR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1054"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2020-03-09 at 8.33.39 PM" translatesAutoresizingMaskIntoConstraints="NO" id="eS7-Xx-cxx">
-                                <rect key="frame" x="0.0" y="196" width="414" height="316"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uXb-y0-zEd">
+                                <rect key="frame" x="0.0" y="149" width="414" height="822"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lfj-hd-evw">
+                                    <size key="itemSize" width="414" height="205"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AcceptMissionCell" id="aH3-ds-xmC" customClass="AcceptMissionCell" customModule="Story_Squad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hpu-tX-Jz7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Accept mission" translatesAutoresizingMaskIntoConstraints="NO" id="1ld-UJ-Kcx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="1ld-UJ-Kcx" secondAttribute="trailing" id="H3O-OD-go5"/>
+                                                <constraint firstItem="1ld-UJ-Kcx" firstAttribute="leading" secondItem="Hpu-tX-Jz7" secondAttribute="leading" id="RIE-dW-IrC"/>
+                                                <constraint firstAttribute="bottom" secondItem="1ld-UJ-Kcx" secondAttribute="bottom" id="iCr-OP-eJc"/>
+                                                <constraint firstItem="1ld-UJ-Kcx" firstAttribute="top" secondItem="Hpu-tX-Jz7" secondAttribute="top" id="rkM-sz-qnX"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="205"/>
+                                        <connections>
+                                            <outlet property="acceptMissionImageView" destination="1ld-UJ-Kcx" id="dvg-rB-dek"/>
+                                            <segue destination="9h6-VP-rPW" kind="show" identifier="AcceptMissionSegue" id="ybg-rG-wHb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="AdventurePassportCell" id="wdB-88-Qh7" customClass="AdventurePassportCell" customModule="Story_Squad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="205" width="414" height="205"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Nny-o6-rvh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Passport" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-k6-jYa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5tr-k6-jYa" firstAttribute="leading" secondItem="Nny-o6-rvh" secondAttribute="leading" id="FeS-hm-NC7"/>
+                                                <constraint firstAttribute="trailing" secondItem="5tr-k6-jYa" secondAttribute="trailing" id="bfi-eT-icV"/>
+                                                <constraint firstItem="5tr-k6-jYa" firstAttribute="top" secondItem="Nny-o6-rvh" secondAttribute="top" id="fCk-DF-Bvf"/>
+                                                <constraint firstAttribute="bottom" secondItem="5tr-k6-jYa" secondAttribute="bottom" id="fLB-lm-Vrv"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="205"/>
+                                        <connections>
+                                            <outlet property="adventurePassportImageView" destination="Nny-o6-rvh" id="FUh-1s-65b"/>
+                                            <segue destination="3Nj-DO-1hz" kind="show" identifier="AdventurePassportSegue" id="fdb-Hg-i3s"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ChangeYourAvatarCell" id="5xl-a7-48b" customClass="ChangeYourAvatarCell" customModule="Story_Squad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="410" width="414" height="205"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FXk-Ic-duc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="H8P-G6-9eX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="H8P-G6-9eX" secondAttribute="bottom" id="4ZC-S0-yVH"/>
+                                                <constraint firstAttribute="trailing" secondItem="H8P-G6-9eX" secondAttribute="trailing" id="Knl-7K-Sdk"/>
+                                                <constraint firstItem="H8P-G6-9eX" firstAttribute="top" secondItem="FXk-Ic-duc" secondAttribute="top" id="iTP-sN-rx1"/>
+                                                <constraint firstItem="H8P-G6-9eX" firstAttribute="leading" secondItem="FXk-Ic-duc" secondAttribute="leading" id="m9C-h6-aZ9"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="205"/>
+                                        <connections>
+                                            <outlet property="changeAvatarImageView" destination="H8P-G6-9eX" id="94t-wt-AV4"/>
+                                            <segue destination="WMO-Sg-ACl" kind="show" identifier="ChangeAvatarSegue" id="f4Q-rM-X8k"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="TrophyRoomCell" id="qUz-vd-KUR" customClass="TrophyRoomCell" customModule="Story_Squad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="615" width="414" height="205"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7ph-4z-22W">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trophy" translatesAutoresizingMaskIntoConstraints="NO" id="Myn-8t-n47">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Myn-8t-n47" firstAttribute="top" secondItem="7ph-4z-22W" secondAttribute="top" id="PQy-ml-7UC"/>
+                                                <constraint firstAttribute="bottom" secondItem="Myn-8t-n47" secondAttribute="bottom" id="hPJ-Rq-LAp"/>
+                                                <constraint firstItem="Myn-8t-n47" firstAttribute="leading" secondItem="7ph-4z-22W" secondAttribute="leading" id="rGP-gz-bcH"/>
+                                                <constraint firstAttribute="trailing" secondItem="Myn-8t-n47" secondAttribute="trailing" id="sVx-0d-QWf"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="205"/>
+                                        <connections>
+                                            <outlet property="trophyRoomImageView" destination="Myn-8t-n47" id="OwZ-e7-qXy"/>
+                                            <segue destination="HDf-Ht-pdb" kind="show" identifier="TrophyRoomSegue" id="w6c-3r-jeS"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Story squad" translatesAutoresizingMaskIntoConstraints="NO" id="Bfd-jm-90V">
+                                <rect key="frame" x="0.0" y="44" width="414" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="VJx-5m-lQy"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming Soon!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agE-au-LzC">
-                                <rect key="frame" x="20" y="329" width="374" height="142"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="74"/>
-                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bfd-jm-90V" firstAttribute="leading" secondItem="954-em-fTw" secondAttribute="leading" id="3ky-ey-TcE"/>
+                            <constraint firstItem="Bfd-jm-90V" firstAttribute="top" secondItem="954-em-fTw" secondAttribute="top" id="KiM-Vf-md8"/>
+                            <constraint firstItem="954-em-fTw" firstAttribute="trailing" secondItem="Bfd-jm-90V" secondAttribute="trailing" id="QKe-mV-7Ty"/>
+                            <constraint firstItem="uXb-y0-zEd" firstAttribute="leading" secondItem="954-em-fTw" secondAttribute="leading" id="ZQT-1R-5Ec"/>
+                            <constraint firstItem="uXb-y0-zEd" firstAttribute="top" secondItem="Bfd-jm-90V" secondAttribute="bottom" id="mBa-Nu-P4e"/>
+                            <constraint firstItem="Bfd-jm-90V" firstAttribute="centerX" secondItem="s81-MP-KeR" secondAttribute="centerX" id="uvh-bG-Chx"/>
+                            <constraint firstItem="uXb-y0-zEd" firstAttribute="bottom" secondItem="954-em-fTw" secondAttribute="bottom" id="zuY-RP-3hD"/>
+                            <constraint firstItem="uXb-y0-zEd" firstAttribute="trailing" secondItem="954-em-fTw" secondAttribute="trailing" id="zv8-6d-Weo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="954-em-fTw"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aqt-kf-nJy"/>
+                    <navigationItem key="navigationItem" title="Mission Control" id="aqt-kf-nJy"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="414" height="1054"/>
                     <connections>
-                        <outlet property="comingSoonLabel" destination="agE-au-LzC" id="sUS-0f-oXu"/>
+                        <outlet property="missionControlCollectionView" destination="uXb-y0-zEd" id="gyY-TR-iwL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4V-VY-hu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1371.0144927536232" y="170.75892857142856"/>
+            <point key="canvasLocation" x="2339" y="213"/>
+        </scene>
+        <!--AdventurePassport-->
+        <scene sceneID="qm8-Gk-sMd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AdventurePassport" id="3Nj-DO-1hz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WuU-K8-u8U"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQM-v1-LbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2947" y="162"/>
+        </scene>
+        <!--ChangeAvatar-->
+        <scene sceneID="elv-vb-FfF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChangeAvatar" id="WMO-Sg-ACl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8V4-zw-4PO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HMk-2m-Rt4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2969" y="248"/>
+        </scene>
+        <!--TrophyRoom-->
+        <scene sceneID="r9u-AC-ZWn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TrophyRoom" id="HDf-Ht-pdb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Q0E-jQ-gPM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySw-ve-YUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2880" y="478"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2020-03-09 at 8.33.39 PM" width="914" height="715"/>
+        <image name="Accept mission" width="375" height="189"/>
+        <image name="Avatar" width="375" height="220"/>
+        <image name="Passport" width="375" height="291"/>
+        <image name="Story squad" width="375" height="105"/>
+        <image name="Trophy" width="375" height="190"/>
     </resources>
 </document>
