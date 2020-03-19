@@ -43,7 +43,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Accept mission" translatesAutoresizingMaskIntoConstraints="NO" id="1ld-UJ-Kcx">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AcceptMission" translatesAutoresizingMaskIntoConstraints="NO" id="1ld-UJ-Kcx">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                                 </imageView>
                                             </subviews>
@@ -67,7 +67,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Passport" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-k6-jYa">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AdventurePassport" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-k6-jYa">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                                 </imageView>
                                             </subviews>
@@ -91,7 +91,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="H8P-G6-9eX">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChangeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="H8P-G6-9eX">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                                 </imageView>
                                             </subviews>
@@ -115,7 +115,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trophy" translatesAutoresizingMaskIntoConstraints="NO" id="Myn-8t-n47">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrophyRoom" translatesAutoresizingMaskIntoConstraints="NO" id="Myn-8t-n47">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                                 </imageView>
                                             </subviews>
@@ -197,10 +197,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Accept mission" width="375" height="189"/>
-        <image name="Avatar" width="375" height="220"/>
-        <image name="Passport" width="375" height="291"/>
+        <image name="AcceptMission" width="414" height="205"/>
+        <image name="AdventurePassport" width="414" height="205"/>
+        <image name="ChangeAvatar" width="414" height="205"/>
         <image name="Story squad" width="375" height="105"/>
-        <image name="Trophy" width="375" height="190"/>
+        <image name="TrophyRoom" width="414" height="205"/>
     </resources>
 </document>
