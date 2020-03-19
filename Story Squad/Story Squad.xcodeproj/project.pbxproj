@@ -15,6 +15,12 @@
 		4F3EB044242312B700C858B8 /* AdventurePassport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3EB043242312B700C858B8 /* AdventurePassport.storyboard */; };
 		4F3EB0462423132600C858B8 /* ChangeAvatar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3EB0452423132600C858B8 /* ChangeAvatar.storyboard */; };
 		4F3EB0482423133300C858B8 /* TrophyRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3EB0472423133300C858B8 /* TrophyRoom.storyboard */; };
+		4F3EB04A24232A7500C858B8 /* Read.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3EB04924232A7500C858B8 /* Read.storyboard */; };
+		4F3EB04C24232A8000C858B8 /* Write.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3EB04B24232A8000C858B8 /* Write.storyboard */; };
+		4F3EB04E24232A8900C858B8 /* Draw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3EB04D24232A8900C858B8 /* Draw.storyboard */; };
+		4F3EB05224232BD000C858B8 /* ReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05124232BD000C858B8 /* ReadCell.swift */; };
+		4F3EB05424232BDD00C858B8 /* WriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05324232BDD00C858B8 /* WriteCell.swift */; };
+		4F3EB05624232BEB00C858B8 /* DrawCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05524232BEB00C858B8 /* DrawCell.swift */; };
 		4F477121240F590A0067F66B /* FamilySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F477120240F590A0067F66B /* FamilySettingsViewController.swift */; };
 		4F67B1B124187AED00FD7E07 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67B1B024187AED00FD7E07 /* LogInViewController.swift */; };
 		4F83116F241736790098DEFA /* ManageSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F83116E241736790098DEFA /* ManageSubscription.storyboard */; };
@@ -105,6 +111,12 @@
 		4F3EB043242312B700C858B8 /* AdventurePassport.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdventurePassport.storyboard; sourceTree = "<group>"; };
 		4F3EB0452423132600C858B8 /* ChangeAvatar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeAvatar.storyboard; sourceTree = "<group>"; };
 		4F3EB0472423133300C858B8 /* TrophyRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrophyRoom.storyboard; sourceTree = "<group>"; };
+		4F3EB04924232A7500C858B8 /* Read.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Read.storyboard; sourceTree = "<group>"; };
+		4F3EB04B24232A8000C858B8 /* Write.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Write.storyboard; sourceTree = "<group>"; };
+		4F3EB04D24232A8900C858B8 /* Draw.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Draw.storyboard; sourceTree = "<group>"; };
+		4F3EB05124232BD000C858B8 /* ReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadCell.swift; sourceTree = "<group>"; };
+		4F3EB05324232BDD00C858B8 /* WriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCell.swift; sourceTree = "<group>"; };
+		4F3EB05524232BEB00C858B8 /* DrawCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawCell.swift; sourceTree = "<group>"; };
 		4F477120240F590A0067F66B /* FamilySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySettingsViewController.swift; sourceTree = "<group>"; };
 		4F67B1B024187AED00FD7E07 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		4F83116E241736790098DEFA /* ManageSubscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageSubscription.storyboard; sourceTree = "<group>"; };
@@ -200,6 +212,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F3EB04F24232B0B00C858B8 /* ChildDashboardCells */ = {
+			isa = PBXGroup;
+			children = (
+				4F3EB0392423050D00C858B8 /* AcceptMissionCell.swift */,
+				4F3EB03B2423054800C858B8 /* AdventurePassportCell.swift */,
+				4F3EB03D2423056700C858B8 /* ChangeYourAvatarCell.swift */,
+				4F3EB03F2423058A00C858B8 /* TrophyRoomCell.swift */,
+			);
+			path = ChildDashboardCells;
+			sourceTree = "<group>";
+		};
+		4F3EB05024232B9800C858B8 /* AcceptMissionCells */ = {
+			isa = PBXGroup;
+			children = (
+				4F3EB05124232BD000C858B8 /* ReadCell.swift */,
+				4F3EB05324232BDD00C858B8 /* WriteCell.swift */,
+				4F3EB05524232BEB00C858B8 /* DrawCell.swift */,
+			);
+			path = AcceptMissionCells;
+			sourceTree = "<group>";
+		};
 		4FD90F2623FF361900BC4702 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,10 +269,8 @@
 				4FD90F4623FF7A5C00BC4702 /* ChildProfileCollectionViewCell.swift */,
 				4FFA57EB2416C60C00655C9E /* ChildCollectionViewCell.swift */,
 				4FFA57EC2416C60C00655C9E /* ChildCollectionViewCell.xib */,
-				4F3EB0392423050D00C858B8 /* AcceptMissionCell.swift */,
-				4F3EB03B2423054800C858B8 /* AdventurePassportCell.swift */,
-				4F3EB03D2423056700C858B8 /* ChangeYourAvatarCell.swift */,
-				4F3EB03F2423058A00C858B8 /* TrophyRoomCell.swift */,
+				4F3EB05024232B9800C858B8 /* AcceptMissionCells */,
+				4F3EB04F24232B0B00C858B8 /* ChildDashboardCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -339,20 +370,23 @@
 		FA85E85823FEF38D008637E0 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				4F3EB0412423129B00C858B8 /* AcceptMission.storyboard */,
 				4FF0F5FD2405CB2F00587C7B /* AddChildFromDashboard.storyboard */,
+				4F3EB043242312B700C858B8 /* AdventurePassport.storyboard */,
+				4F3EB0452423132600C858B8 /* ChangeAvatar.storyboard */,
 				4FF0F5FB2405C9DD00587C7B /* ChildDashboard.storyboard */,
+				E398E646240F196900CEB26B /* ChildSettings.storyboard */,
+				DD7A36F2240DC0E000F5B246 /* Dashboard.storyboard */,
+				E3C82628240ED82200055A77 /* FamilySettings.storyboard */,
 				4FF0F5ED2404A7A100587C7B /* Help.storyboard */,
 				FA85E84F23FEF35E008637E0 /* LaunchScreen.storyboard */,
 				FA85E84A23FEF35C008637E0 /* Main.storyboard */,
-				DD7A36F2240DC0E000F5B246 /* Dashboard.storyboard */,
-				E3C82628240ED82200055A77 /* FamilySettings.storyboard */,
-				E398E646240F196900CEB26B /* ChildSettings.storyboard */,
 				E35F0402241292940099F4A1 /* ManageChildProfiles.storyboard */,
 				4F83116E241736790098DEFA /* ManageSubscription.storyboard */,
-				4F3EB0412423129B00C858B8 /* AcceptMission.storyboard */,
-				4F3EB043242312B700C858B8 /* AdventurePassport.storyboard */,
-				4F3EB0452423132600C858B8 /* ChangeAvatar.storyboard */,
 				4F3EB0472423133300C858B8 /* TrophyRoom.storyboard */,
+				4F3EB04924232A7500C858B8 /* Read.storyboard */,
+				4F3EB04B24232A8000C858B8 /* Write.storyboard */,
+				4F3EB04D24232A8900C858B8 /* Draw.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -482,12 +516,14 @@
 				E398E647240F196900CEB26B /* ChildSettings.storyboard in Resources */,
 				4FD90F4123FF6AEF00BC4702 /* OpenSans-BoldItalic.ttf in Resources */,
 				FA85E84E23FEF35E008637E0 /* Assets.xcassets in Resources */,
+				4F3EB04C24232A8000C858B8 /* Write.storyboard in Resources */,
 				4FD90F3F23FF6AEF00BC4702 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				4FF0F653240DD01600587C7B /* SIL Open Font License.txt in Resources */,
 				4FF0F5FC2405C9DD00587C7B /* ChildDashboard.storyboard in Resources */,
 				E3C82629240ED82200055A77 /* FamilySettings.storyboard in Resources */,
 				DD7A36F3240DC0E000F5B246 /* Dashboard.storyboard in Resources */,
 				DDD7D24D23FF179900C9DF2B /* README.md in Resources */,
+				4F3EB04A24232A7500C858B8 /* Read.storyboard in Resources */,
 				FA85E84C23FEF35C008637E0 /* Main.storyboard in Resources */,
 				4FD90F3A23FF6AEF00BC4702 /* Apache License.txt in Resources */,
 				4F83116F241736790098DEFA /* ManageSubscription.storyboard in Resources */,
@@ -502,6 +538,7 @@
 				4FF0F654240DD01600587C7B /* Nunito-ExtraBold.ttf in Resources */,
 				4F3EB0422423129B00C858B8 /* AcceptMission.storyboard in Resources */,
 				4FF0F5EE2404A7A100587C7B /* Help.storyboard in Resources */,
+				4F3EB04E24232A8900C858B8 /* Draw.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +609,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6EC42A241EDD5C00F4C79F /* Bearer.swift in Sources */,
+				4F3EB05224232BD000C858B8 /* ReadCell.swift in Sources */,
 				4FF0F62524071B4800587C7B /* NetworkingController.swift in Sources */,
 				4FFA57E224106CF300655C9E /* GradeTextField.swift in Sources */,
 				DD71FD0B2406D9930032EBB5 /* Parent+Convenience.swift in Sources */,
@@ -589,9 +627,11 @@
 				4F477121240F590A0067F66B /* FamilySettingsViewController.swift in Sources */,
 				DD71FD0F2406D9C10032EBB5 /* ParentRepresentation.swift in Sources */,
 				DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */,
+				4F3EB05424232BDD00C858B8 /* WriteCell.swift in Sources */,
 				4FFA57E62410827B00655C9E /* PaddedTextField.swift in Sources */,
 				FA85E88223FF3558008637E0 /* DashboardViewController.swift in Sources */,
 				4F3EB0402423058A00C858B8 /* TrophyRoomCell.swift in Sources */,
+				4F3EB05624232BEB00C858B8 /* DrawCell.swift in Sources */,
 				4FF0F5F42405C4F900587C7B /* AddChildViewController.swift in Sources */,
 				FAE3B63D24228F0900E26C6F /* HeaderNames.swift in Sources */,
 				FAB94F9624045C4500905211 /* HamburgerMenuTableViewController.swift in Sources */,
