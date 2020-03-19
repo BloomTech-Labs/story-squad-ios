@@ -23,6 +23,7 @@
 		4F3EB05624232BEB00C858B8 /* DrawCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05524232BEB00C858B8 /* DrawCell.swift */; };
 		4F3EB05A24232F3700C858B8 /* AcceptMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05924232F3700C858B8 /* AcceptMission.swift */; };
 		4F3EB05C2423479500C858B8 /* ReadPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05B2423479500C858B8 /* ReadPageViewController.swift */; };
+		4F3EB05E242349D100C858B8 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05D242349D100C858B8 /* PageContentViewController.swift */; };
 		4F477121240F590A0067F66B /* FamilySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F477120240F590A0067F66B /* FamilySettingsViewController.swift */; };
 		4F67B1B124187AED00FD7E07 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67B1B024187AED00FD7E07 /* LogInViewController.swift */; };
 		4F83116F241736790098DEFA /* ManageSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F83116E241736790098DEFA /* ManageSubscription.storyboard */; };
@@ -121,6 +122,7 @@
 		4F3EB05524232BEB00C858B8 /* DrawCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawCell.swift; sourceTree = "<group>"; };
 		4F3EB05924232F3700C858B8 /* AcceptMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptMission.swift; sourceTree = "<group>"; };
 		4F3EB05B2423479500C858B8 /* ReadPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadPageViewController.swift; sourceTree = "<group>"; };
+		4F3EB05D242349D100C858B8 /* PageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 		4F477120240F590A0067F66B /* FamilySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySettingsViewController.swift; sourceTree = "<group>"; };
 		4F67B1B024187AED00FD7E07 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		4F83116E241736790098DEFA /* ManageSubscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageSubscription.storyboard; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				4F67B1B024187AED00FD7E07 /* LogInViewController.swift */,
 				4F3EB05924232F3700C858B8 /* AcceptMission.swift */,
 				4F3EB05B2423479500C858B8 /* ReadPageViewController.swift */,
+				4F3EB05D242349D100C858B8 /* PageContentViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				4FFA57E224106CF300655C9E /* GradeTextField.swift in Sources */,
 				DD71FD0B2406D9930032EBB5 /* Parent+Convenience.swift in Sources */,
 				4F831173241739580098DEFA /* ManageSubscriptionViewController.swift in Sources */,
+				4F3EB05E242349D100C858B8 /* PageContentViewController.swift in Sources */,
 				DD71FD072406D5D80032EBB5 /* CoreDataStack.swift in Sources */,
 				4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */,
 				4FF0F6022405CE7900587C7B /* ParentAccountMainVC.swift in Sources */,

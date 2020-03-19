@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5an-r2-RHH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kDZ-ax-vg9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -15,18 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Read-->
-        <scene sceneID="Okc-zH-yIL">
-            <objects>
-                <pageViewController storyboardIdentifier="Read" autoresizesArchivedViewToFullSize="NO" title="Read" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="5an-r2-RHH" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TJb-BO-3NS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-442" y="7"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="dkH-Jh-Mx8">
             <objects>
-                <viewController id="kDZ-ax-vg9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Page0ViewController" id="kDZ-ax-vg9" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rYC-Kz-hYr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,10 +32,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmO-m4-cTv">
                                 <rect key="frame" x="0.0" y="120" width="414" height="648"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="8KX-Cr-Oz7">
-                                        <rect key="frame" x="8" y="0.0" width="398" height="669"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="8KX-Cr-Oz7">
+                                        <rect key="frame" x="8" y="0.0" width="398" height="640"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
@@ -51,6 +42,12 @@
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8KX-Cr-Oz7" secondAttribute="bottom" constant="8" id="2aj-xG-Wlb"/>
+                                    <constraint firstItem="8KX-Cr-Oz7" firstAttribute="leading" secondItem="vmO-m4-cTv" secondAttribute="leading" constant="8" id="Flm-l1-1zX"/>
+                                    <constraint firstItem="8KX-Cr-Oz7" firstAttribute="top" secondItem="vmO-m4-cTv" secondAttribute="top" id="XR4-Br-De4"/>
+                                    <constraint firstAttribute="trailing" secondItem="8KX-Cr-Oz7" secondAttribute="trailing" constant="8" id="aKn-mH-Rff"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom &amp; Boom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU0-mm-Ira">
                                 <rect key="frame" x="0.0" y="60" width="414" height="52"/>
@@ -59,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zU0-mm-Ira" firstAttribute="top" secondItem="Uux-Nv-46i" secondAttribute="top" constant="16" id="4nJ-bN-fzp"/>
                             <constraint firstItem="vmO-m4-cTv" firstAttribute="leading" secondItem="Uux-Nv-46i" secondAttribute="leading" id="8os-sC-y15"/>
@@ -83,7 +80,7 @@
         <!--View Controller-->
         <scene sceneID="7cd-ov-xGy">
             <objects>
-                <viewController id="m3Z-t3-aIt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Page1ViewController" id="m3Z-t3-aIt" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xw6-hM-WIP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,10 +94,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7f-aM-nbO">
                                 <rect key="frame" x="0.0" y="120" width="414" height="648"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="bU2-zi-Cqd">
-                                        <rect key="frame" x="8" y="0.0" width="398" height="669"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="bU2-zi-Cqd">
+                                        <rect key="frame" x="8" y="0.0" width="398" height="640"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
@@ -108,6 +104,12 @@
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bU2-zi-Cqd" secondAttribute="bottom" constant="8" id="BMN-mh-KDU"/>
+                                    <constraint firstItem="bU2-zi-Cqd" firstAttribute="top" secondItem="a7f-aM-nbO" secondAttribute="top" id="Gx9-sv-NUW"/>
+                                    <constraint firstAttribute="trailing" secondItem="bU2-zi-Cqd" secondAttribute="trailing" constant="8" id="O7d-yg-G43"/>
+                                    <constraint firstItem="bU2-zi-Cqd" firstAttribute="leading" secondItem="a7f-aM-nbO" secondAttribute="leading" constant="8" id="moc-nf-QRM"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom &amp; Boom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZI1-6J-ijs">
                                 <rect key="frame" x="0.0" y="60" width="414" height="52"/>
@@ -116,7 +118,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="k9D-uf-ZBP" firstAttribute="trailing" secondItem="ml0-Vn-jcR" secondAttribute="trailing" constant="20" id="0sZ-LW-dJz"/>
                             <constraint firstItem="a7f-aM-nbO" firstAttribute="leading" secondItem="k9D-uf-ZBP" secondAttribute="leading" id="5KY-bP-9EA"/>
@@ -135,12 +137,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njy-s2-YcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="7"/>
+            <point key="canvasLocation" x="1069.5652173913045" y="6.6964285714285712"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h8c-wE-j8d">
             <objects>
-                <viewController id="Tyd-Bc-4Ot" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Page2ViewController" id="Tyd-Bc-4Ot" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9x6-US-zIk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,10 +156,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgB-Oh-bmm">
                                 <rect key="frame" x="0.0" y="120" width="414" height="648"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-DQ-3Hn">
-                                        <rect key="frame" x="8" y="0.0" width="398" height="669"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-DQ-3Hn">
+                                        <rect key="frame" x="8" y="0.0" width="398" height="640"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
@@ -165,6 +166,12 @@
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1tE-DQ-3Hn" secondAttribute="trailing" constant="8" id="1Vr-kC-krM"/>
+                                    <constraint firstItem="1tE-DQ-3Hn" firstAttribute="top" secondItem="rgB-Oh-bmm" secondAttribute="top" id="3KI-w8-e2i"/>
+                                    <constraint firstItem="1tE-DQ-3Hn" firstAttribute="leading" secondItem="rgB-Oh-bmm" secondAttribute="leading" constant="8" id="9tk-kf-K2G"/>
+                                    <constraint firstAttribute="bottom" secondItem="1tE-DQ-3Hn" secondAttribute="bottom" constant="8" id="eef-SD-Acz"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom &amp; Boom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmC-nz-t26">
                                 <rect key="frame" x="0.0" y="60" width="414" height="52"/>
@@ -173,7 +180,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xnp-An-uIN" firstAttribute="bottom" secondItem="fMr-hN-37w" secondAttribute="bottom" id="3B6-tK-DCx"/>
                             <constraint firstItem="fMr-hN-37w" firstAttribute="trailing" secondItem="xnp-An-uIN" secondAttribute="trailing" constant="20" id="5T7-3e-axo"/>
@@ -192,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Jk-yN-NOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1758" y="5"/>
+            <point key="canvasLocation" x="1757.9710144927537" y="4.6875"/>
         </scene>
     </scenes>
 </document>
