@@ -28,7 +28,7 @@ class DashboardViewController: UIViewController {
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
         
         // Fetch for Children of correct Parent
-        let predicate = NSPredicate(format: "parent.id == %@", getParentID())
+        let predicate = NSPredicate(format: "parent.id == %i", parentUser?.id ?? 0)
         fetchRequest.predicate = predicate
         
         // Sort Children by Name
@@ -58,6 +58,7 @@ class DashboardViewController: UIViewController {
         
         updateViews()
         receiveDataFromSignup()
+//        updateParentInfo()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,20 +68,39 @@ class DashboardViewController: UIViewController {
     }
     
     // To receive the Parent and NetworkingController from the Tab Bar
-    func receiveDataFromSignup() {
+    private func receiveDataFromSignup() {
         guard let tabBar = tabBarController as? MainTabBarController else { return }
         
         self.parentUser = tabBar.parentUser
         self.networkingController = tabBar.networkingController
     }
     
-    // Get Parent's id as a string to fetch Children from CoreData
-    private func getParentID() -> String {
-        guard let parent = parentUser,
-            let id = parent.id else { return ""}
-        
-        return id
-    }
+//    private func updateParentInfo() {
+//
+//        guard let parentUser = parentUser else { return }
+//
+//        networkingController?.updateParentWithServer(parent: parentUser, completion: { (result) in
+//            do {
+//                let parent = try result.get()
+//                self.parentUser = parent
+//                print("\nUpdated Parent with Server")
+//
+//            } catch {
+//                NSLog("Couldn't update Parent with Server")
+//
+//                DispatchQueue.main.async {
+//                    self.showErrorAlert(errorTitle: "Sorry", errorMessage: "Couldn't reach server to update Family Account")
+//                }
+//            }
+//        })
+//    }
+//
+//    private func showErrorAlert(errorTitle: String, errorMessage: String) {
+//        let alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//
+//        self.present(alert, animated: true, completion: nil)
+//    }
     
     private func updateViews() {
         

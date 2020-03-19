@@ -11,19 +11,20 @@ import CoreData
 
 extension Parent {
     
-        var parentRepresentation: ParentRepresentation? {
-
-		// swiftlint:disable:next unused_declaration
-        guard let name = name,
-                let email = email,
-                let password = password,
-                let children = children else { return nil }
-//        return ParentRepresentation(name: name, password: password, email: email, children: children, id: id, pin: pin)
-            return nil
+    var parentRepresentation: ParentRepresentation? {
+        
+        // swiftlint:disable:next unused_declaration
+        guard let email = email else { return nil }
+//        let id = id,
+        //            let password = password,
+        //            let name = name,
+        //            let children = children
+        //        return ParentRepresentation(name: name, password: password, email: email, children: children, id: id, pin: pin)
+        return ParentRepresentation(id: id, email: email)
     }
     
     // MARK: CoreData Inititalizer
-    @discardableResult convenience init(name: String, id: String, email: String, password: String, pin: Int16, children: NSOrderedSet = [], context: NSManagedObjectContext) {
+    @discardableResult convenience init(name: String, id: Int16, email: String, password: String, pin: Int16, children: NSOrderedSet = [], context: NSManagedObjectContext) {
         self.init(context: context)
         
         self.name = name

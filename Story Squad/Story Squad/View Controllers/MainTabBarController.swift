@@ -16,11 +16,28 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = 1
-        // Do any additional setup after loading the view.
+        
+        updateParentInfo()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    private func updateParentInfo() {
+        
+        guard let parentUser = parentUser else { return }
+        
+        networkingController?.updateParentWithServer(parent: parentUser, completion: { (result) in
+            do {
+                let parent = try result.get()
+                self.parentUser = parent
+                print("\nUpdated Parent with Server")
+                
+            } catch {
+                NSLog("Couldn't update Parent with Server")
+            }
+        })
     }
     /*
     // MARK: - Navigation
