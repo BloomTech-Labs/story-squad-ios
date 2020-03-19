@@ -141,7 +141,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Bfd-jm-90V" firstAttribute="leading" secondItem="954-em-fTw" secondAttribute="leading" id="3ky-ey-TcE"/>
                             <constraint firstItem="Bfd-jm-90V" firstAttribute="top" secondItem="954-em-fTw" secondAttribute="top" id="KiM-Vf-md8"/>
