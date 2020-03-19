@@ -56,6 +56,10 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         setupChildCollectionView()
     }
     
+    @IBAction func logoutButtonTapped(_ sender: UIButton) {
+        
+    }
+    
     // Setup ChildCollectionView's Properties
     private func setupChildCollectionView() {
         childCollectionView.register(UINib.init(nibName: "ChildCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "childCollectionViewCellIdentifier")
