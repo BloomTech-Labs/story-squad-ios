@@ -22,8 +22,8 @@
 		4F3EB05424232BDD00C858B8 /* WriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05324232BDD00C858B8 /* WriteCell.swift */; };
 		4F3EB05624232BEB00C858B8 /* DrawCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05524232BEB00C858B8 /* DrawCell.swift */; };
 		4F3EB05A24232F3700C858B8 /* AcceptMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05924232F3700C858B8 /* AcceptMission.swift */; };
-		4F3EB05C2423479500C858B8 /* PagesContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05B2423479500C858B8 /* PagesContentVC.swift */; };
-		4F3EB05E242349D100C858B8 /* ReadStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB05D242349D100C858B8 /* ReadStoryViewController.swift */; };
+		4F3EB062242451DA00C858B8 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB061242451DA00C858B8 /* ReadViewController.swift */; };
+		4F3EB0642424525700C858B8 /* white_nights.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3EB0632424525700C858B8 /* white_nights.pdf */; };
 		4F477121240F590A0067F66B /* FamilySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F477120240F590A0067F66B /* FamilySettingsViewController.swift */; };
 		4F67B1B124187AED00FD7E07 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67B1B024187AED00FD7E07 /* LogInViewController.swift */; };
 		4F83116F241736790098DEFA /* ManageSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F83116E241736790098DEFA /* ManageSubscription.storyboard */; };
@@ -121,8 +121,8 @@
 		4F3EB05324232BDD00C858B8 /* WriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCell.swift; sourceTree = "<group>"; };
 		4F3EB05524232BEB00C858B8 /* DrawCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawCell.swift; sourceTree = "<group>"; };
 		4F3EB05924232F3700C858B8 /* AcceptMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptMission.swift; sourceTree = "<group>"; };
-		4F3EB05B2423479500C858B8 /* PagesContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesContentVC.swift; sourceTree = "<group>"; };
-		4F3EB05D242349D100C858B8 /* ReadStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadStoryViewController.swift; sourceTree = "<group>"; };
+		4F3EB061242451DA00C858B8 /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
+		4F3EB0632424525700C858B8 /* white_nights.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = white_nights.pdf; sourceTree = "<group>"; };
 		4F477120240F590A0067F66B /* FamilySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySettingsViewController.swift; sourceTree = "<group>"; };
 		4F67B1B024187AED00FD7E07 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		4F83116E241736790098DEFA /* ManageSubscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageSubscription.storyboard; sourceTree = "<group>"; };
@@ -364,6 +364,7 @@
 				FAB94F97240469B200905211 /* Helper */,
 				4FD90F2623FF361900BC4702 /* Font */,
 				FA85E84D23FEF35E008637E0 /* Assets.xcassets */,
+				4F3EB0632424525700C858B8 /* white_nights.pdf */,
 				FA85E84423FEF35C008637E0 /* AppDelegate.swift */,
 				FA85E84623FEF35C008637E0 /* SceneDelegate.swift */,
 				FA85E85223FEF35E008637E0 /* Info.plist */,
@@ -420,8 +421,7 @@
 				4F831172241739580098DEFA /* ManageSubscriptionViewController.swift */,
 				4F67B1B024187AED00FD7E07 /* LogInViewController.swift */,
 				4F3EB05924232F3700C858B8 /* AcceptMission.swift */,
-				4F3EB05B2423479500C858B8 /* PagesContentVC.swift */,
-				4F3EB05D242349D100C858B8 /* ReadStoryViewController.swift */,
+				4F3EB061242451DA00C858B8 /* ReadViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -514,6 +514,7 @@
 				4FF0F5FE2405CB2F00587C7B /* AddChildFromDashboard.storyboard in Resources */,
 				4F3EB0482423133300C858B8 /* TrophyRoom.storyboard in Resources */,
 				4FD90F3C23FF6AEF00BC4702 /* OpenSans-LightItalic.ttf in Resources */,
+				4F3EB0642424525700C858B8 /* white_nights.pdf in Resources */,
 				4FD90F2A23FF361900BC4702 /* OFL.txt in Resources */,
 				4FF0F655240DD01600587C7B /* Nunito-Light.ttf in Resources */,
 				FA85E85123FEF35E008637E0 /* LaunchScreen.storyboard in Resources */,
@@ -623,7 +624,6 @@
 				4FFA57E224106CF300655C9E /* GradeTextField.swift in Sources */,
 				DD71FD0B2406D9930032EBB5 /* Parent+Convenience.swift in Sources */,
 				4F831173241739580098DEFA /* ManageSubscriptionViewController.swift in Sources */,
-				4F3EB05E242349D100C858B8 /* ReadStoryViewController.swift in Sources */,
 				DD71FD072406D5D80032EBB5 /* CoreDataStack.swift in Sources */,
 				4FF0F5F02404A7D200587C7B /* HelpViewController.swift in Sources */,
 				4FF0F6022405CE7900587C7B /* ParentAccountMainVC.swift in Sources */,
@@ -651,9 +651,9 @@
 				DD7A36F5240DC39E00F5B246 /* LogOutViewController.swift in Sources */,
 				FA6EC428241EDC9F00F4C79F /* HTTPMethod.swift in Sources */,
 				FAB94F9924046A3C00905211 /* SlideInTransition.swift in Sources */,
-				4F3EB05C2423479500C858B8 /* PagesContentVC.swift in Sources */,
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,
 				4F3EB03C2423054800C858B8 /* AdventurePassportCell.swift in Sources */,
+				4F3EB062242451DA00C858B8 /* ReadViewController.swift in Sources */,
 				FA9A34D52405FFB700A2F8FE /* CreditCardViewController.swift in Sources */,
 				4FF0F6002405CE5A00587C7B /* ChildDashboard.swift in Sources */,
 				4F3EB03A2423050D00C858B8 /* AcceptMissionCell.swift in Sources */,
