@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K4o-QS-sF0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,35 +24,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MH-k2-kIR">
-                                <rect key="frame" x="108" y="746" width="198" height="35"/>
-                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
-                                <state key="normal" title="Manage Subscription">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="V12-qT-Aud" kind="show" identifier="ManageSubscriptionSegue" id="sJ5-ik-055"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpj-Fg-7Lp">
-                                <rect key="frame" x="51.5" y="588" width="311" height="47"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="1A6-BM-83k"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="18"/>
-                                <state key="normal" title="Add a Child">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="14"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="pdR-UR-rMP" kind="show" identifier="toAddChildSegue" id="2s5-Je-WkY"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kjz-sm-LiH">
                                 <rect key="frame" x="0.0" y="142" width="414" height="378"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,20 +60,67 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="woo-wx-Oty">
+                                <rect key="frame" x="50" y="590" width="314" height="193"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpj-Fg-7Lp">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="47"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="1A6-BM-83k"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="18"/>
+                                        <state key="normal" title="Add a Child">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="pdR-UR-rMP" kind="show" identifier="toAddChildSegue" id="2s5-Je-WkY"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-6F-3Lx">
+                                        <rect key="frame" x="0.0" y="123" width="314" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MH-k2-kIR">
+                                                <rect key="frame" x="70.5" y="0.0" width="173" height="35"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                <state key="normal" title="Manage Subscription">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="V12-qT-Aud" kind="show" identifier="ManageSubscriptionSegue" id="sJ5-ik-055"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeP-3e-f8B">
+                                                <rect key="frame" x="123.5" y="35" width="67" height="35"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                <state key="normal" title="Log Out">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="logoutButtonTapped:" destination="ch1-6F-6PW" eventType="touchUpInside" id="k4M-1N-Btm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gpj-Fg-7Lp" firstAttribute="top" secondItem="Esg-lb-SU9" secondAttribute="top" constant="500" id="8r4-jz-UFD"/>
+                            <constraint firstItem="Esg-lb-SU9" firstAttribute="trailing" secondItem="woo-wx-Oty" secondAttribute="trailing" constant="50" id="6nP-c1-LFw"/>
+                            <constraint firstItem="Esg-lb-SU9" firstAttribute="bottom" secondItem="woo-wx-Oty" secondAttribute="bottom" constant="30" id="GIX-xo-DOS"/>
                             <constraint firstItem="Kjz-sm-LiH" firstAttribute="trailing" secondItem="Esg-lb-SU9" secondAttribute="trailing" id="K10-wf-Zlq"/>
                             <constraint firstItem="Kjz-sm-LiH" firstAttribute="top" secondItem="Esg-lb-SU9" secondAttribute="top" constant="54" id="QNS-72-kcX"/>
-                            <constraint firstItem="Esg-lb-SU9" firstAttribute="bottom" secondItem="9MH-k2-kIR" secondAttribute="bottom" constant="32" id="UC3-rp-bZe"/>
-                            <constraint firstItem="9MH-k2-kIR" firstAttribute="leading" secondItem="Esg-lb-SU9" secondAttribute="leading" constant="108" id="azS-bX-IWf"/>
+                            <constraint firstItem="woo-wx-Oty" firstAttribute="leading" secondItem="Esg-lb-SU9" secondAttribute="leading" constant="50" id="Ru2-fA-n1m"/>
                             <constraint firstItem="Kjz-sm-LiH" firstAttribute="leading" secondItem="Esg-lb-SU9" secondAttribute="leading" id="ilV-WJ-hdV"/>
-                            <constraint firstItem="Esg-lb-SU9" firstAttribute="trailing" secondItem="9MH-k2-kIR" secondAttribute="trailing" constant="108" id="nJS-Yt-OOf"/>
-                            <constraint firstItem="Esg-lb-SU9" firstAttribute="trailing" secondItem="gpj-Fg-7Lp" secondAttribute="trailing" constant="51.5" id="p2M-IA-bHJ"/>
                             <constraint firstItem="Kjz-sm-LiH" firstAttribute="centerY" secondItem="DJn-h9-hbZ" secondAttribute="centerY" constant="-117" id="u4u-mY-Rgn"/>
                             <constraint firstItem="Kjz-sm-LiH" firstAttribute="centerX" secondItem="DJn-h9-hbZ" secondAttribute="centerX" id="wX4-gn-7OW"/>
-                            <constraint firstItem="gpj-Fg-7Lp" firstAttribute="leading" secondItem="Esg-lb-SU9" secondAttribute="leading" constant="51.5" id="xS6-Hp-fbc"/>
+                            <constraint firstItem="woo-wx-Oty" firstAttribute="top" secondItem="Kjz-sm-LiH" secondAttribute="bottom" constant="70" id="xRS-28-4bd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Esg-lb-SU9"/>
                     </view>

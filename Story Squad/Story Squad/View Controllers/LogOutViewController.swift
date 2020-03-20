@@ -27,8 +27,9 @@ class LogOutViewController: UIViewController {
     }
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
-        
+
     }
+    
     // To receive the Parent and NetworkingController from the Tab Bar
     func receiveDataFromSignup() {
         guard let tabBar = tabBarController as? MainTabBarController else { return }
