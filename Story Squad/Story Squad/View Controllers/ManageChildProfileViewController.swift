@@ -58,7 +58,7 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
     }
     
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
-        
+        handleSignOut()
     }
     
     // Setup ChildCollectionView's Properties
@@ -83,6 +83,25 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         
         self.parentUser = tabBar.parentUser
         self.networkingController = tabBar.networkingController
+    }
+    
+    func handleSignOut() {
+        
+        networkingController?.logOut()
+        
+//        // The name for UIStoryboard is the file name of the storyboard without the .storyboard extension
+//        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//        //swiftlint:disable:next force_cast
+//        let loginVC = mainStoryboard.instantiateViewController(identifier: "LoginVCStoryboard") as! LogInViewController
+//        self.navigationController?.pushViewController(loginVC, animated: true)
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    private func updateViews() {
+        
+        
     }
     
     // MARK: - UICollectionView Delegates and DataSource Methods

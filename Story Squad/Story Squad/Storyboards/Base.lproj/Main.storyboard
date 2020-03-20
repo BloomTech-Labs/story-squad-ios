@@ -236,7 +236,7 @@
                         <outlet property="pinTextField" destination="f56-Ub-K6a" id="8Wr-xL-FMG"/>
                         <outlet property="signinButton" destination="Rwy-Tz-PqJ" id="PEy-TF-bCf"/>
                         <outlet property="storySquadLabel" destination="OGc-Ql-RIf" id="2x3-E4-2rl"/>
-                        <segue destination="zsa-An-dBu" kind="show" identifier="ShowTabBarSegue" id="5fd-yD-UrO"/>
+                        <segue destination="zsa-An-dBu" kind="presentation" identifier="ShowTabBarSegue" modalPresentationStyle="fullScreen" id="5fd-yD-UrO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caO-dC-y9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -395,7 +395,7 @@
                         <outlet property="forgotPasswordButton" destination="UZV-dh-9j8" id="ixF-8g-NXA"/>
                         <outlet property="passwordTextField" destination="Xe3-ye-ZKe" id="Wiu-rV-Nut"/>
                         <outlet property="storySquadLabel" destination="R9j-Gv-76L" id="u6S-hk-tZu"/>
-                        <segue destination="zsa-An-dBu" kind="show" identifier="ShowTabBarFromLoginSegue" id="Dxv-Gs-sEA"/>
+                        <segue destination="zsa-An-dBu" kind="presentation" identifier="ShowTabBarFromLoginSegue" modalPresentationStyle="fullScreen" id="Dxv-Gs-sEA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5D6-Ra-im7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
