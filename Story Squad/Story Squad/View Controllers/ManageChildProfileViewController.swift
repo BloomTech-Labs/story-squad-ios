@@ -52,6 +52,7 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateViews()
         receiveDataFromSignup()
         setupChildCollectionView()
     }

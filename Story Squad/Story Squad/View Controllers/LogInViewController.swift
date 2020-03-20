@@ -61,14 +61,16 @@ class LogInViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         
-                        if let parent = self.networkingController.parentUser {
-                            
+//                        if let parent = self.networkingController.parentUser {
+                        
+                            let parent = self.networkingController.parentUser
                             self.parentUser = parent
                             self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
-                        } else {
-                            self.showErrorAlert(errorTitle: "Oops!", errorMessage: "Couldn't get all necessary data. Please try again")
-                            NSLog("Couldn't get response from server.")
-                        }
+                        
+//                        } else {
+//                            self.showErrorAlert(errorTitle: "Oops!", errorMessage: "Couldn't get all necessary data. Please try again")
+//                            NSLog("Couldn't get response from server.")
+//                        }
                     }
                 } catch {
                     DispatchQueue.main.async {

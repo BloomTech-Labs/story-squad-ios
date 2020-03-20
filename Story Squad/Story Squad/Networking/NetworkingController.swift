@@ -22,6 +22,11 @@ class NetworkingController {
     var parentBearer: Bearer?
     var childBearer: Bearer?
     
+    func logOut() {
+        parentBearer = nil
+        childBearer = nil
+    }
+    
     // MARK: - Create Parent using Server
     func updateParentWithServer(parent: Parent, completion: @escaping(Result<Parent?, NetworkingError>) -> Void) {
         
@@ -378,12 +383,12 @@ class NetworkingController {
                 // Either way, assigns managed object to self.parentUser
                 // (Object is fetched/created on main context so safe to use in
                 // view controllers
-                self.fetchOrCreateParent(with: email, password: password)
+                self.fetchOrCreateParent(with: email, password: password) {
                 
-                // Return the Bearer
-                completion(.success(self.parentBearer))
-                return
-                
+                    // Return the Bearer
+                    completion(.success(self.parentBearer))
+                }
+            
             } catch {
                 print("Error decoding: \(error)")
                 completion(.failure(.badDecode))
@@ -395,7 +400,7 @@ class NetworkingController {
     // MARK: - Parent CRUD Methods
     
     // Create Parent
-    func createParent(name: String, id: Int16, email: String, password: String, pin: Int16) {
+    func createParent(name: String, id: Int16, email: String, password: String, pin: Int16, completion: @escaping(() -> Void ) = {}) {
         
         DispatchQueue.main.async {
             let moc = CoreDataStack.shared.mainContext
@@ -403,6 +408,7 @@ class NetworkingController {
             
             // Saving to CoreData
             CoreDataStack.shared.save(context: moc)
+            completion()
         }
     }
     
@@ -590,7 +596,7 @@ class NetworkingController {
         return parentUser
     }
     
-    func fetchOrCreateParent(with email: String, password: String) {
+    func fetchOrCreateParent(with email: String, password: String, completion: @escaping(() -> Void) = {}) {
         
         DispatchQueue.main.async {
             var parent: Parent?
@@ -601,15 +607,18 @@ class NetworkingController {
             do {
                 parent = try moc.fetch(fetchRequest).first
             } catch {
+                NSLog("Parent wasn't fetched from CoreData")
+                completion()
                 // handle the fetch error
             }
             
             if let parent = parent {
                 self.parentUser = parent
+                completion()
             } else {
                 let temporaryID = Int16.random(in: 0..<1_000)
                 let temporaryPIN = Int16.random(in: 0..<1_000)
-                self.createParent(name: "", id: temporaryID, email: email, password: password, pin: temporaryPIN)
+                self.createParent(name: "", id: temporaryID, email: email, password: password, pin: temporaryPIN, completion: completion)
             }
         }
     }
