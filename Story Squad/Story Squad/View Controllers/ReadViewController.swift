@@ -11,14 +11,41 @@ import PDFKit
 
 class ReadViewController: UIViewController {
 
-    @IBOutlet weak var pdfView: UIView!
+    @IBOutlet weak var pdfView: PDFView!
+    
+    @IBOutlet weak var pageControl: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupPDFView()
+        loadPDF()
 
-        // Do any additional setup after loading the view.
+        let totalPages = pdfView.document?.pageCount
+        self.pageControl.currentPage = 0
+        let dotsCount = 5
+        if totalPages! < dotsCount {
+        self.pageControl.numberOfPages = totalPages!
+            } else {
+        self.pageControl.numberOfPages = dotsCount
+            }
+        self.pageControl.currentPageIndicatorTintColor = UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1)
+        
     }
 
+    func setupPDFView() {
+        
+        pdfView.displayDirection = .horizontal
+        pdfView.usePageViewController(true)
+        pdfView.pageBreakMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        pdfView.autoScales = true
+    }
+    
+    func loadPDF() {
+        guard let path = Bundle.main.url(forResource: "white_nights", withExtension: "pdf") else { return }
+        pdfView.document = PDFDocument(url: path)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -30,3 +57,4 @@ class ReadViewController: UIViewController {
     */
 
 }
+

@@ -10,9 +10,6 @@
         <array key="Bangers.ttf">
             <string>Bangers-Regular</string>
         </array>
-        <array key="Nunito-Regular.ttf">
-            <string>Nunito-Regular</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Read View Controller-->
@@ -30,14 +27,14 @@
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom &amp; Boom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU0-mm-Ira">
-                                <rect key="frame" x="0.0" y="60" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="60" width="414" height="51.5"/>
                                 <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="48"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZO1-2U-093" userLabel="PDFView">
-                                <rect key="frame" x="8" y="124" width="398" height="644"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZO1-2U-093" userLabel="PDFView" customClass="PDFView">
+                                <rect key="frame" x="8" y="119.5" width="398" height="648.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,85 +54,13 @@
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="pdfView" destination="ZO1-2U-093" id="ElL-rx-AcQ"/>
+                        <outlet property="pageControl" destination="V7A-01-BwY" id="y72-8z-zqq"/>
+                        <outlet property="pdfView" destination="ZO1-2U-093" id="0YU-kA-hxf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aj9-iE-liC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="373.91304347826087" y="4.6875"/>
-        </scene>
-        <!--Read Story View Controller-->
-        <scene sceneID="tmR-QG-Dkm">
-            <objects>
-                <viewController storyboardIdentifier="Read" id="fK0-zL-yPx" customClass="ReadStoryViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Eza-QV-Og6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-CY-BeK">
-                                <rect key="frame" x="20" y="776" width="374" height="37"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="pageIndicatorTintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6N1-2C-sCT">
-                                <rect key="frame" x="0.0" y="119.5" width="414" height="648.5"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="tkO-pB-DGR">
-                                        <rect key="frame" x="8" y="0.0" width="398" height="640.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="tkO-pB-DGR" firstAttribute="top" secondItem="6N1-2C-sCT" secondAttribute="top" id="T2A-XB-9dy"/>
-                                    <constraint firstAttribute="trailing" secondItem="tkO-pB-DGR" secondAttribute="trailing" constant="8" id="ZCC-en-LCT"/>
-                                    <constraint firstAttribute="bottom" secondItem="tkO-pB-DGR" secondAttribute="bottom" constant="8" id="mV0-X1-qZ5"/>
-                                    <constraint firstItem="tkO-pB-DGR" firstAttribute="leading" secondItem="6N1-2C-sCT" secondAttribute="leading" constant="8" id="qdH-1F-cXE"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom &amp; Boom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1D-Kq-5wO">
-                                <rect key="frame" x="0.0" y="60" width="414" height="51.5"/>
-                                <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="48"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#/#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhg-Kr-qTR">
-                                <rect key="frame" x="261" y="783" width="120" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="6N1-2C-sCT" firstAttribute="leading" secondItem="wGq-1p-quL" secondAttribute="leading" id="4bf-q7-q5J"/>
-                            <constraint firstItem="6N1-2C-sCT" firstAttribute="top" secondItem="G1D-Kq-5wO" secondAttribute="bottom" constant="8" id="Bc5-FA-bhU"/>
-                            <constraint firstItem="AtV-CY-BeK" firstAttribute="bottom" secondItem="wGq-1p-quL" secondAttribute="bottom" id="JiK-qa-RJj"/>
-                            <constraint firstItem="6N1-2C-sCT" firstAttribute="trailing" secondItem="wGq-1p-quL" secondAttribute="trailing" id="KEW-4m-PH4"/>
-                            <constraint firstItem="AtV-CY-BeK" firstAttribute="top" secondItem="6N1-2C-sCT" secondAttribute="bottom" constant="8" id="L3J-Qd-NL6"/>
-                            <constraint firstItem="G1D-Kq-5wO" firstAttribute="top" secondItem="wGq-1p-quL" secondAttribute="top" constant="16" id="OCb-BV-I8K"/>
-                            <constraint firstItem="AtV-CY-BeK" firstAttribute="leading" secondItem="wGq-1p-quL" secondAttribute="leading" constant="20" id="Puz-r0-3fd"/>
-                            <constraint firstItem="wGq-1p-quL" firstAttribute="trailing" secondItem="G1D-Kq-5wO" secondAttribute="trailing" id="aSZ-j9-XyC"/>
-                            <constraint firstItem="G1D-Kq-5wO" firstAttribute="leading" secondItem="wGq-1p-quL" secondAttribute="leading" id="aZr-V5-WMq"/>
-                            <constraint firstItem="wGq-1p-quL" firstAttribute="trailing" secondItem="AtV-CY-BeK" secondAttribute="trailing" constant="20" id="zKH-aw-hRO"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="wGq-1p-quL"/>
-                    </view>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="currentPageLabel" destination="Hhg-Kr-qTR" id="XH0-fc-fw3"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cuh-eM-Ivb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1061" y="5"/>
         </scene>
     </scenes>
 </document>
