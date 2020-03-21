@@ -10,16 +10,16 @@ import UIKit
 import Firebase
 
 class LogInViewController: UIViewController {
-
+    
     // MARK: - Properties
     let networkingController = NetworkingController()
     var parentUser: Parent?
     var bearerToken: Bearer?
     
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
-         .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
-         .strokeWidth: -3.5
-     ]
+        .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
+        .strokeWidth: -3.5
+    ]
     
     // MARK: - Outlets
     @IBOutlet weak var storySquadLabel: UILabel!
@@ -53,6 +53,7 @@ class LogInViewController: UIViewController {
             
             // Try Login
             networkingController.loginParent(email: email, password: password) { (result) in
+                
                 do {
                     
                     // Set bearer and parentUser
@@ -61,16 +62,18 @@ class LogInViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         
-//                        if let parent = self.networkingController.parentUser {
-                        
+                        if let parentData = self.networkingController.parentUser {
+                            
                             let parent = self.networkingController.parentUser
                             self.parentUser = parent
                             self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
-                        
-//                        } else {
-//                            self.showErrorAlert(errorTitle: "Oops!", errorMessage: "Couldn't get all necessary data. Please try again")
-//                            NSLog("Couldn't get response from server.")
-//                        }
+                            
+                        } else {
+                            // TODO: If this alert NEVER shows up after a few days:
+                            // We delete this "if let parentData = self.networkingController.parentUser" if-else clause
+                            self.showErrorAlert(errorTitle: "Oops!", errorMessage: "Couldn't get all necessary data. Please try again")
+                            NSLog("Couldn't get response from server.")
+                        }
                     }
                 } catch {
                     DispatchQueue.main.async {
@@ -117,17 +120,22 @@ class LogInViewController: UIViewController {
         passwordTextField.layer.borderColor = UIColor(red: 0.373, green: 0.373, blue: 0.373, alpha: 1).cgColor
     }
     
+    // TODO: This function should run at viewDidLoad, when finished ( WIP Function)
+    func checkBearerIsValid() {
+        
+        guard let bearer = UserDefaults.standard.string(forKey: .parentBearerString),
+            let email = UserDefaults.standard.string(forKey: .parentEmailString),
+            let password = UserDefaults.standard.string(forKey: .parentPassString) else { return }
+        
+        // Make a network call to check if the token is still valid
+        // If Bearer is valid, automatically login
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // Segue to TabBar
         if segue.identifier == "ShowTabBarFromLoginSegue" {
-            
-            // Removing the previous Navigation Controller
-            guard let navigationController = self.navigationController else { return }
-            var navigationArray = navigationController.viewControllers // To get all the previous NavControllers as an Array
-            navigationArray.removeAll() // To remove all UIViewControllers out of this Array
-            self.navigationController?.viewControllers = navigationArray // Setting this array as the navigationController?.viewControllers
             
             guard let tabBarController = segue.destination as? MainTabBarController else { return }
             

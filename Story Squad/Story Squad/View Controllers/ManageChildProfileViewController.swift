@@ -58,7 +58,7 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
     }
     
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
-        
+        handleSignOut()
     }
     
     // Setup ChildCollectionView's Properties
@@ -83,6 +83,15 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         
         self.parentUser = tabBar.parentUser
         self.networkingController = tabBar.networkingController
+    }
+    
+    func handleSignOut() {
+        
+        networkingController?.logOut()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    private func updateViews() {
     }
     
     // MARK: - UICollectionView Delegates and DataSource Methods

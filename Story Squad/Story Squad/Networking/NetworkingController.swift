@@ -19,9 +19,19 @@ class NetworkingController {
     var parentUser: Parent?
     var children: [Child]?
     var childUser: Child?
+    
     var parentBearer: Bearer?
     var childBearer: Bearer?
     
+    // MARK: - Save Parent Bearer in UserDefaults
+    func saveParentBearer(bearer: Bearer, email: String, password: String) {
+        
+        UserDefaults.standard.set(bearer.token, forKey: .parentBearerString)
+        UserDefaults.standard.set(email, forKey: .parentEmailString)
+        UserDefaults.standard.set(password, forKey: .parentPassString)
+    }
+    
+    // MARK: - Logout
     func logOut() {
         parentBearer = nil
         childBearer = nil
@@ -225,10 +235,11 @@ class NetworkingController {
             
             do {
                 // Decode the bearer
-                let dataString = String(data: data, encoding: .utf8)
-                print("dataString: \(String(describing: dataString))")
                 let parentBearer = try JSONDecoder().decode(Bearer.self, from: data)
                 self.parentBearer = parentBearer
+                
+                // Save Bearer in UserDefaults
+                self.saveParentBearer(bearer: parentBearer, email: email, password: password)
                 
                 // Create Parent in CoreData
                 let temporaryID = Int16.random(in: 0..<1_000)
@@ -375,9 +386,11 @@ class NetworkingController {
             
             do {
                 // Decoding Bearer
-                let dataString = String(data: data, encoding: .utf8)
-                print("response Token Data: \(String(describing: dataString))")
-                self.parentBearer = try JSONDecoder().decode(Bearer.self, from: data)
+                let parentBearer = try JSONDecoder().decode(Bearer.self, from: data)
+                self.parentBearer = parentBearer
+                
+                // Save Bearer in UserDefaults
+                self.saveParentBearer(bearer: parentBearer, email: email, password: password)
                 
                 // Fetching parent from CD, or create a new managed parent
                 // Either way, assigns managed object to self.parentUser

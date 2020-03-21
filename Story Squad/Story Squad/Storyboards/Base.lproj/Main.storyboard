@@ -10,9 +10,6 @@
         <array key="Bangers.ttf">
             <string>Bangers-Regular</string>
         </array>
-        <array key="Nunito-Bold.ttf">
-            <string>Nunito-Bold</string>
-        </array>
         <array key="Nunito-Regular.ttf">
             <string>Nunito-Regular</string>
         </array>
@@ -236,7 +233,7 @@
                         <outlet property="pinTextField" destination="f56-Ub-K6a" id="8Wr-xL-FMG"/>
                         <outlet property="signinButton" destination="Rwy-Tz-PqJ" id="PEy-TF-bCf"/>
                         <outlet property="storySquadLabel" destination="OGc-Ql-RIf" id="2x3-E4-2rl"/>
-                        <segue destination="zsa-An-dBu" kind="show" identifier="ShowTabBarSegue" id="5fd-yD-UrO"/>
+                        <segue destination="zsa-An-dBu" kind="presentation" identifier="ShowTabBarSegue" modalPresentationStyle="fullScreen" id="5fd-yD-UrO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caO-dC-y9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -251,7 +248,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9m-TA-KLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-243" y="730"/>
+            <point key="canvasLocation" x="-52" y="730"/>
         </scene>
         <!--ManageChildProfiles-->
         <scene sceneID="ac7-Ep-E6g">
@@ -261,7 +258,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHe-wO-8Ti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="201" y="743"/>
+            <point key="canvasLocation" x="446" y="730"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="iEH-am-3XS">
@@ -395,54 +392,12 @@
                         <outlet property="forgotPasswordButton" destination="UZV-dh-9j8" id="ixF-8g-NXA"/>
                         <outlet property="passwordTextField" destination="Xe3-ye-ZKe" id="Wiu-rV-Nut"/>
                         <outlet property="storySquadLabel" destination="R9j-Gv-76L" id="u6S-hk-tZu"/>
-                        <segue destination="zsa-An-dBu" kind="show" identifier="ShowTabBarFromLoginSegue" id="Dxv-Gs-sEA"/>
+                        <segue destination="zsa-An-dBu" kind="presentation" identifier="ShowTabBarFromLoginSegue" modalPresentationStyle="fullScreen" id="Dxv-Gs-sEA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5D6-Ra-im7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-345" y="-459"/>
-        </scene>
-        <!--Logout-->
-        <scene sceneID="0PG-Lx-cF5">
-            <objects>
-                <viewController id="I5w-ry-Fm1" customClass="LogOutViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Nn-KO-L8t">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWA-jO-6hu">
-                                <rect key="frame" x="0.0" y="226" width="414" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="24"/>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Log Out">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="logOutButtonTapped:" destination="I5w-ry-Fm1" eventType="touchUpInside" id="pbt-Xw-RnI"/>
-                                    <segue destination="gHV-IQ-dpr" kind="show" id="HIB-ut-CIM"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello Parent!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJX-mK-O2O">
-                                <rect key="frame" x="20" y="197" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="sQQ-1Q-htC"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Logout" image="square.and.arrow.up" catalog="system" id="3M0-9m-OVV"/>
-                    <connections>
-                        <outlet property="helloParentLabel" destination="fJX-mK-O2O" id="JP9-9Q-y3g"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A2o-26-l51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="738" y="1058"/>
         </scene>
         <!--tabBarController-->
         <scene sceneID="zNK-hS-obg">
@@ -458,7 +413,6 @@
                     <connections>
                         <segue destination="Z26-dB-iWW" kind="relationship" relationship="viewControllers" id="EAX-zG-QGP"/>
                         <segue destination="Wdt-yQ-klU" kind="relationship" relationship="viewControllers" id="4K2-zF-O8l"/>
-                        <segue destination="I5w-ry-Fm1" kind="relationship" relationship="viewControllers" id="fVH-cn-wOn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4d-Om-I2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -484,11 +438,7 @@
             <point key="canvasLocation" x="-1226" y="-459"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Dxv-Gs-sEA"/>
-        <segue reference="qzK-ip-9LL"/>
     </inferredMetricsTieBreakers>
 </document>
