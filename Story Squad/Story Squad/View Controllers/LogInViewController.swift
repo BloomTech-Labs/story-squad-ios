@@ -62,15 +62,17 @@ class LogInViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         
-                        if let parentData = self.networkingController.parentUser {
+                        if let _ = self.networkingController.parentUser {
                             
                             let parent = self.networkingController.parentUser
                             self.parentUser = parent
-                            self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
+                            
+                            // Ask if the Parent or a Child is logging in
+                            self.askWhoWillLogin()
                             
                         } else {
                             // TODO: If this alert NEVER shows up after a few days:
-                            // We delete this "if let parentData = self.networkingController.parentUser" if-else clause
+                            // We delete this "if let _ = self.networkingController.parentUser" if-else clause
                             self.showErrorAlert(errorTitle: "Oops!", errorMessage: "Couldn't get all necessary data. Please try again")
                             NSLog("Couldn't get response from server.")
                         }
@@ -82,6 +84,33 @@ class LogInViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    private func askWhoWillLogin() {
+        
+        let alert = UIAlertController(title: "Ready!", message: "Who will Sign in today?", preferredStyle: .alert)
+        
+        guard let parent = parentUser else { return }
+
+        // Action buttons
+        alert.addAction(UIAlertAction(title: "Parent", style: .default, handler: { (_) in
+            self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
+        }))
+        
+        // Fetch Children in CoreData for this Parent
+        let children = networkingController.fetchChildrenFromCDFor(parent: parent)
+        
+        // Add a button for each child
+        for child in children {
+            guard let name = child.name else { return }
+            
+            alert.addAction(UIAlertAction(title: "\(name)", style: .default, handler: { (_) in
+                print(("\n\n Tapped on child \(name)\n\n"))
+            }))
+        }
+        
+        // present the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func showErrorAlert(errorTitle: String, errorMessage: String) {

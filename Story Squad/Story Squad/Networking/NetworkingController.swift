@@ -625,6 +625,17 @@ class NetworkingController {
             }
             
             if let parent = parent {
+//                self.updateParentWithServer(parent: parent) { (result) in
+//                    do {
+//                        let parent = try result.get()
+////                        self.parentUser = parent
+//                        print("\nUpdated Parent with Server\n")
+//                        completion()
+//                    } catch {
+//                        NSLog("\nCouldn't update Parent with Server\n")
+//                        completion()
+//                    }
+//                }
                 self.parentUser = parent
                 completion()
             } else {
@@ -676,5 +687,21 @@ class NetworkingController {
             }
         }
         return childUser
+    }
+    
+    // Children
+    func fetchChildrenFromCDFor(parent: Parent) -> [Child] {
+        
+        let moc = CoreDataStack.shared.mainContext
+        let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
+
+        let predicate = NSPredicate(format: "parent.id == %i", parentUser?.id ?? 0)
+        fetchRequest.predicate = predicate
+        
+        let fetchedChildren = try? moc.fetch(fetchRequest)
+        
+        guard let children = fetchedChildren else { return [] }
+
+        return children
     }
 }
