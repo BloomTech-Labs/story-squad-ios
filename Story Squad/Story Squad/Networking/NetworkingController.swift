@@ -57,7 +57,7 @@ class NetworkingController {
         
         print("Request: \(request)")
         
-        URLSession.shared.dataTask(with: request) { (data , response, error) in
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             if let error = error {
                 print("Error getting response: \(error)")
@@ -401,7 +401,6 @@ class NetworkingController {
                     // Return the Bearer
                     completion(.success(self.parentBearer))
                 }
-            
             } catch {
                 print("Error decoding: \(error)")
                 completion(.failure(.badDecode))
