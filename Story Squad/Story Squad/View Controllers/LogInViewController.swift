@@ -237,7 +237,7 @@ class LogInViewController: UIViewController {
             guard let tabBarController = segue.destination as? ChildTabBarController else { return }
             
             tabBarController.parentUser = self.parentUser
-            tabBarController.childUser = self.childUser
+            tabBarController.childUser = networkingController.childUser
             tabBarController.networkingController = self.networkingController
         }
     }
