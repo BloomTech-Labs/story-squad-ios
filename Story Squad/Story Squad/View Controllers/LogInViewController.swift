@@ -153,21 +153,10 @@ class LogInViewController: UIViewController {
         //        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
         
         // 1st TextField for username
-        // Put a place holder for the username TextField or not
-        // Depending wether child.username is nil or not
-        if child.username != nil {
-            
-            alert.addTextField { (textField: UITextField) in
-                //If required mention keyboard type, delegates, text size and font etc...
-                //EX:
-                textField.keyboardType = .default
-            }
-        } else {
-            alert.addTextField { (textField: UITextField) in
-                
-                textField.placeholder = "Enter username"
-                textField.keyboardType = .default
-            }
+        alert.addTextField { (textField: UITextField) in
+        
+        textField.placeholder = "Enter username"
+        textField.keyboardType = .default
         }
         
         //2nd textField for password
