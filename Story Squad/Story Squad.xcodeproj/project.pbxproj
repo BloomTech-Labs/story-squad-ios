@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F3BD645242947D900CC560F /* PageCountProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BD644242947D900CC560F /* PageCountProgressView.swift */; };
 		4F3EB03A2423050D00C858B8 /* AcceptMissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB0392423050D00C858B8 /* AcceptMissionCell.swift */; };
 		4F3EB03C2423054800C858B8 /* AdventurePassportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB03B2423054800C858B8 /* AdventurePassportCell.swift */; };
 		4F3EB03E2423056700C858B8 /* ChangeYourAvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB03D2423056700C858B8 /* ChangeYourAvatarCell.swift */; };
@@ -107,6 +108,7 @@
 
 /* Begin PBXFileReference section */
 		48454DF4E1E53CE87F5D35CB /* Pods_Story_Squad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Story_Squad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F3BD644242947D900CC560F /* PageCountProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCountProgressView.swift; sourceTree = "<group>"; };
 		4F3EB0392423050D00C858B8 /* AcceptMissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptMissionCell.swift; sourceTree = "<group>"; };
 		4F3EB03B2423054800C858B8 /* AdventurePassportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventurePassportCell.swift; sourceTree = "<group>"; };
 		4F3EB03D2423056700C858B8 /* ChangeYourAvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeYourAvatarCell.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 				4F3EB061242451DA00C858B8 /* ReadViewController.swift */,
 				DDDE702324046484003F8783 /* SettingsParentPinViewController.swift */,
 				FA71E34F2406F826001385E7 /* SignupViewController.swift */,
+				4F3BD644242947D900CC560F /* PageCountProgressView.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				4FFA57F02416D62900655C9E /* UPCarouselFlowLayout.swift in Sources */,
 				4F3EB03E2423056700C858B8 /* ChangeYourAvatarCell.swift in Sources */,
 				4F3EB05A24232F3700C858B8 /* AcceptMission.swift in Sources */,
+				4F3BD645242947D900CC560F /* PageCountProgressView.swift in Sources */,
 				FA71E3502406F826001385E7 /* SignupViewController.swift in Sources */,
 				FA85E84523FEF35C008637E0 /* AppDelegate.swift in Sources */,
 				DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */,

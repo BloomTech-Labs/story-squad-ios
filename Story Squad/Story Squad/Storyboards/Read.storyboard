@@ -20,12 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="V7A-01-BwY">
-                                <rect key="frame" x="20" y="776" width="374" height="37"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="pageIndicatorTintColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom &amp; Boom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU0-mm-Ira">
                                 <rect key="frame" x="0.0" y="60" width="414" height="51.5"/>
                                 <fontDescription key="fontDescription" name="Bangers-Regular" family="Bangers" pointSize="48"/>
@@ -36,25 +30,29 @@
                                 <rect key="frame" x="8" y="119.5" width="398" height="648.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oad-AB-1Nb" customClass="PageCountProgressView" customModule="Story_Squad" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="776" width="414" height="37"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oad-AB-1Nb" firstAttribute="leading" secondItem="Uux-Nv-46i" secondAttribute="leading" id="2qF-9z-j13"/>
                             <constraint firstItem="ZO1-2U-093" firstAttribute="leading" secondItem="Uux-Nv-46i" secondAttribute="leading" constant="8" id="4cm-4F-eLe"/>
                             <constraint firstItem="zU0-mm-Ira" firstAttribute="top" secondItem="Uux-Nv-46i" secondAttribute="top" constant="16" id="4nJ-bN-fzp"/>
-                            <constraint firstItem="V7A-01-BwY" firstAttribute="bottom" secondItem="Uux-Nv-46i" secondAttribute="bottom" id="Td7-f7-Wim"/>
+                            <constraint firstItem="oad-AB-1Nb" firstAttribute="trailing" secondItem="Uux-Nv-46i" secondAttribute="trailing" id="Enb-iz-Z6Q"/>
+                            <constraint firstItem="oad-AB-1Nb" firstAttribute="bottom" secondItem="Uux-Nv-46i" secondAttribute="bottom" id="U7f-RL-YrT"/>
+                            <constraint firstItem="oad-AB-1Nb" firstAttribute="top" secondItem="ZO1-2U-093" secondAttribute="bottom" constant="8" id="aVc-m3-iZw"/>
                             <constraint firstItem="Uux-Nv-46i" firstAttribute="trailing" secondItem="ZO1-2U-093" secondAttribute="trailing" constant="8" id="aj4-qn-yYA"/>
                             <constraint firstItem="Uux-Nv-46i" firstAttribute="trailing" secondItem="zU0-mm-Ira" secondAttribute="trailing" id="ddk-Gm-TH8"/>
-                            <constraint firstItem="Uux-Nv-46i" firstAttribute="trailing" secondItem="V7A-01-BwY" secondAttribute="trailing" constant="20" id="ho6-DS-Dwm"/>
+                            <constraint firstItem="oad-AB-1Nb" firstAttribute="top" secondItem="rYC-Kz-hYr" secondAttribute="top" constant="776" id="h6S-tG-Pgg"/>
                             <constraint firstItem="zU0-mm-Ira" firstAttribute="leading" secondItem="Uux-Nv-46i" secondAttribute="leading" id="kyY-Hf-fQR"/>
-                            <constraint firstItem="V7A-01-BwY" firstAttribute="leading" secondItem="Uux-Nv-46i" secondAttribute="leading" constant="20" id="rIX-f7-Un4"/>
                             <constraint firstItem="ZO1-2U-093" firstAttribute="top" secondItem="zU0-mm-Ira" secondAttribute="bottom" constant="8" id="xVJ-Pe-5wY"/>
-                            <constraint firstItem="V7A-01-BwY" firstAttribute="top" secondItem="ZO1-2U-093" secondAttribute="bottom" constant="8" id="zX3-xJ-AUk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uux-Nv-46i"/>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="pageControl" destination="V7A-01-BwY" id="y72-8z-zqq"/>
                         <outlet property="pdfView" destination="ZO1-2U-093" id="0YU-kA-hxf"/>
                     </connections>
                 </viewController>
