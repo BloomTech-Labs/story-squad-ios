@@ -22,6 +22,17 @@ extension Child {
         return ChildRepresentation(name: name, id: id, username: username, cohort: cohort, grade: grade, dyslexiaPreference: dyslexiaPreference, pin: pin, avatar: avatar)
     }
     
+    var childInParentRepresentation: ChildInParentRepresentation? {
+        
+        guard let username = username,
+            let name = name,
+            let avatar = avatar,
+            let cohort = cohort
+            else { return nil }
+        
+        return ChildInParentRepresentation(name: name, id: id, parent: nil, username: username, cohort: cohort, grade: grade, dyslexiaPreference: dyslexiaPreference, pin: pin, avatar: avatar)
+    }
+    
     // MARK: CoreData Initializer
     @discardableResult convenience init(name: String, id: Int16, username: String?, parent: Parent, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: String?, context: NSManagedObjectContext) {
         self.init(context: context)

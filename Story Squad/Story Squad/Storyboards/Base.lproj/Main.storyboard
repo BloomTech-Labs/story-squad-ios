@@ -240,6 +240,24 @@
             </objects>
             <point key="canvasLocation" x="781" y="-459"/>
         </scene>
+        <!--Child Tab Bar Controller-->
+        <scene sceneID="2yW-3n-n44">
+            <objects>
+                <tabBarController id="2wM-NX-Qin" customClass="ChildTabBarController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5CV-ru-yjl"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b7a-7W-cHV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="78k-C2-fyC" kind="relationship" relationship="viewControllers" id="gRU-zt-KNh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yoc-91-c5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1226" y="311"/>
+        </scene>
         <!--Dashboard-->
         <scene sceneID="c7h-CB-aVj">
             <objects>
@@ -393,11 +411,23 @@
                         <outlet property="passwordTextField" destination="Xe3-ye-ZKe" id="Wiu-rV-Nut"/>
                         <outlet property="storySquadLabel" destination="R9j-Gv-76L" id="u6S-hk-tZu"/>
                         <segue destination="zsa-An-dBu" kind="presentation" identifier="ShowTabBarFromLoginSegue" modalPresentationStyle="fullScreen" id="Dxv-Gs-sEA"/>
+                        <segue destination="2wM-NX-Qin" kind="presentation" identifier="ShowChildDashboardVCFromLoginVC" modalPresentationStyle="fullScreen" id="uQD-Ey-24H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5D6-Ra-im7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-345" y="-459"/>
+        </scene>
+        <!--ChildDashboard-->
+        <scene sceneID="5EX-zD-8o9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChildDashboard" id="78k-C2-fyC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Ktb-GD-EdQ"/>
+                    <navigationItem key="navigationItem" id="yPn-qo-hih"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHm-Ye-W1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1688" y="730"/>
         </scene>
         <!--tabBarController-->
         <scene sceneID="zNK-hS-obg">

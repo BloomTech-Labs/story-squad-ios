@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0zb-v7-rKJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y5z-fP-gL4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -16,7 +16,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Kj-U3-v6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889" y="17"/>
+            <point key="canvasLocation" x="3797.826086956522" y="16.741071428571427"/>
         </scene>
         <!--Mission Control-->
         <scene sceneID="LDC-st-c7b">
@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uXb-y0-zEd">
-                                <rect key="frame" x="0.0" y="149" width="414" height="822"/>
+                                <rect key="frame" x="0.0" y="193" width="414" height="778"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lfj-hd-evw">
                                     <size key="itemSize" width="414" height="205"/>
@@ -135,7 +135,7 @@
                                 </cells>
                             </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Story squad" translatesAutoresizingMaskIntoConstraints="NO" id="Bfd-jm-90V">
-                                <rect key="frame" x="0.0" y="44" width="414" height="105"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="VJx-5m-lQy"/>
                                 </constraints>
@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4V-VY-hu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2339" y="213"/>
+            <point key="canvasLocation" x="3247.826086956522" y="212.94642857142856"/>
         </scene>
         <!--AdventurePassport-->
         <scene sceneID="qm8-Gk-sMd">
@@ -173,7 +173,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQM-v1-LbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2947" y="162"/>
+            <point key="canvasLocation" x="3855.7971014492755" y="161.38392857142856"/>
         </scene>
         <!--ChangeAvatar-->
         <scene sceneID="elv-vb-FfF">
@@ -183,7 +183,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMk-2m-Rt4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2969" y="248"/>
+            <point key="canvasLocation" x="3878.985507246377" y="247.76785714285714"/>
         </scene>
         <!--TrophyRoom-->
         <scene sceneID="r9u-AC-ZWn">
@@ -193,7 +193,27 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySw-ve-YUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2880" y="478"/>
+            <point key="canvasLocation" x="3789.130434782609" y="477.45535714285711"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="aoZ-6h-MDW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y5z-fP-gL4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="square.grid.2x2" catalog="system" id="BR3-0L-f84"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KHQ-0P-vta">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0zb-v7-rKJ" kind="relationship" relationship="rootViewController" id="DWL-V4-qCG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHx-ph-YZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2337.68115942029" y="212.94642857142856"/>
         </scene>
     </scenes>
     <resources>
@@ -202,5 +222,6 @@
         <image name="ChangeAvatar" width="414" height="205"/>
         <image name="Story squad" width="375" height="105"/>
         <image name="TrophyRoom" width="414" height="205"/>
+        <image name="square.grid.2x2" catalog="system" width="64" height="56"/>
     </resources>
 </document>

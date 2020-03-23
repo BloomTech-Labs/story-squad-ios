@@ -11,6 +11,7 @@ import CoreData
 import UIKit
 import Firebase
 
+// swiftlint:disable:next type_body_length
 class NetworkingController {
     
     // MARK: - Properties
@@ -57,7 +58,7 @@ class NetworkingController {
         
         print("Request: \(request)")
         
-        URLSession.shared.dataTask(with: request) { (data , response, error) in
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             if let error = error {
                 print("Error getting response: \(error)")
@@ -185,6 +186,90 @@ class NetworkingController {
                 completion(.success(self.childUser))
                 return
                 
+            } catch {
+                print("Error decoding: \(error)")
+                completion(.failure(.badDecode))
+                return
+            }
+        }.resume()
+    }
+    
+    // MARK: - Add new Child to Parent in Server
+    func createChildAndAddToParent(username: String, grade: Int16, dyslexiaPreference: Bool, completion: @escaping(Result<Child?, NetworkingError>) -> Void) {
+        
+        guard let parentBearer = parentBearer else {
+            completion(Result.failure(NetworkingError.noBearer))
+            return
+        }
+        
+        let registerURL = baseURL
+            .appendingPathComponent("children")
+            .appendingPathComponent("list")
+        
+        let json = """
+        {
+            "username": "\(username)",
+            "grade": \(grade)
+        }
+        """
+        
+        let jsonData = json.data(using: .utf8)
+        
+        guard let unwrappedData = jsonData else {
+            print("encoded data wrong, couldn't unwrap data")
+            completion(.failure(.formattedJSONIncorrectly))
+            return
+        }
+        print("jsoneData: \(jsonData)")
+                var request = URLRequest(url: registerURL)
+        
+        request.httpBody = unwrappedData
+        request.httpMethod = HTTPMethod.post.rawValue
+        
+        request.setValue(parentBearer.token, forHTTPHeaderField: HeaderNames.authorization.rawValue)
+        request.setValue("application/json", forHTTPHeaderField: HeaderNames.contentType.rawValue)
+        
+        print("Request: \(request)")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let error = error {
+                print("Error getting response: \(error)")
+                completion(.failure(.serverError(error)))
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                if response.statusCode == 200 || response.statusCode == 201 {
+                    print("Good response")
+                } else {
+                    print("Bad response, code: \(response.statusCode)")
+                    print("Response description: \(response.description)")
+                    print("Response debug description: \(response.debugDescription)")
+                    completion(.failure(.unexpectedStatusCode(response.statusCode)))
+                    return
+                }
+            }
+            
+            guard let data = data else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            do {
+                let dataString = String(data: data, encoding: .utf8)
+                print("parent response as data: \(String(describing: dataString))")
+                
+                let childRep = try JSONDecoder().decode(ChildRepresentation.self, from: data)
+                
+                guard let parent = self.parentUser else { return }
+                
+                let randomPIN = Int16.random(in: 1..<199)
+                
+                self.createChildAndAddToParentInCoreData(parent: parent, name: username, username: username, id: childRep.id, pin: randomPIN, grade: grade, cohort: nil, dyslexiaPreference: dyslexiaPreference, avatar: nil, context: CoreDataStack.shared.mainContext) {
+                    
+                    completion(.success(self.childUser))
+                }
             } catch {
                 print("Error decoding: \(error)")
                 completion(.failure(.badDecode))
@@ -401,7 +486,65 @@ class NetworkingController {
                     // Return the Bearer
                     completion(.success(self.parentBearer))
                 }
+            } catch {
+                print("Error decoding: \(error)")
+                completion(.failure(.badDecode))
+                return
+            }
+        }.resume()
+    }
+    
+    // MARK: - Login Child
+    func loginChild(child: Child, completion: @escaping(Result<Bearer?, NetworkingError>) -> Void) {
+        
+        guard let parentBearer = parentBearer else {
+            completion(Result.failure(NetworkingError.noBearer))
+            return
+        }
+        
+        let registerURL = baseURL
+            .appendingPathComponent("children")
+            .appendingPathComponent("\(child.id)")
+            .appendingPathComponent("login")
+        
+        var request = URLRequest(url: registerURL)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("\(parentBearer.token)", forHTTPHeaderField: HeaderNames.authorization.rawValue)
+        
+        print("Request: \(request)")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             
+            if let error = error {
+                print("Error getting response: \(error)")
+                completion(.failure(.serverError(error)))
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                if response.statusCode == 200 || response.statusCode == 201 {
+                    print("Good response")
+                } else {
+                    print("Bad response, code: \(response.statusCode)")
+                    completion(.failure(.unexpectedStatusCode(response.statusCode)))
+                    return
+                }
+            }
+            
+            guard let data = data else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            do {
+                let dataString = String(data: data, encoding: .utf8)
+                print("response Token Data: \(String(describing: dataString))")
+                
+                self.childBearer = try JSONDecoder().decode(Bearer.self, from: data)
+
+                completion(.success(self.childBearer))
+                return
+                
             } catch {
                 print("Error decoding: \(error)")
                 completion(.failure(.badDecode))
@@ -505,27 +648,25 @@ class NetworkingController {
         self.childUser = childUser
     }
     
-    // MARK: - Child CRUD Methods
+    // MARK: - Child CRUD Methods for CoreData
     
     // create Child
-    func createChildAndAddToParent(parent: Parent, name: String, username: String?, id: Int16?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool = false, avatar: String?, context: NSManagedObjectContext) {
+    private func createChildAndAddToParentInCoreData(parent: Parent, name: String, username: String, id: Int16, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: String?, context: NSManagedObjectContext, completion: @escaping(() -> Void) = {}) {
         
         // Generate random avatar
         let arrayOfAvatars = ["Hero 6.png", "Hero 11.png", "Hero 12.png", "Hero 13.png", "Hero 14.png", "Hero 15.png", "Hero 16.png", "Hero 18.png", "Hero 19.png"]
         
         let randomAvatar = arrayOfAvatars.randomElement()
         
-        // generate random ID
-        let temporaryID = Int16.random(in: 0..<1_000)
-        
-        //        let randomID = Int16.random(in: 1..<1000)
-        
         // swiftlint:disable:next line_length
-        let child = Child(name: name, id: temporaryID, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: randomAvatar, context: context)
+        let child = Child(name: name, id: id, username: username, parent: parent, pin: pin, grade: grade, cohort: cohort, dyslexiaPreference: dyslexiaPreference, avatar: randomAvatar, context: context)
+        self.childUser = child
         
         // Adding child to it's parent in Core Data
         parent.addToChildren(child)
         CoreDataStack.shared.save(context: context)
+        
+        completion()
     }
     
     // Update Child
@@ -626,6 +767,17 @@ class NetworkingController {
             }
             
             if let parent = parent {
+//                self.updateParentWithServer(parent: parent) { (result) in
+//                    do {
+//                        let parent = try result.get()
+////                        self.parentUser = parent
+//                        print("\nUpdated Parent with Server\n")
+//                        completion()
+//                    } catch {
+//                        NSLog("\nCouldn't update Parent with Server\n")
+//                        completion()
+//                    }
+//                }
                 self.parentUser = parent
                 completion()
             } else {
@@ -677,5 +829,21 @@ class NetworkingController {
             }
         }
         return childUser
+    }
+    
+    // Children
+    func fetchChildrenFromCDFor(parent: Parent) -> [Child] {
+        
+        let moc = CoreDataStack.shared.mainContext
+        let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
+
+        let predicate = NSPredicate(format: "parent.id == %i", parentUser?.id ?? 0)
+        fetchRequest.predicate = predicate
+        
+        let fetchedChildren = try? moc.fetch(fetchRequest)
+        
+        guard let children = fetchedChildren else { return [] }
+
+        return children
     }
 }

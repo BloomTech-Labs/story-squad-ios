@@ -14,7 +14,9 @@ class LogInViewController: UIViewController {
     // MARK: - Properties
     let networkingController = NetworkingController()
     var parentUser: Parent?
-    var bearerToken: Bearer?
+    var childUser: Child?
+    
+    var parentToken: Bearer?
     
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
         .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
@@ -58,19 +60,21 @@ class LogInViewController: UIViewController {
                     
                     // Set bearer and parentUser
                     let result = try result.get()
-                    self.bearerToken = result
+                    self.parentToken = result
                     
                     DispatchQueue.main.async {
                         
-                        if let parentData = self.networkingController.parentUser {
+                        if let _ = self.networkingController.parentUser {
                             
                             let parent = self.networkingController.parentUser
                             self.parentUser = parent
-                            self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
+                            
+                            // Ask if the Parent or a Child is logging in
+                            self.askWhoWillLogin()
                             
                         } else {
                             // TODO: If this alert NEVER shows up after a few days:
-                            // We delete this "if let parentData = self.networkingController.parentUser" if-else clause
+                            // We delete this "if let _ = self.networkingController.parentUser" if-else clause
                             self.showErrorAlert(errorTitle: "Oops!", errorMessage: "Couldn't get all necessary data. Please try again")
                             NSLog("Couldn't get response from server.")
                         }
@@ -82,6 +86,91 @@ class LogInViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    private func askWhoWillLogin() {
+        
+        let alert = UIAlertController(title: "Ready!", message: "Who will Sign in today?", preferredStyle: .alert)
+        
+        guard let parent = parentUser else { return }
+
+        // Action buttons
+        alert.addAction(UIAlertAction(title: "Parent", style: .default, handler: { (_) in
+            self.performSegue(withIdentifier: "ShowTabBarFromLoginSegue", sender: self)
+        }))
+        
+        // Fetch Children in CoreData for this Parent
+        let children = networkingController.fetchChildrenFromCDFor(parent: parent)
+        
+        // Add a button for each child
+        for child in children {
+            guard let name = child.name else { return }
+            
+            alert.addAction(UIAlertAction(title: "\(name)", style: .default, handler: { (_) in
+                print(("\n\n Tapped on child \(name)\n\n"))
+                self.childUser = child
+                self.loginChildAlert(child: child)
+            }))
+        }
+        
+        // present the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func loginChildAlert(child: Child) {
+        
+        let alert = UIAlertController(title: "Log In", message: "Please enter your PIN", preferredStyle: .alert)
+        
+        let loginAction = UIAlertAction(title: "Login", style: .default, handler: { (_) -> Void in
+            
+            self.networkingController.loginChild(child: child) { (result) in
+                
+                do {
+                    let result = try result.get()
+                    
+                    DispatchQueue.main.async {
+                        if result != nil {
+                            self.performSegue(withIdentifier: "ShowChildDashboardVCFromLoginVC", sender: self)
+                        }
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        self.showErrorAlert(errorTitle: "Unsuccessful Login", errorMessage: "Please check your username or PIN and try again ")
+                    }
+                }
+            }
+            
+//            // Get TextFields Text
+//            let usernameTextField = alert.textFields![0]
+//            let _ = alert.textFields![1]
+//
+//            if let username = child.username {
+//                usernameTextField.text = username
+//            }
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        //        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
+        
+        // 1st TextField for username
+        alert.addTextField { (textField: UITextField) in
+        
+        textField.placeholder = "Enter username"
+        textField.keyboardType = .default
+        }
+        
+        //2nd textField for password
+        alert.addTextField { (textField: UITextField) in
+            textField.placeholder = "Enter PIN"
+            textField.isSecureTextEntry = true
+        }
+
+        // Add actions
+        alert.addAction(loginAction)
+        alert.addAction(cancel)
+        
+        // present the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func showErrorAlert(errorTitle: String, errorMessage: String) {
@@ -140,6 +229,15 @@ class LogInViewController: UIViewController {
             guard let tabBarController = segue.destination as? MainTabBarController else { return }
             
             tabBarController.parentUser = self.parentUser
+            tabBarController.networkingController = self.networkingController
+        }
+        // Segue to Child Dashboard
+        else if segue.identifier == "ShowChildDashboardVCFromLoginVC" {
+            
+            guard let tabBarController = segue.destination as? ChildTabBarController else { return }
+            
+            tabBarController.parentUser = self.parentUser
+            tabBarController.childUser = self.childUser
             tabBarController.networkingController = self.networkingController
         }
     }
