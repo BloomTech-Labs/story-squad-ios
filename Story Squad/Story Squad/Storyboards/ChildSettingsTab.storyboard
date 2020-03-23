@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Child Settings Tab View Controller-->
         <scene sceneID="P4b-Uj-dfb">
@@ -20,7 +25,24 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCP-8J-Vwc">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jx-vc-zOC">
+                                                <rect key="frame" x="20" y="670" width="374" height="35"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                <state key="normal" title="Log Out">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="logoutButtonTapped:" destination="1TO-XB-GSH" eventType="touchUpInside" id="xdN-qz-fhD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="2Jx-vc-zOC" firstAttribute="leading" secondItem="JCP-8J-Vwc" secondAttribute="leading" constant="20" id="giG-xi-CSG"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Jx-vc-zOC" secondAttribute="trailing" constant="20" id="jVA-m0-RRn"/>
+                                            <constraint firstAttribute="bottom" secondItem="2Jx-vc-zOC" secondAttribute="bottom" constant="20" id="kL1-pO-2h3"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>

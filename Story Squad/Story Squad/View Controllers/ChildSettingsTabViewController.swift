@@ -22,6 +22,17 @@ class ChildSettingsTabViewController: UIViewController {
         updateViews()
     }
     
+    @IBAction func logoutButtonTapped(_ sender: UIButton) {
+        handleSignOut()
+    }
+    
+    // Sign out
+    private func handleSignOut() {
+        
+        networkingController?.logOut()
+        dismiss(animated: true, completion: nil)
+    }
+    
     // To receive the Child, Parent and NetworkingController from the Tab Bar
     private func receiveDataFromTabBar() {
         guard let tabBar = tabBarController as? ChildTabBarController else { return }
@@ -33,8 +44,9 @@ class ChildSettingsTabViewController: UIViewController {
     
     private func updateViews() {
         
-        guard let child = self.childUser else { return }
-        title = "\(child.username)'s Settings"
+        guard let child = self.childUser,
+            let username = child.name else { return }
+        
     }
 
     /*

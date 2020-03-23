@@ -251,8 +251,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="78k-C2-fyC" kind="relationship" relationship="viewControllers" id="gRU-zt-KNh"/>
                         <segue destination="lIN-p3-OVJ" kind="relationship" relationship="viewControllers" id="Q56-pe-WnN"/>
+                        <segue destination="78k-C2-fyC" kind="relationship" relationship="viewControllers" id="tCU-6v-2La"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yoc-91-c5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -267,7 +267,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ltm-jz-fCu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-860" y="730"/>
+            <point key="canvasLocation" x="-1478" y="730"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="c7h-CB-aVj">
@@ -438,7 +438,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHm-Ye-W1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1688" y="730"/>
+            <point key="canvasLocation" x="-971" y="730"/>
         </scene>
         <!--tabBarController-->
         <scene sceneID="zNK-hS-obg">
