@@ -12,24 +12,14 @@ import PDFKit
 class ReadViewController: UIViewController {
 
     @IBOutlet weak var pdfView: PDFView!
-    
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var progressView: PageCountProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupPDFView()
         loadPDF()
-
-        let totalPages = pdfView.document?.pageCount
-        self.pageControl.currentPage = 0
-        let dotsCount = 5
-        if totalPages! < dotsCount {
-        self.pageControl.numberOfPages = totalPages!
-            } else {
-        self.pageControl.numberOfPages = dotsCount
-            }
-        self.pageControl.currentPageIndicatorTintColor = UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1)
+        NotificationCenter.default.addObserver(self, selector: #selector(pageHasTurned), name: .PDFViewPageChanged, object: nil)
         
     }
 
@@ -44,6 +34,17 @@ class ReadViewController: UIViewController {
     func loadPDF() {
         guard let path = Bundle.main.url(forResource: "white_nights", withExtension: "pdf") else { return }
         pdfView.document = PDFDocument(url: path)
+    }
+    
+    @objc func pageHasTurned() {
+        if let document = pdfView.document,
+            let currentPage = pdfView.currentPage {
+            let currentPageNumber = document.index(for: currentPage)
+            let totalPages = document.pageCount
+            let progress: CGFloat = (currentPageNumber > 0 ? CGFloat(currentPageNumber) : 0.01) / CGFloat(totalPages)
+            progressView.progress = progress
+            progressView.setNeedsDisplay()
+        }
     }
     
     /*

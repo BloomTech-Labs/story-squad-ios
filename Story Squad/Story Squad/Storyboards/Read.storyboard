@@ -54,6 +54,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="pdfView" destination="ZO1-2U-093" id="0YU-kA-hxf"/>
+                        <outlet property="progressView" destination="oad-AB-1Nb" id="Fob-ii-e4A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aj9-iE-liC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
