@@ -409,6 +409,65 @@ class NetworkingController {
         }.resume()
     }
     
+    // MARK: - Login Child
+    func loginChild(child: Child, completion: @escaping(Result<Bearer?, NetworkingError>) -> Void) {
+        
+        guard let parentBearer = parentBearer else {
+            completion(Result.failure(NetworkingError.noBearer))
+            return
+        }
+        
+        let registerURL = baseURL
+            .appendingPathComponent("children")
+            .appendingPathComponent("\(child.id)")
+            .appendingPathComponent("login")
+        
+        var request = URLRequest(url: registerURL)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("\(parentBearer.token)", forHTTPHeaderField: HeaderNames.authorization.rawValue)
+        
+        print("Request: \(request)")
+        
+        URLSession.shared.dataTask(with: request) { (data , response, error) in
+            
+            if let error = error {
+                print("Error getting response: \(error)")
+                completion(.failure(.serverError(error)))
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                if response.statusCode == 200 || response.statusCode == 201 {
+                    print("Good response")
+                } else {
+                    print("Bad response, code: \(response.statusCode)")
+                    completion(.failure(.unexpectedStatusCode(response.statusCode)))
+                    return
+                }
+            }
+            
+            guard let data = data else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            do {
+                let dataString = String(data: data, encoding: .utf8)
+                print("response Token Data: \(String(describing: dataString))")
+                
+                self.childBearer = try JSONDecoder().decode(Bearer.self, from: data)
+
+                completion(.success(self.childBearer))
+                return
+                
+            } catch {
+                print("Error decoding: \(error)")
+                completion(.failure(.badDecode))
+                return
+            }
+        }.resume()
+    }
+    
     // MARK: - Parent CRUD Methods
     
     // Create Parent

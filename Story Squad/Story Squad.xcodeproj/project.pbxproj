@@ -102,6 +102,7 @@
 		FAE3B63D24228F0900E26C6F /* HeaderNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B63C24228F0900E26C6F /* HeaderNames.swift */; };
 		FAE3B6432426CAEA00E26C6F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B6422426CAEA00E26C6F /* LogInViewController.swift */; };
 		FAE3B6472427AB0300E26C6F /* ChildInParentRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B6462427AB0300E26C6F /* ChildInParentRepresentation.swift */; };
+		FAE3B6492428EE5500E26C6F /* ChildTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B6482428EE5500E26C6F /* ChildTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -204,6 +205,7 @@
 		FAE3B63C24228F0900E26C6F /* HeaderNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderNames.swift; sourceTree = "<group>"; };
 		FAE3B6422426CAEA00E26C6F /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		FAE3B6462427AB0300E26C6F /* ChildInParentRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildInParentRepresentation.swift; sourceTree = "<group>"; };
+		FAE3B6482428EE5500E26C6F /* ChildTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +411,7 @@
 				FA9A34D6240606C700A2F8FE /* ChildProfilePinViewController.swift */,
 				4FF0F5E82404975A00587C7B /* ChildrenProfileTableView.swift */,
 				4FF0F5F12404AEF300587C7B /* ChildSettingsViewController.swift */,
+				FAE3B6482428EE5500E26C6F /* ChildTabBarController.swift */,
 				FA9A34D42405FFB700A2F8FE /* CreditCardViewController.swift */,
 				FA85E88123FF3558008637E0 /* DashboardViewController.swift */,
 				4F477120240F590A0067F66B /* FamilySettingsViewController.swift */,
@@ -654,6 +657,7 @@
 				FA85E84723FEF35C008637E0 /* SceneDelegate.swift in Sources */,
 				4F3EB03C2423054800C858B8 /* AdventurePassportCell.swift in Sources */,
 				4F3EB062242451DA00C858B8 /* ReadViewController.swift in Sources */,
+				FAE3B6492428EE5500E26C6F /* ChildTabBarController.swift in Sources */,
 				FA9A34D52405FFB700A2F8FE /* CreditCardViewController.swift in Sources */,
 				4FF0F6002405CE5A00587C7B /* ChildDashboard.swift in Sources */,
 				4F3EB03A2423050D00C858B8 /* AcceptMissionCell.swift in Sources */,

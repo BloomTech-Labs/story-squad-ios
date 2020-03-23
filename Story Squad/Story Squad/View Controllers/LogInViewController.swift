@@ -14,7 +14,9 @@ class LogInViewController: UIViewController {
     // MARK: - Properties
     let networkingController = NetworkingController()
     var parentUser: Parent?
-    var bearerToken: Bearer?
+    var childUser: Child?
+    
+    var parentToken: Bearer?
     
     let sqLabelStrokeAttributes: [NSAttributedString.Key: Any] = [
         .strokeColor: UIColor(red: 1, green: 0.427, blue: 0.227, alpha: 1),
@@ -58,7 +60,7 @@ class LogInViewController: UIViewController {
                     
                     // Set bearer and parentUser
                     let result = try result.get()
-                    self.bearerToken = result
+                    self.parentToken = result
                     
                     DispatchQueue.main.async {
                         
@@ -106,7 +108,8 @@ class LogInViewController: UIViewController {
             
             alert.addAction(UIAlertAction(title: "\(name)", style: .default, handler: { (_) in
                 print(("\n\n Tapped on child \(name)\n\n"))
-                self.loginChild(child: child)
+                self.childUser = child
+                self.loginChildAlert(child: child)
             }))
         }
         
@@ -114,20 +117,36 @@ class LogInViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    private func loginChild(child: Child) {
-        
+    private func loginChildAlert(child: Child) {
         
         let alert = UIAlertController(title: "Log In", message: "Please enter your PIN", preferredStyle: .alert)
         
-        let loginAction = UIAlertAction(title: "Login", style: .default, handler: { (action) -> Void in
+        let loginAction = UIAlertAction(title: "Login", style: .default, handler: { (_) -> Void in
             
-            // Get TextFields Text
-            let usernameTextField = alert.textFields![0]
-            let passwordTextField = alert.textFields![1]
-            
-            if let username = child.username {
-                usernameTextField.text = username
+            self.networkingController.loginChild(child: child) { (result) in
+                
+                do {
+                    let result = try result.get()
+                    
+                    DispatchQueue.main.async {
+                        if result != nil {
+                            self.performSegue(withIdentifier: "ShowChildDashboardVCFromLoginVC", sender: self)
+                        }
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        self.showErrorAlert(errorTitle: "Unsuccessful Login", errorMessage: "Please check your username or PIN and try again ")
+                    }
+                }
             }
+            
+//            // Get TextFields Text
+//            let usernameTextField = alert.textFields![0]
+//            let _ = alert.textFields![1]
+//
+//            if let username = child.username {
+//                usernameTextField.text = username
+//            }
         })
         
         let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
@@ -136,7 +155,7 @@ class LogInViewController: UIViewController {
         // 1st TextField for username
         // Put a place holder for the username TextField or not
         // Depending wether child.username is nil or not
-        if let _ = child.username {
+        if child.username != nil {
             
             alert.addTextField { (textField: UITextField) in
                 //If required mention keyboard type, delegates, text size and font etc...
@@ -221,6 +240,15 @@ class LogInViewController: UIViewController {
             guard let tabBarController = segue.destination as? MainTabBarController else { return }
             
             tabBarController.parentUser = self.parentUser
+            tabBarController.networkingController = self.networkingController
+        }
+        // Segue to Child Dashboard
+        else if segue.identifier == "ShowChildDashboardVCFromLoginVC" {
+            
+            guard let tabBarController = segue.destination as? ChildTabBarController else { return }
+            
+            tabBarController.parentUser = self.parentUser
+            tabBarController.childUser = self.childUser
             tabBarController.networkingController = self.networkingController
         }
     }
