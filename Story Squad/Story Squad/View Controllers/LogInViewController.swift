@@ -106,8 +106,60 @@ class LogInViewController: UIViewController {
             
             alert.addAction(UIAlertAction(title: "\(name)", style: .default, handler: { (_) in
                 print(("\n\n Tapped on child \(name)\n\n"))
+                self.loginChild(child: child)
             }))
         }
+        
+        // present the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func loginChild(child: Child) {
+        
+        
+        let alert = UIAlertController(title: "Log In", message: "Please enter your PIN", preferredStyle: .alert)
+        
+        let loginAction = UIAlertAction(title: "Login", style: .default, handler: { (action) -> Void in
+            
+            // Get TextFields Text
+            let usernameTextField = alert.textFields![0]
+            let passwordTextField = alert.textFields![1]
+            
+            if let username = child.username {
+                usernameTextField.text = username
+            }
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        //        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
+        
+        // 1st TextField for username
+        // Put a place holder for the username TextField or not
+        // Depending wether child.username is nil or not
+        if let _ = child.username {
+            
+            alert.addTextField { (textField: UITextField) in
+                //If required mention keyboard type, delegates, text size and font etc...
+                //EX:
+                textField.keyboardType = .default
+            }
+        } else {
+            alert.addTextField { (textField: UITextField) in
+                
+                textField.placeholder = "Enter username"
+                textField.keyboardType = .default
+            }
+        }
+        
+        //2nd textField for password
+        alert.addTextField { (textField: UITextField) in
+            textField.placeholder = "Enter PIN"
+            textField.isSecureTextEntry = true
+        }
+
+        // Add actions
+        alert.addAction(loginAction)
+        alert.addAction(cancel)
         
         // present the alert
         self.present(alert, animated: true, completion: nil)
