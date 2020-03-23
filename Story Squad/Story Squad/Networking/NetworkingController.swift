@@ -541,7 +541,7 @@ class NetworkingController {
                 print("response Token Data: \(String(describing: dataString))")
                 
                 self.childBearer = try JSONDecoder().decode(Bearer.self, from: data)
-
+                self.childUser = child
                 completion(.success(self.childBearer))
                 return
                 
