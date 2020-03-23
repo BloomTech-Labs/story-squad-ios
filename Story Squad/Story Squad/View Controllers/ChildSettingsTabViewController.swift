@@ -44,9 +44,6 @@ class ChildSettingsTabViewController: UIViewController {
     
     private func updateViews() {
         
-        guard let child = self.childUser,
-            let username = child.name else { return }
-        
     }
 
     /*
