@@ -25,6 +25,7 @@ class AddChildViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var pinTextField: UITextField!
     @IBOutlet weak var gradeTextField: GradeTextField!
+    @IBOutlet weak var dyslexiaSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,17 +43,19 @@ class AddChildViewController: UIViewController {
     
     @IBAction func addChildButtonPressed(_ sender: UIButton) {
         
-        // Check all Text Fields are filled
+        guard let parent = parentUser else { return }
         
+        // Check all Text Fields are filled
         guard let name = nameTextField.text,
-            !name.isEmpty else {
+            let pin = pinTextField.text,
+            !name.isEmpty,
+            !pin.isEmpty,
+            let pinInt = Int16(pin)
+            
+            else {
                 showIncompleteAlert()
                 return
         }
-        
-        guard let parent = parentUser,
-            let pin = pinTextField.text,
-            let pinInt = Int16(pin) else { return }
         
         // Check Child's Grade
         switch gradeTextField.text {
@@ -71,23 +74,47 @@ class AddChildViewController: UIViewController {
         // Continue if grade is not nil
         if let grade = grade {
             
-            networkingController?.createChildAndAddToParent(parent: parent, name: name, username: nil, id: nil, pin: pinInt, grade: grade, cohort: nil, avatar: nil, context: CoreDataStack.shared.mainContext)
+            let dyslexiaPreference = dyslexiaSwitch.isOn
             
-            // Go back to Dashboard
-            self.navigationController?.popToRootViewController(animated: true)
+            networkingController?.createChildAndAddToParent(username: name, grade: grade, dyslexiaPreference: dyslexiaPreference, completion: { (result) in
+                
+                do {
+                    let result = try result.get()
+                    
+                    DispatchQueue.main.async {
+                        
+                        if result != nil {
+                            // Go back to Dashboard
+                            self.navigationController?.popToRootViewController(animated: true)
+                        }
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        self.showErrorAlert(errorTitle: "Sorry!", errorMessage: "Couldn't add new Child. Please try again")
+                    }
+                }
+            })
         } else {
+            showIncompleteAlert()
             return
         }
     }
     
     // MARK: - Incomplete Child Data Alert
-    func showIncompleteAlert() {
+    private func showIncompleteAlert() {
         let alert = UIAlertController(title: "Incomplete Child Information", message: "Please fill in all Text Fields", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
     
+    // MARK: - Error Alert
+    private func showErrorAlert(errorTitle: String, errorMessage: String) {
+        let alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 // MARK: - Grade Picker
