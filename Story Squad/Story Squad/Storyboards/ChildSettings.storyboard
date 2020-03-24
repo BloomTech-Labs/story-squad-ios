@@ -30,12 +30,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QOd-dw-1MC">
-                                <rect key="frame" x="16" y="177.5" width="382" height="421"/>
+                                <rect key="frame" x="16" y="177.5" width="382" height="580"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cer-nG-wZr">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVn-GE-cGT">
                                         <rect key="frame" x="12" y="32" width="358" height="47"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Change Users Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRn-2Q-Q6B">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Change Child's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSJ-sW-gTC">
+                                                <rect key="frame" x="20" y="3" width="318" height="41"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.75722388699999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="ql5-5S-qHc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                        <color key="value" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="bSJ-sW-gTC" firstAttribute="leading" secondItem="xVn-GE-cGT" secondAttribute="leading" constant="20" id="08K-rh-bJj"/>
+                                            <constraint firstAttribute="height" constant="47" id="NBK-n5-qeI"/>
+                                            <constraint firstItem="bSJ-sW-gTC" firstAttribute="centerY" secondItem="xVn-GE-cGT" secondAttribute="centerY" id="Qib-tY-onI"/>
+                                            <constraint firstAttribute="trailing" secondItem="bSJ-sW-gTC" secondAttribute="trailing" constant="20" id="ez4-ek-xl2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cer-nG-wZr">
+                                        <rect key="frame" x="12" y="99" width="358" height="47"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Change Child's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRn-2Q-Q6B">
                                                 <rect key="frame" x="20" y="3" width="318" height="41"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="0.75722388699999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -59,7 +85,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VF-73-oZe">
-                                        <rect key="frame" x="12" y="99" width="358" height="47"/>
+                                        <rect key="frame" x="12" y="166" width="358" height="47"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Grade" placeholder="Change Users Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fn-Fd-8PT">
                                                 <rect key="frame" x="20" y="3" width="318" height="41"/>
@@ -85,9 +111,9 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nI-bZ-amd">
-                                        <rect key="frame" x="12" y="166" width="358" height="47"/>
+                                        <rect key="frame" x="12" y="300" width="358" height="47"/>
                                         <subviews>
-                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Change PIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U10-xi-Xfu">
+                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Change Child's PIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U10-xi-Xfu">
                                                 <rect key="frame" x="20" y="3" width="318" height="41"/>
                                                 <color key="tintColor" red="0.8155755401" green="0.94907230139999998" blue="0.9253777862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -112,7 +138,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qch-Ef-LH2">
-                                        <rect key="frame" x="77.5" y="292.5" width="227" height="42.5"/>
+                                        <rect key="frame" x="77.5" y="429.5" width="227" height="42.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.47799999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="227" id="0Hl-8C-Cx2"/>
@@ -132,7 +158,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dyslexia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9b-oc-LZP">
-                                        <rect key="frame" x="213" y="230" width="91" height="30.5"/>
+                                        <rect key="frame" x="213" y="367" width="91" height="30.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.31" green="0.31" blue="0.31" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="24"/>
@@ -140,7 +166,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bPQ-yB-5h1">
-                                        <rect key="frame" x="321" y="230" width="51" height="31"/>
+                                        <rect key="frame" x="321" y="367" width="51" height="31"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.0" green="0.47799999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="onTintColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,28 +174,64 @@
                                             <action selector="dyslexiaSliderToggled:" destination="rc8-C2-qc1" eventType="valueChanged" id="Lwn-oD-Waf"/>
                                         </connections>
                                     </switch>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUq-pi-eXm">
+                                        <rect key="frame" x="12" y="233" width="358" height="47"/>
+                                        <subviews>
+                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Change PIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEv-rd-mru">
+                                                <rect key="frame" x="20" y="3" width="318" height="41"/>
+                                                <color key="tintColor" red="0.8155755401" green="0.94907230139999998" blue="0.9253777862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="OX5-rq-7Mq"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                        <color key="value" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="xEv-rd-mru" secondAttribute="trailing" constant="20" id="WgP-KE-gqs"/>
+                                            <constraint firstItem="xEv-rd-mru" firstAttribute="leading" secondItem="tUq-pi-eXm" secondAttribute="leading" constant="20" id="XQU-Ba-Pcd"/>
+                                            <constraint firstItem="xEv-rd-mru" firstAttribute="centerY" secondItem="tUq-pi-eXm" secondAttribute="centerY" id="t3Y-yr-4R5"/>
+                                            <constraint firstAttribute="height" constant="47" id="vXp-Gr-qr7"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.81599999999999995" green="0.94999999999999996" blue="0.92600000000000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="bPQ-yB-5h1" firstAttribute="centerY" secondItem="q9b-oc-LZP" secondAttribute="centerY" id="0PQ-KJ-hqR"/>
                                     <constraint firstAttribute="trailing" secondItem="5nI-bZ-amd" secondAttribute="trailing" constant="12" id="0TW-IF-4F8"/>
-                                    <constraint firstItem="5nI-bZ-amd" firstAttribute="top" secondItem="3VF-73-oZe" secondAttribute="bottom" constant="20" id="4nW-pK-wtR"/>
                                     <constraint firstItem="qch-Ef-LH2" firstAttribute="centerX" secondItem="QOd-dw-1MC" secondAttribute="centerX" id="6jo-g9-Cna"/>
                                     <constraint firstItem="cer-nG-wZr" firstAttribute="leading" secondItem="QOd-dw-1MC" secondAttribute="leading" constant="12" id="Dbq-Hy-FgK"/>
+                                    <constraint firstItem="xVn-GE-cGT" firstAttribute="leading" secondItem="QOd-dw-1MC" secondAttribute="leading" constant="12" id="IC7-Qh-zK0"/>
                                     <constraint firstAttribute="trailing" secondItem="cer-nG-wZr" secondAttribute="trailing" constant="12" id="KHF-Ht-wQa"/>
-                                    <constraint firstItem="cer-nG-wZr" firstAttribute="top" secondItem="QOd-dw-1MC" secondAttribute="top" constant="32" id="KyJ-xL-dHN"/>
-                                    <constraint firstAttribute="height" constant="421" id="Lbc-IR-ITw"/>
-                                    <constraint firstItem="q9b-oc-LZP" firstAttribute="top" secondItem="5nI-bZ-amd" secondAttribute="bottom" constant="17" id="RVv-U3-erc"/>
+                                    <constraint firstAttribute="height" constant="580" id="Lbc-IR-ITw"/>
+                                    <constraint firstItem="q9b-oc-LZP" firstAttribute="top" secondItem="5nI-bZ-amd" secondAttribute="bottom" constant="20" id="RVv-U3-erc"/>
                                     <constraint firstItem="5nI-bZ-amd" firstAttribute="leading" secondItem="QOd-dw-1MC" secondAttribute="leading" constant="12" id="RyS-40-N5e"/>
+                                    <constraint firstItem="xVn-GE-cGT" firstAttribute="centerX" secondItem="QOd-dw-1MC" secondAttribute="centerX" id="V4d-ud-L4h"/>
                                     <constraint firstItem="qch-Ef-LH2" firstAttribute="top" secondItem="q9b-oc-LZP" secondAttribute="bottom" constant="32" id="VTM-f8-jDv"/>
+                                    <constraint firstAttribute="bottom" secondItem="xVn-GE-cGT" secondAttribute="bottom" constant="501" id="WOB-ib-NUU"/>
+                                    <constraint firstAttribute="bottom" secondItem="xVn-GE-cGT" secondAttribute="bottom" constant="501" id="XDO-Tw-Lwo"/>
+                                    <constraint firstAttribute="trailing" secondItem="tUq-pi-eXm" secondAttribute="trailing" constant="12" id="ZcC-Op-pDu"/>
+                                    <constraint firstItem="xVn-GE-cGT" firstAttribute="top" secondItem="QOd-dw-1MC" secondAttribute="top" constant="32" id="aO0-vU-RKJ"/>
                                     <constraint firstItem="cer-nG-wZr" firstAttribute="centerX" secondItem="QOd-dw-1MC" secondAttribute="centerX" id="b2U-4c-Yo8"/>
+                                    <constraint firstItem="tUq-pi-eXm" firstAttribute="leading" secondItem="QOd-dw-1MC" secondAttribute="leading" constant="12" id="b5j-R1-uRe"/>
+                                    <constraint firstItem="tUq-pi-eXm" firstAttribute="top" secondItem="3VF-73-oZe" secondAttribute="bottom" constant="20" id="fKO-B9-EKh"/>
                                     <constraint firstItem="bPQ-yB-5h1" firstAttribute="trailing" secondItem="5nI-bZ-amd" secondAttribute="trailing" id="iYQ-zx-w0N"/>
                                     <constraint firstItem="3VF-73-oZe" firstAttribute="centerX" secondItem="QOd-dw-1MC" secondAttribute="centerX" id="mW0-Vr-29r"/>
                                     <constraint firstItem="3VF-73-oZe" firstAttribute="leading" secondItem="QOd-dw-1MC" secondAttribute="leading" constant="12" id="n0o-hP-zg4"/>
                                     <constraint firstItem="5nI-bZ-amd" firstAttribute="centerX" secondItem="QOd-dw-1MC" secondAttribute="centerX" id="qPn-Ut-V6P"/>
                                     <constraint firstAttribute="trailing" secondItem="3VF-73-oZe" secondAttribute="trailing" constant="12" id="rUu-Ij-eLz"/>
                                     <constraint firstItem="bPQ-yB-5h1" firstAttribute="leading" secondItem="q9b-oc-LZP" secondAttribute="trailing" constant="17" id="tPH-yb-qLY"/>
+                                    <constraint firstItem="cer-nG-wZr" firstAttribute="top" secondItem="xVn-GE-cGT" secondAttribute="bottom" constant="20" id="wfn-XT-M1P"/>
                                     <constraint firstItem="3VF-73-oZe" firstAttribute="top" secondItem="cer-nG-wZr" secondAttribute="bottom" constant="20" id="x5r-lT-UJp"/>
+                                    <constraint firstAttribute="trailing" secondItem="xVn-GE-cGT" secondAttribute="trailing" constant="12" id="yEx-mI-zWL"/>
+                                    <constraint firstItem="5nI-bZ-amd" firstAttribute="top" secondItem="tUq-pi-eXm" secondAttribute="bottom" constant="20" id="yYe-Df-SdD"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -193,6 +255,8 @@
                     <navigationItem key="navigationItem" id="gui-S7-jcJ"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="currentNameTextField" destination="bSJ-sW-gTC" id="Wdd-gN-FzH"/>
+                        <outlet property="currentPinTextField" destination="xEv-rd-mru" id="VoW-zP-8Ic"/>
                         <outlet property="dyslexiaSlider" destination="bPQ-yB-5h1" id="txz-ac-b03"/>
                         <outlet property="gradeTextField" destination="6fn-Fd-8PT" id="G28-lq-bEQ"/>
                         <outlet property="nameLabel" destination="77H-OG-7gQ" id="IiJ-fi-EM9"/>
@@ -203,7 +267,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4f-u9-8zK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="pya-yu-DsI"/>
             </objects>
-            <point key="canvasLocation" x="3409" y="90"/>
+            <point key="canvasLocation" x="3408.6956521739135" y="89.732142857142847"/>
         </scene>
     </scenes>
 </document>
