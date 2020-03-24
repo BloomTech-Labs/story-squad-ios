@@ -9,29 +9,30 @@
 import UIKit
 
 class WriteViewController: UIViewController {
-
-    @IBOutlet weak var promptTextView: UITextView!
     
+    // MARK: - Outlets
+    @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var writeTextView: UITextView!
-    @IBOutlet weak var uploadButton: UIButton!
     
     @IBOutlet weak var submitButton: UIButton!
-    
-    //@IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var chooseFilesFromDeviceButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+200)
-        writeTextView.delegate = self
+
         updateViews()
     }
     
     func updateViews() {
-        promptTextView.layer.borderWidth = 7.0
+        promptLabel.layer.borderWidth = 7.0
         writeTextView.layer.cornerRadius = 10
         writeTextView.layer.borderWidth = 3.0
-        uploadButton.layer.borderWidth = 3.0
+        chooseFilesFromDeviceButton.layer.borderWidth = 3.0
         submitButton.layer.borderWidth = 3.0
+        
+        writeTextView.text = ""
     }
 
     /*
@@ -43,11 +44,4 @@ class WriteViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
-
-extension WriteViewController: UITextViewDelegate {
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        writeTextView.text = ""
-    }
 }
