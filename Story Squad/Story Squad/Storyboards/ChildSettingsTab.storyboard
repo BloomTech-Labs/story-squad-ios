@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2CO-m9-fS2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Child Settings Tab View Controller-->
+        <scene sceneID="P4b-Uj-dfb">
+            <objects>
+                <viewController id="1TO-XB-GSH" customClass="ChildSettingsTabViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v4E-Gd-tDm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYe-Fg-pLY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCP-8J-Vwc">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jx-vc-zOC">
+                                                <rect key="frame" x="20" y="670" width="374" height="35"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                <state key="normal" title="Log Out">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="logoutButtonTapped:" destination="1TO-XB-GSH" eventType="touchUpInside" id="xdN-qz-fhD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="2Jx-vc-zOC" firstAttribute="leading" secondItem="JCP-8J-Vwc" secondAttribute="leading" constant="20" id="giG-xi-CSG"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Jx-vc-zOC" secondAttribute="trailing" constant="20" id="jVA-m0-RRn"/>
+                                            <constraint firstAttribute="bottom" secondItem="2Jx-vc-zOC" secondAttribute="bottom" constant="20" id="kL1-pO-2h3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="JCP-8J-Vwc" secondAttribute="bottom" id="0FL-mW-vxP"/>
+                                    <constraint firstItem="JCP-8J-Vwc" firstAttribute="top" secondItem="cYe-Fg-pLY" secondAttribute="top" id="B1R-0e-TkE"/>
+                                    <constraint firstItem="JCP-8J-Vwc" firstAttribute="width" secondItem="cYe-Fg-pLY" secondAttribute="width" id="Mhp-NY-S0z"/>
+                                    <constraint firstAttribute="trailing" secondItem="JCP-8J-Vwc" secondAttribute="trailing" id="aKg-ob-HcU"/>
+                                    <constraint firstItem="JCP-8J-Vwc" firstAttribute="height" secondItem="cYe-Fg-pLY" secondAttribute="height" priority="250" id="ok1-mE-3vX"/>
+                                    <constraint firstItem="JCP-8J-Vwc" firstAttribute="leading" secondItem="cYe-Fg-pLY" secondAttribute="leading" id="zsR-Ar-TNs"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="beO-iM-so8" firstAttribute="trailing" secondItem="cYe-Fg-pLY" secondAttribute="trailing" id="9ci-Qe-NWu"/>
+                            <constraint firstItem="cYe-Fg-pLY" firstAttribute="top" secondItem="beO-iM-so8" secondAttribute="top" id="N4U-bq-ajz"/>
+                            <constraint firstItem="cYe-Fg-pLY" firstAttribute="leading" secondItem="beO-iM-so8" secondAttribute="leading" id="inS-rF-TnN"/>
+                            <constraint firstItem="beO-iM-so8" firstAttribute="bottom" secondItem="cYe-Fg-pLY" secondAttribute="bottom" id="n8g-bo-5yj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="beO-iM-so8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MPN-tT-ua1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYs-HB-hkv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005.7971014492755" y="155.35714285714286"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="LVq-wv-mvL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2CO-m9-fS2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="XSy-HN-Ev9"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y3Z-vd-j5S">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1TO-XB-GSH" kind="relationship" relationship="rootViewController" id="D4C-Ez-1jU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYF-d8-snH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="155.35714285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="64" height="58"/>
+    </resources>
+</document>
