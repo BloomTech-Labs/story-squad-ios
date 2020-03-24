@@ -15,9 +15,12 @@ class ChildSettingsViewController: UIViewController {
     var parentUser: Parent?
     var childUser: Child?
     
+    var childName: String?
     var initialDyslexiaSliderState: Bool?
     
     // MARK: - Outlets
+    
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var pinTextField: UITextField!
     @IBOutlet weak var pinConfirmationTextField: UITextField!
@@ -25,7 +28,7 @@ class ChildSettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        nameLabel.text = "\(childUser?.name ?? "Child's")'s Settings"
         initialDyslexiaSliderState = dyslexiaSlider.isOn
     }
     

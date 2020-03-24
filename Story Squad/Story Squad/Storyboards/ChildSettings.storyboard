@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rc8-C2-qc1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rc8-C2-qc1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Nunito-Light.ttf">
+            <string>Nunito-Light</string>
+        </array>
         <array key="Nunito-Regular.ttf">
             <string>Nunito-Regular</string>
         </array>
@@ -23,8 +26,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child's Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77H-OG-7gQ">
+                                <rect key="frame" x="12" y="120" width="390" height="23"/>
+                                <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.47799999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QOd-dw-1MC">
-                                <rect key="frame" x="16" y="120" width="382" height="358"/>
+                                <rect key="frame" x="16" y="175" width="382" height="358"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cer-nG-wZr">
                                         <rect key="frame" x="12" y="32" width="358" height="47"/>
@@ -175,9 +184,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="77H-OG-7gQ" firstAttribute="centerX" secondItem="WxE-jZ-l6l" secondAttribute="centerX" id="3xf-0T-NCB"/>
                             <constraint firstItem="QOd-dw-1MC" firstAttribute="leading" secondItem="p2G-Tu-nEM" secondAttribute="leading" constant="16" id="7bS-fC-sGx"/>
+                            <constraint firstItem="QOd-dw-1MC" firstAttribute="top" secondItem="77H-OG-7gQ" secondAttribute="bottom" constant="32" id="Qox-Hk-8B9"/>
+                            <constraint firstItem="p2G-Tu-nEM" firstAttribute="trailing" secondItem="77H-OG-7gQ" secondAttribute="trailing" constant="12" id="TsY-01-yhj"/>
                             <constraint firstItem="p2G-Tu-nEM" firstAttribute="trailing" secondItem="QOd-dw-1MC" secondAttribute="trailing" constant="16" id="cI3-dE-O4A"/>
-                            <constraint firstItem="QOd-dw-1MC" firstAttribute="top" secondItem="p2G-Tu-nEM" secondAttribute="top" constant="32" id="yf3-Rq-VsO"/>
+                            <constraint firstItem="77H-OG-7gQ" firstAttribute="leading" secondItem="p2G-Tu-nEM" secondAttribute="leading" constant="12" id="xuF-9a-qfG"/>
+                            <constraint firstItem="77H-OG-7gQ" firstAttribute="top" secondItem="p2G-Tu-nEM" secondAttribute="top" constant="32" id="z9O-rJ-QAU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p2G-Tu-nEM"/>
                     </view>
@@ -185,6 +198,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="dyslexiaSlider" destination="bPQ-yB-5h1" id="txz-ac-b03"/>
+                        <outlet property="nameLabel" destination="77H-OG-7gQ" id="IiJ-fi-EM9"/>
                         <outlet property="nameTextField" destination="yRn-2Q-Q6B" id="jCH-oz-9CC"/>
                         <outlet property="pinConfirmationTextField" destination="P91-p0-aLk" id="YLN-JO-BzT"/>
                         <outlet property="pinTextField" destination="U10-xi-Xfu" id="eqw-h6-Pbv"/>

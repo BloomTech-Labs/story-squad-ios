@@ -52,7 +52,7 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateViews()
+        //updateViews()
         receiveDataFromSignup()
         setupChildCollectionView()
     }
@@ -107,16 +107,29 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "ChildSettingsFromManageProfilesSegue", sender: self)
         print("child selected == \(indexPath.row)")
+        print("child name == \(child?.name ?? "no name")")
     }
+    
+    
     
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "ChildSettingsFromManageProfilesSegue" {
-            if let sender = sender as? ChildCollectionViewCell {
-                guard childCollectionView.indexPath(for: sender) != nil else { return }
+           // if let selectedCell = collectionView.cell as? ChildSettingsViewController
+            
+            if let indexPath = childCollectionView.indexPathsForSelectedItems?.first,
+                let destinationVC = segue.destination as? ChildSettingsViewController {
+               let child = fetchResultsController.object(at: indexPath)
+                destinationVC.childUser = child
             }
+//            }
+  //          destinationController?.childName = child?.name
+//            if let sender = sender as? ChildCollectionViewCell {
+//                guard childCollectionView.indexPath(for: sender) != nil else { return }
+//            }
         }
     }
 }
