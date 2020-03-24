@@ -25,15 +25,23 @@ class ChildSettingsViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var currentNameTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var gradeTextField: GradeTextField!
+    @IBOutlet weak var currentPinTextField: UITextField!
     @IBOutlet weak var pinTextField: UITextField!
     @IBOutlet weak var dyslexiaSlider: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = "\(childUser?.name ?? "Child's")'s Settings"
-        nameTextField.placeholder = "\(childUser?.name ?? "Change Child's Name")"
+        
+        guard let childUser = childUser,
+            let name = childUser.name else { return }
+        
+        let pinString = String(childUser.pin)
+        nameLabel.text = name
+        currentNameTextField.text = "\(name)"
+        currentPinTextField.text = "\(pinString)"
         initialDyslexiaSliderState = dyslexiaSlider.isOn
         
         createPicker()
@@ -62,35 +70,32 @@ class ChildSettingsViewController: UIViewController {
             let name = nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
             //TODO: Remove comments at cleanup
             //let pin = pinTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-    
+            
             // Commented out because the text field was removed
-//            let pinConfirmation = pinConfirmationTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            //            let pinConfirmation = pinConfirmationTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
             let dyslexiaBool = dyslexiaSlider.isOn
             
             //TODO: Remove comments at cleanup
             //if pin == pinConfirmation {
-
-                networkingController?.updateChildAccountInServer(child: child, username: name, dyslexiaPreference: dyslexiaBool, grade: child.grade, completion: { (result) in
-
-                    do {
-                        let child = try result.get()
-
-                        DispatchQueue.main.async {
-
-                            self.childUser = child
-                            self.showCompleteAlert()
-                        }
-                    } catch {
-                        DispatchQueue.main.async {
-
-                            self.showErrorAlert(errorTitle: "Something went wrong", errorMessage: "Please check you changes and try again")
-                        }
-                    }
-                })
-            //}
             
+            networkingController?.updateChildAccountInServer(child: child, username: name, dyslexiaPreference: dyslexiaBool, grade: child.grade, completion: { (result) in
+                
+                do {
+                    let child = try result.get()
+                    
+                    DispatchQueue.main.async {
+                        
+                        self.childUser = child
+                        self.showCompleteAlert()
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        
+                        self.showErrorAlert(errorTitle: "Something went wrong", errorMessage: "Please check you changes and try again")
+                    }
+                }
+            })
         }
-        
     }
     
     private func validateFields() -> String? {
@@ -130,7 +135,7 @@ class ChildSettingsViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-
+    
 }
 // MARK: - Grade Picker
 extension ChildSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
