@@ -41,6 +41,9 @@ class SignupViewController: UIViewController {
         confirmPWTextField.textContentType = .oneTimeCode
         pinTextField.delegate = self
         updateViews()
+        
+        // Hide the Keyboard with tap gesture
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {

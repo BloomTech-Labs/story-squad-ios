@@ -33,6 +33,9 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         
         updateViews()
+        
+        // Hide the Keyboard with tap gesture
+        self.hideKeyboardWhenTappedAround()
     }
     
     // MARK: - IBActions

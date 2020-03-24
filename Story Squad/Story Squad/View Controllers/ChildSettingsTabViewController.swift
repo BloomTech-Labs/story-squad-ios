@@ -20,6 +20,9 @@ class ChildSettingsTabViewController: UIViewController {
         
         receiveDataFromTabBar()
         updateViews()
+        
+        // Hide the Keyboard with tap gesture
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func logoutButtonTapped(_ sender: UIButton) {

@@ -88,6 +88,7 @@
 		E3C82629240ED82200055A77 /* FamilySettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C82628240ED82200055A77 /* FamilySettings.storyboard */; };
 		FA0D6CAA24294AF200C40917 /* ChildSettingsTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0D6CA924294AF200C40917 /* ChildSettingsTab.storyboard */; };
 		FA0D6CAC24294C4600C40917 /* ChildSettingsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D6CAB24294C4600C40917 /* ChildSettingsTabViewController.swift */; };
+		FA0D6CAE242A430F00C40917 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D6CAD242A430F00C40917 /* ViewControllerExtension.swift */; };
 		FA6EC428241EDC9F00F4C79F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EC427241EDC9F00F4C79F /* HTTPMethod.swift */; };
 		FA6EC42A241EDD5C00F4C79F /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EC429241EDD5C00F4C79F /* Bearer.swift */; };
 		FA71E3502406F826001385E7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71E34F2406F826001385E7 /* SignupViewController.swift */; };
@@ -192,6 +193,7 @@
 		E3C82628240ED82200055A77 /* FamilySettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FamilySettings.storyboard; sourceTree = "<group>"; };
 		FA0D6CA924294AF200C40917 /* ChildSettingsTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildSettingsTab.storyboard; sourceTree = "<group>"; };
 		FA0D6CAB24294C4600C40917 /* ChildSettingsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildSettingsTabViewController.swift; sourceTree = "<group>"; };
+		FA0D6CAD242A430F00C40917 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		FA6EC427241EDC9F00F4C79F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		FA6EC429241EDD5C00F4C79F /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		FA71E34F2406F826001385E7 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -326,7 +328,6 @@
 			isa = PBXGroup;
 			children = (
 				BC79FBE55D78D57160A94447 /* Pods-Story Squad.debug.xcconfig */,
-				F2F9090C5BA9571F0873A26F /* Pods-Story Squad.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -453,6 +454,7 @@
 				FA71E374240B036B001385E7 /* SchoolGrade.swift */,
 				FAB94F9824046A3C00905211 /* SlideInTransition.swift */,
 				DD13175A2405B4F100013753 /* StringKeys.swift */,
+				FA0D6CAD242A430F00C40917 /* ViewControllerExtension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -651,6 +653,7 @@
 				DDDE702424046484003F8783 /* SettingsParentPinViewController.swift in Sources */,
 				DD71FD092406D97F0032EBB5 /* Child+Convenience.swift in Sources */,
 				4FF0F62724071DED00587C7B /* NetworkingError.swift in Sources */,
+				FA0D6CAE242A430F00C40917 /* ViewControllerExtension.swift in Sources */,
 				4F477121240F590A0067F66B /* FamilySettingsViewController.swift in Sources */,
 				DD71FD0F2406D9C10032EBB5 /* ParentRepresentation.swift in Sources */,
 				DDDE70222404646E003F8783 /* AddChildParentPinViewController.swift in Sources */,
@@ -851,7 +854,6 @@
 		};
 		FA85E85723FEF35E008637E0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2F9090C5BA9571F0873A26F /* Pods-Story Squad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
