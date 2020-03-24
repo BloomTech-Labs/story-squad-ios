@@ -21,31 +21,28 @@ class ChildSettingsViewController: UIViewController {
     var grade: Int16?
     
     var initialDyslexiaSliderState: Bool?
+    var initialGrade: SchoolGrade?
     
     // MARK: - Outlets
     
     @IBOutlet weak var nameLabel: UILabel!
+    
     @IBOutlet weak var currentNameTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
+    
     @IBOutlet weak var gradeTextField: GradeTextField!
+    
     @IBOutlet weak var currentPinTextField: UITextField!
     @IBOutlet weak var pinTextField: UITextField!
+    
     @IBOutlet weak var dyslexiaSlider: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let childUser = childUser,
-            let name = childUser.name else { return }
-        
-        let pinString = String(childUser.pin)
-        nameLabel.text = name
-        currentNameTextField.text = "\(name)"
-        currentPinTextField.text = "\(pinString)"
-        initialDyslexiaSliderState = dyslexiaSlider.isOn
-        
         createPicker()
         createToolbar()
+        updateViews()
         
         self.hideKeyboardWhenTappedAround()
     }
@@ -68,43 +65,57 @@ class ChildSettingsViewController: UIViewController {
         } else {
             
             let name = nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            //TODO: Remove comments at cleanup
-            //let pin = pinTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            // Commented out because the text field was removed
-            //            let pinConfirmation = pinConfirmationTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+//            let pin = pinTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+
             let dyslexiaBool = dyslexiaSlider.isOn
             
-            //TODO: Remove comments at cleanup
-            //if pin == pinConfirmation {
+            // Check Child's Grade
+            switch gradeTextField.text {
+            case SchoolGrade.thirdGrade.rawValue:
+                grade = 3
+            case SchoolGrade.forthGrade.rawValue:
+                grade = 4
+            case SchoolGrade.fifthGrade.rawValue:
+                grade = 5
+            case SchoolGrade.sixthGrade.rawValue:
+                grade = 6
+            default:
+                grade = nil
+            }
             
-            networkingController?.updateChildAccountInServer(child: child, username: name, dyslexiaPreference: dyslexiaBool, grade: child.grade, completion: { (result) in
+            // Continue if grade is not nil
+            if let grade = grade {
                 
-                do {
-                    let child = try result.get()
+                networkingController?.updateChildAccountInServer(child: child, username: name, dyslexiaPreference: dyslexiaBool, grade: grade, completion: { (result) in
                     
-                    DispatchQueue.main.async {
+                    do {
+                        let child = try result.get()
                         
-                        self.childUser = child
-                        self.showCompleteAlert()
+                        DispatchQueue.main.async {
+                            
+                            self.childUser = child
+                            self.showCompleteAlert()
+                        }
+                    } catch {
+                        DispatchQueue.main.async {
+                            self.showErrorAlert(errorTitle: "Something went wrong", errorMessage: "Please check you changes and try again")
+                        }
                     }
-                } catch {
-                    DispatchQueue.main.async {
-                        
-                        self.showErrorAlert(errorTitle: "Something went wrong", errorMessage: "Please check you changes and try again")
-                    }
-                }
-            })
+                })
+            } else {
+                showErrorAlert(errorTitle: "", errorMessage: "")
+                return
+            }
         }
     }
     
     private func validateFields() -> String? {
         
         // Check that at least one change was made
-        if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            pinTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            //pinConfirmationTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            initialDyslexiaSliderState == dyslexiaSlider.isOn {
+        if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" &&
+            pinTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" &&
+            initialDyslexiaSliderState == dyslexiaSlider.isOn &&
+            initialGrade?.rawValue == gradeTextField.text {
             
             return "Please make at least one change to update Child Account"
         }
@@ -124,6 +135,39 @@ class ChildSettingsViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "Done", style: .default, handler: nil))
         self.present(alert, animated: true)
+    }
+    
+    private func updateViews() {
+        
+        guard let childUser = childUser,
+            let name = childUser.name else { return }
+        
+        let pinString = String(childUser.pin)
+        
+        // Pupolate the grade TextField with the Child's Grade
+        switch childUser.grade {
+        case 3:
+            gradeTextField.text = SchoolGrade.thirdGrade.rawValue
+            initialGrade = SchoolGrade.thirdGrade
+        case 4:
+            gradeTextField.text = SchoolGrade.forthGrade.rawValue
+            initialGrade = SchoolGrade.forthGrade
+        case 5:
+            gradeTextField.text = SchoolGrade.fifthGrade.rawValue
+            initialGrade = SchoolGrade.fifthGrade
+        case 6:
+            gradeTextField.text = SchoolGrade.sixthGrade.rawValue
+            initialGrade = SchoolGrade.sixthGrade
+        default:
+            grade = nil
+        }
+        
+        nameLabel.text = name
+        currentNameTextField.text = "\(name)"
+        currentPinTextField.text = "\(pinString)"
+        
+        // Capture the state of the initial state of the dyslexia switch
+        initialDyslexiaSliderState = dyslexiaSlider.isOn
     }
     
     /*
