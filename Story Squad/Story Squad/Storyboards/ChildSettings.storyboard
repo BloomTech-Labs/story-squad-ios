@@ -128,7 +128,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="saveButtonTapped:" destination="rc8-C2-qc1" eventType="touchUpInside" id="hBV-LN-4LQ"/>
+                                            <action selector="updateButtonTapped:" destination="rc8-C2-qc1" eventType="touchUpInside" id="hBV-LN-4LQ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dyslexia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9b-oc-LZP">
