@@ -23,8 +23,11 @@ class AcceptMission: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       updateViews()
+        
+        updateViews()
+        
+        // Hide the Keyboard with tap gesture
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,6 +35,7 @@ class AcceptMission: UIViewController {
     }
     
     private func updateViews() {
+        
         acceptMissionCollectionView.delegate = self
         acceptMissionCollectionView.dataSource = self
     }

@@ -21,6 +21,9 @@ class HelpViewController: UIViewController {
         super.viewDidLoad()
         
         updateViews()
+        
+        // Hide the Keyboard with tap gesture
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {

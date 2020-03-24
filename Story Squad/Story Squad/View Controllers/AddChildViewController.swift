@@ -32,6 +32,9 @@ class AddChildViewController: UIViewController {
         
         createPicker()
         createToolbar()
+        
+        // Hide the Keyboard with tap gesture
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {
