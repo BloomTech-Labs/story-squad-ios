@@ -7,9 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Nunito-Light.ttf">
-            <string>Nunito-Light</string>
-        </array>
         <array key="Nunito-Regular.ttf">
             <string>Nunito-Regular</string>
         </array>
@@ -27,13 +24,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child's Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77H-OG-7gQ">
-                                <rect key="frame" x="12" y="120" width="390" height="23"/>
-                                <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="18"/>
+                                <rect key="frame" x="12" y="120" width="390" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.47799999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QOd-dw-1MC">
-                                <rect key="frame" x="16" y="175" width="382" height="421"/>
+                                <rect key="frame" x="16" y="177.5" width="382" height="421"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cer-nG-wZr">
                                         <rect key="frame" x="12" y="32" width="358" height="47"/>
@@ -114,35 +111,8 @@
                                             <constraint firstAttribute="height" constant="47" id="qfo-F1-N6b"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5D-eU-PbS">
-                                        <rect key="frame" x="12" y="229" width="358" height="47"/>
-                                        <subviews>
-                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm PIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P91-p0-aLk">
-                                                <rect key="frame" x="20" y="3" width="318" height="41"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" red="0.8155755401" green="0.94907230139999998" blue="0.9253777862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="41" id="KSc-tE-Tsb"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                                        <color key="value" red="0.58039215686274503" green="0.58039215686274503" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="P91-p0-aLk" firstAttribute="centerY" secondItem="P5D-eU-PbS" secondAttribute="centerY" id="E72-8U-ORl"/>
-                                            <constraint firstAttribute="trailing" secondItem="P91-p0-aLk" secondAttribute="trailing" constant="20" id="cvI-IR-Glo"/>
-                                            <constraint firstItem="P91-p0-aLk" firstAttribute="leading" secondItem="P5D-eU-PbS" secondAttribute="leading" constant="20" id="npq-ew-cT0"/>
-                                            <constraint firstAttribute="height" constant="47" id="oe6-SV-ngU"/>
-                                        </constraints>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qch-Ef-LH2">
-                                        <rect key="frame" x="77.5" y="355.5" width="227" height="42.5"/>
+                                        <rect key="frame" x="77.5" y="292.5" width="227" height="42.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.47799999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="227" id="0Hl-8C-Cx2"/>
@@ -158,11 +128,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="saveButtonTapped:" destination="rc8-C2-qc1" eventType="touchUpInside" id="hBV-LN-4LQ"/>
+                                            <action selector="updateButtonTapped:" destination="rc8-C2-qc1" eventType="touchUpInside" id="hBV-LN-4LQ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dyslexia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9b-oc-LZP">
-                                        <rect key="frame" x="213" y="293" width="91" height="30.5"/>
+                                        <rect key="frame" x="213" y="230" width="91" height="30.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.31" green="0.31" blue="0.31" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="24"/>
@@ -170,7 +140,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bPQ-yB-5h1">
-                                        <rect key="frame" x="321" y="293" width="51" height="31"/>
+                                        <rect key="frame" x="321" y="230" width="51" height="31"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.0" green="0.47799999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="onTintColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -185,19 +155,15 @@
                                     <constraint firstAttribute="trailing" secondItem="5nI-bZ-amd" secondAttribute="trailing" constant="12" id="0TW-IF-4F8"/>
                                     <constraint firstItem="5nI-bZ-amd" firstAttribute="top" secondItem="3VF-73-oZe" secondAttribute="bottom" constant="20" id="4nW-pK-wtR"/>
                                     <constraint firstItem="qch-Ef-LH2" firstAttribute="centerX" secondItem="QOd-dw-1MC" secondAttribute="centerX" id="6jo-g9-Cna"/>
-                                    <constraint firstItem="P5D-eU-PbS" firstAttribute="top" secondItem="5nI-bZ-amd" secondAttribute="bottom" constant="16" id="C2Q-gy-GBd"/>
-                                    <constraint firstItem="P5D-eU-PbS" firstAttribute="leading" secondItem="QOd-dw-1MC" secondAttribute="leading" constant="12" id="D5W-j3-zfF"/>
                                     <constraint firstItem="cer-nG-wZr" firstAttribute="leading" secondItem="QOd-dw-1MC" secondAttribute="leading" constant="12" id="Dbq-Hy-FgK"/>
                                     <constraint firstAttribute="trailing" secondItem="cer-nG-wZr" secondAttribute="trailing" constant="12" id="KHF-Ht-wQa"/>
                                     <constraint firstItem="cer-nG-wZr" firstAttribute="top" secondItem="QOd-dw-1MC" secondAttribute="top" constant="32" id="KyJ-xL-dHN"/>
                                     <constraint firstAttribute="height" constant="421" id="Lbc-IR-ITw"/>
-                                    <constraint firstAttribute="trailing" secondItem="P5D-eU-PbS" secondAttribute="trailing" constant="12" id="QRK-Zm-sdD"/>
+                                    <constraint firstItem="q9b-oc-LZP" firstAttribute="top" secondItem="5nI-bZ-amd" secondAttribute="bottom" constant="17" id="RVv-U3-erc"/>
                                     <constraint firstItem="5nI-bZ-amd" firstAttribute="leading" secondItem="QOd-dw-1MC" secondAttribute="leading" constant="12" id="RyS-40-N5e"/>
                                     <constraint firstItem="qch-Ef-LH2" firstAttribute="top" secondItem="q9b-oc-LZP" secondAttribute="bottom" constant="32" id="VTM-f8-jDv"/>
                                     <constraint firstItem="cer-nG-wZr" firstAttribute="centerX" secondItem="QOd-dw-1MC" secondAttribute="centerX" id="b2U-4c-Yo8"/>
-                                    <constraint firstItem="P5D-eU-PbS" firstAttribute="centerX" secondItem="QOd-dw-1MC" secondAttribute="centerX" id="czI-Ic-9hM"/>
-                                    <constraint firstItem="bPQ-yB-5h1" firstAttribute="trailing" secondItem="P5D-eU-PbS" secondAttribute="trailing" id="fwq-4o-mb7"/>
-                                    <constraint firstItem="q9b-oc-LZP" firstAttribute="top" secondItem="P5D-eU-PbS" secondAttribute="bottom" constant="17" id="jn1-qQ-cob"/>
+                                    <constraint firstItem="bPQ-yB-5h1" firstAttribute="trailing" secondItem="5nI-bZ-amd" secondAttribute="trailing" id="iYQ-zx-w0N"/>
                                     <constraint firstItem="3VF-73-oZe" firstAttribute="centerX" secondItem="QOd-dw-1MC" secondAttribute="centerX" id="mW0-Vr-29r"/>
                                     <constraint firstItem="3VF-73-oZe" firstAttribute="leading" secondItem="QOd-dw-1MC" secondAttribute="leading" constant="12" id="n0o-hP-zg4"/>
                                     <constraint firstItem="5nI-bZ-amd" firstAttribute="centerX" secondItem="QOd-dw-1MC" secondAttribute="centerX" id="qPn-Ut-V6P"/>
@@ -231,7 +197,6 @@
                         <outlet property="gradeTextField" destination="6fn-Fd-8PT" id="G28-lq-bEQ"/>
                         <outlet property="nameLabel" destination="77H-OG-7gQ" id="IiJ-fi-EM9"/>
                         <outlet property="nameTextField" destination="yRn-2Q-Q6B" id="jCH-oz-9CC"/>
-                        <outlet property="pinConfirmationTextField" destination="P91-p0-aLk" id="YLN-JO-BzT"/>
                         <outlet property="pinTextField" destination="U10-xi-Xfu" id="eqw-h6-Pbv"/>
                     </connections>
                 </viewController>

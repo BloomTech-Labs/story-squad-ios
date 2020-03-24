@@ -28,16 +28,18 @@ class ChildSettingsViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var gradeTextField: GradeTextField!
     @IBOutlet weak var pinTextField: UITextField!
-    @IBOutlet weak var pinConfirmationTextField: UITextField!
     @IBOutlet weak var dyslexiaSlider: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = "\(childUser?.name ?? "Child's")'s Settings"
+        nameTextField.placeholder = "\(childUser?.name ?? "Change Child's Name")"
         initialDyslexiaSliderState = dyslexiaSlider.isOn
         
         createPicker()
         createToolbar()
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,7 +49,7 @@ class ChildSettingsViewController: UIViewController {
     @IBAction func dyslexiaSliderToggled(_ sender: UISwitch) {
     }
     
-    @IBAction func saveButtonTapped(_ sender: Any) {
+    @IBAction func updateButtonTapped(_ sender: Any) {
         
         guard let child = childUser else { return }
         
@@ -58,19 +60,23 @@ class ChildSettingsViewController: UIViewController {
         } else {
             
             let name = nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            let pin = pinTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            let pinConfirmation = pinConfirmationTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            //TODO: Remove comments at cleanup
+            //let pin = pinTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+    
+            // Commented out because the text field was removed
+//            let pinConfirmation = pinConfirmationTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
             let dyslexiaBool = dyslexiaSlider.isOn
             
-            if pin == pinConfirmation {
-                
+            //TODO: Remove comments at cleanup
+            //if pin == pinConfirmation {
+
                 networkingController?.updateChildAccountInServer(child: child, username: name, dyslexiaPreference: dyslexiaBool, grade: child.grade, completion: { (result) in
-                    
+
                     do {
                         let child = try result.get()
-                        
+
                         DispatchQueue.main.async {
-                            
+
                             self.childUser = child
                             self.showCompleteAlert()
                         }
@@ -81,7 +87,7 @@ class ChildSettingsViewController: UIViewController {
                         }
                     }
                 })
-            }
+            //}
             
         }
         
@@ -92,7 +98,7 @@ class ChildSettingsViewController: UIViewController {
         // Check that at least one change was made
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             pinTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            pinConfirmationTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            //pinConfirmationTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             initialDyslexiaSliderState == dyslexiaSlider.isOn {
             
             return "Please make at least one change to update Child Account"
@@ -124,8 +130,8 @@ class ChildSettingsViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-}
 
+}
 // MARK: - Grade Picker
 extension ChildSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -166,3 +172,4 @@ extension ChildSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSou
         view.endEditing(true)
     }
 }
+
