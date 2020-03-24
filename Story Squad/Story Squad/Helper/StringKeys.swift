@@ -16,4 +16,8 @@ extension String {
     static var passDataForParentString = "co.lambda.pasDataForParent"
     static var passDataForChildString = "co.lambda.pasDataForChild"
     
+    // UserDefault Keys for saving Parent Bearer
+    static var parentBearerString = "ParentBearer"
+    static var parentEmailString = "ParentEmail"
+    static var parentPassString = "ParentPassword"
 }

@@ -73,6 +73,10 @@ class DashboardViewController: UIViewController {
         self.parentUser = tabBar.parentUser
         self.networkingController = tabBar.networkingController
     }
+    
+    private func isParentLoggedIn() -> Bool {
+        return UserDefaults.standard.bool(forKey: "ParentIsLoggedIn")
+    }
 
     private func updateViews() {
         

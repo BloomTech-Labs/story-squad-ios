@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+
 // swiftlint:disable all
 class ChildDashboard: UIViewController {
     
@@ -23,12 +24,24 @@ class ChildDashboard: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        receiveDataFromSignup()
         updateViews()
         
+        // Hide the Keyboard with tap gesture
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    // To receive the Child, Parent and NetworkingController from the Tab Bar
+    private func receiveDataFromSignup() {
+        guard let tabBar = tabBarController as? ChildTabBarController else { return }
+        
+        self.parentUser = tabBar.parentUser
+        self.childUser = tabBar.childUser
+        self.networkingController = tabBar.networkingController
     }
     
     private func updateViews() {

@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 
+typealias App = AppDelegate
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
