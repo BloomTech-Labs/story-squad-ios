@@ -194,6 +194,12 @@ class LogInViewController: UIViewController {
         return nil
     }
     
+    // Clear out TextFileds before segue from this VC
+    private func clearOutTextFields() {
+        emailTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
     private func updateViews() {
         
         // Hide NavigationController Bar
@@ -228,6 +234,7 @@ class LogInViewController: UIViewController {
         
         // Segue to TabBar
         if segue.identifier == "ShowTabBarFromLoginSegue" {
+            clearOutTextFields()
             
             guard let tabBarController = segue.destination as? MainTabBarController else { return }
             
@@ -236,6 +243,7 @@ class LogInViewController: UIViewController {
         }
         // Segue to Child Dashboard
         else if segue.identifier == "ShowChildDashboardVCFromLoginVC" {
+            clearOutTextFields()
             
             guard let tabBarController = segue.destination as? ChildTabBarController else { return }
             
