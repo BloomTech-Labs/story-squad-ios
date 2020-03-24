@@ -16,12 +16,17 @@ class ChildSettingsViewController: UIViewController {
     var childUser: Child?
     
     var childName: String?
+    let gradePicker = UIPickerView()
+    var arrayOfGrades = ["Select Grade", "3rd Grade", "4th Grade", "5th Grade", "6th Grade"]
+    var grade: Int16?
+    
     var initialDyslexiaSliderState: Bool?
     
     // MARK: - Outlets
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var gradeTextField: GradeTextField!
     @IBOutlet weak var pinTextField: UITextField!
     @IBOutlet weak var pinConfirmationTextField: UITextField!
     @IBOutlet weak var dyslexiaSlider: UISwitch!
@@ -30,6 +35,9 @@ class ChildSettingsViewController: UIViewController {
         super.viewDidLoad()
         nameLabel.text = "\(childUser?.name ?? "Child's")'s Settings"
         initialDyslexiaSliderState = dyslexiaSlider.isOn
+        
+        createPicker()
+        createToolbar()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -116,4 +124,45 @@ class ChildSettingsViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+}
+
+// MARK: - Grade Picker
+extension ChildSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func createPicker() {
+        let gradePicker = UIPickerView()
+        gradePicker.delegate = self
+        gradePicker.delegate?.pickerView?(gradePicker, didSelectRow: 0, inComponent: 0)
+        gradeTextField.inputView = gradePicker
+        gradeTextField.isUserInteractionEnabled = true
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return arrayOfGrades.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return arrayOfGrades[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        return gradeTextField.text =  arrayOfGrades[row]
+    }
+    
+    func createToolbar() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddChildViewController.closePickerView))
+        toolbar.setItems([doneButton], animated: false)
+        toolbar.isUserInteractionEnabled = true
+        gradeTextField.inputAccessoryView = toolbar
+    }
+    
+    @objc func closePickerView() {
+        view.endEditing(true)
+    }
 }
