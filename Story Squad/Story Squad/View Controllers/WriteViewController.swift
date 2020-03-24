@@ -23,6 +23,7 @@ class WriteViewController: UIViewController {
         //scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+200)
 
         updateViews()
+        self.hideKeyboardWhenTappedAround()
     }
     
     func updateViews() {
