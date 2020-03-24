@@ -38,6 +38,8 @@ class ChildSettingsViewController: UIViewController {
         
         createPicker()
         createToolbar()
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {
