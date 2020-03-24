@@ -33,6 +33,7 @@ class PageCountProgressView: UIView {
             let progressRect = CGRect(x: 2, y: rect.height / 4, width: trackWidth * progress, height: rect.height / 2)
             context.setFillColor(completedProgressFillColor)
             
+            
             let progressPath = UIBezierPath(roundedRect: progressRect, cornerRadius: 14)
             progressPath.fill()
             
