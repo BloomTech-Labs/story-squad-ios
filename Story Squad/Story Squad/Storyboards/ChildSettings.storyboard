@@ -202,10 +202,10 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGU-0Q-EMX">
-                                        <rect key="frame" x="101" y="488" width="180" height="43"/>
+                                        <rect key="frame" x="77.5" y="504" width="227" height="43"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="180" id="EAD-Ps-xO0"/>
+                                            <constraint firstAttribute="width" constant="227" id="EAD-Ps-xO0"/>
                                             <constraint firstAttribute="height" constant="42.710000000000001" id="Wd0-9c-tDF"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="18"/>
@@ -226,7 +226,7 @@
                                 <constraints>
                                     <constraint firstItem="bPQ-yB-5h1" firstAttribute="centerY" secondItem="q9b-oc-LZP" secondAttribute="centerY" id="0PQ-KJ-hqR"/>
                                     <constraint firstAttribute="trailing" secondItem="5nI-bZ-amd" secondAttribute="trailing" constant="12" id="0TW-IF-4F8"/>
-                                    <constraint firstItem="eGU-0Q-EMX" firstAttribute="top" secondItem="qch-Ef-LH2" secondAttribute="bottom" constant="16" id="2Bq-5f-hQk"/>
+                                    <constraint firstItem="eGU-0Q-EMX" firstAttribute="top" secondItem="qch-Ef-LH2" secondAttribute="bottom" constant="32" id="2Bq-5f-hQk"/>
                                     <constraint firstItem="qch-Ef-LH2" firstAttribute="centerX" secondItem="QOd-dw-1MC" secondAttribute="centerX" id="6jo-g9-Cna"/>
                                     <constraint firstItem="cer-nG-wZr" firstAttribute="leading" secondItem="QOd-dw-1MC" secondAttribute="leading" constant="12" id="Dbq-Hy-FgK"/>
                                     <constraint firstItem="xVn-GE-cGT" firstAttribute="leading" secondItem="QOd-dw-1MC" secondAttribute="leading" constant="12" id="IC7-Qh-zK0"/>
