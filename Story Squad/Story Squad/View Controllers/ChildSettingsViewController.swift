@@ -46,6 +46,7 @@ class ChildSettingsViewController: UIViewController {
         updateViews()
         
         scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+400)
+        //self.title = "Child Settings"
         self.hideKeyboardWhenTappedAround()
     }
     
