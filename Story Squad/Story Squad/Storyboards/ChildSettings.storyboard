@@ -61,7 +61,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cer-nG-wZr">
                                         <rect key="frame" x="12" y="99" width="358" height="47"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Change Child's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRn-2Q-Q6B">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Change Child's Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRn-2Q-Q6B">
                                                 <rect key="frame" x="20" y="3" width="318" height="41"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="0.75722388699999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <constraints>

@@ -93,9 +93,6 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="18"/>
                                                         <state key="normal" title="Manage Subscription"/>
-                                                        <connections>
-                                                            <segue destination="oUP-jv-Hmj" kind="show" identifier="ManageSubscriptionSegue" id="72F-eY-9lB"/>
-                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBi-gr-VZf">
                                                         <rect key="frame" x="0.0" y="279.5" width="406" height="250"/>
@@ -180,16 +177,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDF-cR-Lfz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1833" y="166"/>
-        </scene>
-        <!--ManageSubscription-->
-        <scene sceneID="c1O-SW-BwW">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ManageSubscription" id="oUP-jv-Hmj" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="pXb-i7-B1z"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qd8-7O-R7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1835" y="223"/>
         </scene>
         <!--Settings-->
         <scene sceneID="hgD-OH-MGA">
