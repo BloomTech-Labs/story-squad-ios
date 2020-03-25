@@ -128,18 +128,15 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ChildSettingsFromManageProfilesSegue" {
-           // if let selectedCell = collectionView.cell as? ChildSettingsViewController
             
             if let indexPath = childCollectionView.indexPathsForSelectedItems?.first,
-                let destinationVC = segue.destination as? ChildSettingsViewController {
+                let childSettingsVC = segue.destination as? ChildSettingsViewController {
+                
                let child = fetchResultsController.object(at: indexPath)
-                destinationVC.childUser = child
+                childSettingsVC.childUser = child
+                childSettingsVC.parentUser = parentUser
+                childSettingsVC.networkingController = networkingController
             }
-//            }
-  //          destinationController?.childName = child?.name
-//            if let sender = sender as? ChildCollectionViewCell {
-//                guard childCollectionView.indexPath(for: sender) != nil else { return }
-//            }
         }
     }
 }

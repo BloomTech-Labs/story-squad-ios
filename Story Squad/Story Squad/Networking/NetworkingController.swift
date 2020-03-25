@@ -38,6 +38,11 @@ class NetworkingController {
         childBearer = nil
     }
     
+    // MARK: - Set ChildUser
+    func setChildUser(child: Child) {
+        childUser = child
+    }
+    
     // MARK: - Create Parent using Server
     func updateParentWithServer(parent: Parent, completion: @escaping(Result<Parent?, NetworkingError>) -> Void) {
         
@@ -149,7 +154,7 @@ class NetworkingController {
         
         print("Request: \(request)")
         
-        URLSession.shared.dataTask(with: request) { (data , response, error) in
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             if let error = error {
                 print("Error getting response: \(error)")
@@ -158,8 +163,8 @@ class NetworkingController {
             }
             
             if let response = response as? HTTPURLResponse {
-                if response.statusCode == 200 {
-                    print("Good 200 response")
+                if response.statusCode == 200 || response.statusCode == 201 {
+                    print("Good response")
                 } else {
                     print("Bad response, code: \(response.statusCode)")
                     print("Response description: \(response.description)")
@@ -179,13 +184,14 @@ class NetworkingController {
                 print("child Data from response: \(String(describing: dataString))")
                 
                 let childRep = try JSONDecoder().decode(ChildRepresentation.self, from: data)
+                self.childUser = child
                 
                 // Update this Child in CoreData with childRepresentation
-                self.updateChildInCoreData(with: childRep)
-                
-                completion(.success(self.childUser))
-                return
-                
+                self.updateChildInCoreData(with: childRep) {
+    
+                    completion(.success(self.childUser))
+                    return
+                }
             } catch {
                 print("Error decoding: \(error)")
                 completion(.failure(.badDecode))
@@ -633,19 +639,28 @@ class NetworkingController {
     }
     
     // Child
-    private func updateChildInCoreData(with representation: ChildRepresentation) {
+    private func updateChildInCoreData(with representation: ChildRepresentation, completion: @escaping(() -> Void) = {}) {
         
-        guard let childUser = childUser else { return }
-        
-        childUser.username = representation.username
-        //        childUser.id = representation.id
-        childUser.grade = representation.grade
-        childUser.avatar = representation.avatar
-        childUser.dyslexiaPreference = representation.dyslexiaPreference
-        
-        CoreDataStack.shared.save(context: CoreDataStack.shared.mainContext)
-        
-        self.childUser = childUser
+        guard let childUser = childUser else {
+            completion()
+            return
+        }
+        fetchChildFromCD(with: childUser.id) {
+            guard let childUser = self.childUser else {
+                completion()
+                return
+            }
+            
+            childUser.username = representation.username
+            childUser.grade = representation.grade
+            childUser.avatar = representation.avatar
+            childUser.dyslexiaPreference = representation.dyslexiaPreference
+            
+            CoreDataStack.shared.save(context: CoreDataStack.shared.mainContext)
+            
+            self.childUser = childUser
+            completion()
+        }
     }
     
     // MARK: - Child CRUD Methods for CoreData
@@ -670,52 +685,6 @@ class NetworkingController {
     }
     
     // Update Child
-    // swiftlint:disable:next function_parameter_count
-    func updateChildInCoreDataWith(name: String?, id: Int16, username: String?, pin: Int16?, grade: Int16?, cohort: String?, dyslexiaPreference: Bool?, avatar: String?, context: NSManagedObjectContext) {
-        
-        guard let child = fetchChildFromCD(with: id) else { return }
-        
-        // Use new property or old property
-        let newName = name ?? child.name
-        let newUsername = username ?? child.username
-        let newPin = pin ?? child.pin
-        let newGrade = grade ?? child.grade
-        let newCohort = cohort ?? child.cohort
-        let newDyslexiaPreference = dyslexiaPreference ?? child.dyslexiaPreference
-        let newAvatar = avatar ?? child.avatar
-        
-        let moc = CoreDataStack.shared.mainContext
-        let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
-        
-        // Array with child that needs to be fetched
-        let childrenByID = [id]
-        fetchRequest.predicate = NSPredicate(format: "id IN %@", childrenByID)
-        
-        // Trying to fetch array of children
-        let fetchedChildren = try? moc.fetch(fetchRequest)
-        
-        guard let children = fetchedChildren else { return }
-        for child in children {
-            
-            // Updating Child
-            if child.id == id {
-                child.name = newName
-                child.username = newUsername
-                child.pin = newPin
-                child.grade = newGrade
-                child.cohort = newCohort
-                child.dyslexiaPreference = newDyslexiaPreference
-                child.avatar = newAvatar
-                
-                print("Succefully fetched and updated child \(String(describing: name)) in CoreData")
-            } else {
-                NSLog("Couldn't fetched and update child \(String(describing: name)) in CoreData")
-            }
-        }
-        
-        // Saving to CoreData
-        CoreDataStack.shared.save(context: context)
-    }
     
     // Delete Child
     func deleteChildFromCoreData(child: Child, context: NSManagedObjectContext) {
@@ -810,25 +779,30 @@ class NetworkingController {
     }
     
     // Child
-    func fetchChildFromCD(with id: Int16) -> Child? {
+    func fetchChildFromCD(with id: Int16, completion: @escaping(() -> Void) = {}) {
         
         let moc = CoreDataStack.shared.mainContext
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
         let childrenByID = [id]
         fetchRequest.predicate = NSPredicate(format: "id IN %@", childrenByID)
         
-        let possibleChildren = try? moc.fetch(fetchRequest)
-        
-        guard let children = possibleChildren else { return nil }
-        for child in children {
+        do {
+            let children = try moc.fetch(fetchRequest)
             
-            if child.id == id {
-                self.childUser = child
-            } else {
-                print("Couldn't fetch child from CoreData")
+            for child in children {
+                
+                if child.id == id {
+                    self.childUser = child
+                    completion()
+                } else {
+                    print("Couldn't fetch child from CoreData")
+                    completion()
+                }
             }
+        } catch {
+            NSLog("Couldn't fetch Child to update")
+            completion()
         }
-        return childUser
     }
     
     // Children
