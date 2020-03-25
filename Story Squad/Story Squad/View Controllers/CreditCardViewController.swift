@@ -19,6 +19,7 @@ class CreditCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func addCardButtonPressed(_ sender: UIButton) {

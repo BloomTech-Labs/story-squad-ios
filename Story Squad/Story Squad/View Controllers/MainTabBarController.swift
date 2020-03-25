@@ -18,6 +18,7 @@ class MainTabBarController: UITabBarController {
         self.selectedIndex = 1
         
         updateParentInfo()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

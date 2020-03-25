@@ -55,6 +55,7 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         //updateViews()
         receiveDataFromSignup()
         setupChildCollectionView()
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func logoutButtonTapped(_ sender: UIButton) {

@@ -23,7 +23,8 @@ class ParentAccountMainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func updateButtonTapped(_ sender: Any) {
