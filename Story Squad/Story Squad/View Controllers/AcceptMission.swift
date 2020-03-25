@@ -12,13 +12,11 @@ import CoreData
 class AcceptMission: UIViewController {
    
     // MARK: - Properties
-    
     var networkingController: NetworkingController?
     var parentUser: Parent?
     var childUser: Child?
     
     // MARK: - Outlets
-    
     @IBOutlet weak var acceptMissionCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -40,16 +38,18 @@ class AcceptMission: UIViewController {
         acceptMissionCollectionView.dataSource = self
     }
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "WriteSegue" {
+            if let writeVC = segue.destination as? WriteViewController {
+                
+                writeVC.childUser = self.childUser
+                writeVC.parentUser = self.parentUser
+                writeVC.networkingController = self.networkingController
+            }
+        }
     }
-    */
-
 }
 
 extension AcceptMission: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {

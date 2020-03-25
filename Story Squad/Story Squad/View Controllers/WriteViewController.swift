@@ -10,6 +10,11 @@ import UIKit
 
 class WriteViewController: UIViewController {
     
+    // MARK: - Properties
+    var networkingController: NetworkingController?
+    var parentUser: Parent?
+    var childUser: Child?
+    
     // MARK: - Outlets
     @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var writeTextView: UITextView!
@@ -19,10 +24,10 @@ class WriteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+200)
 
         updateViews()
+        
+        // Hide Keyboard on tap gesture
         self.hideKeyboardWhenTappedAround()
     }
     
