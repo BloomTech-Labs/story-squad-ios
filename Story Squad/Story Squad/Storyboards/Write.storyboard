@@ -76,6 +76,9 @@
                                                                 <integer key="value" value="14"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="submitButtonTapped:" destination="PCB-u6-eyg" eventType="touchUpInside" id="rdl-NB-8Io"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrm-zi-qwk">
                                                         <rect key="frame" x="0.0" y="47" width="342" height="33"/>
@@ -102,6 +105,9 @@
                                                                 <integer key="value" value="14"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="chooseFilesFromDeviceButtonTapped:" destination="PCB-u6-eyg" eventType="touchUpInside" id="TRJ-OY-n53"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
