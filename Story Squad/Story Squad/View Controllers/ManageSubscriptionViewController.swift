@@ -18,7 +18,7 @@ class ManageSubscriptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        comingSoonLabel.transform = CGAffineTransform.init(rotationAngle: 0.75)
+        //comingSoonLabel.transform = CGAffineTransform.init(rotationAngle: 0.75)
         // Do any additional setup after loading the view.
         self.hideKeyboardWhenTappedAround()
     }

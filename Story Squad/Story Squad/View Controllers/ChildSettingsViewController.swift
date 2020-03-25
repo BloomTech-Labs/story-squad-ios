@@ -25,6 +25,7 @@ class ChildSettingsViewController: UIViewController {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var currentNameTextField: UITextField!
@@ -44,6 +45,8 @@ class ChildSettingsViewController: UIViewController {
         createToolbar()
         updateViews()
         
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+400)
+        //self.title = "Child Settings"
         self.hideKeyboardWhenTappedAround()
     }
     
