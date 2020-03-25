@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ComingSoon" translatesAutoresizingMaskIntoConstraints="NO" id="6fp-Sv-OSZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="325.00000000000023"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="325" id="lus-DL-c0j"/>
                                         </constraints>
