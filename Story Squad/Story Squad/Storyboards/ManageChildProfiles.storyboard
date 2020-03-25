@@ -92,7 +92,7 @@
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="V12-qT-Aud" kind="show" identifier="ManageSubscriptionSegue" id="sJ5-ik-055"/>
+                                                    <segue destination="V12-qT-Aud" kind="show" id="vCv-Wn-Asg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeP-3e-f8B">
@@ -127,7 +127,7 @@
                     <navigationItem key="navigationItem" id="QJq-d2-Yrg">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="questionmark.circle" catalog="system" id="kvL-00-MPl">
                             <connections>
-                                <segue destination="rFf-hu-Gey" kind="show" identifier="ShowHelpVC" id="re1-85-eSd"/>
+                                <segue destination="rFf-hu-Gey" kind="show" id="39A-yE-s9i"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -148,7 +148,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCh-WM-mJ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1429" y="-29"/>
+            <point key="canvasLocation" x="1429" y="-72"/>
         </scene>
         <!--ChildSettings-->
         <scene sceneID="wld-TY-NLa">
@@ -178,7 +178,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T52-if-Iox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1499" y="68"/>
+            <point key="canvasLocation" x="1499" y="113"/>
         </scene>
         <!--Settings-->
         <scene sceneID="6Y9-8L-CZ4">
