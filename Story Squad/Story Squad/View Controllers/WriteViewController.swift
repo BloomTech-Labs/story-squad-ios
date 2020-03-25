@@ -31,6 +31,42 @@ class WriteViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
     }
     
+    @IBAction func submitButtonTapped(_ sender: UIButton) {
+        
+        if let _ = childUser,
+            let writtenStory = writeTextView.text,
+            !writtenStory.isEmpty {
+            
+            showStorySubmittedAlert()
+//            self.dismiss(animated: true, completion: nil)
+        } else {
+            showErrorAlert(errorTitle: "No Story found", errorMessage: "Please write your story before submitting")
+        }
+    }
+    
+    @IBAction func chooseFilesFromDeviceButtonTapped(_ sender: UIButton) {
+    }
+    
+    // Story Submitted Alert
+    private func showStorySubmittedAlert() {
+        
+        let alert = UIAlertController(title: "Your Amazing Story has been Submitted!", message: "Thank you", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { (_) in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    // Error alert
+    private func showErrorAlert(errorTitle: String, errorMessage: String) {
+        let alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func updateViews() {
         promptLabel.layer.borderWidth = 7.0
         writeTextView.layer.cornerRadius = 10
