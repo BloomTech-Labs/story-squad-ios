@@ -15,6 +15,8 @@ class WriteViewController: UIViewController {
     var parentUser: Parent?
     var childUser: Child?
     
+    var imagePicker: ImagePicker!
+    
     // MARK: - Outlets
     @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var writeTextView: UITextView!
@@ -36,6 +38,7 @@ class WriteViewController: UIViewController {
     }
     
     @IBAction func chooseFilesFromDeviceButtonTapped(_ sender: UIButton) {
+        self.imagePicker.present(from: sender)
     }
     
     private func submitStory() {
@@ -106,3 +109,10 @@ class WriteViewController: UIViewController {
     }
     */
 }
+
+//extension WriteViewController: ImagePickerDelegate {
+
+    //func didSelect(image: UIImage?) {
+       // self.imageView.image = image
+  //  }
+//}
