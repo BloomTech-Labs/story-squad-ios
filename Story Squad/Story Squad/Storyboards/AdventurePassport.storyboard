@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ld7-BA-59Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ld7-BA-59Q">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,14 +14,52 @@
                     <view key="view" contentMode="scaleToFill" id="2Em-em-RVo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyc-d1-qT9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ComingSoon" translatesAutoresizingMaskIntoConstraints="NO" id="6fp-Sv-OSZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="325.00000000000023"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="325" id="lus-DL-c0j"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ComingSoon2" translatesAutoresizingMaskIntoConstraints="NO" id="wRs-HG-2oV">
+                                        <rect key="frame" x="0.0" y="325" width="414" height="444"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="v0I-wW-0iQ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6fp-Sv-OSZ" secondAttribute="trailing" id="5BV-Xd-CvR"/>
+                                    <constraint firstItem="6fp-Sv-OSZ" firstAttribute="leading" secondItem="oyc-d1-qT9" secondAttribute="leading" id="LJN-YI-0Gy"/>
+                                    <constraint firstItem="wRs-HG-2oV" firstAttribute="top" secondItem="6fp-Sv-OSZ" secondAttribute="bottom" id="MI0-uo-Tlp"/>
+                                    <constraint firstItem="wRs-HG-2oV" firstAttribute="centerX" secondItem="oyc-d1-qT9" secondAttribute="centerX" id="XkE-od-fOx"/>
+                                    <constraint firstItem="6fp-Sv-OSZ" firstAttribute="top" secondItem="oyc-d1-qT9" secondAttribute="top" id="let-RW-UkD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oyc-d1-qT9" firstAttribute="top" secondItem="h2Z-q2-EKv" secondAttribute="top" id="3eb-tl-5YM"/>
+                            <constraint firstItem="oyc-d1-qT9" firstAttribute="leading" secondItem="h2Z-q2-EKv" secondAttribute="leading" id="FCF-DT-IhH"/>
+                            <constraint firstItem="h2Z-q2-EKv" firstAttribute="bottom" secondItem="oyc-d1-qT9" secondAttribute="bottom" id="M3C-eU-2Bm"/>
+                            <constraint firstItem="h2Z-q2-EKv" firstAttribute="trailing" secondItem="oyc-d1-qT9" secondAttribute="trailing" id="M5T-x0-oru"/>
+                            <constraint firstItem="h2Z-q2-EKv" firstAttribute="bottom" secondItem="wRs-HG-2oV" secondAttribute="bottom" id="Zvm-iR-Qyr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="h2Z-q2-EKv"/>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljh-bw-OsZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="94"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ComingSoon" width="1160" height="886"/>
+        <image name="ComingSoon2" width="759" height="808"/>
+    </resources>
 </document>

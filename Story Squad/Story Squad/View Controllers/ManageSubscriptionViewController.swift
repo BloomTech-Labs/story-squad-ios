@@ -20,6 +20,7 @@ class ManageSubscriptionViewController: UIViewController {
         super.viewDidLoad()
         comingSoonLabel.transform = CGAffineTransform.init(rotationAngle: 0.75)
         // Do any additional setup after loading the view.
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func cancelSubscriptionButtonTapped(_ sender: Any) {

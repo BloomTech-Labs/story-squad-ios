@@ -25,6 +25,7 @@ class FamilySettingsViewController: UIViewController {
         super.viewDidLoad()
         
         receiveDataFromSignup()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {
