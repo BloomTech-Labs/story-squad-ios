@@ -58,14 +58,20 @@ class ChildSettingsViewController: UIViewController {
         
         guard let child = childUser else { return }
         
-        let errorMessage = validateFields()
+        let errorMessage = checkIfChangesWhereMade()
         
         if errorMessage != nil {
             showErrorAlert(errorTitle: "No changes made", errorMessage: errorMessage!)
         } else {
             
-            let name = nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-//            let pin = pinTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            var name: String?
+            
+            if let nameInTextField = nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+                !nameInTextField.isEmpty {
+                name = nameInTextField
+            } else {
+                name = child.name
+            }
 
             let dyslexiaBool = dyslexiaSlider.isOn
             
@@ -85,15 +91,17 @@ class ChildSettingsViewController: UIViewController {
             
             // Continue if grade is not nil
             if let grade = grade {
+                guard let newName = name else { return }
+                networkingController?.setChildUser(child: child)
                 
-                networkingController?.updateChildAccountInServer(child: child, username: name, dyslexiaPreference: dyslexiaBool, grade: grade, completion: { (result) in
+                networkingController?.updateChildAccountInServer(child: child, username: newName, dyslexiaPreference: dyslexiaBool, grade: grade, completion: { (result) in
                     
                     do {
-                        let child = try result.get()
+                        let result = try result.get()
+                        self.childUser = result
                         
                         DispatchQueue.main.async {
                             
-                            self.childUser = child
                             self.showCompleteAlert()
                         }
                     } catch {
@@ -109,7 +117,7 @@ class ChildSettingsViewController: UIViewController {
         }
     }
     
-    private func validateFields() -> String? {
+    private func checkIfChangesWhereMade() -> String? {
         
         // Check that at least one change was made
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" &&
@@ -133,14 +141,17 @@ class ChildSettingsViewController: UIViewController {
     private func showCompleteAlert() {
         let alert = UIAlertController(title: "Success!", message: "Child Account has been updated", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { (_) in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+//        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
     
     private func updateViews() {
         
         guard let childUser = childUser,
-            let name = childUser.name else { return }
+            let username = childUser.username else { return }
         
         let pinString = String(childUser.pin)
         
@@ -162,9 +173,14 @@ class ChildSettingsViewController: UIViewController {
             grade = nil
         }
         
-        nameLabel.text = name
-        currentNameTextField.text = "\(name)"
+        nameLabel.text = username
+        currentNameTextField.text = "\(username)"
         currentPinTextField.text = "\(pinString)"
+        
+        // Make sure user can't update these TextFields
+        currentNameTextField.isUserInteractionEnabled = false
+        currentPinTextField.isUserInteractionEnabled = false
+//        gradeTextField.isUserInteractionEnabled = false
         
         // Capture the state of the initial state of the dyslexia switch
         initialDyslexiaSliderState = dyslexiaSlider.isOn
