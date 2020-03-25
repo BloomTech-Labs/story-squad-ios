@@ -95,7 +95,7 @@ class NetworkingController {
                 // Update in CoreData with ParentRepresentation
                 let parentRep = try JSONDecoder().decode(ParentRepresentation.self, from: data)
                 self.updateParentInCoreData(with: parentRep)
-
+                
                 completion(.success(self.parentUser))
                 return
                 
@@ -115,7 +115,7 @@ class NetworkingController {
             return
         }
         
-//        guard let id = child.id else { return }
+        //        guard let id = child.id else { return }
         let id = child.id
         
         let registerURL = baseURL
@@ -188,7 +188,7 @@ class NetworkingController {
                 
                 // Update this Child in CoreData with childRepresentation
                 self.updateChildInCoreData(with: childRep) {
-    
+                    
                     completion(.success(self.childUser))
                     return
                 }
@@ -214,8 +214,8 @@ class NetworkingController {
         
         let json = """
         {
-            "username": "\(username)",
-            "grade": \(grade)
+        "username": "\(username)",
+        "grade": \(grade)
         }
         """
         
@@ -227,7 +227,7 @@ class NetworkingController {
             return
         }
         print("jsoneData: \(jsonData)")
-                var request = URLRequest(url: registerURL)
+        var request = URLRequest(url: registerURL)
         
         request.httpBody = unwrappedData
         request.httpMethod = HTTPMethod.post.rawValue
@@ -488,7 +488,7 @@ class NetworkingController {
                 // (Object is fetched/created on main context so safe to use in
                 // view controllers
                 self.fetchOrCreateParent(with: email, password: password) {
-                
+                    
                     // Return the Bearer
                     completion(.success(self.parentBearer))
                 }
@@ -556,6 +556,86 @@ class NetworkingController {
                 completion(.failure(.badDecode))
                 return
             }
+        }.resume()
+    }
+    
+    // MARK: - Submit Written Story
+    func submitStory(child: Child, storyText: String, page1: String?, page2: String?, page3: String?, page4: String?, page5: String?, completion: @escaping(Result<String?, NetworkingError>) -> Void) {
+        
+        guard let childBearer = childBearer else {
+            completion(Result.failure(NetworkingError.noBearer))
+            return
+        }
+        
+        let registerURL = baseURL
+            .appendingPathComponent("storyRoutes")
+        
+        if storyText.isEmpty && page1 == nil {
+            completion(.failure(.missingRequiredElement))
+            return
+        }
+        
+        let page1 = page1 ?? ""
+        let page2 = page2 ?? ""
+        let page3 = page3 ?? ""
+        let page4 = page4 ?? ""
+        let page5 = page5 ?? ""
+        
+        let json = """
+        {
+        "storyText": "\(storyText)",
+        "story": {
+        "page1": "\(page1)",
+        "page2": "\(page2)",
+        "page3": "\(page3)",
+        "page4": "\(page4)",
+        "page5": "\(page5)"
+        }
+        }
+        """
+        
+        let jsonData = json.data(using: .utf8)
+        
+        guard let unwrappedData = jsonData else {
+            print("encoded data wrong, couldn't unwrap data")
+            completion(.failure(.formattedJSONIncorrectly))
+            return
+        }
+        
+        var request = URLRequest(url: registerURL)
+        
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: HeaderNames.contentType.rawValue)
+        request.setValue("\(childBearer.token)", forHTTPHeaderField: HeaderNames.authorization.rawValue)
+        request.httpBody = unwrappedData
+        
+        print("Request: \(request)")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let error = error {
+                print("Error getting response: \(error)")
+                completion(.failure(.serverError(error)))
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                if response.statusCode == 200 || response.statusCode == 201 {
+                    print("Good response")
+                    completion(.success("Succesfully Submitted Story"))
+                    return
+                } else {
+                    print("Bad response, code: \(response.statusCode)")
+                    completion(.failure(.unexpectedStatusCode(response.statusCode)))
+                    return
+                }
+            }
+            
+            guard data != nil else {
+                completion(.failure(.noData))
+                return
+            }
+            // TODO: Decode the Story after a CoreData Model is created for a Story
         }.resume()
     }
     
@@ -736,17 +816,17 @@ class NetworkingController {
             }
             
             if let parent = parent {
-//                self.updateParentWithServer(parent: parent) { (result) in
-//                    do {
-//                        let parent = try result.get()
-////                        self.parentUser = parent
-//                        print("\nUpdated Parent with Server\n")
-//                        completion()
-//                    } catch {
-//                        NSLog("\nCouldn't update Parent with Server\n")
-//                        completion()
-//                    }
-//                }
+                //                self.updateParentWithServer(parent: parent) { (result) in
+                //                    do {
+                //                        let parent = try result.get()
+                ////                        self.parentUser = parent
+                //                        print("\nUpdated Parent with Server\n")
+                //                        completion()
+                //                    } catch {
+                //                        NSLog("\nCouldn't update Parent with Server\n")
+                //                        completion()
+                //                    }
+                //                }
                 self.parentUser = parent
                 completion()
             } else {
@@ -810,14 +890,14 @@ class NetworkingController {
         
         let moc = CoreDataStack.shared.mainContext
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
-
+        
         let predicate = NSPredicate(format: "parent.id == %i", parentUser?.id ?? 0)
         fetchRequest.predicate = predicate
         
         let fetchedChildren = try? moc.fetch(fetchRequest)
         
         guard let children = fetchedChildren else { return [] }
-
+        
         return children
     }
 }

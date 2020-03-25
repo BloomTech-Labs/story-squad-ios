@@ -18,4 +18,5 @@ enum NetworkingError: Error {
     case badEncoding
     case noRepresentation
     case formattedJSONIncorrectly
+    case missingRequiredElement
 }

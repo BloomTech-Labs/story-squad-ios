@@ -32,19 +32,38 @@ class WriteViewController: UIViewController {
     }
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
-        
-        if let _ = childUser,
-            let writtenStory = writeTextView.text,
-            !writtenStory.isEmpty {
-            
-            showStorySubmittedAlert()
-//            self.dismiss(animated: true, completion: nil)
-        } else {
-            showErrorAlert(errorTitle: "No Story found", errorMessage: "Please write your story before submitting")
-        }
+        submitStory()
     }
     
     @IBAction func chooseFilesFromDeviceButtonTapped(_ sender: UIButton) {
+    }
+    
+    private func submitStory() {
+        
+       // TODO: Check that at least you have one image or that the written story is not empty before attempting to submit the Story
+        
+        if let child = childUser,
+            let writtenStory = writeTextView.text,
+            !writtenStory.isEmpty {
+            
+            networkingController?.submitStory(child: child, storyText: writtenStory, page1: nil, page2: nil, page3: nil, page4: nil, page5: nil, completion: { (result) in
+                
+                do {
+                    //swiftlint:disable:next redundant_discardable_let
+                    let _ = try result.get()
+                    
+                    DispatchQueue.main.async {
+                        self.showStorySubmittedAlert()
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        self.showErrorAlert(errorTitle: "Couldn't save your Story", errorMessage: " You can only submit one Story for this week. If you haven't submitted one yet, please try again")
+                    }
+                }
+            })
+        } else {
+            showErrorAlert(errorTitle: "No Story found", errorMessage: "Please write your story before submitting")
+        }
     }
     
     // Story Submitted Alert
