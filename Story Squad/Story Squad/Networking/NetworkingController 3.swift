@@ -305,6 +305,7 @@ class NetworkingController {
     // MARK: - Child CRUD Methods
     
     // create Child
+    //swiftlint:disable:next function_parameter_count
     func createChildAndAddToParent(parent: Parent, name: String, username: String?, id: String?, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool = false, avatar: String?, context: NSManagedObjectContext) {
         
         // Generate random avatar

@@ -240,4 +240,3 @@ extension ChildSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSou
         view.endEditing(true)
     }
 }
-

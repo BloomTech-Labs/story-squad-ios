@@ -19,6 +19,7 @@ struct ChildInParentRepresentation: Codable {
         case avatar
         case dyslexiaPreference = "preferences"
         
+        //swiftlint:disable:next nesting
         enum DyslexiaCodingKeys: String, CodingKey {
             case dyslexia
         }
@@ -34,7 +35,6 @@ struct ChildInParentRepresentation: Codable {
     var cohort: String?
     var pin: Int16?
     var parent: ParentRepresentation?
-    
     
     // init when Decoding
     init(from decoder: Decoder) throws {

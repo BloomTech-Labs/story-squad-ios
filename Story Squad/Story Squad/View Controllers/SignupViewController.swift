@@ -112,14 +112,14 @@ class SignupViewController: UIViewController {
         }
     }
     
-    func showErrorAlert(errorTitle: String, errorMessage: String) {
+    private func showErrorAlert(errorTitle: String, errorMessage: String) {
         let alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
     }
     
-    func validateFields() -> String? {
+    private func validateFields() -> String? {
         
         // Check that all fields are filled in
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
@@ -129,18 +129,17 @@ class SignupViewController: UIViewController {
             
             return "Please fill in all fields."
         }
-        
-        // TODO: Comment back in for production
-        
-        //        // Check if the password is secure enough
-        //        if isPasswordValid(cleanedPassword) == false {
-        //
-        //            return "Please make sure your password is at least 8 characters, contains a special character and a number."
-        //        }
+
+        // Check if the password is secure enough
+        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if isPasswordValid(cleanedPassword) == false {
+            
+            return "Please make sure your password is at least 8 characters, contains a special character and a number."
+        }
         return nil
     }
     
-    func isPasswordValid(_ password: String) -> Bool {
+    private func isPasswordValid(_ password: String) -> Bool {
         // 1 - Password length is 8.
         // 2 - One Alphabet in Password.
         // 3 - One Special Character in Password.

@@ -46,18 +46,23 @@ class AddChildViewController: UIViewController {
     
     @IBAction func addChildButtonPressed(_ sender: UIButton) {
         
-        guard let parent = parentUser else { return }
+        guard parentUser != nil else { return }
         
         // Check all Text Fields are filled
         guard let name = nameTextField.text,
             let pin = pinTextField.text,
             !name.isEmpty,
             !pin.isEmpty,
-            let pinInt = Int16(pin)
+            let _ = Int16(pin)
             
             else {
                 showIncompleteAlert()
                 return
+        }
+        
+        if isNameShort() {
+            showErrorAlert(errorTitle: "Sorry", errorMessage: "Username has to be of 4 letters or more")
+            return
         }
         
         // Check Child's Grade
@@ -100,6 +105,19 @@ class AddChildViewController: UIViewController {
         } else {
             showIncompleteAlert()
             return
+        }
+    }
+    
+    // Check if username is too short
+    // Only because the server doesn't accept usernames of 3 letters or less
+    private func isNameShort() -> Bool {
+        guard let name = nameTextField.text,
+            !name.isEmpty else { return true }
+        
+        if name.count <= 3 {
+            return true
+        } else {
+            return false
         }
     }
     

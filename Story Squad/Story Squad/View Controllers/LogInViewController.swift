@@ -221,9 +221,9 @@ class LogInViewController: UIViewController {
     // TODO: This function should run at viewDidLoad, when finished ( WIP Function)
     func checkBearerIsValid() {
         
-        guard let bearer = UserDefaults.standard.string(forKey: .parentBearerString),
-            let email = UserDefaults.standard.string(forKey: .parentEmailString),
-            let password = UserDefaults.standard.string(forKey: .parentPassString) else { return }
+//        guard let bearer = UserDefaults.standard.string(forKey: .parentBearerString),
+//            let email = UserDefaults.standard.string(forKey: .parentEmailString),
+//            let password = UserDefaults.standard.string(forKey: .parentPassString) else { return }
         
         // Make a network call to check if the token is still valid
         // If Bearer is valid, automatically login

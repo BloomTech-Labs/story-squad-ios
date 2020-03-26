@@ -119,12 +119,8 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         print("child selected == \(indexPath.row)")
         print("child name == \(child?.name ?? "no name")")
     }
-    
-    
-    
+      
     // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ChildSettingsFromManageProfilesSegue" {
@@ -136,6 +132,12 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
                 childSettingsVC.childUser = child
                 childSettingsVC.parentUser = parentUser
                 childSettingsVC.networkingController = networkingController
+            }
+        } else if segue.identifier == "toAddChildSegue" {
+            if let addChildVC = segue.destination as? AddChildViewController {
+                
+                addChildVC.parentUser = parentUser
+                addChildVC.networkingController = networkingController
             }
         }
     }

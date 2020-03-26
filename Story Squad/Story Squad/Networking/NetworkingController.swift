@@ -25,6 +25,7 @@ class NetworkingController {
     var childBearer: Bearer?
     
     // MARK: - Save Parent Bearer in UserDefaults
+    // Not fully implemented yet
     func saveParentBearer(bearer: Bearer, email: String, password: String) {
         
         UserDefaults.standard.set(bearer.token, forKey: .parentBearerString)
@@ -226,7 +227,7 @@ class NetworkingController {
             completion(.failure(.formattedJSONIncorrectly))
             return
         }
-        print("jsoneData: \(jsonData)")
+        
         var request = URLRequest(url: registerURL)
         
         request.httpBody = unwrappedData
@@ -272,6 +273,7 @@ class NetworkingController {
                 
                 let randomPIN = Int16.random(in: 1..<199)
                 
+                //swiftlint:disable:next line_length
                 self.createChildAndAddToParentInCoreData(parent: parent, name: username, username: username, id: childRep.id, pin: randomPIN, grade: grade, cohort: nil, dyslexiaPreference: dyslexiaPreference, avatar: nil, context: CoreDataStack.shared.mainContext) {
                     
                     completion(.success(self.childUser))
@@ -348,81 +350,6 @@ class NetworkingController {
         })
         dataTask.resume()
     }
-    
-    //        func signupParent(email: String, password: String, termsOfService: Bool, name: String, completion: @escaping(Result<Bearer?, NetworkingError>) -> Void) {
-    
-    //          let registerURL = baseURL
-    //                .appendingPathComponent("auth")
-    //                .appendingPathComponent("register")
-    //
-    //            let json = """
-    //            {
-    //            "email": "\(email)",
-    //            "password": "\(password)",
-    //            "termsOfService": "\(termsOfService)"
-    //            }
-    //            """
-    //
-    //            let jsonData = json.data(using: .utf8)
-    //
-    //            guard let unwrappedData = jsonData else {
-    //                print("encoded data wrong, couldn't unwrap data")
-    //                completion(.failure(.formattedJSONIncorrectly))
-    //                return
-    //            }
-    //
-    //            var request = URLRequest(url: registerURL)
-    //            request.httpMethod = HTTPMethod.post.rawValue
-    //
-    //            request.allHTTPHeaderFields = [
-    //              "content-type": "application/json",
-    //              "authorization": "Bearer undefined"
-    //            ]
-    //    //        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    //            request.httpBody = unwrappedData
-    //            print("Request: \(request)")
-    //
-    //            URLSession.shared.dataTask(with: request) { (data, response, error) in
-    //
-    //                if let error = error {
-    //                    print("Error getting response: \(error)")
-    //                    completion(.failure(.serverError(error)))
-    //                    return
-    //                }
-    //
-    //                if let response = response as? HTTPURLResponse {
-    //                    if response.statusCode == 200 {
-    //                        print("Good 200 response")
-    //                    } else {
-    //                        print("Bad response, code: \(response.statusCode)")
-    //                        print("\(response)")
-    //                        completion(.failure(.unexpectedStatusCode(response.statusCode)))
-    //                        return
-    //                    }
-    //                }
-    //
-    //                guard let data = data else {
-    //                    completion(.failure(.noData))
-    //                    return
-    //                }
-    //                do {
-    //                    let dataString = String(data: data, encoding: .utf8)
-    //                    print("response Parent data: \(String(describing: dataString))")
-    //                    let parentRepresentation = try JSONDecoder().decode(ParentRepresentation.self, from: data)
-    ////                    self.parentUser?.parentRepresentation = parentRepresentation
-    //                    print("Parent Representation: \(parentRepresentation)")
-    //
-    //                    let bearer = try JSONDecoder().decode(Bearer.self, from: data)
-    //                    self.bearer = bearer
-    //                    completion(.success(parentRepresentation))
-    //                    return
-    //                } catch {
-    //                    print("Error decoding: \(error)")
-    //                    completion(.failure(.badDecode))
-    //                    return
-    //                }
-    //            }.resume()
-    //}
     
     // MARK: - Login Parent Account
     func loginParent(email: String, password: String, completion: @escaping(Result<Bearer?, NetworkingError>) -> Void) {
@@ -793,6 +720,7 @@ class NetworkingController {
     // MARK: - Child CRUD Methods for CoreData
     
     // create Child
+    //swiftlint:disable:next function_parameter_count
     private func createChildAndAddToParentInCoreData(parent: Parent, name: String, username: String, id: Int16, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: String?, context: NSManagedObjectContext, completion: @escaping(() -> Void) = {}) {
         
         // Generate random avatar
@@ -810,8 +738,6 @@ class NetworkingController {
         
         completion()
     }
-    
-    // Update Child
     
     // Delete Child
     func deleteChildFromCoreData(child: Child, context: NSManagedObjectContext) {
@@ -863,17 +789,6 @@ class NetworkingController {
             }
             
             if let parent = parent {
-                //                self.updateParentWithServer(parent: parent) { (result) in
-                //                    do {
-                //                        let parent = try result.get()
-                ////                        self.parentUser = parent
-                //                        print("\nUpdated Parent with Server\n")
-                //                        completion()
-                //                    } catch {
-                //                        NSLog("\nCouldn't update Parent with Server\n")
-                //                        completion()
-                //                    }
-                //                }
                 self.parentUser = parent
                 completion()
             } else {
@@ -884,6 +799,7 @@ class NetworkingController {
         }
     }
     
+    // Fetch Parent by Email
     func fetchParentFromCDWithEmail(email: String) -> Parent? {
         
         let moc = CoreDataStack.shared.mainContext
