@@ -399,16 +399,16 @@
 				FA85E88123FF3558008637E0 /* DashboardViewController.swift */,
 				4F477120240F590A0067F66B /* FamilySettingsViewController.swift */,
 				4FF0F5EF2404A7D200587C7B /* HelpViewController.swift */,
+				4F5BAC43242C12BE002559BD /* ImagePicker.swift */,
 				FAE3B6422426CAEA00E26C6F /* LogInViewController.swift */,
 				4FF0F65B240DDBB900587C7B /* MainTabBarController.swift */,
 				4F831170241738050098DEFA /* ManageChildProfileViewController.swift */,
 				4F831172241739580098DEFA /* ManageSubscriptionViewController.swift */,
+				4F3BD644242947D900CC560F /* PageCountProgressView.swift */,
 				4FF0F6012405CE7900587C7B /* ParentAccountMainVC.swift */,
 				4F3EB061242451DA00C858B8 /* ReadViewController.swift */,
 				FA71E34F2406F826001385E7 /* SignupViewController.swift */,
-				4F3BD644242947D900CC560F /* PageCountProgressView.swift */,
 				4FE1309924296DE600D00322 /* WriteViewController.swift */,
-				4F5BAC43242C12BE002559BD /* ImagePicker.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
