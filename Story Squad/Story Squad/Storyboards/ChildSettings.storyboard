@@ -48,9 +48,10 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rU7-l9-ZRw">
                                                         <rect key="frame" x="12" y="32" width="342" height="47"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Change Child's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aoD-cX-uXm">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Current Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aoD-cX-uXm">
                                                                 <rect key="frame" x="20" y="3" width="302" height="41"/>
-                                                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.75722388699999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="41" id="F5z-oM-PKF"/>
                                                                 </constraints>
@@ -63,10 +64,10 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="aoD-cX-uXm" secondAttribute="trailing" constant="20" id="0nh-e7-Hlt"/>
-                                                            <constraint firstItem="aoD-cX-uXm" firstAttribute="centerY" secondItem="rU7-l9-ZRw" secondAttribute="centerY" id="bRF-gP-doh"/>
+                                                            <constraint firstItem="aoD-cX-uXm" firstAttribute="centerY" secondItem="rU7-l9-ZRw" secondAttribute="centerY" id="JWy-Yu-7gj"/>
                                                             <constraint firstAttribute="height" constant="47" id="rKI-22-uRi"/>
                                                             <constraint firstItem="aoD-cX-uXm" firstAttribute="leading" secondItem="rU7-l9-ZRw" secondAttribute="leading" constant="20" id="ziG-Ff-1e3"/>
                                                         </constraints>
@@ -76,7 +77,7 @@
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Change Child's Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTY-rg-CIQ">
                                                                 <rect key="frame" x="20" y="3" width="302" height="41"/>
-                                                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.75722388699999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="41" id="onY-rX-GkY"/>
                                                                 </constraints>
@@ -128,7 +129,8 @@
                                                         <subviews>
                                                             <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Change Child's PIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i9m-4C-Au6">
                                                                 <rect key="frame" x="20" y="3" width="302" height="41"/>
-                                                                <color key="tintColor" red="0.8155755401" green="0.94907230139999998" blue="0.9253777862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="41" id="86f-Oh-9xY"/>
                                                                 </constraints>
@@ -190,9 +192,10 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDW-nu-Pse">
                                                         <rect key="frame" x="12" y="233" width="342" height="47"/>
                                                         <subviews>
-                                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Change PIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Khj-XC-hlh">
+                                                            <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Current PIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Khj-XC-hlh">
                                                                 <rect key="frame" x="20" y="3" width="302" height="41"/>
-                                                                <color key="tintColor" red="0.8155755401" green="0.94907230139999998" blue="0.9253777862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="41" id="dPb-5n-U6p"/>
                                                                 </constraints>
@@ -206,7 +209,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="Khj-XC-hlh" firstAttribute="leading" secondItem="pDW-nu-Pse" secondAttribute="leading" constant="20" id="App-ds-T2Z"/>
                                                             <constraint firstAttribute="trailing" secondItem="Khj-XC-hlh" secondAttribute="trailing" constant="20" id="Pgz-LS-Ges"/>
@@ -214,7 +217,7 @@
                                                             <constraint firstItem="Khj-XC-hlh" firstAttribute="centerY" secondItem="pDW-nu-Pse" secondAttribute="centerY" id="iTr-dS-a13"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXe-54-GB6">
+                                                    <button opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXe-54-GB6">
                                                         <rect key="frame" x="69.5" y="504" width="227" height="43"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>

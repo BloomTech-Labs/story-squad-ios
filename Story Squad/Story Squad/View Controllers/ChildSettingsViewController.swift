@@ -188,8 +188,8 @@ class ChildSettingsViewController: UIViewController {
         }
         
         nameLabel.text = username
-        currentNameTextField.text = "\(username)"
-        currentPinTextField.text = "\(pinString)"
+        currentNameTextField.text = "Current Username: \(username)"
+        currentPinTextField.text = "Current PIN: \(pinString)"
         
         // Make sure user can't update these TextFields
         currentNameTextField.isUserInteractionEnabled = false
