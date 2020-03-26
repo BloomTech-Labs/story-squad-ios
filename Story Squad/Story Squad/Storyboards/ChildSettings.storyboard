@@ -214,7 +214,7 @@
                                                             <constraint firstItem="Khj-XC-hlh" firstAttribute="centerY" secondItem="pDW-nu-Pse" secondAttribute="centerY" id="iTr-dS-a13"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXe-54-GB6">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXe-54-GB6">
                                                         <rect key="frame" x="69.5" y="504" width="227" height="43"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
