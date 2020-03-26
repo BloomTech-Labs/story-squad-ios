@@ -175,7 +175,7 @@
                         <outlet property="chooseFilesFromDeviceButton" destination="9oU-Ve-vUu" id="ooA-Vm-FFE"/>
                         <outlet property="promptLabel" destination="2yG-ad-52E" id="0KW-12-DLB"/>
                         <outlet property="selectAnImageLabel" destination="4MJ-Cd-K45" id="Nki-3D-DqW"/>
-                        <outlet property="selectedImage1Label" destination="G3l-hs-qqv" id="zc5-rE-8bb"/>
+                        <outlet property="selectedImage1Label" destination="G3l-hs-qqv" id="PJz-Wf-SBw"/>
                         <outlet property="submitButton" destination="ewH-eH-Lqq" id="RzO-jW-bGF"/>
                     </connections>
                 </viewController>
