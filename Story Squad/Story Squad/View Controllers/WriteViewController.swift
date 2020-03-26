@@ -124,16 +124,12 @@ extension WriteViewController: ImagePickerDelegate {
     func didSelect(image: UIImage?) {
         let imageString = image?.description
         selectedImage1.text = imageString
-//        if selectedImage1 == nil {
-//            self.selectedImage1.text = imageString
-//        } else if selectedImage2 == nil {
-//            self.selectedImage2.text = imageString
-//        } else if selectedImage3 == nil {
-//        self.selectedImage3.text = imageString
-//        } else if selectedImage4 == nil {
-//            self.selectedImage4.text = imageString
-//        } else if selectedImage5 == nil {
-//            self.selectedImage5.text = imageString
-//        }
+    }
+}
+
+extension UIImage {
+    func toBase64() -> String? {
+        guard let imageData = self.pngData() else { return nil }
+        return imageData.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
     }
 }

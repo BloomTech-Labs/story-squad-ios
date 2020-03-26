@@ -29,6 +29,7 @@
 		4F5BAC44242C12BE002559BD /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5BAC43242C12BE002559BD /* ImagePicker.swift */; };
 		4F831171241738050098DEFA /* ManageChildProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F831170241738050098DEFA /* ManageChildProfileViewController.swift */; };
 		4F831173241739580098DEFA /* ManageSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F831172241739580098DEFA /* ManageSubscriptionViewController.swift */; };
+		4FD17FD6242D222200553ED4 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD17FD5242D222200553ED4 /* DrawViewController.swift */; };
 		4FD90F2923FF361900BC4702 /* Bangers.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F2723FF361900BC4702 /* Bangers.ttf */; };
 		4FD90F2A23FF361900BC4702 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F2823FF361900BC4702 /* OFL.txt */; };
 		4FD90F3723FF6AEF00BC4702 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD90F2C23FF6AEF00BC4702 /* OpenSans-Semibold.ttf */; };
@@ -126,6 +127,7 @@
 		4F5BAC43242C12BE002559BD /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4F831170241738050098DEFA /* ManageChildProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageChildProfileViewController.swift; sourceTree = "<group>"; };
 		4F831172241739580098DEFA /* ManageSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSubscriptionViewController.swift; sourceTree = "<group>"; };
+		4FD17FD5242D222200553ED4 /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
 		4FD90F2723FF361900BC4702 /* Bangers.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bangers.ttf; sourceTree = "<group>"; };
 		4FD90F2823FF361900BC4702 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		4FD90F2C23FF6AEF00BC4702 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				4F3EB061242451DA00C858B8 /* ReadViewController.swift */,
 				FA71E34F2406F826001385E7 /* SignupViewController.swift */,
 				4FE1309924296DE600D00322 /* WriteViewController.swift */,
+				4FD17FD5242D222200553ED4 /* DrawViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				4FF0F6022405CE7900587C7B /* ParentAccountMainVC.swift in Sources */,
 				4FFA57F02416D62900655C9E /* UPCarouselFlowLayout.swift in Sources */,
 				4F3EB03E2423056700C858B8 /* ChangeYourAvatarCell.swift in Sources */,
+				4FD17FD6242D222200553ED4 /* DrawViewController.swift in Sources */,
 				4F3EB05A24232F3700C858B8 /* AcceptMission.swift in Sources */,
 				4F3BD645242947D900CC560F /* PageCountProgressView.swift in Sources */,
 				FA71E3502406F826001385E7 /* SignupViewController.swift in Sources */,
