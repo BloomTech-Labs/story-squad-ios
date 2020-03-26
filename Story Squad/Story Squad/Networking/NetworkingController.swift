@@ -15,7 +15,7 @@ import Firebase
 class NetworkingController {
     
     // MARK: - Properties
-    private let baseURL = URL(string: "https://story-squad.herokuapp.com")!
+     let baseURL = URL(string: "https://story-squad.herokuapp.com")!
     
     var parentUser: Parent?
     var children: [Child]?
