@@ -226,7 +226,7 @@ class NetworkingController {
             completion(.failure(.formattedJSONIncorrectly))
             return
         }
-        print("jsoneData: \(jsonData)")
+        
         var request = URLRequest(url: registerURL)
         
         request.httpBody = unwrappedData
@@ -272,6 +272,7 @@ class NetworkingController {
                 
                 let randomPIN = Int16.random(in: 1..<199)
                 
+                //swiftlint:disable:next line_length
                 self.createChildAndAddToParentInCoreData(parent: parent, name: username, username: username, id: childRep.id, pin: randomPIN, grade: grade, cohort: nil, dyslexiaPreference: dyslexiaPreference, avatar: nil, context: CoreDataStack.shared.mainContext) {
                     
                     completion(.success(self.childUser))
@@ -793,6 +794,7 @@ class NetworkingController {
     // MARK: - Child CRUD Methods for CoreData
     
     // create Child
+    //swiftlint:disable:next function_parameter_count
     private func createChildAndAddToParentInCoreData(parent: Parent, name: String, username: String, id: Int16, pin: Int16, grade: Int16, cohort: String?, dyslexiaPreference: Bool, avatar: String?, context: NSManagedObjectContext, completion: @escaping(() -> Void) = {}) {
         
         // Generate random avatar

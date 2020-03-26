@@ -20,7 +20,7 @@ class PageCountProgressView: UIView {
         if let context = UIGraphicsGetCurrentContext() {
             let trackWidth = rect.width - 4
             
-            let trackRect = CGRect (x: 2, y: rect.height / 4, width: trackWidth, height: rect.height / 2)
+            let trackRect = CGRect(x: 2, y: rect.height / 4, width: trackWidth, height: rect.height / 2)
             
             let path = UIBezierPath(roundedRect: trackRect, cornerRadius: 14.0)
            
@@ -33,11 +33,9 @@ class PageCountProgressView: UIView {
             let progressRect = CGRect(x: 2, y: rect.height / 4, width: trackWidth * progress, height: rect.height / 2)
             context.setFillColor(completedProgressFillColor)
             
-            
             let progressPath = UIBezierPath(roundedRect: progressRect, cornerRadius: 14)
             progressPath.fill()
             
-           
             // MARK: - Progress Markers
             
              let circleColor = UIColor(red: 0, green: 0.447, blue: 0.733, alpha: 1).cgColor
