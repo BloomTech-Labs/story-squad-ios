@@ -46,14 +46,14 @@ class AddChildViewController: UIViewController {
     
     @IBAction func addChildButtonPressed(_ sender: UIButton) {
         
-        guard let parent = parentUser else { return }
+        guard parentUser != nil else { return }
         
         // Check all Text Fields are filled
         guard let name = nameTextField.text,
             let pin = pinTextField.text,
             !name.isEmpty,
             !pin.isEmpty,
-            let pinInt = Int16(pin)
+            let _ = Int16(pin)
             
             else {
                 showIncompleteAlert()

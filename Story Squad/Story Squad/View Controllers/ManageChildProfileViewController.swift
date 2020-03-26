@@ -119,9 +119,7 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         print("child selected == \(indexPath.row)")
         print("child name == \(child?.name ?? "no name")")
     }
-    
-    
-    
+      
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
