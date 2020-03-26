@@ -286,6 +286,11 @@ class NetworkingController {
         }.resume()
     }
     
+    // MARK: - Delete a child from server
+    func deleteChild(at index: Int) {
+        children?.remove(at: index)
+    }
+    
     // MARK: - Signup Parent Account
     func signupParent(email: String, password: String, termsOfService: Bool, name: String, completion: @escaping(Result<Bearer?, NetworkingError>) -> Void) {
         //        func signupParent(email: String, password: String, termsOfService: Bool,  completion: @escaping(Result<ParentRepresentation?, NetworkingError>) -> Void) {
