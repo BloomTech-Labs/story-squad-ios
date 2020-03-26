@@ -9,7 +9,7 @@
 import UIKit
 
 class WriteViewController: UIViewController {
-    
+
     // MARK: - Properties
     var networkingController: NetworkingController?
     var parentUser: Parent?
@@ -23,10 +23,19 @@ class WriteViewController: UIViewController {
     
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var chooseFilesFromDeviceButton: UIButton!
+    @IBOutlet weak var selectedImageLabel: UILabel!
+    
+    @IBOutlet weak var selectedImage1: UILabel!
+    @IBOutlet weak var selectedImage2: UILabel!
+    @IBOutlet weak var selectedImage3: UILabel!
+   
+    @IBOutlet weak var selectedImage4: UILabel!
+    @IBOutlet weak var selectedImage5: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         updateViews()
         
         // Hide Keyboard on tap gesture
@@ -110,9 +119,21 @@ class WriteViewController: UIViewController {
     */
 }
 
-//extension WriteViewController: ImagePickerDelegate {
+extension WriteViewController: ImagePickerDelegate {
 
-    //func didSelect(image: UIImage?) {
-       // self.imageView.image = image
-  //  }
-//}
+    func didSelect(image: UIImage?) {
+        let imageString = image?.description
+        selectedImage1.text = imageString
+//        if selectedImage1 == nil {
+//            self.selectedImage1.text = imageString
+//        } else if selectedImage2 == nil {
+//            self.selectedImage2.text = imageString
+//        } else if selectedImage3 == nil {
+//        self.selectedImage3.text = imageString
+//        } else if selectedImage4 == nil {
+//            self.selectedImage4.text = imageString
+//        } else if selectedImage5 == nil {
+//            self.selectedImage5.text = imageString
+//        }
+    }
+}

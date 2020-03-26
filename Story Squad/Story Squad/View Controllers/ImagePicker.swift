@@ -25,7 +25,8 @@ open class ImagePicker: NSObject {
 
         self.presentationController = presentationController
         self.delegate = delegate
-
+        self.pickerController.sourceType = .photoLibrary
+        self.pickerController.sourceType = .savedPhotosAlbum
         self.pickerController.delegate = self
         self.pickerController.mediaTypes = ["public.image"]
     }
@@ -57,7 +58,7 @@ open class ImagePicker: NSObject {
         self.presentationController?.present(alertController, animated: true)
     }
 
-    private func pickerController(_ controller: UIImagePickerController, didSelect image: UIImage?) {
+    @objc func pickerController(_ controller: UIImagePickerController, didSelect image: UIImage?) {
         controller.dismiss(animated: true, completion: nil)
 
         self.delegate?.didSelect(image: image)
@@ -70,9 +71,8 @@ extension ImagePicker: UIImagePickerControllerDelegate {
         self.pickerController(picker, didSelect: nil)
     }
 
-    public func imagePickerController(_ picker: UIImagePickerController,
-                                      didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        guard let image = info[.editedImage] as? UIImage else {
+    @objc public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let image = info[.originalImage] as? UIImage else {
             return self.pickerController(picker, didSelect: nil)
         }
         self.pickerController(picker, didSelect: image)
