@@ -54,6 +54,8 @@ class ChildSettingsViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+
+    // MARK: - Actions
     @IBAction func dyslexiaSliderToggled(_ sender: UISwitch) {
     }
     
@@ -119,6 +121,15 @@ class ChildSettingsViewController: UIViewController {
             }
         }
     }
+    
+    //TODO: Add function for removing child
+//    @IBAction func deleteChild(_ sender: UIButton) {
+//
+//        networkingController?.deleteChildFromCoreData(child: childUser, context: <#T##NSManagedObjectContext#>)
+//    }
+    
+    
+    // MARK: - Private functions
     
     private func checkIfChangesWhereMade() -> String? {
         
