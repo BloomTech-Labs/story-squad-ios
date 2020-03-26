@@ -142,27 +142,24 @@ class LogInViewController: UIViewController {
                     }
                 }
             }
-            
-//            // Get TextFields Text
-//            let usernameTextField = alert.textFields![0]
-//            let _ = alert.textFields![1]
-//
-//            if let username = child.username {
-//                usernameTextField.text = username
-//            }
         })
         
         let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
-        //        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
         
         // 1st TextField for username
         alert.addTextField { (textField: UITextField) in
-        
-        textField.placeholder = "Enter username"
-        textField.keyboardType = .default
+            
+            if let username = child.username {
+                
+                textField.text = "\(username)"
+                textField.keyboardType = .default
+            } else {
+                textField.placeholder = "Enter username"
+                textField.keyboardType = .default
+            }
         }
         
-        //2nd textField for password
+        // 2nd textField for password
         alert.addTextField { (textField: UITextField) in
             textField.placeholder = "Enter PIN"
             textField.isSecureTextEntry = true
