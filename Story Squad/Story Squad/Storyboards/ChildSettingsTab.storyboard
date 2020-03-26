@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jx-vc-zOC">
-                                                <rect key="frame" x="20" y="670" width="374" height="35"/>
+                                                <rect key="frame" x="20" y="672" width="374" height="33"/>
                                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                                 <state key="normal" title="Log Out">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,7 +37,7 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ComingSoon" translatesAutoresizingMaskIntoConstraints="NO" id="wSb-Ny-DFQ">
-                                                <rect key="frame" x="20" y="30" width="374" height="325.00000000000023"/>
+                                                <rect key="frame" x="20" y="30" width="374" height="325"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="325" id="cKU-XC-ZHv"/>
                                                 </constraints>

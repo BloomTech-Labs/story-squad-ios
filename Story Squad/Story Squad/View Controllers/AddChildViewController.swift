@@ -60,6 +60,11 @@ class AddChildViewController: UIViewController {
                 return
         }
         
+        if isNameShort() {
+            showErrorAlert(errorTitle: "Sorry", errorMessage: "Username has to be of 4 letters or more")
+            return
+        }
+        
         // Check Child's Grade
         switch gradeTextField.text {
         case SchoolGrade.thirdGrade.rawValue:
@@ -100,6 +105,19 @@ class AddChildViewController: UIViewController {
         } else {
             showIncompleteAlert()
             return
+        }
+    }
+    
+    // Check if username is too short
+    // Only because the server doesn't accept usernames of 3 letters or less
+    private func isNameShort() -> Bool {
+        guard let name = nameTextField.text,
+            !name.isEmpty else { return true }
+        
+        if name.count <= 3 {
+            return true
+        } else {
+            return false
         }
     }
     
