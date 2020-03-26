@@ -10,6 +10,11 @@ import UIKit
 import PDFKit
 
 class ReadViewController: UIViewController {
+    
+    // MARK: - Properties
+    var networkingController: NetworkingController?
+    var parentUser: Parent?
+    var childUser: Child?
 
     @IBOutlet weak var pdfView: PDFView!
     @IBOutlet weak var progressView: PageCountProgressView!
@@ -20,7 +25,6 @@ class ReadViewController: UIViewController {
         setupPDFView()
         loadPDF()
         NotificationCenter.default.addObserver(self, selector: #selector(pageHasTurned), name: .PDFViewPageChanged, object: nil)
-        
     }
 
     func setupPDFView() {
@@ -32,6 +36,10 @@ class ReadViewController: UIViewController {
     }
     
     func loadPDF() {
+        // TODO: Display correct pdf when back-end fixes pdf distribution
+        // Right now they have a dummy pdf
+        // networkingController?.getStoryFromServer(child: childUser, completion: { (result) in })
+        
         guard let path = Bundle.main.url(forResource: "white_nights", withExtension: "pdf") else { return }
         pdfView.document = PDFDocument(url: path)
     }
@@ -56,6 +64,4 @@ class ReadViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
-
