@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PCB-u6-eyg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PCB-u6-eyg">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -82,7 +82,7 @@
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrm-zi-qwk">
                                                         <rect key="frame" x="0.0" y="47" width="342" height="33"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="33" id="caw-Kn-Lxv"/>
                                                         </constraints>
@@ -113,9 +113,56 @@
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDP-ib-wEU">
                                                 <rect key="frame" x="10" y="739" width="394" height="340"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="34l-hP-C9d">
+                                                        <rect key="frame" x="8" y="0.0" width="378" height="162"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select up to 5 Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLB-rm-qli">
+                                                                <rect key="frame" x="0.0" y="0.0" width="378" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9t8-sr-rPx">
+                                                                <rect key="frame" x="0.0" y="28.333333333333371" width="378" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0At-6L-pdk">
+                                                                <rect key="frame" x="0.0" y="56.666666666666636" width="378" height="20.333333333333336"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAt-m0-Cc3">
+                                                                <rect key="frame" x="0.0" y="85" width="378" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jao-28-WMe">
+                                                                <rect key="frame" x="0.0" y="113.33333333333337" width="378" height="20.333333333333343"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnQ-yj-6Lw">
+                                                                <rect key="frame" x="0.0" y="141.66666666666663" width="378" height="20.333333333333343"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="34l-hP-C9d" firstAttribute="top" secondItem="WDP-ib-wEU" secondAttribute="top" id="B2g-VU-S92"/>
+                                                    <constraint firstAttribute="trailing" secondItem="34l-hP-C9d" secondAttribute="trailing" constant="8" id="VbQ-aY-y38"/>
                                                     <constraint firstAttribute="height" constant="340" id="mNr-8I-9Jn"/>
+                                                    <constraint firstItem="34l-hP-C9d" firstAttribute="leading" secondItem="WDP-ib-wEU" secondAttribute="leading" constant="8" id="rQc-Vh-2bQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="34l-hP-C9d" secondAttribute="bottom" constant="178" id="y70-1h-ODt"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -162,6 +209,12 @@
                     <connections>
                         <outlet property="chooseFilesFromDeviceButton" destination="1gL-VJ-iel" id="JMR-n0-SMH"/>
                         <outlet property="promptLabel" destination="MxR-9U-o43" id="hGa-fY-wqe"/>
+                        <outlet property="selectedImage1" destination="9t8-sr-rPx" id="kjA-md-HFT"/>
+                        <outlet property="selectedImage2" destination="0At-6L-pdk" id="H5e-7d-fIn"/>
+                        <outlet property="selectedImage3" destination="tAt-m0-Cc3" id="Tc8-VX-n2L"/>
+                        <outlet property="selectedImage4" destination="Jao-28-WMe" id="InG-Tc-sfl"/>
+                        <outlet property="selectedImage5" destination="cnQ-yj-6Lw" id="ACT-qv-fMe"/>
+                        <outlet property="selectedImageLabel" destination="TLB-rm-qli" id="yJO-85-izz"/>
                         <outlet property="submitButton" destination="hpJ-2T-KMf" id="7tE-h0-Kkl"/>
                         <outlet property="writeTextView" destination="hNk-HL-W55" id="rX5-WG-7pf"/>
                     </connections>
