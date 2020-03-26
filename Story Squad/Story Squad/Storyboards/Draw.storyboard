@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uoe-7O-yIX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uoe-7O-yIX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +14,44 @@
                     <view key="view" contentMode="scaleToFill" id="Mcc-DK-QpI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q50-HT-ctZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iMk-qx-I0O">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ComingSoon" translatesAutoresizingMaskIntoConstraints="NO" id="CC8-ay-Beh">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="325" id="PQx-g0-cwE"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ComingSoon2" translatesAutoresizingMaskIntoConstraints="NO" id="JRW-FP-DVa">
+                                                <rect key="frame" x="0.0" y="325" width="414" height="444"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="414" id="UsO-LG-CPF"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="iMk-qx-I0O" firstAttribute="leading" secondItem="Q50-HT-ctZ" secondAttribute="leading" id="DRN-YO-gV5"/>
+                                    <constraint firstAttribute="trailing" secondItem="iMk-qx-I0O" secondAttribute="trailing" id="Elf-qX-c6y"/>
+                                    <constraint firstItem="iMk-qx-I0O" firstAttribute="top" secondItem="Q50-HT-ctZ" secondAttribute="top" id="iFv-kR-qyr"/>
+                                    <constraint firstAttribute="bottom" secondItem="iMk-qx-I0O" secondAttribute="bottom" id="sGg-wq-xts"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Q50-HT-ctZ" firstAttribute="leading" secondItem="hh4-Br-GUa" secondAttribute="leading" id="Qxp-za-Hpz"/>
+                            <constraint firstItem="Q50-HT-ctZ" firstAttribute="bottom" secondItem="hh4-Br-GUa" secondAttribute="bottom" id="ZFc-gW-f5b"/>
+                            <constraint firstItem="hh4-Br-GUa" firstAttribute="trailing" secondItem="Q50-HT-ctZ" secondAttribute="trailing" id="gkB-uX-sfR"/>
+                            <constraint firstItem="Q50-HT-ctZ" firstAttribute="top" secondItem="hh4-Br-GUa" secondAttribute="top" id="kQk-ig-28S"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hh4-Br-GUa"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
@@ -22,7 +59,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k2Y-JE-EHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152" y="101"/>
+            <point key="canvasLocation" x="150.72463768115944" y="100.44642857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ComingSoon" width="1160" height="886"/>
+        <image name="ComingSoon2" width="759" height="808"/>
+    </resources>
 </document>

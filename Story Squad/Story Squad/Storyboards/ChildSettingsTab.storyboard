@@ -36,12 +36,21 @@
                                                     <action selector="logoutButtonTapped:" destination="1TO-XB-GSH" eventType="touchUpInside" id="xdN-qz-fhD"/>
                                                 </connections>
                                             </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ComingSoon" translatesAutoresizingMaskIntoConstraints="NO" id="wSb-Ny-DFQ">
+                                                <rect key="frame" x="20" y="30" width="374" height="325.00000000000023"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="325" id="cKU-XC-ZHv"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="wSb-Ny-DFQ" firstAttribute="top" secondItem="JCP-8J-Vwc" secondAttribute="top" constant="30" id="Ur6-gG-rI3"/>
                                             <constraint firstItem="2Jx-vc-zOC" firstAttribute="leading" secondItem="JCP-8J-Vwc" secondAttribute="leading" constant="20" id="giG-xi-CSG"/>
                                             <constraint firstAttribute="trailing" secondItem="2Jx-vc-zOC" secondAttribute="trailing" constant="20" id="jVA-m0-RRn"/>
                                             <constraint firstAttribute="bottom" secondItem="2Jx-vc-zOC" secondAttribute="bottom" constant="20" id="kL1-pO-2h3"/>
+                                            <constraint firstAttribute="trailing" secondItem="wSb-Ny-DFQ" secondAttribute="trailing" constant="20" symbolic="YES" id="wVH-WO-EMk"/>
+                                            <constraint firstItem="wSb-Ny-DFQ" firstAttribute="leading" secondItem="JCP-8J-Vwc" secondAttribute="leading" constant="20" symbolic="YES" id="y4Y-X7-SBM"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -92,6 +101,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ComingSoon" width="1160" height="886"/>
         <image name="gear" catalog="system" width="64" height="58"/>
     </resources>
 </document>

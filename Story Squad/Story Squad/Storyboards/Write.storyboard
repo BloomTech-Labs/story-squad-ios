@@ -50,7 +50,7 @@
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="hNk-HL-W55">
                                                         <rect key="frame" x="0.0" y="106" width="394" height="366"/>
-                                                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="0.34912778249999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.9977398515" green="0.99503070120000003" blue="0.8368028998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="366" id="1Hu-IP-QSp"/>
                                                         </constraints>
@@ -163,7 +163,7 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="WDP-ib-wEU" firstAttribute="top" secondItem="34l-hP-C9d" secondAttribute="bottom" constant="10" id="499-M4-ahK"/>
                                             <constraint firstItem="7KC-Sz-cYR" firstAttribute="leading" secondItem="iBI-ia-KMN" secondAttribute="leading" constant="10" id="Der-AB-un4"/>
@@ -194,7 +194,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Rwq-mH-97w" firstAttribute="leading" secondItem="tF2-dA-m9j" secondAttribute="leading" id="AfW-pB-cEg"/>
                             <constraint firstItem="tF2-dA-m9j" firstAttribute="bottom" secondItem="Rwq-mH-97w" secondAttribute="bottom" id="aqS-Hf-a5m"/>
