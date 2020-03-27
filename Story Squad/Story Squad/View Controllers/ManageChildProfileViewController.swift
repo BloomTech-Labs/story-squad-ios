@@ -110,7 +110,13 @@ class ManageChildProfilesViewController: UIViewController, UICollectionViewDeleg
         let avatar = child.avatar
         
         cell.avatarImageView.image = UIImage(named: avatar ?? "Hero 12.png")
-        cell.nameLabel.text = child.name
+        //cell.nameLabel.text = child.name
+        
+        if let username = child.username {
+                   cell.nameLabel.text = username
+               } else {
+                   cell.nameLabel.text = child.name
+               }
         return cell
     }
     
