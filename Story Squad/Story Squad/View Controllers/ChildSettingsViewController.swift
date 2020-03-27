@@ -123,10 +123,11 @@ class ChildSettingsViewController: UIViewController {
     }
     
     //TODO: Add function for removing child
-//    @IBAction func deleteChild(_ sender: UIButton) {
-//
+    @IBAction func deleteChild(_ sender: UIButton) {
+
+        showDeleteAlert()
 //        networkingController?.deleteChildFromCoreData(child: childUser, context: <#T##NSManagedObjectContext#>)
-//    }
+    }
     
     
     // MARK: - Private functions
@@ -161,6 +162,17 @@ class ChildSettingsViewController: UIViewController {
 //        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
+    
+    // MARK: - Alert for Confirmation Delete
+    private func showDeleteAlert() {
+        let alert = UIAlertController(title: "Success!", message: "Child has been deleted.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        self.present(alert, animated: true)
+    }
+    
     
     private func updateViews() {
         
