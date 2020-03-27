@@ -36,7 +36,13 @@ class ChildProfileCollectionViewCell: UICollectionViewCell {
         guard let child = childUser,
             let avatar = child.avatar else { return }
         
-        nameLabel.text = child.name
+        //nameLabel.text = child.name
+        
+        if let username = child.username {
+            nameLabel.text = username
+        } else {
+            nameLabel.text = child.name
+        }
         
         avatarImageView.image = UIImage(named: avatar)
         }
