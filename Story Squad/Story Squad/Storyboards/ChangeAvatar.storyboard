@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C7w-4h-aeX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Change Avatar-->
+        <scene sceneID="51B-Hc-ZNW">
+            <objects>
+                <viewController title="Change Avatar" id="C7w-4h-aeX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vjc-B0-ghG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJg-l4-3ct">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ComingSoon" translatesAutoresizingMaskIntoConstraints="NO" id="nWC-ir-xus">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="325" id="RIj-zL-fmo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ComingSoon2" translatesAutoresizingMaskIntoConstraints="NO" id="N6M-hT-W5j">
+                                        <rect key="frame" x="0.0" y="325" width="414" height="444"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="rg4-Wk-1o1"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="N6M-hT-W5j" secondAttribute="bottom" id="4Dm-7v-00d"/>
+                                    <constraint firstItem="nWC-ir-xus" firstAttribute="top" secondItem="TJg-l4-3ct" secondAttribute="top" id="NoU-yi-tbP"/>
+                                    <constraint firstAttribute="trailing" secondItem="nWC-ir-xus" secondAttribute="trailing" id="a3u-lj-Qk0"/>
+                                    <constraint firstItem="N6M-hT-W5j" firstAttribute="top" secondItem="nWC-ir-xus" secondAttribute="bottom" id="jZT-kb-XUT"/>
+                                    <constraint firstItem="N6M-hT-W5j" firstAttribute="centerX" secondItem="TJg-l4-3ct" secondAttribute="centerX" id="nPY-4C-sgL"/>
+                                    <constraint firstItem="nWC-ir-xus" firstAttribute="leading" secondItem="TJg-l4-3ct" secondAttribute="leading" id="zJ5-DO-qUk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IhK-13-tLQ" firstAttribute="bottom" secondItem="TJg-l4-3ct" secondAttribute="bottom" id="4lD-Om-ocH"/>
+                            <constraint firstItem="IhK-13-tLQ" firstAttribute="leading" secondItem="TJg-l4-3ct" secondAttribute="leading" id="PgI-R6-kb3"/>
+                            <constraint firstItem="IhK-13-tLQ" firstAttribute="top" secondItem="TJg-l4-3ct" secondAttribute="top" id="Wzr-pM-ZeU"/>
+                            <constraint firstItem="IhK-13-tLQ" firstAttribute="trailing" secondItem="TJg-l4-3ct" secondAttribute="trailing" id="do2-qZ-Lfc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IhK-13-tLQ"/>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rzO-R1-Rx0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ComingSoon" width="1160" height="886"/>
+        <image name="ComingSoon2" width="759" height="808"/>
+    </resources>
+</document>

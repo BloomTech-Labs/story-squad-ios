@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iQO-pi-nw3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+        <array key="Nunito-SemiBold.ttf">
+            <string>Nunito-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Draw-->
+        <scene sceneID="hjP-LC-HIE">
+            <objects>
+                <viewController title="Draw" id="iQO-pi-nw3" customClass="DrawViewController" customModule="Story_Squad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S8d-lM-ida">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1350"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWl-k4-WSZ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="1179"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3T-6N-oRE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1197"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Story squad" translatesAutoresizingMaskIntoConstraints="NO" id="Rnw-Kn-cOR">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="244" translatesAutoresizingMaskIntoConstraints="NO" id="u0G-dB-32b">
+                                                <rect key="frame" x="10" y="115" width="394" height="101"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draw a picture of your favorite part of the story." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yG-ad-52E">
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="101"/>
+                                                        <color key="backgroundColor" red="0.78566646579999999" green="0.86027115580000002" blue="0.33455419539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="101" id="XKd-8S-Ykl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="24"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2hL-Jw-olH">
+                                                <rect key="frame" x="60" y="970" width="295" height="127"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewH-eH-Lqq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="47"/>
+                                                        <color key="backgroundColor" red="1" green="0.42745098040000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="47" id="9zV-XU-wWR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="24"/>
+                                                        <state key="normal" title="Submit">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="14"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="submitButtonTapped:" destination="iQO-pi-nw3" eventType="touchUpInside" id="7M1-WP-7ts"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSc-7S-bzO">
+                                                        <rect key="frame" x="0.0" y="47" width="295" height="33"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33" id="keP-Kl-J2f"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oU-Ve-vUu">
+                                                        <rect key="frame" x="0.0" y="80" width="295" height="47"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.44705882349999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="47" id="uvR-Ne-B2s"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="24"/>
+                                                        <state key="normal" title=" Choose Files from Device ">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="14"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="chooseFilesFromDeviceButtonTapped:" destination="iQO-pi-nw3" eventType="touchUpInside" id="yeB-SB-XXm"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="gXn-az-YVL">
+                                                <rect key="frame" x="30" y="1113" width="354" height="48"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image selected will appear below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MJ-Cd-K45">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3l-hs-qqv" userLabel="SelectedImage1">
+                                                        <rect key="frame" x="0.0" y="27.5" width="354" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xo-Se-XPU">
+                                                <rect key="frame" x="10" y="224" width="394" height="736"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="736" id="ry1-qg-H7p"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="2hL-Jw-olH" firstAttribute="leading" secondItem="P3T-6N-oRE" secondAttribute="leading" constant="60" id="8in-Ic-jhV"/>
+                                            <constraint firstItem="4xo-Se-XPU" firstAttribute="leading" secondItem="P3T-6N-oRE" secondAttribute="leading" constant="10" id="Dky-qO-Vnc"/>
+                                            <constraint firstItem="gXn-az-YVL" firstAttribute="leading" secondItem="P3T-6N-oRE" secondAttribute="leading" constant="30" id="KBP-wc-Iti"/>
+                                            <constraint firstItem="4xo-Se-XPU" firstAttribute="top" secondItem="u0G-dB-32b" secondAttribute="bottom" constant="8" id="KRw-vg-uYd"/>
+                                            <constraint firstItem="u0G-dB-32b" firstAttribute="top" secondItem="Rnw-Kn-cOR" secondAttribute="bottom" constant="10" id="Omh-i8-Ls1"/>
+                                            <constraint firstItem="Rnw-Kn-cOR" firstAttribute="top" secondItem="P3T-6N-oRE" secondAttribute="top" id="PTu-2V-GCW"/>
+                                            <constraint firstAttribute="bottom" secondItem="gXn-az-YVL" secondAttribute="bottom" constant="36" id="QD7-O0-Owd"/>
+                                            <constraint firstItem="Rnw-Kn-cOR" firstAttribute="leading" secondItem="P3T-6N-oRE" secondAttribute="leading" id="Rtx-N1-Lzz"/>
+                                            <constraint firstItem="gXn-az-YVL" firstAttribute="top" secondItem="2hL-Jw-olH" secondAttribute="bottom" constant="16" id="VFD-YE-LGf"/>
+                                            <constraint firstAttribute="trailing" secondItem="2hL-Jw-olH" secondAttribute="trailing" constant="59" id="Ytb-7a-6gi"/>
+                                            <constraint firstItem="u0G-dB-32b" firstAttribute="leading" secondItem="P3T-6N-oRE" secondAttribute="leading" constant="10" id="cEa-1d-fyZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rnw-Kn-cOR" secondAttribute="trailing" id="cLV-0R-mHV"/>
+                                            <constraint firstAttribute="trailing" secondItem="u0G-dB-32b" secondAttribute="trailing" constant="10" id="ej6-GT-qb2"/>
+                                            <constraint firstItem="2hL-Jw-olH" firstAttribute="top" secondItem="4xo-Se-XPU" secondAttribute="bottom" constant="10" id="hrx-zM-Lz4"/>
+                                            <constraint firstAttribute="trailing" secondItem="gXn-az-YVL" secondAttribute="trailing" constant="30" id="iG2-II-BT4"/>
+                                            <constraint firstAttribute="trailing" secondItem="4xo-Se-XPU" secondAttribute="trailing" constant="10" id="kIY-he-8YS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="P3T-6N-oRE" firstAttribute="leading" secondItem="JWl-k4-WSZ" secondAttribute="leading" id="Atj-V5-L2f"/>
+                                    <constraint firstAttribute="bottom" secondItem="P3T-6N-oRE" secondAttribute="bottom" id="B19-Ip-Mv8"/>
+                                    <constraint firstItem="P3T-6N-oRE" firstAttribute="width" secondItem="JWl-k4-WSZ" secondAttribute="width" id="CP6-ES-wVV"/>
+                                    <constraint firstItem="P3T-6N-oRE" firstAttribute="height" secondItem="JWl-k4-WSZ" secondAttribute="height" priority="250" id="Lzr-gv-rYi"/>
+                                    <constraint firstItem="P3T-6N-oRE" firstAttribute="top" secondItem="JWl-k4-WSZ" secondAttribute="top" id="WDu-Ho-qb0"/>
+                                    <constraint firstAttribute="trailing" secondItem="P3T-6N-oRE" secondAttribute="trailing" id="eZT-md-4cu"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bmC-cT-kMk" firstAttribute="bottom" secondItem="JWl-k4-WSZ" secondAttribute="bottom" id="7wb-xE-eVg"/>
+                            <constraint firstItem="JWl-k4-WSZ" firstAttribute="top" secondItem="bmC-cT-kMk" secondAttribute="top" id="tJC-x4-09w"/>
+                            <constraint firstItem="bmC-cT-kMk" firstAttribute="trailing" secondItem="JWl-k4-WSZ" secondAttribute="trailing" id="yyz-cX-DZN"/>
+                            <constraint firstItem="JWl-k4-WSZ" firstAttribute="leading" secondItem="bmC-cT-kMk" secondAttribute="leading" id="zCT-Ei-AfE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bmC-cT-kMk"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="414" height="1350"/>
+                    <connections>
+                        <outlet property="chooseFilesFromDeviceButton" destination="9oU-Ve-vUu" id="ooA-Vm-FFE"/>
+                        <outlet property="promptLabel" destination="2yG-ad-52E" id="0KW-12-DLB"/>
+                        <outlet property="selectAnImageLabel" destination="4MJ-Cd-K45" id="Nki-3D-DqW"/>
+                        <outlet property="selectedImage1Label" destination="G3l-hs-qqv" id="PJz-Wf-SBw"/>
+                        <outlet property="submitButton" destination="ewH-eH-Lqq" id="RzO-jW-bGF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fw7-Eg-YRe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424.63768115942031" y="168.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Story squad" width="375" height="105"/>
+    </resources>
+</document>
