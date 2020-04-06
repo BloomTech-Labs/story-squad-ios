@@ -1,9 +1,7 @@
 
 # Story Squad
 
-1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
-
-## 4️⃣ Contributors
+## Contributors
 
 
 [Wilmari Rodriguez](https://github.com/kima-92) | [Jonalynn Masters](https://www.github.com/jonalynnA) | [Percival Ngan](https://github.com/PercivalN)                                     
@@ -21,15 +19,14 @@
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-🚫 more info on using badges [here](https://github.com/badges/shields)
 
 ## Project Overview
 
-1️⃣ [Trello Board](https://trello.com/b/YDkQ9Mqw/labs-story-squad)
+[Trello Board](https://trello.com/b/YDkQ9Mqw/labs-story-squad)
 
-1️⃣ [Product Canvas](https://www.notion.so/v1-0-Labs21-iOS-Release-Canvas-Dashboard-Integration-11d96a13125140d6b3038dc78ca02c46)
+[Product Canvas](https://www.notion.so/v1-0-Labs21-iOS-Release-Canvas-Dashboard-Integration-11d96a13125140d6b3038dc78ca02c46)
 
-1️⃣ [UX Design files](https://www.figma.com/file/WaHXdLK2NASoFWYVMZLVNt/Story_Squad?node-id=0%3A1) 
+[UX Design files](https://www.figma.com/file/WaHXdLK2NASoFWYVMZLVNt/Story_Squad?node-id=0%3A1) 
 
 
 Welcome to Story Squad! We are an interactive learning platform targeted at grade school children, and we help build reading comprehension as well as artistic, writing, and analytical/critical thinking skills through weekly competitions.
@@ -56,7 +53,7 @@ Story Squad is a paid service; parents are required to create the account for th
 -   Xcode 11.3+
 -   Cocoa Pods
 
-## Contributing
+# Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 
