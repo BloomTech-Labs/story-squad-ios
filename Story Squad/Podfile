@@ -8,10 +8,7 @@ target 'Story Squad' do
   # Pods for Story Squad
 
 	pod 'SwiftLint'
-	pod "ScalingCarousel"
-
-  
- 
-  	pod 'Firebase/Analytics'
+  pod "ScalingCarousel"
+  pod 'Firebase/Analytics'
 
 end
