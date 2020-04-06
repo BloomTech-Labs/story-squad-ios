@@ -12,7 +12,6 @@
 | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/kima-92) | [<img src="https://github.com/favicon.ico" width="15"> ](https://www.github.com/jonalynnA)             |           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/PercivalN)            |
 | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/wilmari-rodriguez-2317aa194/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](http://linkedin.com/in/jonalynn-masters-64473847) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/percival-ngan-869381163/) |
 
-🚫 Optional examples of using badges with links for your tech stack, make sure to change these to fit your project
 
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
