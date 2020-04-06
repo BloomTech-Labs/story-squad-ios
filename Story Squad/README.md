@@ -34,11 +34,14 @@
 
 1️⃣ [UX Design files](https://www.figma.com/file/WaHXdLK2NASoFWYVMZLVNt/Story_Squad?node-id=0%3A1) 
 
-🚫 One to two paragraph statement about your product and what it does.
 
-Quis hendrerit dolor magna eget. Pretium quam vulputate dignissim suspendisse. Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Orci dapibus ultrices in iaculis nunc sed augue. Euismod in pellentesque massa placerat duis ultricies. Bibendum at varius vel pharetra vel turpis nunc eget lorem. Lectus quam id leo in vitae. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor.
+Welcome to Story Squad! We are an interactive learning platform targeted at grade school children, and we help build reading comprehension as well as artistic, writing, and analytical/critical thinking skills through weekly competitions.
 
-Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Donec et odio pellentesque diam volutpat. Id diam maecenas ultricies mi eget mauris. Est pellentesque elit ullamcorper dignissim. Orci dapibus ultrices in iaculis nunc.
+Each week features a new chapter in an exciting novel, written and serialized specifically for Story Squad by author and educator Graig Peterson. Children are provided with prompts based on the chapter they've just read, and participants are then divided into teams of two. Students create art and fanfiction to match the prompt, before going head to head in a bracket-style tournament.
+
+In addition to growing their literary and artistic skills, students learn team building and critical thinking skills through a unique voting system, where each child must weight their own work against their teammate in order to increase their odds of winning. Badges and points incentivize winning and encourage participation.
+
+Story Squad is a paid service; parents are required to create the account for their children and pay a monthly subscription fee in order for their children to compete. This brings the platform into compliance with COPPA and ensures a long future for the project.
 
 ![](header.png)
 
