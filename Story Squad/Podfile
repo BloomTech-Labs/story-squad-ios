@@ -10,5 +10,7 @@ target 'Story Squad' do
 	pod 'SwiftLint'
   pod "ScalingCarousel"
   pod 'Firebase/Analytics'
+  pod 'OktaOidc'
+  pod 'OktaJWT'
 
 end

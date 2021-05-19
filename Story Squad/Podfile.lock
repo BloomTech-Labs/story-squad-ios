@@ -64,12 +64,21 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - OktaJWT (2.3.2)
+  - OktaOidc (3.10.3):
+    - OktaOidc/AppAuth (= 3.10.3)
+    - OktaOidc/Okta (= 3.10.3)
+  - OktaOidc/AppAuth (3.10.3)
+  - OktaOidc/Okta (3.10.3):
+    - OktaOidc/AppAuth
   - PromisesObjC (1.2.8)
   - ScalingCarousel (3.0)
   - SwiftLint (0.39.1)
 
 DEPENDENCIES:
   - Firebase/Analytics
+  - OktaJWT
+  - OktaOidc
   - ScalingCarousel
   - SwiftLint
 
@@ -86,6 +95,8 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - nanopb
+    - OktaJWT
+    - OktaOidc
     - PromisesObjC
     - ScalingCarousel
     - SwiftLint
@@ -102,10 +113,12 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: 6f15a89b0ca35d6fa523e1f752ef818588885988
   GoogleUtilities: ad0f3b691c67909d03a3327cc205222ab8f42e0e
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  OktaJWT: b5e3872ab185c9a37264e8a7210c336239e14531
+  OktaOidc: 8b964d82d1489bbe71e41d39cd19686e5d9d1566
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   ScalingCarousel: 7bf711d154b0c5c362c5dd4787ed7d13b489a4cb
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: afb80a0a755c7e228e21ff793923922825054e4f
+PODFILE CHECKSUM: 0845a9054ea10987f63becf00e89a7ef92fb7a75
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1

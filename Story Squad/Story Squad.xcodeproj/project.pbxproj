@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		445676E22654A71900DC9662 /* Okta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 445676E12654A71900DC9662 /* Okta.plist */; };
 		4F3BD645242947D900CC560F /* PageCountProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BD644242947D900CC560F /* PageCountProgressView.swift */; };
 		4F3EB03A2423050D00C858B8 /* AcceptMissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB0392423050D00C858B8 /* AcceptMissionCell.swift */; };
 		4F3EB03C2423054800C858B8 /* AdventurePassportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EB03B2423054800C858B8 /* AdventurePassportCell.swift */; };
@@ -100,6 +101,7 @@
 
 /* Begin PBXFileReference section */
 		118C1B07AD8B4E65E3BD7134 /* Pods-Story Squad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Story Squad.debug.xcconfig"; path = "Target Support Files/Pods-Story Squad/Pods-Story Squad.debug.xcconfig"; sourceTree = "<group>"; };
+		445676E12654A71900DC9662 /* Okta.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Okta.plist; sourceTree = "<group>"; };
 		4F3BD644242947D900CC560F /* PageCountProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCountProgressView.swift; sourceTree = "<group>"; };
 		4F3EB0392423050D00C858B8 /* AcceptMissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptMissionCell.swift; sourceTree = "<group>"; };
 		4F3EB03B2423054800C858B8 /* AdventurePassportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventurePassportCell.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				FA85E84423FEF35C008637E0 /* AppDelegate.swift */,
 				FA85E84623FEF35C008637E0 /* SceneDelegate.swift */,
 				FA85E85223FEF35E008637E0 /* Info.plist */,
+				445676E12654A71900DC9662 /* Okta.plist */,
 				E350FE652417B7C900759D36 /* GoogleService-Info.plist */,
 			);
 			path = "Story Squad";
@@ -522,6 +525,7 @@
 				4FD90F3923FF6AEF00BC4702 /* OpenSans-Italic.ttf in Resources */,
 				4FFA57EE2416C60C00655C9E /* ChildCollectionViewCell.xib in Resources */,
 				4FF0F659240DD01600587C7B /* Nunito-Black.ttf in Resources */,
+				445676E22654A71900DC9662 /* Okta.plist in Resources */,
 				4FD90F3B23FF6AEF00BC4702 /* OpenSans-ExtraBold.ttf in Resources */,
 				4FF0F65A240DD01600587C7B /* Nunito-ExtraLight.ttf in Resources */,
 				4FF0F652240DD01600587C7B /* Nunito-Medium.ttf in Resources */,
